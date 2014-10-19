@@ -1,42 +1,14 @@
-#### Character.rb
 class Character
+  DEFAULT_AGE = 18
+  STAT_NAMES = %w(Str Dex End Int Edu Soc)
+
+  attr_accessor :career, :gender
+  attr_writer :terms
+
   def initialize()
     @gender = ''
     @career = ''
-
-    @skills = Hash.new
-    @stats = Hash.new
-    @stats = {
-      'Str' => nil,
-      'Dex' => nil,
-      'End' => nil,
-      'Int' => nil,
-      'Edu' => nil,
-      'Soc' => nil
-      }
-
-    @upp = ''
-    @stat_names = %w(Str Dex End Int Edu Soc)
-    @stat_mods = Hash.new
-    @stat_names.each do |stat|
-      @stat_mods[stat] = nil
-    end
-  end
-
-  def set_gender(g)
-    @gender = g
-  end
-
-  def get_gender
-    return @gender
-  end
-
-  def set_career(c)
-    @career = c
-  end
-
-  def get_career
-    return @career
+    @stats = {}
   end
 
   def set_stat(stat, num)
@@ -44,35 +16,21 @@ class Character
   end
 
   def get_stat(stat)
-    return @stats[stat]
+    @stats[stat]
   end
 
-  def set_terms(terms)
-    @terms = terms
+  def age
+    @age ||= (terms * 4) + DEFAULT_AGE
   end
 
-  def get_terms
-    return @terms
+  def terms
+    @terms ||= 0
   end
 
-  def set_age
-    @age = (@terms * 4) + 18
-  end
-
-  def get_age
-    return @age
-  end
-
-  def set_upp
-
-    @stat_names.each do |stat|
-      @upp = @upp + @stats[stat]
+  def upp
+    STAT_NAMES.inject('') do |upp, stat|
+      upp + @stats[stat]
     end    
   end
-
-  def get_upp
-    return @upp
-  end
-
 end
 
