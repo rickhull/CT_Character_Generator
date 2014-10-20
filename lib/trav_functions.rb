@@ -40,6 +40,21 @@ def build_skills(career)
 
 end
 
+def stat_to_int(stat)
+  return stat.to_i(10)
+end
+
+def get_stat_mod(stat)
+  case
+  when stat.to_i(16) < 6
+    return -1
+  when stat.to_i(16) > 9
+    return 1
+  else
+    return 0
+  end
+end
+
 #stats = {
 #       'Str' => nil,
 #       'Dex' => nil,

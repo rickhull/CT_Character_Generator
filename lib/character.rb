@@ -2,13 +2,14 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name
+  attr_accessor :career, :gender, :name, :stat_mods
   attr_writer :terms
 
   def initialize()
     @gender = ''
     @career = ''
     @stats = {}
+    @stat_mods = {}
   end
 
   def set_stat(stat, num)
@@ -32,5 +33,18 @@ class Character
       upp + @stats[stat]
     end    
   end
+
+  def set_stat_mods
+    STAT_NAMES.each do |stat|
+      @stat_mods[stat] = get_stat_mod(@stats[stat])
+    end
+  end
+
+  def show_stat_mods
+    STAT_NAMES.each do |stat|
+      puts "#{stat} modifier is #{@stat_mods[stat]}."
+    end
+  end
+ 
 end
 

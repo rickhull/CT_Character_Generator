@@ -1,5 +1,3 @@
-#require_relative 'lib/character'
-#require_relative 'trav_functions'
 require 'lib/character'
 require 'lib/trav_functions'
 
@@ -14,4 +12,5 @@ stat_names.each do |stat|
 end
 
 puts "#{me.name} is a #{me.age} year old #{me.career} with a UPP of #{me.upp}."
-
+me.set_stat_mods
+me.show_stat_mods
