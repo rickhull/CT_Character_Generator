@@ -1,22 +1,16 @@
-#!/usr/bin/env ruby
-#
-
-require 'Character'
-require 'trav_functions.rb'
+#require_relative 'lib/character'
+#require_relative 'trav_functions'
+require 'lib/character'
+require 'trav_functions'
 
 me = Character.new
-me.set_terms(average2)
-me.set_age
-my_age = me.get_age
+me.terms = average2
+me.career = 'Scout'
 
-stat_names = ['Str', 'Dex', 'End', 'Int', 'Edu', 'Soc']
+stat_names = Character::STAT_NAMES
 stat_names.each do |stat|
   me.set_stat(stat, make_stat)
 end
 
-me.set_upp
-my_upp = me.get_upp
-me.set_career('Scout')
-puts "A #{my_age} year old #{me.get_career} with a UPP of #{my_upp}."
-
+puts "A #{me.age} year old #{me.career} with a UPP of #{me.upp}."
 
