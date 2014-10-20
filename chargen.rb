@@ -1,7 +1,7 @@
 #require_relative 'lib/character'
 #require_relative 'trav_functions'
 require 'lib/character'
-require 'trav_functions'
+require 'lib/trav_functions'
 
 me = Character.new
 me.terms = average2
