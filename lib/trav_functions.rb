@@ -20,11 +20,9 @@ def make_stat
 end
 
 def set_career
-  terms = rand(6) + 1
-  age = 18 + (terms * 4)
-  careers = ['Navy', 'Army', 'Marines', 'Merchants', 'Scouts']
+  careers = ['Navy', 'Army', 'Marine', 'Merchant', 'Scout']
   career = careers[rand(careers.length)]
-  return age, terms, career
+  return career
 end
 
 def build_skills(career)
@@ -37,7 +35,9 @@ def build_skills(career)
 
   max = skills[career].length
   return skills[career][rand(max)]
+end
 
+def set_rank(branch, grade)
 end
 
 def stat_to_int(stat)
