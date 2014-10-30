@@ -13,8 +13,6 @@ stat_names.each do |stat|
 end
 
 puts "#{me.name} is a #{me.age} year old #{me.career} with a UPP of #{me.upp}."
-# me.set_stat_mods
-# me.show_stat_mods
 
 test_career = 'Marines'
 test_grade = 'E3'

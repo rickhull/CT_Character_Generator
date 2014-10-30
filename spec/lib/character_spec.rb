@@ -35,14 +35,14 @@ describe Character do
   end
 
   describe '#upp' do
-    context 'when set_upp has not been called' do
+    context 'when set_stat has not been called' do
       it 'returns an empty string' do
         # expect(subject.upp).to eql ''
         subject.upp.should == ''
       end
     end
 
-    context 'when set_upp has been called' do
+    context 'when set_stat has been called on all stats' do
       before (:all) do
         subject.set_stat('Str', '5')
         subject.set_stat('Dex', '6')
@@ -50,13 +50,18 @@ describe Character do
         subject.set_stat('Int', '8')
         subject.set_stat('Edu', '9')
         subject.set_stat('Soc', 'A')
-        #subject.set_upp
       end
+
       it 'returns a partucular 6 character string' do
         subject.upp.should == '56789A'
       end 
+
       it 'returns a 5 character string' do
         subject.upp.length.should == 6
+      end
+
+      it 'returns the right value for a chosen stat' do
+        subject.get_stat('Str').should == '5'
       end
     end
   end
