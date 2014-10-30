@@ -41,5 +41,25 @@ describe Character do
         subject.upp.should == ''
       end
     end
+
+    context 'when set_upp has been called' do
+      before (:all) do
+        subject.set_stat('Str', '5')
+        subject.set_stat('Dex', '6')
+        subject.set_stat('End', '7')
+        subject.set_stat('Int', '8')
+        subject.set_stat('Edu', '9')
+        subject.set_stat('Soc', 'A')
+        #subject.set_upp
+      end
+      it 'returns a partucular 6 character string' do
+        subject.upp.should == '56789A'
+      end 
+      it 'returns a 5 character string' do
+        subject.upp.length.should == 6
+      end
+    end
   end
+
+
 end
