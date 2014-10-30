@@ -1,6 +1,7 @@
 require 'lib/character'
 require 'lib/trav_functions'
 require 'lib/trav_arrays'
+require 'lib/dice'
 
 me = Character.new
 me.terms = average2

@@ -1,3 +1,4 @@
+# require 'lib/dice'
 
 def roll2
   return 2 + rand(6) + rand(6)
