@@ -8,7 +8,8 @@ describe Character do
   describe '#age' do
     context 'when terms are not set' do
       it 'returns the default age' do
-        expect(subject.age).to eql Character::DEFAULT_AGE
+        # expect(subject.age).to eql Character::DEFAULT_AGE
+        subject.age.should == Character::DEFAULT_AGE
       end
     end
 
@@ -18,7 +19,8 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        expect(subject.age).to eql 34
+        # expect(subject.age).to eql 34
+        subject.age.should == 34
       end
     end
   end
@@ -26,7 +28,8 @@ describe Character do
   describe '#terms' do
     context 'when not set' do
       it 'returns 0' do
-        expect(subject.terms).to eql 0
+        # expect(subject.terms).to eql 0
+        subject.terms.should == 0
       end
     end
   end
@@ -34,7 +37,8 @@ describe Character do
   describe '#upp' do
     context 'when set_upp has not been called' do
       it 'returns an empty string' do
-        expect(subject.upp).to eql ''
+        # expect(subject.upp).to eql ''
+        subject.upp.should == ''
       end
     end
   end
