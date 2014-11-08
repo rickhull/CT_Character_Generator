@@ -2,15 +2,15 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :stat_mods, :grade
+  attr_accessor :career, :gender, :name, :grade
   attr_writer :terms
 
   def initialize()
-    @gender = ''
     @career = ''
-    @stats = {}
-    @stat_mods = {}
+    @gender = ''
     @grade = ''
+    # @name = ''
+    @stats = {}
   end
 
   def set_stat(stat, num)

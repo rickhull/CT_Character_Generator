@@ -8,7 +8,6 @@ describe Character do
   describe '#age' do
     context 'when terms are not set' do
       it 'returns the default age' do
-        # expect(subject.age).to eql Character::DEFAULT_AGE
         subject.age.should == Character::DEFAULT_AGE
       end
     end
@@ -19,8 +18,20 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        # expect(subject.age).to eql 34
         subject.age.should == 34
+      end
+    end
+  end
+
+  describe '#name' do
+    context 'when not set' do
+      subject.name.should == ''
+    end
+    context 'when set' do
+      #let(:name) {'Allesandro'}
+      before { subject.name = 'Allesandro' }
+      it 'returns the right name' do
+        subject.name.should === 'Allesandro'
       end
     end
   end
