@@ -2,17 +2,28 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :grade
+  attr_accessor :career, :gender, :name, :grade, :skills
   attr_writer :terms
 
   def initialize()
     @career = ''
     @gender = ''
     @grade = ''
-    # @name = ''
+    @name = ''
     @stats = {}
+    @skills = Hash.new
   end
 
+  def increase_skill(skill, level=1)
+    if @skills.has_key?(skill)
+    then
+      old_level = @skills[skill]
+    else
+      old_level = 0
+    end
+    @skills[skill] = old_level + level  
+  end
+ 
   def set_stat(stat, num)
     @stats[stat] = num
   end

@@ -5,6 +5,40 @@ describe Character do
   it { should respond_to(:career) }
   it { should respond_to(:gender) }
 
+  describe '#skills' do
+    context 'when no skills set' do
+      it 'returns empty hash' do
+        subject.skills.count == 0
+      end
+    end
+    context 'when a skill first added' do
+      let(:skill) {'Pilot'}
+      let(:skill_level) {1}
+      before { subject.skills[skill] = skill_level }
+
+      it 'returns a skill level of 1' do
+        subject.skills[skill] == skill_level
+      end
+    end
+    context 'when a skill is incrementd' do
+      let(:skill) {'Engineering'}
+      it 'returns nil when skill not yet added' do
+        subject.skills[skill] == nil
+      end
+    end
+
+    context 'when a skill increased' do
+      let(:skill) {'Navigation'}
+      let(:initial_level) { 0 }
+      let(:default_level) { 1 }
+      let(:high_level) { 3 }
+      before { subject.increase_skill(skill, initial_level) }
+      it 'returns 0 with new skill' do
+        subject.skills[skill] == initial_level
+      end
+    end 
+  end
+
   describe '#age' do
     context 'when terms are not set' do
       it 'returns the default age' do
@@ -26,7 +60,7 @@ describe Character do
   describe '#name' do
     context 'when not set' do
       it 'returns a blank string when name not set' do
-        subject.name.should == nil
+        subject.name.should == '' 
       end
     end
     context 'when set' do

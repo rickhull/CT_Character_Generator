@@ -14,9 +14,13 @@ stat_names = Character::STAT_NAMES
 stat_names.each do |stat|
   me.set_stat(stat, make_stat)
 end
+ 
+me.skills['Pilot'] = 1
+me.skills.each do |skill, level|
+  puts "#{skill} : #{level}"
+end
 
 puts "#{me.name} is a #{me.age} year old #{me.career} with a UPP of #{me.upp}."
-
 test_career = 'Marines'
 test_grade = 'E3'
 puts "Rank is #{Ranks[test_career][test_grade]}."
