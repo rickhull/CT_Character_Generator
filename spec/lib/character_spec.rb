@@ -52,11 +52,11 @@ describe Character do
         subject.set_stat('Soc', 'A')
       end
 
-      it 'returns a partucular 6 character string' do
+      it 'returns a particular 6 character string' do
         subject.upp.should == '56789A'
       end 
 
-      it 'returns a 5 character string' do
+      it 'returns a 6 character string' do
         subject.upp.length.should == 6
       end
 
