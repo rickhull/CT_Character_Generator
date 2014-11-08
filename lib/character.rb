@@ -40,17 +40,19 @@ class Character
     end    
   end
 
-  def set_stat_mods
-    STAT_NAMES.each do |stat|
-      @stat_mods[stat] = get_stat_mod(@stats[stat])
+  def get_stat_modifier(upp_position, low, low_mod, high, high_mod)
+    # Return the modifier based on high or low stat.
+    stat = upp[upp_position, 1]
+    stat = stat.to_i(16)
+    if stat <= low
+    then
+      return low_mod
+    elsif stat >= high
+      return high_mod
+    else
+      return 0
     end
   end
-
-  def show_stat_mods
-    STAT_NAMES.each do |stat|
-      puts "#{stat} modifier is #{@stat_mods[stat]}."
-    end
-  end
- 
+  
 end
 

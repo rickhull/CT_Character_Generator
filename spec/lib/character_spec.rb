@@ -63,6 +63,19 @@ describe Character do
       it 'returns the right value for a chosen stat' do
         subject.get_stat('Str').should == '5'
       end
+
+      it 'returns the right value for a low stat modifier' do
+        subject.get_stat_modifier(0, 6, -1, 9, 2).should == -1
+      end
+
+      it 'returns the right value for a high stat modifier' do
+        subject.get_stat_modifier(5, 6, -1, 9, 2).should == 2
+      end
+
+      it 'returns the right value for an average stat modifier' do
+        subject.get_stat_modifier(2, 6, -1, 9, 2).should == 0
+      end
+
     end
   end
 
