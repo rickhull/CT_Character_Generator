@@ -25,7 +25,9 @@ describe Character do
 
   describe '#name' do
     context 'when not set' do
-      subject.name.should == ''
+      it 'returns a blank string when name not set' do
+        subject.name.should == nil
+      end
     end
     context 'when set' do
       #let(:name) {'Allesandro'}
