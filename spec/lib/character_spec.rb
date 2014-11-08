@@ -36,7 +36,24 @@ describe Character do
       it 'returns 0 with new skill' do
         subject.skills[skill] == initial_level
       end
+      it 'returns +1 when using the default level value' do
+        old_level = subject.skills[skill]
+        subject.increase_skill(skill)
+        subject.skills[skill].should == old_level + default_level
+      end
+      it 'returns specifically increased value when non-default used.' do
+        old_level = subject.skills[skill]
+        subject.increase_skill(skill, high_level)
+        subject.skills[skill].should == old_level + high_level
+      end
+      it 'returns combination of default and higher skills.' do
+        subject.increase_skill(skill)
+        initial_level = subject.skills[skill]
+        subject.increase_skill(skill, high_level)
+        subject.skills[skill].should == default_level + high_level
+      end
     end 
+  
   end
 
   describe '#age' do

@@ -16,6 +16,7 @@ stat_names.each do |stat|
 end
  
 me.skills['Pilot'] = 1
+me.increase_skill('Pilot', 2)
 me.skills.each do |skill, level|
   puts "#{skill} : #{level}"
 end
