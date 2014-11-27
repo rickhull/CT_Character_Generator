@@ -17,12 +17,21 @@ end
  
 me.skills['Pilot'] = 1
 me.increase_skill('Pilot', 2)
-me.skills.each do |skill, level|
-  puts "#{skill} : #{level}"
-end
+me.skills['CbtR'] = 2
 
-puts "#{me.name} is a #{me.age} year old #{me.career} with a UPP of #{me.upp}."
-test_career = 'Marines'
-test_grade = 'E3'
-puts "Rank is #{Ranks[test_career][test_grade]}."
+puts "#{me.career} #{me.name} #{me.upp} Age #{me.age}  #{me.terms} terms"
+first_skill = true
+me.skills.each do |skill, level|
+  if first_skill == false
+    print ", "
+  end
+  print "#{skill}-#{level}"
+  first_skill = false
+end
+print "\n"
+
+# test_career = 'Marines'
+# test_grade = 'E3'
+# puts "Rank is #{Ranks[test_career][test_grade]}."
+
 
