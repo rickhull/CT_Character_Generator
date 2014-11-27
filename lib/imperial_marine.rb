@@ -24,6 +24,7 @@ class ImperialMarine < Character
     'O6' => 'Brigadier'
   }
 
+
   Comission_roll = 9
 
   def initialize()
@@ -31,6 +32,9 @@ class ImperialMarine < Character
     @career = 'Marine'
     @rank = 'Private'
     @skills = { 'Blade' => 1 }
+    @terms = average2
+    @basic_skill_options = [ 'GunCbt', 'Blade', 'VaccSuit', 'GunCbt', 'Driver']
+    @advanced_skill_options = ['Medic', 'Computer', 'Sensors', 'Leadership']
   end
 
   def set_rank()
@@ -44,6 +48,21 @@ class ImperialMarine < Character
     end 
     grade = Grade[grade_set][grade_level]
     @rank = Ranks[grade]
+  end
+
+  def set_skills()
+    edu = upp[4].chr.to_i(16)
+    if edu >= 8
+      skill_options = @basic_skill_options + @advanced_skill_options
+    else
+      skill_options = @basic_skill_options
+    end
+
+    rolls = terms + 1 
+    rolls.times do
+      new_skill = skill_options[rand(skill_options.count)]
+      increase_skill(new_skill)
+    end
   end
 
 end
