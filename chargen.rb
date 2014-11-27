@@ -19,7 +19,31 @@ me.skills['Pilot'] = 1
 me.increase_skill('Pilot', 2)
 me.skills['CbtR'] = 2
 
-puts "#{me.career} #{me.name} #{me.upp} Age #{me.age}  #{me.terms} terms"
+### Testing how to assign ranks
+me.career = 'Marines'
+commission_roll = roll2
+if commission_roll >= 8
+  grade_set = 'Officer'
+  grade_level = me.terms
+  if grade_level > 5
+    grade_level = 5
+  end
+else
+  grade_set = 'Enlisted'
+  grade_level = me.terms + 2
+  if grade_level > 8
+    grade_level = 8
+  end
+end
+
+grade = Grade[grade_set][grade_level]
+me.rank = Ranks[me.career][grade]  
+
+####  End of testing how to assign ranks.
+
+
+###  Output section
+puts "#{me.career} #{me.rank} #{me.name} #{me.upp} Age #{me.age}  #{me.terms} terms"
 first_skill = true
 me.skills.each do |skill, level|
   if first_skill == false
@@ -30,8 +54,5 @@ me.skills.each do |skill, level|
 end
 print "\n"
 
-# test_career = 'Marines'
-# test_grade = 'E3'
-# puts "Rank is #{Ranks[test_career][test_grade]}."
-
+#####  End of output section.
 
