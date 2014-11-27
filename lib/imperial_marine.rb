@@ -3,9 +3,11 @@ $LOAD_PATH << File.expand_path("../lib", __FILE__)
 require 'character'
 
 class ImperialMarine < Character
+  Grade = Hash.new
+  Grade['Enlisted'] = %w(E1 E2 E3 E4 E5 E6 E7 E8 E9)
+  Grade['Officer'] = %w(O1 O2 O3 O4 O5 O6)
 
-  Ranks = Hash.new
-  Ranks['Marine'] = { 
+  Ranks = { 
     'E1' => 'Private',
     'E2' => 'Lance Corporal',
     'E3' => 'Corporal',
@@ -19,23 +21,30 @@ class ImperialMarine < Character
     'O3' => 'Force Commander',
     'O4' => 'Lieutenant Colonel',
     'O5' => 'Colonel',
-    'O6' => 'Brigadier',
+    'O6' => 'Brigadier'
   }
 
   Comission_roll = 9
 
-
-  attr_accessor :career
-
   def initialize()
     super
     @career = 'Marine'
+    @rank = 'Private'
+    @skills = { 'Blade' => 1 }
   end
 
-  def get_comission(roll)
+  def set_rank()
+    roll = roll2
     if roll >= Comission_roll
-      comissioned = true
-    end
-  end  
+      grade_set = 'Officer'
+      grade_level = [terms, 5].min
+    else
+      grade_set = 'Enlisted'
+      grade_level = [terms + 2, 8].min
+    end 
+    grade = Grade[grade_set][grade_level]
+    @rank = Ranks[grade]
+  end
+
 end
 

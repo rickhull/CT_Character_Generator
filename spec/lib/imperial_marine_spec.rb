@@ -4,9 +4,8 @@ require 'imperial_marine'
 describe ImperialMarine do
 
   describe '#rank' do
-    context 'when set rank' do
-      before { subject.rank = 'Private' }
-      it 'returns rank' do
+    context 'when no set rank' do
+      it 'returns Private' do
         subject.rank.should == 'Private'
       end
     end 
@@ -19,6 +18,7 @@ describe ImperialMarine do
       end
     end
   end
+      
 
 end
 
