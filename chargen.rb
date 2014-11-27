@@ -20,7 +20,7 @@ me.increase_skill('Pilot', 2)
 me.skills['CbtR'] = 2
 
 ### Testing how to assign ranks
-me.career = 'Marines'
+me.career = 'Marine'
 commission_roll = roll2
 if commission_roll >= 8
   grade_set = 'Officer'
@@ -37,6 +37,9 @@ else
 end
 
 grade = Grade[grade_set][grade_level]
+#grade = 'E7'
+#puts "grade #{grade}."
+#puts "me.career is #{me.career}."
 me.rank = Ranks[me.career][grade]  
 
 ####  End of testing how to assign ranks.
