@@ -29,10 +29,10 @@ end
 def build_skills(career)
   skills = Hash.new
   skills['Army'] = ['CbtR', 'Drive', 'Ldr', 'CbtR', 'Mech', 'GunCbt', ]
-  skills['Marines'] = ['CbtR', 'BattleDress', 'Ldr', 'CbtR', 'Mech', 'GunCbt', ]
+  skills['Marine'] = ['CbtR', 'BattleDress', 'Ldr', 'CbtR', 'Mech', 'GunCbt', ]
   skills['Navy'] = ['Pilot', 'Nav', 'Sensors',]
-  skills['Merchants'] = ['Pilot', 'Nav', 'Broker', 'Steward', 'Math']
-  skills['Scouts'] = ['Pilot', 'Nav', 'Sensors',]
+  skills['Merchant'] = ['Pilot', 'Nav', 'Broker', 'Steward', 'Math']
+  skills['Scout'] = ['Pilot', 'Nav', 'Sensors',]
 
   max = skills[career].length
   return skills[career][rand(max)]
