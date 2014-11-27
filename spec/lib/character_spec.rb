@@ -69,7 +69,8 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        subject.age.should == 34
+        subject.age.should be >= 36
+        subject.age.should be <= 38
       end
     end
   end
