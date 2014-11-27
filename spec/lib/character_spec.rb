@@ -59,7 +59,8 @@ describe Character do
   describe '#age' do
     context 'when terms are not set' do
       it 'returns the default age' do
-        subject.age.should == Character::DEFAULT_AGE
+        subject.age.should be >= Character::DEFAULT_AGE
+        subject.age.should be <= Character::DEFAULT_AGE + 3
       end
     end
 
@@ -69,7 +70,7 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        subject.age.should be >= 36
+        subject.age.should be >= 34
         subject.age.should be <= 38
       end
     end

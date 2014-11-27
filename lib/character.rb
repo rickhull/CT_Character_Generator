@@ -33,7 +33,7 @@ class Character
   end
 
   def age
-    @age ||= (terms * 4) + DEFAULT_AGE
+    @age ||= (terms * 4) + DEFAULT_AGE + rand(3)
   end
 
   def terms
