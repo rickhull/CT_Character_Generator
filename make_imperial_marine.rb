@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-# $LOAD_PATH << File.expand_path("./lib", __FILE__)
+$LOAD_PATH << File.expand_path("../lib", __FILE__)
 
-#require 'lib/character'
 require 'lib/imperial_marine'
 require 'lib/trav_functions'
 require 'lib/trav_arrays'
@@ -10,10 +9,10 @@ require 'lib/dice'
 
 me = Imperial_Marine.new
 me.terms = average2
-# me.career = set_career
 me.name = 'Allesandro'
 
-stat_names = Character::STAT_NAMES
+#stat_names = Character::STAT_NAMES
+stat_names = Imperial_Marine::STAT_NAMES
 stat_names.each do |stat|
   me.set_stat(stat, make_stat)
 end
@@ -23,7 +22,6 @@ me.increase_skill('Pilot', 2)
 me.skills['CbtR'] = 2
 
 ### Testing how to assign ranks
-# me.career = 'Marine'
 commission_roll = roll2
 if commission_roll >= 8
   grade_set = 'Officer'
@@ -40,9 +38,6 @@ else
 end
 
 grade = Grade[grade_set][grade_level]
-#grade = 'E7'
-#puts "grade #{grade}."
-#puts "me.career is #{me.career}."
 me.rank = Ranks[me.career][grade]  
 
 ####  End of testing how to assign ranks.

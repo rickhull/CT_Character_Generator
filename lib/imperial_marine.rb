@@ -7,6 +7,7 @@ class Imperial_Marine < Character
   attr_accessor :rank, :career
 
   def initialize()
+    super
     @career = 'Marine'
   end
 
