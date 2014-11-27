@@ -7,12 +7,12 @@ require 'lib/trav_functions'
 require 'lib/trav_arrays'
 require 'lib/dice'
 
-me = Imperial_Marine.new
+me = ImperialMarine.new
 me.terms = average2
 me.name = 'Allesandro'
 
 #stat_names = Character::STAT_NAMES
-stat_names = Imperial_Marine::STAT_NAMES
+stat_names = ImperialMarine::STAT_NAMES
 stat_names.each do |stat|
   me.set_stat(stat, make_stat)
 end

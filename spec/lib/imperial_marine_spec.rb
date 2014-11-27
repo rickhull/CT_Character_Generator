@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'imperial_marine'
 
-describe Imperial_Marine do
+describe ImperialMarine do
 
   describe '#rank' do
     context 'when set rank' do
