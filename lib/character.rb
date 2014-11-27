@@ -2,13 +2,13 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :grade, :skills
+  attr_accessor :career, :gender, :name, :rank, :skills
   attr_writer :terms
 
   def initialize()
     @career = ''
     @gender = ''
-    @grade = ''
+    @rank = ''
     @name = ''
     @stats = {}
     @skills = Hash.new
