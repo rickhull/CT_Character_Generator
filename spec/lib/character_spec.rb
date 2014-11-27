@@ -70,7 +70,8 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        subject.age.should be_within(2).of(36)
+        #subject.age.should be_within(2).of(36)
+        subject.age.should be >= 34
         subject.age.should be <= 37
       end
     end
@@ -96,6 +97,14 @@ describe Character do
       it 'returns 0' do
         # expect(subject.terms).to eql 0
         subject.terms.should == 0
+      end
+    end
+  end
+
+  describe '#comissioned' do
+    context 'when not set' do
+      it 'returns false' do
+        subject.comissioned.should == false
       end
     end
   end
