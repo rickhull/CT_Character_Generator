@@ -1,54 +1,49 @@
 #!/usr/bin/env ruby
 
-require 'lib/character'
+$LOAD_PATH << File.expand_path("../lib", __FILE__)
+
 require 'lib/trav_functions'
-#require 'lib/trav_arrays'
 require 'lib/dice'
+require 'sqlite3'
 
-me = Character.new
-me.terms = average2
-me.career = set_career
-me.name = 'Allesandro'
+# These need to be arguments that are checked.
+career = 'Marine'
 
+
+case career
+  when 'Marine'
+    require 'lib/imperial_marine'
+    character = ImperialMarine.new
+    character.career = 'Marine'
+    character.set_rank()
+  else
+     abort("Sorry, I don't know how to create that sort of character.")
+end
+
+# Set the gender and get a name
+gender_options = ['male', 'female']
+gender = gender_options[rand(gender_options.length)]
+character.set_name(gender)
+
+# Generate the UPP 
+# Really, this should be done before the career is chosen. 
+# Ideally, anyway. Not required for this.
 stat_names = Character::STAT_NAMES
 stat_names.each do |stat|
-  me.set_stat(stat, make_stat)
-end
- 
-me.skills['Pilot'] = 1
-me.increase_skill('Pilot', 2)
-me.skills['CbtR'] = 2
-
-### Testing how to assign ranks
-me.career = 'Marine'
-commission_roll = roll2
-if commission_roll >= 8
-  grade_set = 'Officer'
-  grade_level = me.terms
-  if grade_level > 5
-    grade_level = 5
-  end
-else
-  grade_set = 'Enlisted'
-  grade_level = me.terms + 2
-  if grade_level > 8
-    grade_level = 8
-  end
+  character.set_stat(stat, make_stat)
 end
 
-grade = Grade[grade_set][grade_level]
-#grade = 'E7'
-#puts "grade #{grade}."
-#puts "me.career is #{me.career}."
-me.rank = Ranks[me.career][grade]  
+# Terms defines age and affects skills
+character.terms = average2
 
-####  End of testing how to assign ranks.
+# Skills depends on the career and terms
+character.set_skills()
 
 
 ###  Output section
-puts "#{me.career} #{me.rank} #{me.name} #{me.upp} Age #{me.age}  #{me.terms} terms"
+puts "#{character.career} #{character.rank} #{character.name} #{character.upp} Age #{character.age}  #{character.terms} terms"
 first_skill = true
-me.skills.each do |skill, level|
+character.skills.each do |skill, level|
   if first_skill == false
     print ", "
   end

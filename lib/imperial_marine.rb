@@ -27,6 +27,8 @@ class ImperialMarine < Character
 
   Comission_roll = 9
 
+  attr_accessor :rank
+
   def initialize()
     super
     @career = 'Marine'
