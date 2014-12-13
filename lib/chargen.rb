@@ -1,0 +1,2 @@
+require 'chargen/create'
+
