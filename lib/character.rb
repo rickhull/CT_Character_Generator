@@ -4,15 +4,16 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :skills, :age
+  attr_accessor :career, :gender, :name, :skills, :age, :upp
   attr_writer :terms
 
   def initialize()
     @career = ''
-    @gender = ''
+    @gender = set_gender
     @name = ''
     @stats = {}
     @skills = Hash.new
+    @upp = set_upp()
   end
 
   def set_name(gender='male')
@@ -45,13 +46,20 @@ class Character
     @skills[skill] = old_level + level  
   end
  
-  def set_stat(stat, num)
-    @stats[stat] = num
-  end
+#  def set_stat(stat, num)
+#    @stats[stat] = num
+#  end
 
-  def get_stat(stat)
-    @stats[stat]
+#  def get_stat(stat)
+#    @stats[stat]
+#  end
+
+  def set_gender
+    gender_options = ['male', 'female']
+    @gender ||= gender_options[rand(gender_options.length)]
+    return @gender 
   end
+    
 
   def age
     @age ||= (terms * 4) + DEFAULT_AGE + rand(3)
@@ -61,28 +69,38 @@ class Character
     @terms ||= 0
   end
 
-  def upp
-    if @stats.length == 0
-      upp = ''
-    else
-      STAT_NAMES.inject('') do |upp, stat|
-        upp + @stats[stat]
-      end
-    end    
-  end
+#  def upp
+#    if @stats.length == 0
+#      upp = ''
+#    else
+#      STAT_NAMES.inject('') do |upp, stat|
+#        upp + @stats[stat]
+#      end
+#    end    
+#  end
 
-  def get_stat_modifier(upp_position, low, low_mod, high, high_mod)
-    # Return the modifier based on high or low stat.
-    stat = upp[upp_position, 1]
-    stat = stat.to_i(16)
-    if stat <= low
-    then
-      return low_mod
-    elsif stat >= high
-      return high_mod
-    else
-      return 0
+#  def get_stat_modifier(upp_position, low, low_mod, high, high_mod)
+#    # Return the modifier based on high or low stat.
+#    stat = upp[upp_position, 1]
+#    stat = stat.to_i(16)
+#    if stat <= low
+#    then
+#      return low_mod
+#    elsif stat >= high
+#      return high_mod
+#    else
+#      return 0
+#    end
+#  end
+
+  def set_upp
+    @upp = ''
+    6.times do
+      stat = rand(6) + rand(6) + 2
+      stat = stat.to_s(16).upcase
+      @upp = @upp + stat
     end
+    return @upp
   end
   
 end
