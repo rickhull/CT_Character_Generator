@@ -24,14 +24,14 @@ class ImperialMarine < Character
     'O6' => 'Brigadier'
   }
 
-
-  Comission_roll = 9
-
   attr_accessor :rank
 
   def initialize()
     super
     @career = 'Marine'
+    @comission_roll = 9
+    @grade_set = 'Enlisted'
+    @officer = officer(@comission_roll)
     @rank = 'Private'
     @skills = { 'Blade' => 1 }
     @terms = average2
@@ -40,8 +40,7 @@ class ImperialMarine < Character
   end
 
   def set_rank()
-    roll = roll2
-    if roll >= Comission_roll
+    if @officer 
       grade_set = 'Officer'
       grade_level = [terms, 5].min
     else

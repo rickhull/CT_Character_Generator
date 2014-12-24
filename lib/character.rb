@@ -4,13 +4,14 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :skills, :age, :upp
+  attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer
   attr_writer :terms
 
   def initialize()
     @career = ''
     @gender = set_gender
     @name = ''
+    @officer = false
     @stats = {}
     @skills = Hash.new
     @upp = set_upp()
@@ -46,20 +47,11 @@ class Character
     @skills[skill] = old_level + level  
   end
  
-#  def set_stat(stat, num)
-#    @stats[stat] = num
-#  end
-
-#  def get_stat(stat)
-#    @stats[stat]
-#  end
-
   def set_gender
     gender_options = ['male', 'female']
     @gender ||= gender_options[rand(gender_options.length)]
     return @gender 
   end
-    
 
   def age
     @age ||= (terms * 4) + DEFAULT_AGE + rand(3)
@@ -68,30 +60,6 @@ class Character
   def terms
     @terms ||= 0
   end
-
-#  def upp
-#    if @stats.length == 0
-#      upp = ''
-#    else
-#      STAT_NAMES.inject('') do |upp, stat|
-#        upp + @stats[stat]
-#      end
-#    end    
-#  end
-
-#  def get_stat_modifier(upp_position, low, low_mod, high, high_mod)
-#    # Return the modifier based on high or low stat.
-#    stat = upp[upp_position, 1]
-#    stat = stat.to_i(16)
-#    if stat <= low
-#    then
-#      return low_mod
-#    elsif stat >= high
-#      return high_mod
-#    else
-#      return 0
-#    end
-#  end
 
   def set_upp
     @upp = ''
@@ -102,6 +70,10 @@ class Character
     end
     return @upp
   end
-  
+ 
+  def officer(target_roll=13)
+    @officer ||=  roll2 >= target_roll
+  end
+
 end
 

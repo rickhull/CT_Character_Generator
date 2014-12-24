@@ -29,21 +29,13 @@ case career
     character = ImperialMarine.new
     character.set_upp
     character.career = 'Marine'
-    character.set_rank()
+    character.set_rank
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
 
 # Set name
 character.set_name(character.gender)
-
-# Generate the UPP 
-# Really, this should be done before the career is chosen. 
-# Ideally, anyway. Not required for this.
-#stat_names = Character::STAT_NAMES
-#stat_names.each do |stat|
-#  character.set_stat(stat, make_stat)
-#end
 
 # Terms defines age and affects skills
 character.terms = average2
