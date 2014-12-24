@@ -70,7 +70,6 @@ describe Character do
       before { subject.terms = terms }
 
       it 'calculates age based on terms' do
-        #subject.age.should be_within(2).of(36)
         subject.age.should be >= 34
         subject.age.should be <= 37
       end
@@ -101,6 +100,18 @@ describe Character do
 
   describe '#officer' do
     context 'when not set' do
+      it 'returns false' do
+        subject.officer.should == false
+      end
+    end
+    context 'when given an easy roll' do
+      before { subject.officer(1) }
+      it 'returns true' do
+        subject.officer.should == true
+      end
+    end
+    context 'when given an impossible roll' do
+      before { subject.officer(14) }
       it 'returns false' do
         subject.officer.should == false
       end
