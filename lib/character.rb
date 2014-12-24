@@ -5,7 +5,7 @@ class Character
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
   attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer
-  attr_writer :terms
+  attr_writer :terms, :officer
 
   def initialize()
     @career = ''

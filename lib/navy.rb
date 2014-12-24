@@ -2,40 +2,41 @@ $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
 require 'character'
 
-class ImperialMarine < Character
+class Navy < Character
   Grade = Hash.new
   Grade['Enlisted'] = %w(E1 E2 E3 E4 E5 E6 E7 E8 E9)
   Grade['Officer'] = %w(O1 O2 O3 O4 O5 O6)
 
   Ranks = { 
-    'E1' => 'Private',
-    'E2' => 'Lance Corporal',
-    'E3' => 'Corporal',
-    'E4' => 'Lance Sergeant',
-    'E5' => 'Sergeant',
-    'E6' => 'Leading Sergeant',
-    'E7' => 'First Sergeant',
-    'E8' => 'Sergeant Major',
-    'O1' => 'Lieutenant',
-    'O2' => 'Captain',
-    'O3' => 'Force Commander',
-    'O4' => 'Lieutenant Colonel',
-    'O5' => 'Colonel',
-    'O6' => 'Brigadier'
+    'E1' => 'Spacehand Recruit',
+    'E2' => 'Spacehand Apprentice',
+    'E3' => 'Able Spacehand',
+    'E4' => 'Petty Officer Third Class',
+    'E5' => 'Petty Officer Second Class',
+    'E6' => 'Petter Officer First Class',
+    'E7' => 'Chief Petty Officer',
+    'E8' => 'Senior Chief Petty Officer',
+    'E9' => 'Master Chief Petty Officer',
+    'O1' => 'Ensign',
+    'O2' => 'Sublieutenant',
+    'O3' => 'Lieutenant',
+    'O4' => 'Lieutenant Commander',
+    'O5' => 'Commander',
+    'O6' => 'Admiral'
   }
 
   attr_accessor :rank
 
   def initialize()
     super
-    @career = 'Marine'
-    @comission_roll = 9
+    @career = 'Navy'
+    @comission_roll = 6
     @grade_set = 'Enlisted'
     @officer = officer(@comission_roll)
-    @rank = 'Private'
-    @skills = { 'Blade' => 1 }
-    @basic_skill_options = [ 'GunCbt', 'Blade', 'VaccSuit', 'GunCbt', 'Driver']
-    @advanced_skill_options = ['Medic', 'Computer', 'Sensors', 'Leadership']
+    @rank = 'Spacehand Recruit'
+    @skills = { }
+    @basic_skill_options = [ 'Eng', 'Navg', 'VaccSuit', 'ZeroG', 'Mechanical']
+    @advanced_skill_options = ['Medic', 'Computer', 'Pilot', 'Sensors', 'Leadership']
   end
 
   def set_rank()

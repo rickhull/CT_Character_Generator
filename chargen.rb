@@ -27,18 +27,21 @@ case career
   when 'Marine'
     require 'lib/imperial_marine'
     character = ImperialMarine.new
-    character.set_upp
     character.career = 'Marine'
-    character.set_rank
+  when 'Navy'
+    require 'lib/navy'
+    character = Navy.new
+    character.career = 'Navy'
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
 
+character.terms = average2
+character.set_upp
+character.set_rank
+
 # Set name
 character.set_name(character.gender)
-
-# Terms defines age and affects skills
-character.terms = average2
 
 # Skills depends on the career and terms
 character.set_skills()
