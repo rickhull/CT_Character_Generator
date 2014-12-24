@@ -5,11 +5,23 @@ $LOAD_PATH << File.expand_path("../lib", __FILE__)
 require 'lib/trav_functions'
 require 'lib/dice'
 require 'sqlite3'
+require 'optparse'
 
-# These need to be arguments that are checked.
-career = 'Marine'
+career = ''
+options = { :career => nil }
 
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: chargen -c <career>"
 
+  opts.on( '-c career') do |c|
+    options[:career] = c
+  end
+  
+end
+parser.parse!
+career = options[:career]
+
+  
 case career
   when 'Marine'
     require 'lib/imperial_marine'
