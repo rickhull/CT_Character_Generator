@@ -33,7 +33,7 @@ class Marine < Character
     @grade_set = 'Enlisted'
     @officer = officer(@comission_roll)
     @rank = 'Private'
-    @skills = { 'Blade' => 1 }
+    @skills = { 'Blade' => 1 , 'GunCbt' => 1 }
     @skill_options = [ 'Brawling', 'Gambling', '+1 Str', '+1 Dex', '+1 End', 'GunCbt', 'Blade', 'VaccSuit', 'GunCbt', 'Driver']
     @advanced_skill_options = ['Medical', 'Computer', 'Sensors', 'Leadership']
     @officer_skill_options = ['+1 Edu', '+1 Soc', 'Vehicle', 'HvyWpns', 'Leadership', 'Tactics', 'Mechanic', 'FwdObs', 'Computer', 'Electroncs', 'Medical', 'Instruction', 'Admin']
