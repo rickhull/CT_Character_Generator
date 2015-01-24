@@ -37,14 +37,30 @@ class Character
     end
   end
 
+  def increase_stat(stat, level)
+    stat_index = STAT_NAMES.index(stat)
+    amount = level[-1,1].to_i
+    new_stat = @upp[stat_index,1].to_i(16) + amount
+    new_stat = new_stat.to_s(16).upcase
+    @upp[stat_index] = new_stat
+  end
+
   def increase_skill(skill, level=1)
-    if @skills.has_key?(skill)
+    if skill.split.length > 1
     then
-      old_level = @skills[skill]
+      puts "Old UPP: #{@upp}"
+      amount = skill.split[0]
+      stat = skill.split[1]
+      increase_stat(stat, amount)
     else
-      old_level = 0
-    end
-    @skills[skill] = old_level + level  
+      if @skills.has_key?(skill)
+      then
+        old_level = @skills[skill]
+      else
+        old_level = 0
+      end
+      @skills[skill] = old_level + level
+    end  
   end
  
   def set_gender

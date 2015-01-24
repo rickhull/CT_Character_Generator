@@ -26,7 +26,7 @@ career = options[:career]
 case career
   when 'Marine'
     require 'lib/marine'
-    character = ImperialMarine.new
+    character = Marine.new
     character.career = 'Marine'
   when 'Navy'
     require 'lib/navy'

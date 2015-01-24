@@ -34,33 +34,36 @@ class Marine < Character
     @officer = officer(@comission_roll)
     @rank = 'Private'
     @skills = { 'Blade' => 1 }
-    @basic_skill_options = [ 'GunCbt', 'Blade', 'VaccSuit', 'GunCbt', 'Driver']
-    @advanced_skill_options = ['Medic', 'Computer', 'Sensors', 'Leadership']
+    @skill_options = [ 'Brawling', 'Gambling', '+1 Str', '+1 Dex', '+1 End', 'GunCbt', 'Blade', 'VaccSuit', 'GunCbt', 'Driver']
+    @advanced_skill_options = ['Medical', 'Computer', 'Sensors', 'Leadership']
+    @officer_skill_options = ['+1 Edu', '+1 Soc', 'Vehicle', 'HvyWpns', 'Leadership', 'Tactics', 'Mechanic', 'FwdObs', 'Computer', 'Electroncs', 'Medical', 'Instruction', 'Admin']
   end
 
   def set_rank()
     if @officer 
-      grade_set = 'Officer'
+      @grade_set = 'Officer'
       grade_level = [terms, 5].min
     else
-      grade_set = 'Enlisted'
+      @grade_set = 'Enlisted'
       grade_level = [terms + 2, 8].min
     end 
-    grade = Grade[grade_set][grade_level]
+    grade = Grade[@grade_set][grade_level]
     @rank = Ranks[grade]
   end
 
   def set_skills()
     edu = upp[4].chr.to_i(16)
     if edu >= 8
-      skill_options = @basic_skill_options + @advanced_skill_options
-    else
-      skill_options = @basic_skill_options
+      @skill_options = @skill_options + @advanced_skill_options
+    end
+
+    if @grade_set == 'Officer'
+      @skill_options = @skill_options + @officer_skill_options
     end
 
     rolls = terms + 1 
     rolls.times do
-      new_skill = skill_options[rand(skill_options.count)]
+      new_skill = @skill_options[rand(@skill_options.count)]
       increase_skill(new_skill)
     end
   end
