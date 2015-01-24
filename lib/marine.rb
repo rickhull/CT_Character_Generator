@@ -2,7 +2,7 @@ $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
 require 'character'
 
-class ImperialMarine < Character
+class Marine < Character
   Grade = Hash.new
   Grade['Enlisted'] = %w(E1 E2 E3 E4 E5 E6 E7 E8 E9)
   Grade['Officer'] = %w(O1 O2 O3 O4 O5 O6)
