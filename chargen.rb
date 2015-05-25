@@ -32,6 +32,10 @@ case career
     require 'lib/navy'
     character = Navy.new
     character.career = 'Navy'
+  when 'Warder'
+    require 'lib/warder'
+    character = Warder.new
+    character.career = 'Warder'
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
@@ -48,7 +52,7 @@ character.set_skills()
 
 
 ###  Output section
-puts "#{character.career} #{character.rank} #{character.name} #{character.upp} Age #{character.age}  #{character.terms} terms"
+puts "#{character.career} #{character.rank} #{character.name} #{character.upp} Gender #{character.gender.capitalize} Age #{character.age}  #{character.terms} terms"
 first_skill = true
 character.skills.each do |skill, level|
   if first_skill == false
