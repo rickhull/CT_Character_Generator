@@ -56,7 +56,17 @@ character.set_skills()
 
 
 ###  Output section
-puts "#{character.career} #{character.rank} #{character.name} #{character.upp} Gender #{character.gender.capitalize} Age #{character.age}  #{character.terms} terms"
+
+if character.rank.length > 1
+  rank = character.rank
+end
+
+if character.terms > 0
+  terms = character.terms
+  term_string = "#{terms} terms"
+end
+
+puts "#{character.career} #{rank} #{character.name} #{character.upp} Gender #{character.gender.capitalize} Age #{character.age}  #{term_string}"
 first_skill = true
 character.skills.each do |skill, level|
   if first_skill == false
