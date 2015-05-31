@@ -36,6 +36,10 @@ case career
     require 'lib/warder'
     character = Warder.new
     character.career = 'Warder'
+  when 'College'
+    require 'lib/college'
+    character = College.new
+    character.career = 'College'
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
