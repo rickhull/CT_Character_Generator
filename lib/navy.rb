@@ -13,7 +13,7 @@ class Navy < Character
     'E3' => 'Able Spacehand',
     'E4' => 'Petty Officer Third Class',
     'E5' => 'Petty Officer Second Class',
-    'E6' => 'Petter Officer First Class',
+    'E6' => 'Petty Officer First Class',
     'E7' => 'Chief Petty Officer',
     'E8' => 'Senior Chief Petty Officer',
     'E9' => 'Master Chief Petty Officer',
@@ -37,6 +37,7 @@ class Navy < Character
     @skills = { }
     @basic_skill_options = [ 'Eng', 'Navg', 'VaccSuit', 'ZeroG', 'Mechanical']
     @advanced_skill_options = ['Medic', 'Computer', 'Pilot', 'Sensors', 'Leadership']
+    @officer_skill_options = ['Medic', 'Computer', 'Leadership', 'Admin', '+1 Soc']
   end
 
   def set_rank()
@@ -58,6 +59,10 @@ class Navy < Character
       skill_options = @basic_skill_options + @advanced_skill_options
     else
       skill_options = @basic_skill_options
+    end
+
+    if @officer
+      skill_options = skill_options + @officer_skill_options
     end
 
     rolls = terms + 1 
