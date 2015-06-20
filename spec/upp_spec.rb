@@ -13,12 +13,11 @@ module Ct_chargen
     end
 
     it "be 6 characters long" do
-      #@char_upp.should have(6).characters
-      @char_upp.size.to eq(6)
+      expect(@char_upp.size).to eq(6)
     end
 
     it "be hexidecimal digits" do
-      @char_upp.should =~ /[0-9A-F]/
+      expect(@char_upp).to match(/[0-9A-F]/)
     end
       
   end
