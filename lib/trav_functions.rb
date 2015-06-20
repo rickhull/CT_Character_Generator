@@ -8,8 +8,12 @@ def roll1
   return 1 + rand(6)
 end
 
-def average2
+def average1
   return ((rand(6) + rand(6)) / 2) + 1
+end
+
+def average2
+  return ((rand(6) + rand(6) + rand(6) + rand(6) + rand(6) + rand(6)) / 3) + 2
 end
 
 def hexconvert(num)

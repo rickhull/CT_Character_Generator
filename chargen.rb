@@ -24,12 +24,12 @@ parser = OptionParser.new do |opts|
 end
 parser.parse!
 
-if ARGV.empty?
-  puts parser.help
-  exit 1
-else
+#if options[:career].length 
+#  puts parser.help
+#  exit 1
+#else
   career = options[:career]
-end
+#end
 
 # Need a failure mode if the files don't exist. 
 case career
