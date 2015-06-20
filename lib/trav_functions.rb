@@ -11,7 +11,7 @@ def roll1
 end
 
 def average1
-  return $dice.average2
+  return $dice.average1
 end
 
 def average2
