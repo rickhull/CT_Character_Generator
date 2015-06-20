@@ -23,9 +23,15 @@ parser = OptionParser.new do |opts|
   
 end
 parser.parse!
-career = options[:career]
 
-  
+if ARGV.empty?
+  puts parser.help
+  exit 1
+else
+  career = options[:career]
+end
+
+# Need a failure mode if the files don't exist. 
 case career
   when 'Marine'
     require 'lib/marine'
