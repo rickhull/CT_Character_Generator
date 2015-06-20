@@ -12,9 +12,12 @@ career = ''
 options = { :career => nil }
 
 parser = OptionParser.new do |opts|
-  opts.banner = "Usage: chargen -c <career>"
+  program_name = File.basename($PROGRAM_NAME)
+  opts.banner = "Used to create CT style characters.
+  Usage: #{program_name} -c <career>"
 
-  opts.on( '-c career') do |c|
+  opts.on( '-c career', 'Select a career. Current options are:
+                         Marine, Navy, Warder, College' ) do |c|
     options[:career] = c
   end
   
