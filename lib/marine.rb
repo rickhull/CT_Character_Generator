@@ -15,7 +15,8 @@ class Marine < Character
     'E5' => 'Sergeant',
     'E6' => 'Leading Sergeant',
     'E7' => 'First Sergeant',
-    'E8' => 'Sergeant Major',
+    'E8' => 'Gunnery Sergeant',
+    'E9' => 'Sergeant Major',
     'O1' => 'Lieutenant',
     'O2' => 'Captain',
     'O3' => 'Force Commander',
@@ -41,13 +42,14 @@ class Marine < Character
 
   def set_rank()
     if @officer 
-      @grade_set = 'Officer'
+      puts "Am officer."
+      grade_set = 'Officer'
       grade_level = [terms, 5].min
     else
-      @grade_set = 'Enlisted'
+      grade_set = 'Enlisted'
       grade_level = [terms + 2, 8].min
     end 
-    grade = Grade[@grade_set][grade_level]
+    grade = Grade[grade_set][grade_level]
     @rank = Ranks[grade]
   end
 
@@ -57,7 +59,7 @@ class Marine < Character
       @skill_options = @skill_options + @advanced_skill_options
     end
 
-    if @grade_set == 'Officer'
+    if @officer
       @skill_options = @skill_options + @officer_skill_options
     end
 
