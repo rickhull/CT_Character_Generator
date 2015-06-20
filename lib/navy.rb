@@ -43,6 +43,7 @@ class Navy < Character
     if @officer 
       grade_set = 'Officer'
       grade_level = [terms, 5].min
+      min_stat('Edu', 6)
     else
       grade_set = 'Enlisted'
       grade_level = [terms + 2, 8].min
