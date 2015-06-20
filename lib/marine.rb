@@ -44,9 +44,10 @@ class Marine < Character
     if @officer 
       grade_set = 'Officer'
       grade_level = [terms, 5].min
+      min_stat('Edu', 6)
     else
       grade_set = 'Enlisted'
-      grade_level = [terms + 2, 8].min
+      grade_level = [terms + 1, 8].min
     end 
     grade = Grade[grade_set][grade_level]
     @rank = Ranks[grade]
