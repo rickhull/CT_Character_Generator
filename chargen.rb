@@ -53,7 +53,7 @@ case career
      abort("Sorry, I don't know how to create that sort of character.")
 end
 
-character.terms = average2
+character.terms = average1
 character.set_upp
 character.set_rank
 
