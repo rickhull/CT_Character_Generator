@@ -11,7 +11,7 @@ class College < Character
     @career = 'College Student'
     @rank = ''
     @skills = { 'Computer' => 1 }
-    @skill_options = [ 'Administration', 'Electronics', 'Athletics', '+1 Int', 'Vehicle' ]
+    @skill_options = [ 'Administration', 'Electronics', 'Athletics', '+1 Int', '+ Edu', 'Vehicle' ]
     @advanced_skill_options = ['+1 Edu', 'Science', 'Computer', 'Engineering', 'Medical', 'Leadership']
   end
 
@@ -27,12 +27,8 @@ class College < Character
       increase_stat('Edu', '2')
     end
 
-    soc = upp[5].chr.to_i(16)
-    if soc <= 5
-      increase_stat('Soc', '2')
-    end
+    min_stat('Soc', 6)
 
-    soc 
     @terms = 0
     @age = 18 + rand(3)
 
