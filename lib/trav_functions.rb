@@ -62,6 +62,37 @@ def get_stat_mod(stat)
   end
 end
 
+def out_txt(c)
+  puts ""
+#  output_sequence = %w(career rank name upp gender age terms)
+#  output_sequence.each do |item| 
+    #item = character.send(item)
+    #puts "#{character.send(item)}"
+    #puts "item is #{thing}."
+#    puts "item is #{item}."
+#  end
+
+#  career = character.career
+  rank = c.rank
+  name = c.name
+  upp = c.upp
+  gender = c.gender
+  age = c.age
+  terms = c.terms
+ 
+  
+  puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+  first_skill = true
+  c.skills.each do |skill, level|
+    if first_skill == false
+      print ", "
+    end 
+    print "#{skill}-#{level}"
+    first_skill = false
+  end
+  puts""
+end
+
 #stats = {
 #       'Str' => nil,
 #       'Dex' => nil,
