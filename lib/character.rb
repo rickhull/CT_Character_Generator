@@ -45,6 +45,15 @@ class Character
     @upp[stat_index] = new_stat
   end
 
+  def max_stat(stat, max)
+    stat_index = STAT_NAMES.index(stat)
+    old_stat = @upp[stat_index,1].to_i(16)
+    new_stat = [old_stat, max].min.to_s(16).upcase
+    @upp[stat_index] = new_stat
+  end
+
+  def min_stat(stat, min)
+  end  
   def increase_skill(skill, level=1)
     if skill.split.length > 1
     then

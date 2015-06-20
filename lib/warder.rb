@@ -20,6 +20,7 @@ class Warder < Character
   end
 
   def set_skills()
+    max_stat('Soc', 4)
     edu = upp[4].chr.to_i(16)
     if edu >= 8
       @skill_options = @skill_options + @advanced_skill_options
@@ -32,5 +33,6 @@ class Warder < Character
     end
   end
 
+  
 end
 
