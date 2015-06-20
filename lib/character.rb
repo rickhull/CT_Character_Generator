@@ -48,7 +48,6 @@ class Character
   def increase_skill(skill, level=1)
     if skill.split.length > 1
     then
-      puts "Old UPP: #{@upp}"
       amount = skill.split[0]
       stat = skill.split[1]
       increase_stat(stat, amount)

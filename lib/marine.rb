@@ -42,7 +42,6 @@ class Marine < Character
 
   def set_rank()
     if @officer 
-      puts "Am officer."
       grade_set = 'Officer'
       grade_level = [terms, 5].min
     else

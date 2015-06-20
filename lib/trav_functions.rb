@@ -1,19 +1,21 @@
-# require 'lib/dice'
+require 'lib/dice'
+
+$dice = Dice.new
 
 def roll2
-  return 2 + rand(6) + rand(6)
+  return $dice.roll2
 end
 
 def roll1
-  return 1 + rand(6)
+  return $dice.roll1
 end
 
 def average1
-  return ((rand(6) + rand(6)) / 2) + 1
+  return $dice.average2
 end
 
 def average2
-  return ((rand(6) + rand(6) + rand(6) + rand(6) + rand(6) + rand(6)) / 3) + 2
+  return $dice.average2
 end
 
 def hexconvert(num)

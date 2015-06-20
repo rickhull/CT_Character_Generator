@@ -56,6 +56,10 @@ end
 character.terms = average1
 character.set_upp
 character.set_rank
+if character.rank.length > 0
+  rank = character.rank
+end
+
 
 # Set name
 character.set_name(character.gender)
@@ -63,12 +67,7 @@ character.set_name(character.gender)
 # Skills depends on the career and terms
 character.set_skills()
 
-
 ###  Output section
-
-if character.rank.length > 1
-  rank = character.rank
-end
 
 if character.terms > 0
   terms = character.terms
