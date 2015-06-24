@@ -24,12 +24,7 @@ parser = OptionParser.new do |opts|
 end
 parser.parse!
 
-#if options[:career].length 
-#  puts parser.help
-#  exit 1
-#else
-  career = options[:career]
-#end
+career = options[:career]
 
 # Need a failure mode if the files don't exist. 
 case career
@@ -49,41 +44,19 @@ case career
     require 'lib/college'
     character = College.new
     character.career = 'College'
+  when 'Entertainer'
+    require 'lib/entertainer'
+    character = Entertainer.new
+    character.career = 'Entertainer'
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
 
-character.terms = average1
+character.terms = roll1
 character.set_upp
 character.set_rank
-if character.rank.length > 0
-  rank = character.rank
-end
-
-
-# Set name
 character.set_name(character.gender)
-
-# Skills depends on the career and terms
 character.set_skills()
 
 ###  Output section
-
-if character.terms > 0
-  terms = character.terms
-  term_string = "#{terms} terms"
-end
-
-puts "#{character.career} #{rank} #{character.name} #{character.upp} Gender #{character.gender.capitalize} Age #{character.age}  #{term_string}"
-first_skill = true
-character.skills.each do |skill, level|
-  if first_skill == false
-    print ", "
-  end
-  print "#{skill}-#{level}"
-  first_skill = false
-end
-print "\n"
-
-#####  End of output section.
-
+out_txt(character)
