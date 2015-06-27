@@ -1,0 +1,5 @@
+1. Age characters
+2. Mustering out benefits.
+3. Stuff.
+4. Output able to go to JSON file.
+
