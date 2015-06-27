@@ -6,7 +6,7 @@ describe Marine do
   describe '#rank' do
     context 'when no set rank' do
       it 'returns Private' do
-        subject.rank.should == 'Private'
+        expect(subject.rank).to match('Private')
       end
     end 
   end
@@ -14,11 +14,18 @@ describe Marine do
   describe '#career' do
     context 'when career queried' do
       it 'returns Marine' do
-        subject.career.should == 'Marine'
+        expect(subject.career).to match('Marine')
       end
     end
   end
-      
+
+  describe '#skills' do
+    context 'when created' do
+      it 'has base skills' do
+        expect(subject.skills.keys).to include('Blade')
+        expect(subject.skills.keys).to include('GunCbt')
+      end
+    end
+  end
 
 end
-
