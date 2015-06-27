@@ -68,3 +68,4 @@ character.set_skills()
 
 ###  Output section
 out_txt(character)
+print_mental()
