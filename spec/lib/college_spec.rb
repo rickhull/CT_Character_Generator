@@ -1,12 +1,12 @@
 #require 'spec_helper'
-require 'scout'
+require 'college'
 
-describe Scout do
+describe College do
 
   describe '#career' do
     context 'when career queried' do
-      it 'returns Scout' do
-        expect(subject.career).to match('Scout')
+      it 'returns College' do
+        expect(subject.career).to match('College')
       end
     end
   end
@@ -14,7 +14,7 @@ describe Scout do
   describe '#skills' do
     context 'when created' do
       it 'has base skills' do
-        expect(subject.skills.keys).to include('Pilot')
+        expect(subject.skills.keys).to include('Computer')
       end
     end
   end

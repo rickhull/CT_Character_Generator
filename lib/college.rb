@@ -9,14 +9,13 @@ class College < Character
   def initialize()
     super
     @career = 'College Student'
-    @rank = ''
     @skills = { 'Computer' => 1 }
     @skill_options = [ 'Administration', 'Electronics', 'Athletics', '+1 Int', '+ Edu', 'Vehicle' ]
     @advanced_skill_options = ['+1 Edu', 'Science', 'Computer', 'Engineering', 'Medical', 'Leadership']
   end
 
   def set_rank()
-    @rank = ''
+    @rank = 'Undergrad'
   end
 
   def set_skills()
