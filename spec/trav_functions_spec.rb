@@ -2,5 +2,5 @@
 require 'trav_functions'
 
 describe 'trav_functions' do
-  pending
+  skip
 end
