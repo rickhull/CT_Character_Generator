@@ -10,7 +10,7 @@ class Character
   def initialize()
     @career = ''
     @gender = set_gender
-    @name = ''
+    @name = set_name(@gender)
     @officer = false
     @stats = {}
     @skills = Hash.new
