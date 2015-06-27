@@ -10,8 +10,8 @@ class College < Character
     super
     @career = 'College Student'
     @skills = { 'Computer' => 1 }
-    @skill_options = [ 'Administration', 'Electronics', 'Athletics', '+1 Int', '+ Edu', 'Vehicle' ]
-    @advanced_skill_options = ['+1 Edu', 'Science', 'Computer', 'Engineering', 'Medical', 'Leadership']
+    @skill_options = [ 'Administration', 'Electronic', 'Athletics', '+1 Int', '+ Edu', 'Vehicle' ]
+    @advanced_skill_options = ['+1 Edu', 'Science', 'Computer', 'Engineering', 'Medical', 'Leader']
   end
 
   def set_rank()

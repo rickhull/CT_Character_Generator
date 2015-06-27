@@ -12,7 +12,7 @@ class Warder < Character
     @rank = ''
     @skills = { 'Streetwise' => 1 }
     @skill_options = [ 'Brawling', 'Bribery', 'Forgery', 'Gambling', '+1 Dex', '+1 Int', 'GunCbt', 'Blade', 'Mechanical', 'JoT' ]
-    @advanced_skill_options = ['Computer', 'Electronics', 'Medical', 'Vehicle', 'Steward', 'Leadership']
+    @advanced_skill_options = ['Computer', 'Electronic', 'Medical', 'Vehicle', 'Steward', 'Leader']
   end
 
   def set_rank()
