@@ -37,10 +37,11 @@ class Character
     end
   end
 
-  def increase_stat(stat, level)
+  def increase_stat(stat, level=1)
     stat_index = STAT_NAMES.index(stat)
     amount = level[-1,1].to_i
     new_stat = @upp[stat_index,1].to_i(16) + amount
+    new_stat = [new_stat, 15].min
     new_stat = new_stat.to_s(16).upcase
     @upp[stat_index] = new_stat
   end
