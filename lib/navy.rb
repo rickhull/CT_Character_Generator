@@ -21,7 +21,7 @@ class Navy < Character
     'O2' => 'Sublieutenant',
     'O3' => 'Lieutenant',
     'O4' => 'Lieutenant Commander',
-    'O5' => 'Commander',
+    'O5' => 'Captain',
     'O6' => 'Admiral'
   }
 
@@ -34,10 +34,8 @@ class Navy < Character
     @grade_set = 'Enlisted'
     @officer = officer(@comission_roll)
     @rank = 'Spacehand Recruit'
-    @skills = { }
-    @basic_skill_options = [ 'Eng', 'Navg', 'VaccSuit', 'ZeroG', 'Mechanical']
-    @advanced_skill_options = ['Medic', 'Computer', 'Pilot', 'Sensors', 'Leadership']
-    @officer_skill_options = ['Medic', 'Computer', 'Leadership', 'Admin', '+1 Soc']
+    @basic_skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', '+1 Soc', 'ShipsBoat', 'FwdObs', 'Gunnery', 'Blade', 'GunCbt', 'VaccSuit', 'Mechanical', 'Electronic', 'Engineering', 'Gunnery', 'JoT']
+    @advanced_skill_options = ['Medical', 'Navigation', 'Engineering', 'Computer', 'Pilot', 'Admin']
   end
 
   def set_rank()
@@ -54,6 +52,8 @@ class Navy < Character
   end
 
   def set_skills()
+    rolls = terms + 2 
+
     edu = upp[4].chr.to_i(16)
     if edu >= 8
       skill_options = @basic_skill_options + @advanced_skill_options
@@ -62,10 +62,15 @@ class Navy < Character
     end
 
     if @officer
-      skill_options = skill_options + @officer_skill_options
+      puts "rank is #{@rank}."
+      if @rank == 'Captain'
+        increase_stat('Soc', '+1')
+      elsif @rank == 'Admiral'
+        increase_stat('Soc', '+2')
+      end 
+      rolls = rolls + 1
     end
 
-    rolls = terms + 1 
     rolls.times do
       new_skill = skill_options[rand(skill_options.count)]
       increase_skill(new_skill)
