@@ -52,6 +52,10 @@ case career
     require 'lib/guide'
     character = Guide.new
     character.career = 'Guide'
+  when 'Scout'
+    require 'lib/scout'
+    character = Scout.new
+    character.career = 'Scout'
   else
      abort("Sorry, I don't know how to create that sort of character.")
 end
