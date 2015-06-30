@@ -8,7 +8,6 @@ require 'sqlite3'
 require 'optparse'
 require 'character'
 
-career = ''
 options = { :career => nil }
 
 parser = OptionParser.new do |opts|
@@ -17,7 +16,8 @@ parser = OptionParser.new do |opts|
   Usage: #{program_name} -c <career>"
 
   opts.on( '-c career', 'Select a career. Current options are:
-                         Marine, Navy, Warder, College' ) do |c|
+                         Marine, Navy, Scout, Warder, College,
+                         Guide, Entertainer' ) do |c|
     options[:career] = c
   end
   
