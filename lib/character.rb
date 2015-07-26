@@ -2,7 +2,7 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
-  attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer
+  attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer, :llp
   attr_writer :terms, :officer
 
   def initialize()
@@ -13,6 +13,7 @@ class Character
     @stats = {}
     @skills = Hash.new
     @upp = set_upp()
+    @llp = set_llp()
   end
 
   def set_name(gender='male')
@@ -101,6 +102,20 @@ class Character
  
   def officer(target_roll=13)
     @officer ||=  roll2 >= target_roll
+  end
+
+  def set_llp()
+    roll = rand(100)
+    case roll
+      when 0..6 then llp = 'Mover (action)'
+      when 7..31 then llp = 'Doer (action)'
+      when 32..44 then llp = 'Influencer (heart)'
+      when 45..76 then llp = 'Responder (heart)'
+      when 77..86 then llp = 'Shaper (head)'
+      when 87..89 then llp = 'Producer (head)'
+      when 90..99 then llp = 'Contemplator (head)'
+    end
+    return llp
   end
 
 end
