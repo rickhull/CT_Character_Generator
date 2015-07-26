@@ -1,5 +1,3 @@
-$LOAD_PATH << File.expand_path("../lib", __FILE__)
-
 class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)

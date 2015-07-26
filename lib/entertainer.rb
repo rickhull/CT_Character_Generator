@@ -1,5 +1,3 @@
-$LOAD_PATH << File.expand_path("../lib", __FILE__)
-
 require 'character'
 
 class Entertainer < Character
