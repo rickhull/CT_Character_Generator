@@ -34,12 +34,9 @@ parser = OptionParser.new do |opts|
                          Guide, Entertainer' ) do |c|
     career = c
   end
-  
 end
 parser.parse!
 
 character = gen_char(career)
 
-###  Output section
 out_txt(character)
-#print_mental()
