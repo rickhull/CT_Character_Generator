@@ -42,4 +42,4 @@ character = gen_char(career)
 
 ###  Output section
 out_txt(character)
-print_mental()
+#print_mental()
