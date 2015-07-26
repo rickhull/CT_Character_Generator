@@ -18,19 +18,6 @@ def average2
   return $dice.average2
 end
 
-def print_mental()
-  roll = rand(100)
-  case roll
-    when 0..6 then puts "Mover (action)"
-    when 7..31 then puts "Doer (action)"
-    when 32..44 then puts "Influencer (heart)"
-    when 45..76 then puts "Responder (heart)"
-    when 77..86 then puts "Shaper (head)"
-    when 87..89 then puts "Producer (head)"
-    when 90..99 then puts "Contemplator (head)"
-  end
-end
-
 def out_txt(c)
   rank = c.rank
   name = c.name
@@ -38,6 +25,7 @@ def out_txt(c)
   gender = c.gender
   age = c.age
   terms = c.terms
+  llp = c.llp
   
   puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
   first_skill = true
@@ -48,5 +36,7 @@ def out_txt(c)
     print "#{skill}-#{level}"
     first_skill = false
   end
+  print "\n"
+  puts llp
   puts""
 end
