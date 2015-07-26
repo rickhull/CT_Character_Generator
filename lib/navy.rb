@@ -60,7 +60,6 @@ class Navy < Character
     end
 
     if @officer
-      puts "rank is #{@rank}."
       if @rank == 'Captain'
         increase_stat('Soc', '+1')
       elsif @rank == 'Admiral'
