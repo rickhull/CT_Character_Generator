@@ -7,6 +7,7 @@ require 'lib/dice'
 require 'sqlite3'
 require 'optparse'
 require 'character'
+require 'Chargen'
 
 options = { :career => nil }
 
@@ -26,39 +27,43 @@ parser.parse!
 
 career = options[:career]
 
+name = career.capitalize
+character = Chargen.const_get(name).new
+character.career = name
+
 # Need a failure mode if the files don't exist. 
-case career
-  when 'Marine'
-    require 'lib/marine'
-    character = Marine.new
-    character.career = 'Marine'
-  when 'Navy'
-    require 'lib/navy'
-    character = Navy.new
-    character.career = 'Navy'
-  when 'Warder'
-    require 'lib/warder'
-    character = Warder.new
-    character.career = 'Warder'
-  when 'College'
-    require 'lib/college'
-    character = College.new
-    character.career = 'College'
-  when 'Entertainer'
-    require 'lib/entertainer'
-    character = Entertainer.new
-    character.career = 'Entertainer'
-  when 'Guide'
-    require 'lib/guide'
-    character = Guide.new
-    character.career = 'Guide'
-  when 'Scout'
-    require 'lib/scout'
-    character = Scout.new
-    character.career = 'Scout'
-  else
-     abort("Sorry, I don't know how to create that sort of character.")
-end
+#case career
+#  when 'Marine'
+#    require 'lib/marine'
+#    character = Marine.new
+#    character.career = 'Marine'
+#  when 'Navy'
+#    require 'lib/navy'
+#    character = Navy.new
+#    character.career = 'Navy'
+#  when 'Warder'
+#    require 'lib/warder'
+#    character = Warder.new
+#    character.career = 'Warder'
+#  when 'College'
+#    require 'lib/college'
+#    character = College.new
+#    character.career = 'College'
+#  when 'Entertainer'
+#    require 'lib/entertainer'
+#    character = Entertainer.new
+#    character.career = 'Entertainer'
+#  when 'Guide'
+#    require 'lib/guide'
+#    character = Guide.new
+#    character.career = 'Guide'
+#  when 'Scout'
+#    require 'lib/scout'
+#    character = Scout.new
+#    character.career = 'Scout'
+#  else
+#     abort("Sorry, I don't know how to create that sort of character.")
+#end
 
 character.terms = roll1
 character.set_upp
