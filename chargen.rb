@@ -22,7 +22,7 @@ def gen_char(career)
   return character
 end
 
-career = ''
+career = 'Citizen'
 
 parser = OptionParser.new do |opts|
   program_name = File.basename($PROGRAM_NAME)
@@ -31,7 +31,7 @@ parser = OptionParser.new do |opts|
 
   opts.on( '-c career', 'Select a career. Current options are:
                          Marine, Navy, Scout, Warder, College,
-                         Guide, Entertainer' ) do |c|
+                         Citizen, Guide, Entertainer' ) do |c|
     career = c
   end
 end

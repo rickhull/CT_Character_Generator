@@ -6,4 +6,5 @@ module Chargen
   autoload 'Guide', 'lib/guide'
   autoload 'Scout', 'lib/scout'
   autoload 'Warder', 'lib/warder'
+  autoload 'Citizen', 'lib/citizen'
 end
