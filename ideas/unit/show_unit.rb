@@ -6,31 +6,23 @@ require 'json'
 require 'Trooper'
 require 'optparse'
 
-#roster_file = ''
-toe_file = ''
-
 troop_list = Hash.new
+unit_toe = Hash.new
 
 parser = OptionParser.new do |opts|
   program_name = File.basename($PROGRAM_NAME)
   opts.banner = "Used to display a unit TO&E.
   Usage: #{program_name} -r <roster> -t <toe>"
   opts.on( '-r <roster file>', 'Which team member unit roster file?') do |roster|
-    roster_file = roster
     character_file = File.read(roster)
     troop_list = JSON.parse(character_file)
   end
   opts.on('-t <to&e file>', 'Which organization table?') do |toe|
-    toe_file = toe
+    unit_file = File.read(toe)
+    unit_toe = JSON.parse(unit_file)
   end
 end
 parser.parse!
-
-#character_file = File.read(roster_file)
-#troop_list = JSON.parse(character_file)
-
-unit_file = File.read(toe_file)
-unit_toe = JSON.parse(unit_file)
 
 def team_as_text(designation, members, troop_list)
   ordinals = %w[ HQ 1st 2nd 3rd 4th 5th 6th 7th 8th 9th ]
@@ -87,3 +79,4 @@ end
 # Done.
 
 #<jhass> leitz: and you should use File.write/File.read or at least the block form of File.open, if you have a file.close somewhere you likely have a potential file handle leak ;)
+# Done.
