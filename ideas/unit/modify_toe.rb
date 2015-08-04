@@ -8,7 +8,7 @@ toe_file = ''
 
 parser = OptionParser.new do |opts|
   program_name = File.basename($PROGRAM_NAME)
-  opts.on('-t <to&e file' '--toe', 'Provide a current TO&E file name.') do |toe|
+  opts.on('-t <to&e> file', '--toe', 'Provide a current TO&E file name.') do |toe|
     toe_file = toe
   end
 end
