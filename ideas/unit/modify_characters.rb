@@ -2,7 +2,8 @@
 
 require 'json'
 
-character_file = File.read('battle_results.json')
+#character_file = File.read('battle_results.json')
+character_file = File.read('blue_dragon_roster.json')
 unit = JSON.parse(character_file)
 #puts JSON.pretty_generate(unit)
 
@@ -39,7 +40,7 @@ until modify_trooper == 'n'
   modify_trooper = gets.chomp
 end
 
-out_file = File.open('battle_results.json', 'w')
+out_file = File.open('blue_dragon_roster.json', 'w')
 out_file.write(JSON.pretty_generate(unit))
 
 

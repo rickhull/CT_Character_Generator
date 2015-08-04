@@ -3,52 +3,27 @@
 require 'json'
 require 'pp'
 
-character_file = File.read('battle_results.json')
+character_file = File.read('blue_dragon_roster.json')
 unit = JSON.parse(character_file)
+unit_array = Array.new
 
 unit.sort.each do |trooper|
   this_trooper = Hash.new
   this_trooper = trooper[1]
-  print "#{trooper[0]}  "
-  print " #{this_trooper['rank']} #{this_trooper['first_name']} #{this_trooper['last_name']}  "
-  puts "Morale #{this_trooper['morale']}"
-end
-
-#unit_max = unit.count - 1
-# puts unit.class
-#pp unit["43"]
-
-def show_trooper(trooper)
-  this_trooper = Hash.new
-  this_trooper = trooper[1]
-  line1 = %w[ rank first_name last_name ]
-  line1.each do |item|
-    print "#{this_trooper[item]} "
+  #print "#{trooper[0]}  "
+  #string = "#{this_trooper['rank']} #{this_trooper['first_name']} #{this_trooper['last_name']}  "
+  #print " #{this_trooper['rank']} #{this_trooper['first_name']} #{this_trooper['last_name']}  "
+  #puts "Morale #{this_trooper['morale']}"
+  index = trooper[0].to_i
+  string = index.to_s
+  %w[ rank first_name last_name morale ].each do |key|
+    string = "#{string} " + "#{this_trooper[key]}"
   end
-  puts "Morale: #{this_trooper['morale']} "
+  #puts "string is #{string}."
+  unit_array[index] = string
 end
 
-#show_trooper(unit["43"])
-#(0..unit_max).each do |index|
-#  index = index.to_s
-#  print "#{index} "
-#  puts unit[index]['rank']
-#end
-
-# first_squad = [ 1, 2, 3, 4]
-
-#unit.keys.each do |key|
-#  puts key
-#end
-
-#first_squad.each do |id|
-#unit.each do |key, trooper|
-#  show_trooper(trooper)
-  #id = id.to_s
-  #puts "id is #{id}."
-  #puts id.class
-  #trooper = unit[id] 
-#  show_trooper(trooper)
-#end
-
+unit_array.each do |line|
+  puts line
+end
 

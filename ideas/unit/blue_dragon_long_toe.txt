@@ -1,0 +1,220 @@
+Blue Dragons Raider Company 
+
+Company Commander    Morale:  9
+CPT Marco Domici  78A885 Admin-0,Blade-1,Brawling-1,Computer-0,Electronics-0,Gambling-0,GunCgt(Energy)-2,Leader-0,Medical-0,Mechanical-0,Tactics-0,VaccSuit-1,Vehicle(Grav)-0 13
+CPL Tala Torsten  996B22-C Psion-0,CbtR-0,Dance-1,Survival-0 4
+
+HQ Platoon Leader  Morale:  10
+LT Johanna LNU  679655 AirRaft-2,Electronics-1,Gun 10
+
+HQ Platoon 1st Squad 1st Team  Morale:  8
+NR Cecilia LNU  59755A Mechanical-2,GunCbt-1,HeavyWeapon-1 10
+NR Derek 23  Contemplator 9,9,6,10,MCG 7
+NR Rasmus Vaden  697966 Computer-1 7
+CPL FNU Bohr  7869B4 Computer-1,Electronics-1,GunCbt-1 7
+
+1st Platoon Leader  Morale:  9
+LT Gabriela LNU  366A75 Recon-0,Ship's 10
+NR Jillia Ottoson  785987 CbtRifle-2,Medic-1,Computer-0,Recon-0,Survival-0 7
+
+1st Platoon 1st Squad Leader  Morale:  9
+NR Ervin Puckett  5B7485 Vehicle-1,Persuade-1,JoT-1,Recon-1,CbtR-1,Leadership-1 10
+CPL FNU Osterlund  BB76A4 BladeCbt-1,GunCbt-1,Medic-1 7
+
+1st Platoon 1st Squad 1st Team  Morale:  10
+CPL FNU Forstrom  9889A4 GunCbt-3 10
+CPL FNU Molen  547484 GunCbt-3 10
+LCP FNU Sjostom  76CA54 GunCbt-2 10
+NR Gregor Roden  786988 BladeCbt-2,Computer-1,GunCbt-1 10
+
+1st Platoon 1st Squad 2nd Team  Morale:  9
+NR Cory Singleton  59C475 Vehicle-1,JoT-2,Persuade-1,Recon-1,CbtR-1 10
+NR Vega LNU  96AA77 Shotgun-2 10
+NR Agata LNU  783679 CbtR-2,BladeCbt-1 10
+NR Jakob Trest  8DA735 BladeCbt-1,GunCbt-1 7
+
+1st Platoon 1st Squad 3rd Team  Morale:  9
+LSG FNU Cronbust  D699A6 Electronics-1,GunCbt-1,Medic-1,Recon-1 10
+LCP FNU Brood  D38686 GunCbt-1,Recon-1 7
+NR Mikaela Wist  5B8765 BladeCbt-1,GunCbt-1,Hunter(Recon)-1,Survival-1,Vehicle(Tracked)-1 10
+NR Mikaela Wist  5B8765 BladeCbt-1,GunCbt-1,Hunter(Recon)-1,Survival-1,Vehicle(Tracked)-1 10
+
+1st Platoon 2nd Squad Leader  Morale:  10
+SGT Baltasar LNU  783679 Electronic-0,Grav-1,CbtRifle-2 10
+LSG FNU Eng  7B9685 Medic-2,Computer-1,GunCbt-1 10
+
+1st Platoon 2nd Squad 1st Team  Morale:  8
+NR Evern Bergin  ADC48C GunCbt-2,Computer-2,Admin-1,Hunter(Recon)-1,Medic-1,Survival-1,Blade-0,Electronics-0,Leader-0,Mechanical-0,Vehicle(tracked)-0 10
+NR Monika LNU  855795 CbtRifle-1 7
+NR Soveig Kring  888A85 GunCbt-1,Leader-1 7
+NR Algot Arndt  968952 GunCbt-1 7
+
+1st Platoon 2nd Squad 2nd Team  Morale:  9
+CPL FNU Hellstrom  B6C824 GunCbt-2,Electronics-1 10
+CPL FNU Lunden  B98A83 Electronics-1,GunCbt-1,Medic-1 7
+NR Palmira Dillard  A97931 Blade-1,Brawling-1,Bribery-1,GunCbt-1,Streetwise-1 10
+NR Albin LNU  77734A Gambling-0,CbtRifle-2 10
+
+1st Platoon 2nd Squad 3rd Team  Morale:  7
+LSG FNU Somberg  4B98A4 GunCbt-1,Leader-1,Medic-1,Recon-1 7
+LCP FNU Gustafson  7DA786 GunCbt-1,Recon-1 7
+NR Arvid Corvin  BA9886 Computer-1,GunCbt-1,Hunter(Recon)-1 7
+NR Maja Skogman  98B6A4 GunCbt-1,Medic-1,Survival-1 7
+
+2nd Platoon HQ Squad 1st Team  Morale:  12
+LT Verner Ottoson  9A755A CbtR-4,Recon-3,SkyCrane-1,Tactics-1,Tracked-0,Brawling-0 13
+LSG FNU Birke  9B48A6 Medic-2,GunCbt-1,Mechanical-1 10
+
+2nd Platoon 1st Squad 1st Team  Morale:  9
+NR Petter LNU  7A755A Gun 10
+NR Vickie Aguilar  873672 Brawling-1,Gambling-1,GunCbt-1,Streetwise-1 10
+NR Karin LNU  855795 Electronics-1,GunCbt(SMG)-1 7
+NR Isabella LNU  77AA69 Electronics-2,CbtR-1 7
+
+2nd Platoon 2nd Squad 1st Team  Morale:  9
+NR Bertil LNU  A78657 Gun 10
+NR Paul LNU  698587 Medic-0,CbtRifle-2 10
+NR Leena Dudley  92A963 Brawling-1,Bribery-1,GunCbt-1,Streetwise-1 7
+NR Eugen Lundell  98C876 GunCbt-2,Survival-2 10
+
+2nd Platoon 3rd Squad Leader  Morale:  10
+SGT Elias Winter  96E847 GunCbt-3,Elec-1,Recon-1 13
+NR Klas Winter  5689A5 GunCbt-2,Comp-1 10
+NR Gudrun Winter  79BA55 GunCbt-1,Elec-1,Tactics-1 7
+
+2nd Platoon 3rd Squad 1st Team  Morale:  9
+NR Noah Florin  C7C559 GunCbt-3,Vehicle-2,Blade-1,Medic-1 13
+NR Ake Florin  776856 Elec-1,GunCbt-1,Medic-1,Recon-1 7
+NR Hans Florin  49A833 Brawling-1,Elec-1,GunCbt-1 7
+
+2nd Platoon 3rd Squad 2nd Team  Morale:  9
+NR Natalie Bolen  B5C796 GunCbt-2,Elec-1,Vehicle-1 10
+NR Ansgar Bolen  5CB976 GunCbt-2,Recon-1 10
+NR Stefan Isenberg  B796C3 GunCbt-1,Recon-1 7
+NR Agnes Isenberg  6C5C95 GunCbt-1,Tactics-1 7
+
+2nd Platoon 3rd Squad 3rd Team  Morale:  9
+NR Johanna Rask  8B3827 GunCbt-3,Leader-1 10
+NR Ingemar Solen  474876 Recon-2,GunCbt-1,Mech-1,Vehicle-1 10
+NR Berit Rask  AAC863 GunCbt-1,Recon-1,Vehicle-1 7
+NR Lisa Solen  937764 GunCbt-1,Recon-1 7
+
+2nd Platoon 3rd Squad 4th Team  Morale:  8
+NR Franz Bolen  796494 GunCbt-3 10
+NR Ellen Bolen  8796C3 GunCbt-1,Medic-1,Recon-1,Vehicle-1 7
+NR Andreas Bolen  4A98C7 GunCbt-1,Medic-1,Recon-1,Tactics-1 7
+NR Peder Bolen  C46863 GunCbt-1,Leader-1,Recon-1 7
+
+2nd Platoon 3rd Squad 5th Team  Morale:  7
+NR Matteus Landeen  5B9447 Blade-1,GunCbt-1,Tactics-1 7
+NR Benedikt Landeen  799665 GunCbt-1,Mech-1,Medic-1 7
+NR William Landeen  78A798 GunCbt-1,Mech-1,Medic-1 7
+NR Joel Landeen  9B4B86 GunCbt-1,Elec-1 7
+
+2nd Platoon 4th Squad Leader  Morale:  9
+NCO Eddy Huss  B6659B Tactics-3,GunCbt-2,BladeCbt-1,Mech-1 13
+NR Lars Huss  856536 Recon-2,GunCbt-1 7
+NR Vilhelm Huss  75A794 GunCbt-2 7
+NR Felix Oden  8A6398 Elec-1,GunCbt-1,Recon-1 7
+
+2nd Platoon 4th Squad 1st Team  Morale:  8
+NR Oskar Winger  6AA957 Comp-2,Elec-1,GunCbt-1,Mech-1,Vehicle-1 10
+NR Jesper Winger  C546C7 Comp-1,GunCbt-1,Medic-1,Tactics-1 7
+NR Rune Winger  986556 GunCbt-1,Mech-1,Medic-1 7
+NR Adam Winger  755854 BladeCbt-1,GunCbt-1,Mech-1 7
+
+2nd Platoon 4th Squad 2nd Team  Morale:  9
+NR Hermann Winger  47C357 GunCbt-4,Mech-1 13
+NR Erika Thoren  D6CAA6 GunCbt-2,Vehicle-1 7
+NR Mark Liljegren  8B9985 GunCbt-1,Mech-1 7
+NR Alvin Winger  4A9876 GunCbt-1,Leader-1 7
+
+2nd Platoon 4th Squad 3rd Team  Morale:  8
+NR Malena Thoren  ADA767 GunCbt-2,Medic-2,Elec-1,Recon-1 10
+NR Inger Thoren  8586B5 Tactics-2,GunCbt-1,Vechicle-1 7
+NR Rosa Thoren  7DBB64 GunCbt-2,Medic-1 7
+NR Viveka Thoren  CB5926 GunCbt-2,Tactics-1 7
+
+2nd Platoon 5th Squad Leader  Morale:  10
+SGT Ingrid Ehn  BD8348 GunCbt-2,Medic-2,Recon-1,Tactics-1,Vehicle-1 10
+
+2nd Platoon 5th Squad 1st Team  Morale:  8
+CPL Tora Beckman  A759A4 BladeCbt-1,Elec-1,GunCbt-1,Medic-1 10
+NR Tobias Ehn  9A6545 BladeCbt-1,GunCbt-1,Mech-1,Vehicle-1 7
+NR Axel Rydell  698785 Comp-1,GunCbt-1,Tactics-1,Vehicle-1 7
+
+2nd Platoon 5th Squad 2nd Team  Morale:  8
+NR Agata Byland  D5A667 GunCbt-2,Mech-1,Medic-1,Vehicle-1 10
+NR Jan Rydell  C37875 Mech-2,GunCbt-1,Recon-1 7
+NR Adolf Klang  9A8885 GunCbt-1,Vehicle-1 7
+NR Alrik Ehn  D96947 Elec-1,GunCbt-1 7
+
+2nd Platoon 5th Squad 3rd Team  Morale:  7
+NR Moa Klang  D4C778 Tactics-2,Brawling-1,GunCbt-1 7
+NR Fabian Boden  8D4743 GunCbt-2 7
+NR Lena Byland  995953 GunCbt-1,Mech-1,Medic-1,Vehicle-1 7
+NR Roland Malmgren  7855B5 BladeCbt-1,GunCbt-1,Mech-1 7
+
+2nd Platoon 5th Squad 4th Team  Morale:  8
+CPL Magnus Klang  BEB8B9 GunCbt-2,Vehicle-2,Elec-1 10
+NR Nathanel Franzen  87CA97 GunCbt-1,Mech-1,Vehicle-1 7
+NR Antonetta Rydell  C55756 GunCbt-1,Leader-1,Mech-1 7
+
+2nd Platoon 5th Squad 5th Team  Morale:  8
+NR Evert Vong  644925 GunCbt-3 10
+NR Gertrud Byland  A66874 GunCbt-2,Medic-2,Leader-1 7
+NR Elenora Byland  9A8B85 Recon-2,GunCbt-1 7
+NR Karl Ehn  5B6A64 GunCbt-1,Recon-1 7
+
+2nd Platoon 5th Squad 6th Team  Morale:  7
+NR Gunnar Franzen  676323 GunCbt-2 7
+NR Simon Klang  55AC94 GunCbt-1,Medic-1,Recon-1 7
+NR Viggo Boden  8BC875 GunCbt-1,Vehicle-1 7
+NR Kasper Rydell  5A5683 GunCbt-1,BladeCbt-1 7
+
+3rd Platoon HQ Squad 1st Team  Morale:  9
+LT Patrick Huss  987A42 Streetwise-2,BladeCbt-1(butterfly_knife),Bribery-1,Vehicle-1,Brawling-0,Electronic-0,Forgery-0,Gambling-0,GunCbt(Pistol/SMG)-0,Mechanical-0,Medical-0 10
+NR Tilda Forss  978C55 BladeCbt-1,Electronics-1,GunCbt-1 7
+
+3rd Platoon 1st Squad 1st Team  Morale:  9
+NR Harriet Brand  546C82 Survival-1,Streetwise-3,Investigate-2,GunCbt-1,Bribery-1,Blade-1,Persuade-1 10
+NR Dennis Jensen  B76967 Brawling-1,Forgery-1,Gambling-3 10
+NR Phyllis Parent  B96867 Investigate-1,Blade-1,Stealth-1 7
+NR Sam Garnier  589B84 Blade-1,Brawling-1,Gambling-1,Streetwise-1 7
+
+3rd Platoon 1st Squad 2nd Team  Morale:  5
+LCP FNU Tornberg  796392 GunCbt-1,Medic-1 7
+NR Benton Perrot  3B98AA Art(poet)-1 4
+NR Emilee Vignon  963668 Art(painting)-1,Steward-1,Streetwise-1 4
+NR Rigmora Norum  B35484 GunCbt-1,Medic-1,Vehicle(tracked)-1 7
+NR Avery Bob  487849 Deception-1,Art(mechanical_sculpture)-4 4
+NR Kayleigh Davidson  BC9886 Art(metalworking)-1,Streetwise-1,Persuade-1 4
+
+3rd Platoon 1st Squad 3rd Team  Morale:  9
+NR Tama Leclercq  57589D Persuade-1,CbtR-1 7
+NR Betty Jimenez  566527 JoT-1,Leadership-1,Persuade-1,CbtR-1,GunCbt-1 10
+NR Milton Guthrie  5599B7 Blade-3,Leadership-1,GunCbt-1,Medical-1,Streetwise-1 10
+NR Herbert Torkelson  A7B736 Admin-1,Electronics-1,GunCbt-1 7
+NR Margaret Besse  788942 Gambler-1,Streetwise-1,Deception-1,Athletics-3,Comms-1,Art(theatrics)-1 10
+
+4th Platoon HQ Squad 1st Team  Morale:  9
+LT FNU Arne  BA68B9 CbtRifleman-1,Electronics-1,HvyWeapons-1,Leader-1,Medic-1 10
+CPL FNU Nygrin  4958C5 GunCbt-1,Mechanical-1,Medic-1 7
+
+4th Platoon 1st Squad Leader  Morale:  7
+LSG FNU Sundblad  456B86 Electronics-1,GunCbt-1,Mechanical-1,Recon-1 7
+CPL FNU Roden  76A674 Grav/ACV-1,GunCbt-1,Medic-1 7
+CPL FNU Asae  969766 GunCbt-1,HvyWeapon-1,Medic-1 7
+
+4th Platoon 2nd Squad 1st Team  Morale:  8
+LSG FNU Kron  698356 Computer-1,GunCbt-1,HvyWeapon-1,Mechanical-1 10
+LCP FNU Isberg  7D8875 Grav/ACV-1,GunCbt-1 10
+NR Viola Bohner  9B8474 BladeCbt-1,GunCbt-1,Vehicle(tracked)-1 7
+LCP FNU Linden  B73A73 GunCbt-1,Mechanical-1 7
+NR Jonatan LNU  96AA77 Tracked-0,CbtRifle-1 7
+
+4th Platoon 2nd Squad 2nd Team  Morale:  8
+NR Olga Sjostrand  86A674 GunCbt-1,Vehicle(tracked)-2 10
+NR Brenda Fortin  3B7C74 JoT-2,Mechanical-1,Streetwise-1 7
+NR David Hellen  465AB3 Computer-1,GunCbt-1,Vehicle(tracked)-1 7
+
