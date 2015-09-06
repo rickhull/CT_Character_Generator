@@ -15,7 +15,7 @@ trooper_count = highest_key
 
 # Line example:
 # NR Gudrun Winter 25 AMM F 79BA55 GunCbt-1,Elec-1,Tactics-1 Innovator  7
-input_file = File.read('fred4')
+input_file = File.read('')
 input_file.each do |line|
   line_array = line.split
   trooper_count += 1

@@ -9,10 +9,15 @@ class Trooper
     @morale = trooper['morale']
     @upp = trooper['upp']
     @skills = trooper['skill_line']
+    if trooper.has_key?('wound') 
+      @wound = trooper['wound']
+    else 
+      @wound = ''
+    end
   end 
 
   def trooper_text
-    return "#{@rank} #{@first_name} #{@last_name}  #{@upp} #{@skills} #{@morale}"
+    return "#{@rank} #{@first_name} #{@last_name}  #{@upp} #{@skills} #{@morale} #{@wound}"
   end
   
   def trooper_morale?

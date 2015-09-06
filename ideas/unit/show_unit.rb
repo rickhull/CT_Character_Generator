@@ -8,6 +8,7 @@ require 'optparse'
 
 troop_list = Hash.new
 unit_toe = Hash.new
+format = 'text'
 
 parser = OptionParser.new do |opts|
   program_name = File.basename($PROGRAM_NAME)
@@ -21,14 +22,26 @@ parser = OptionParser.new do |opts|
     unit_file = File.read(toe)
     unit_toe = JSON.parse(unit_file)
   end
+  opts.on('-f <format>', 'Output format?') do |output|
+    format = output
+  end
 end
 parser.parse!
 
-def team_as_text(designation, members, troop_list)
+#if ARGV.empty?
+#  puts "Please supply the required information."
+#  puts "ARGV is #{ARGV}."
+#  puts parser.help
+#  exit
+#end
+
+
+def team_as_text(designation, members, troop_list, format)
   ordinals = %w[ HQ 1st 2nd 3rd 4th 5th 6th 7th 8th 9th ]
   unit = Hash.new
   unit['designation'] = designation
   designation_array = designation.split('.')
+  format = format
 
   total_morale = 0
   unit_members = Array.new
@@ -53,20 +66,28 @@ def team_as_text(designation, members, troop_list)
   else
     title = "#{platoon} Platoon #{squad} Squad #{team} Team"
   end
-  puts "#{title}  Morale:  #{unit_morale}"
+  print "'''" if format == 'wiki'
+  print "#{title}  Morale:  #{unit_morale}"
+  print "'''" if format == 'wiki'
+  puts
+  puts if format == 'wiki' 
   unit_members.each do |member|
     puts member
+     puts if format == 'wiki' 
   end  
   puts
 end
 
+puts "==" if format == 'wiki'
 %w[name type size].each do |header|
   print "#{unit_toe[header]} "
 end
-print "\n\n"
+puts "==" if format == 'wiki'
+puts
+puts
 
 unit_toe['teams'].sort.each do |key, value|
-  team_as_text(key, value, troop_list)
+  team_as_text(key, value, troop_list,format)
 end
 
 #<jhass> leitz: great. Note that we tend to leave get_ prefixes off in ruby and use foo? instead of is_foo
