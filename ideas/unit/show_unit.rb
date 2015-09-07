@@ -10,32 +10,6 @@ troop_list = Hash.new
 unit_toe = Hash.new
 format = 'text'
 
-parser = OptionParser.new do |opts|
-  program_name = File.basename($PROGRAM_NAME)
-  opts.banner = "Used to display a unit TO&E.
-  Usage: #{program_name} -r <roster> -t <toe>"
-  opts.on( '-r <roster file>', 'Which team member unit roster file?') do |roster|
-    character_file = File.read(roster)
-    troop_list = JSON.parse(character_file)
-  end
-  opts.on('-t <to&e file>', 'Which organization table?') do |toe|
-    unit_file = File.read(toe)
-    unit_toe = JSON.parse(unit_file)
-  end
-  opts.on('-f <format>', 'Output format?') do |output|
-    format = output
-  end
-end
-parser.parse!
-
-#if ARGV.empty?
-#  puts "Please supply the required information."
-#  puts "ARGV is #{ARGV}."
-#  puts parser.help
-#  exit
-#end
-
-
 def team_as_text(designation, members, troop_list, format)
   ordinals = %w[ HQ 1st 2nd 3rd 4th 5th 6th 7th 8th 9th ]
   unit = Hash.new
@@ -78,18 +52,42 @@ def team_as_text(designation, members, troop_list, format)
   puts
 end
 
-puts "==" if format == 'wiki'
-%w[name type size].each do |header|
-  print "#{unit_toe[header]} "
-end
-puts "==" if format == 'wiki'
-puts
-puts
 
-unit_toe['teams'].sort.each do |key, value|
-  team_as_text(key, value, troop_list,format)
+parser = OptionParser.new do |opts|
+  program_name = File.basename($PROGRAM_NAME)
+  opts.banner = "Used to display a unit TO&E.
+  Usage: #{program_name} -r <roster> -t <toe>"
+  opts.on( '-r <roster file>', 'Which team member unit roster file?') do |roster|
+    character_file = File.read(roster)
+    troop_list = JSON.parse(character_file)
+  end
+  opts.on('-t <to&e file>', 'Which organization table?') do |toe|
+    unit_file = File.read(toe)
+    unit_toe = JSON.parse(unit_file)
+  end
+  opts.on('-f <format>', 'Output format?') do |output|
+    format = output
+  end
 end
+parser.parse!
 
+
+if troop_list.empty? || unit_toe.empty?
+  puts "Please supply the required information."
+  puts parser.help
+else
+  puts "==" if format == 'wiki'
+  %w[name type size].each do |header|
+    print "#{unit_toe[header]} "
+  end
+  puts "==" if format == 'wiki'
+  puts
+  puts
+
+  unit_toe['teams'].sort.each do |key, value|
+    team_as_text(key, value, troop_list,format)
+  end
+end
 #<jhass> leitz: great. Note that we tend to leave get_ prefixes off in ruby and use foo? instead of is_foo
 # Done.
 
