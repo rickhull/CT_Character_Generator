@@ -10,7 +10,8 @@ require 'pp'
 require 'optparse'
 
 vehicles = Hash.new
-vehicle_file = ''
+vehicle_file = '../data/vehicles.json'
+read_vehicle_file = false
 show = false
 add = false
 show_format = 'text'
@@ -132,6 +133,7 @@ parser = OptionParser.new do |opts|
         vehicle_file = file
         File.open(vehicle_file, 'w') {}
       end
+      read_vehicle_file = true
     end
   end
   opts.on('-s [format]', 'Show vehicles') do |format|
@@ -147,7 +149,17 @@ parser = OptionParser.new do |opts|
   end 
 end
 
+
 parser.parse!
+
+unless read_vehicle_file
+  vehicles_in = File.read(vehicle_file)
+  vehicles, valid_json = valid_json?(vehicles_in)
+  unless valid_json
+    puts "Cannot read #{vehicle_file}, exiting."
+    exit
+  end
+end
 
 if add 
   add_vehicle(vehicles)
