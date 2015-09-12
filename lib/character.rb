@@ -2,6 +2,8 @@ class Character
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 
+  require 'Traveller'
+
   attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer, :llp
   attr_writer :terms, :officer
 
@@ -101,11 +103,11 @@ class Character
   end
  
   def officer(target_roll=13)
-    @officer ||=  roll2 >= target_roll
+    @officer ||=  Traveller.roll_dice(6,2,1) >= target_roll
   end
 
   def set_llp()
-    roll = rand(100)
+    roll = Traveller.roll_dice(100,1,1)
     case roll
       when 0..6 then llp = 'Mover (action)'
       when 7..31 then llp = 'Doer (action)'
