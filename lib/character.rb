@@ -14,7 +14,7 @@ class Character
     @officer = false
     @stats = {}
     @skills = Hash.new
-    @upp = set_upp()
+    @upp = Traveller.roll_upp
     @llp = set_llp()
   end
 
@@ -92,16 +92,6 @@ class Character
     @terms ||= 0
   end
 
-  def set_upp
-    @upp = ''
-    6.times do
-      stat = rand(6) + rand(6) + 2
-      stat = stat.to_s(16).upcase
-      @upp = @upp + stat
-    end
-    return @upp
-  end
- 
   def officer(target_roll=13)
     @officer ||=  Traveller.roll_dice(6,2,1) >= target_roll
   end
