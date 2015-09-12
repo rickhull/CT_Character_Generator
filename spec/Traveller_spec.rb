@@ -124,4 +124,21 @@ module Traveller
     end
   end
 
+  describe 'UPP should match proper format.' do
+    before (:each) do
+      @upp = Traveller.roll_upp
+    end
+
+    it 'should be 6 characters long.' do
+      expect(@upp.size).to eq(6)
+    end
+
+    it 'should only be numeric and uppercase hexidecimal.' do
+      expect(@upp).to match(/[0-9A-F]/)      
+    end
+  end
+
+
+
+
 end 

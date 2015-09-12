@@ -12,6 +12,16 @@ module Traveller
     return @total.to_i
   end
 
+  def Traveller.roll_upp
+    @upp = ''
+    6.times do
+      @stat = Traveller.roll_dice(6,2,1)
+      @stat = @stat.to_s(16).upcase
+      @upp  = @upp + @stat
+    end
+    return @upp
+  end
+    
   def Traveller.noble?(gender, upp)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
