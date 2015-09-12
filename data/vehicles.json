@@ -1,0 +1,71 @@
+{
+  "TL8AirPickup": {
+    "type": "Pickup",
+    "max_speed": "100",
+    "passengers": "9/17",
+    "notes": "",
+    "weapons": "HMG50",
+    "crew": "1",
+    "move_type": "Air Cushion",
+    "armor": "8 8 8 8 8",
+    "tl": "8"
+  },
+  "TL8MedSupplyTruck": {
+    "type": "Medium Supply Truck",
+    "max_speed": "100",
+    "passengers": "17/33",
+    "notes": "",
+    "weapons": "",
+    "crew": "1",
+    "move_type": "Air Cushion",
+    "armor": "4 4 4 4",
+    "tl": "8",
+    "cargo": "8"
+  },
+  "TL8AirTruck": {
+    "type": "Truck",
+    "max_speed": "100",
+    "passengers": "9/17",
+    "notes": "",
+    "weapons": "",
+    "crew": "1",
+    "move_type": "Air Cushion",
+    "armor": "12 12 12 12 12",
+    "tl": "8"
+  },
+  "TL14AR": {
+    "type": "Air Raft",
+    "max_speed": "180",
+    "passengers": "6",
+    "notes": "Appears as TL 10 Air raft. Weapon is pintle mounted. Has hidden storage.",
+    "weapons": "FGMP-14",
+    "crew": "1",
+    "move_type": "Grav",
+    "armor": "0 20 20 20 20",
+    "tl": "14"
+  },
+  "TL8LightSupplyTruck": {
+    "type": "Light Supply Truck",
+    "max_speed": "100",
+    "passengers": "9/17",
+    "notes": "",
+    "weapons": "",
+    "crew": "1",
+    "move_type": "Air Cushion",
+    "armor": "4 4 4 4 4",
+    "tl": "8",
+    "cargo": "4"
+  },
+  "TL8HeavySupplyTruck": {
+    "type": "Heavy Supply Truck",
+    "max_speed": "100",
+    "passengers": "25/49",
+    "notes": "",
+    "weapons": "",
+    "crew": "1",
+    "move_type": "Air Cushion",
+    "armor": "4 4 4 4 4",
+    "tl": "8",
+    "cargo": "12"
+  }
+}
