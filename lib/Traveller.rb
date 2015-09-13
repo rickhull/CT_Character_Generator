@@ -42,6 +42,30 @@ module Traveller
     return title
   end 
 
+# This is a direct cut and paste from trav_functions. 
+# Really needs to be fixed.
+  def Traveller.out_txt(c)
+    rank = c.rank
+    name = c.name
+    upp = c.upp
+    gender = c.gender
+    age = c.age
+    terms = c.terms
+    llp = c.llp
+    
+    puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+    first_skill = true
+    c.skills.each do |skill, level|
+      if first_skill == false
+        print ", "
+      end 
+      print "#{skill}-#{level}"
+      first_skill = false
+    end
+    print "\n"
+    puts llp
+    puts""
+  end
 
 
 end

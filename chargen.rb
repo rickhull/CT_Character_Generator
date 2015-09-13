@@ -2,8 +2,10 @@
 
 $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
-require 'lib/trav_functions'
-require 'lib/dice'
+require 'Traveller'
+
+#require 'lib/trav_functions'
+#require 'lib/dice'
 require 'sqlite3'
 require 'optparse'
 require 'character'
@@ -14,8 +16,8 @@ def gen_char(career)
   name = career.capitalize
   character = Chargen.const_get(name).new
   character.career = name
-  character.terms = roll1
-  character.set_upp
+  character.terms = Traveller.roll_dice(6,1,1)
+  character.upp
   character.set_rank
   character.set_name(character.gender)
   character.set_skills()
@@ -39,4 +41,4 @@ parser.parse!
 
 character = gen_char(career)
 
-out_txt(character)
+Traveller.out_txt(character)
