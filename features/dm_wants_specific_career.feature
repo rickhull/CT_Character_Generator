@@ -6,5 +6,5 @@ Feature:  the DM wants a new character
 
   Scenario: Request a Marine
     Given nothing running
-    When I use the "--marine" option
+    When I use the "-c Marine" option
     Then the character is labelled as a Marine
