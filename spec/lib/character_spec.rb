@@ -1,5 +1,4 @@
-#require 'spec_helper'
-require 'character'
+require 'spec_helper'
 
 describe Character do
   

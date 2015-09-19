@@ -1,5 +1,7 @@
 class Character
-  $LOAD_PATH << File.expand_path("../data")
+
+  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
+  $DATA_PATH = File.expand_path("../../data", __FILE__)
 
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
@@ -23,7 +25,7 @@ class Character
   def set_name(gender='male')
     require 'sqlite3'
     begin
-      db = SQLite3::Database.open "data/names.db"
+      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
       get_first_name = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
       first_name_result = get_first_name.execute
 

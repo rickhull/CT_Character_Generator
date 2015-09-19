@@ -1,15 +1,10 @@
 #!/usr/bin/env ruby
 
-#$LOAD_PATH << File.expand_path("../lib", __FILE__)
-$LOAD_PATH << File.expand_path("lib")
-$LOAD_PATH << File.expand_path("data")
- 
-#puts "LOAD_PATH is #{$LOAD_PATH}."
+$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+$DATA_PATH = File.expand_path("../../data", __FILE__)
 
 require 'Traveller'
 
-#require 'lib/trav_functions'
-#require 'lib/dice'
 require 'sqlite3'
 require 'optparse'
 require 'character'
