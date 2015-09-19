@@ -103,13 +103,13 @@ class Character
   def set_llp()
     roll = Traveller.roll_dice(100,1,1)
     case roll
-      when 0..6 then llp = 'Mover (action)'
+      when 1..6 then llp = 'Mover (action)'
       when 7..31 then llp = 'Doer (action)'
       when 32..44 then llp = 'Influencer (heart)'
       when 45..76 then llp = 'Responder (heart)'
       when 77..86 then llp = 'Shaper (head)'
       when 87..89 then llp = 'Producer (head)'
-      when 90..99 then llp = 'Contemplator (head)'
+      when 90..100 then llp = 'Contemplator (head)'
     end
     return llp
   end
