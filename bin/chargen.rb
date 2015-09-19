@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH << File.expand_path("../lib", __FILE__)
+#$LOAD_PATH << File.expand_path("../lib", __FILE__)
+$LOAD_PATH << File.expand_path("lib")
+$LOAD_PATH << File.expand_path("data")
+ 
+#puts "LOAD_PATH is #{$LOAD_PATH}."
 
 require 'Traveller'
 

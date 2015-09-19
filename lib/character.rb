@@ -1,4 +1,6 @@
 class Character
+  $LOAD_PATH << File.expand_path("../data")
+
   DEFAULT_AGE = 18
   STAT_NAMES = %w(Str Dex End Int Edu Soc)
 

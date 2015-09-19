@@ -1,10 +1,10 @@
 module Chargen
-  autoload 'Marine', 'lib/marine'
-  autoload 'Navy', 'lib/navy'
-  autoload 'College', 'lib/college'
-  autoload 'Entertainer', 'lib/entertainer'
-  autoload 'Guide', 'lib/guide'
-  autoload 'Scout', 'lib/scout'
-  autoload 'Warder', 'lib/warder'
-  autoload 'Citizen', 'lib/citizen'
+  autoload 'Marine', 'marine'
+  autoload 'Navy', 'navy'
+  autoload 'College', 'college'
+  autoload 'Entertainer', 'entertainer'
+  autoload 'Guide', 'guide'
+  autoload 'Scout', 'scout'
+  autoload 'Warder', 'warder'
+  autoload 'Citizen', 'citizen'
 end
