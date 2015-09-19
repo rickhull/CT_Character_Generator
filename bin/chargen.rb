@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
-$DATA_PATH = File.expand_path("../../data", __FILE__)
 
 require 'Traveller'
 
