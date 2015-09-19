@@ -67,7 +67,57 @@ module Traveller
     puts""
   end
 
+  def Traveller.write(c, mode)
+    rank = c.rank
+    name = c.name
+    upp = c.upp
+    gender = c.gender
+    age = c.age
+    terms = c.terms
+    llp = c.llp
+   
+    if mode == 'txt' 
+      puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      first_skill = true
+      c.skills.each do |skill, level|
+        if first_skill == false
+          print ", "
+        end 
+        print "#{skill}-#{level}"
+        first_skill = false
+      end
+      print "\n"
+      puts llp
+      puts""
+    elsif mode == 'wiki'
+      puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts 
+      c.skills.each do |skill, level|
+        if first_skill == false
+          print ", "
+        end 
+        print "#{skill}-#{level}"
+        first_skill = false
+      end
+      puts
+      puts
+      puts llp
+      puts
+    elsif mode == 'html'
+      puts "<p>#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      print "<p>" 
+      c.skills.each do |skill, level|
+        if first_skill == false
+          print ", "
+        end 
+        print "#{skill}-#{level}"
+        first_skill = false
+      end
+      puts 
+      puts "<p>#{llp}"
+      puts "<br>"
+    end
 
 end
 
-    
+end

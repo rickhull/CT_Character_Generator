@@ -23,6 +23,7 @@ def gen_char(career)
 end
 
 career = 'Citizen'
+output_format = 'txt'
 
 parser = OptionParser.new do |opts|
   program_name = File.basename($PROGRAM_NAME)
@@ -34,9 +35,14 @@ parser = OptionParser.new do |opts|
                          Citizen, Guide, Entertainer' ) do |c|
     career = c
   end
+  opts.on( '-o output_format', 'Output format [txt, wiki]' ) do |o|
+    output_format = o
+  end
 end
 parser.parse!
 
 character = gen_char(career)
 
-Traveller.out_txt(character)
+#Traveller.out_txt(character)
+Traveller.write(character, output_format)
+
