@@ -32,7 +32,7 @@ class Navy < Character
     @grade_set = 'Enlisted'
     @officer = officer(@comission_roll)
     @rank = 'Spacehand Recruit'
-    @basic_skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', '+1 Soc', 'ShipsBoat', 'FwdObs', 'Gunnery', 'Blade', 'GunCbt', 'VaccSuit', 'Mechanical', 'Electronic', 'Engineering', 'Gunnery', 'JoT']
+    @skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', '+1 Soc', 'ShipsBoat', 'FwdObs', 'Gunnery', 'Blade', 'GunCbt', 'VaccSuit', 'Mechanical', 'Electronic', 'Engineering', 'Gunnery', 'JoT']
     @advanced_skill_options = ['Medical', 'Navigation', 'Engineering', 'Computer', 'Pilot', 'Admin']
   end
 
@@ -54,9 +54,9 @@ class Navy < Character
 
     edu = upp[4].chr.to_i(16)
     if edu >= 8
-      skill_options = @basic_skill_options + @advanced_skill_options
+      skill_options = @skill_options + @advanced_skill_options
     else
-      skill_options = @basic_skill_options
+      skill_options = @skill_options
     end
 
     if @officer

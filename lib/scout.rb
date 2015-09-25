@@ -8,7 +8,7 @@ class Scout < Character
     super
     @career = 'Scout'
     @skills = { 'Pilot' => 1 } 
-    @basic_skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', 'GunCbt', 'Vehicle', 'VaccSuit', 'Mechanical', 'Navigation', 'Electronic', 'JoT', 'Vehicle', 'Mechanical', 'Electronic', 'JoT', 'Gunnery', 'Medical']
+    @skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', 'GunCbt', 'Vehicle', 'VaccSuit', 'Mechanical', 'Navigation', 'Electronic', 'JoT', 'Vehicle', 'Mechanical', 'Electronic', 'JoT', 'Gunnery', 'Medical']
     @advanced_skill_options = ['Navigation', 'Engineering', 'Computer', 'JoT', 'Pilot', 'Medical']
   end
 
@@ -21,9 +21,9 @@ class Scout < Character
 
     edu = upp[4].chr.to_i(16)
     if edu >= 8
-      skill_options = @basic_skill_options + @advanced_skill_options
+      skill_options = @skill_options + @advanced_skill_options
     else
-      skill_options = @basic_skill_options
+      skill_options = @skill_options
     end
 
     rolls.times do
