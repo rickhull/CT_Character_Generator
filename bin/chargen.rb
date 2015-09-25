@@ -32,7 +32,7 @@ parser = OptionParser.new do |opts|
 
   opts.on( '-c career', 'Select a career. Current options are:
                          Marine, Navy, Scout, Warder, College,
-                         Citizen, Guide, Entertainer' ) do |c|
+                         Citizen, Guide, Entertainer, Mountainman' ) do |c|
     career = c
   end
   opts.on( '-o output_format', 'Output format [txt, wiki]' ) do |o|

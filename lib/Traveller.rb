@@ -53,7 +53,7 @@ module Traveller
     terms = c.terms
     llp = c.llp
     
-    puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+    puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
     first_skill = true
     c.skills.each do |skill, level|
       if first_skill == false
@@ -75,9 +75,10 @@ module Traveller
     age = c.age
     terms = c.terms
     llp = c.llp
+    career = c.career
    
     if mode == 'txt' 
-      puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
       first_skill = true
       c.skills.each do |skill, level|
         if first_skill == false
@@ -89,8 +90,20 @@ module Traveller
       print "\n"
       puts llp
       puts""
+    elsif mode == 'hash'
+      id = Hash.new
+      id['name'] = name
+      id['rank'] = rank
+      id['upp'] = upp
+      id['gender'] = gender
+      id['age'] = age
+      id['terms'] = terms
+      id['llp'] = llp
+      id['career'] = career
+      id['skills'] = c.skills
+      return id
     elsif mode == 'wiki'
-      puts "#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
       puts 
       c.skills.each do |skill, level|
         if first_skill == false
@@ -104,7 +117,7 @@ module Traveller
       puts llp
       puts
     elsif mode == 'html'
-      puts "<p>#{c.career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
       print "<p>" 
       c.skills.each do |skill, level|
         if first_skill == false
