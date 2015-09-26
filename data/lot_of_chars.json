@@ -1,0 +1,177 @@
+{
+  "6C8BA4-Bradford Cochran": {
+    "age": 44,
+    "gender": "male",
+    "terms": 6,
+    "llp": "Responder (heart)",
+    "career": "Warder",
+    "name": "Bradford Cochran",
+    "skills": {
+      "Electronic": 1,
+      "Forgery": 1,
+      "Mechanical": 1,
+      "Bribery": 1,
+      "Gambling": 1,
+      "Computer": 1,
+      "Streetwise": 1
+    },
+    "upp": "6C8BA4",
+    "rank": ""
+  },
+  "CA7754-Larita Mercer": {
+    "age": 28,
+    "gender": "female",
+    "terms": 2,
+    "llp": "Responder (heart)",
+    "career": "Mountainman",
+    "name": "Larita Mercer",
+    "skills": {
+      "Blade": 1,
+      "Gambling": 1,
+      "Brawling": 1,
+      "Survival": 1
+    },
+    "upp": "CA7754",
+    "rank": ""
+  },
+  "B68D44-Ronald Winters": {
+    "age": 27,
+    "gender": "female",
+    "terms": 2,
+    "llp": "Producer (head)",
+    "career": "Warder",
+    "name": "Ronald Winters",
+    "skills": {
+      "Forgery": 1,
+      "Mechanical": 1,
+      "Streetwise": 1
+    },
+    "upp": "B68D44",
+    "rank": ""
+  },
+  "B43664-Lonnie Girault": {
+    "age": 28,
+    "gender": "male",
+    "terms": 2,
+    "llp": "Responder (heart)",
+    "career": "Mountainman",
+    "name": "Lonnie Girault",
+    "skills": {
+      "Hunting": 1,
+      "JoT": 1,
+      "Brawling": 1,
+      "Survival": 1
+    },
+    "upp": "B43664",
+    "rank": ""
+  },
+  "944589-Errol Sandvik": {
+    "age": 23,
+    "gender": "male",
+    "terms": 1,
+    "llp": "Influencer (heart)",
+    "career": "Guide",
+    "name": "Errol Sandvik",
+    "skills": {
+      "Liason": 1,
+      "CbtR": 1
+    },
+    "upp": "944589",
+    "rank": ""
+  },
+  "452B94-Lanelle Fisher": {
+    "age": 31,
+    "gender": "female",
+    "terms": 3,
+    "llp": "Influencer (heart)",
+    "career": "Mountainman",
+    "name": "Lanelle Fisher",
+    "skills": {
+      "Hunting": 2,
+      "Gambling": 1,
+      "Survival": 1
+    },
+    "upp": "452B94",
+    "rank": ""
+  },
+  "825B96-Erich Blankenship": {
+    "age": 28,
+    "gender": "male",
+    "terms": 2,
+    "llp": "Shaper (head)",
+    "career": "Citizen",
+    "name": "Erich Blankenship",
+    "skills": {
+      "Computer": 1,
+      "Medic": 1,
+      "Streetwise": 1
+    },
+    "upp": "825B96",
+    "rank": ""
+  },
+  "958759-Aline Salmon": {
+    "age": 43,
+    "gender": "female",
+    "terms": 6,
+    "llp": "Contemplator (head)",
+    "career": "Path",
+    "name": "Aline Salmon",
+    "skills": {
+      "Hunting": 2,
+      "JoT": 1,
+      "Steward": 1,
+      "Recon": 1,
+      "Vehicle": 1,
+      "Computer": 1
+    },
+    "upp": "958759",
+    "rank": ""
+  },
+  "764A98-Theodore White": {
+    "age": 40,
+    "gender": "male",
+    "terms": 5,
+    "llp": "Influencer (heart)",
+    "career": "Path",
+    "name": "Theodore White",
+    "skills": {
+      "Persuade": 1,
+      "Steward": 1,
+      "Trade(any)": 1,
+      "Liason": 1
+    },
+    "upp": "764A98",
+    "rank": ""
+  },
+  "986574-Brett Cabrera": {
+    "age": 38,
+    "gender": "female",
+    "terms": 5,
+    "llp": "Doer (action)",
+    "career": "Citizen",
+    "name": "Brett Cabrera",
+    "skills": {
+      "Broker": 1,
+      "Admin": 1,
+      "JoT": 1,
+      "Trade(any)": 1
+    },
+    "upp": "986574",
+    "rank": ""
+  },
+  "778678-Dallas Coleman": {
+    "age": 30,
+    "gender": "male",
+    "terms": 3,
+    "llp": "Doer (action)",
+    "career": "Path",
+    "name": "Dallas Coleman",
+    "skills": {
+      "Leader": 2,
+      "Steward": 1,
+      "Vehicle": 1
+    },
+    "upp": "778678",
+    "rank": ""
+  }
+}

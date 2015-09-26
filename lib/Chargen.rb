@@ -7,6 +7,7 @@ module Chargen
   autoload 'Marine', 'marine'
   autoload 'Mountainman', 'mountainman'
   autoload 'Navy', 'navy'
+  autoload 'Path', 'path'
   autoload 'Scout', 'scout'
   autoload 'Warder', 'warder'
 end
