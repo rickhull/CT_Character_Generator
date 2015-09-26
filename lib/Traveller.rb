@@ -75,10 +75,11 @@ module Traveller
     age = c.age
     terms = c.terms
     llp = c.llp
+    morale = c.morale
     career = c.career
    
     if mode == 'txt' 
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
       first_skill = true
       c.skills.each do |skill, level|
         if first_skill == false
@@ -100,10 +101,22 @@ module Traveller
       id['terms'] = terms
       id['llp'] = llp
       id['career'] = career
+      id['morale'] = morale
       id['skills'] = c.skills
       return id
+    elsif mode == 'csv'
+      print "#{career}:#{rank}:#{name}:#{upp}:#{gender.capitalize}:#{age}:#{terms}:#{morale}:#{llp}:"
+      c.skills.each do |skill,level|
+        if first_skill == false
+          print ","
+        end
+        print "#{skill}-#{level}"
+        first_skill = false
+      end
+      puts
+
     elsif mode == 'wiki'
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
       puts 
       c.skills.each do |skill, level|
         if first_skill == false
@@ -117,7 +130,7 @@ module Traveller
       puts llp
       puts
     elsif mode == 'html'
-      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age}  #{terms} terms"
+      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
       print "<p>" 
       c.skills.each do |skill, level|
         if first_skill == false
