@@ -77,6 +77,7 @@ module Traveller
     llp = c.llp
     morale = c.morale
     career = c.career
+    title = c.title
    
     if mode == 'txt' 
       puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
@@ -101,9 +102,10 @@ module Traveller
       id['career'] = career
       id['morale'] = morale
       id['skills'] = c.skills
+      id['title'] = title
       return id
     elsif mode == 'csv'
-      print "#{career}:#{rank}:#{name}:#{upp}:#{gender.capitalize}:#{age}:#{terms}:#{morale}:#{llp}:"
+      print "#{career}:#{rank}:#{title}:#{name}:#{upp}:#{gender.capitalize}:#{age}:#{terms}:#{morale}:#{llp}:"
       c.skills.each do |skill,level|
         if first_skill == false
           print ","

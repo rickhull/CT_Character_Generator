@@ -34,7 +34,10 @@ if valid_json
     puts  "Looking at #{key} people."
     chars.each_key do |char|
       if chars[char]['career'] == key
-        puts "#{chars[char]['name']}"
+        puts "#{chars[char]['rank']} #{chars[char]['name']}"
+        #this_char = Hash.new
+        #this_char = chars[char]
+        #Traveller.write(this_char, 'csv')
       end
     end
   end

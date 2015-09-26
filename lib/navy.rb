@@ -67,7 +67,7 @@ class Navy < Character
         increase_stat('Soc', '+2')
       end 
       rolls = rolls + 1
-      morale += 1      
+      @morale += 1      
     end
 
     @morale += terms
@@ -75,7 +75,10 @@ class Navy < Character
       new_skill = skill_options[rand(skill_options.count)]
       increase_skill(new_skill)
     end
-  end
 
+    @title = Traveller.noble?(@gender, @upp)
+  end
+  
+  
 end
 
