@@ -11,17 +11,17 @@ class Character
   attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer, :llp, :morale, :title
   attr_writer :terms, :officer
 
-  def initialize()
-    @career = ''
-    @gender = set_gender
-    @name = set_name(@gender)
-    @officer = false
-    @stats = {}
-    @skills = Hash.new
-    @upp = Traveller.roll_upp
-    @llp = set_llp()
-    @morale = Traveller.roll_dice(6,1,1)
-    @title = Traveller.noble?(@gender, @upp)
+  def initialize(char = Hash.new)
+    @career   = char['career']  ||  ''
+    @gender   = char['gender']  ||  set_gender
+    @name     = char['name']    ||  set_name(@gender)
+    @officer  = char['officer'] ||  false
+    @stats    = char['stats']   ||  {}
+    @skills   = char['skills']  ||  Hash.new
+    @upp      = char['upp']     ||  Traveller.roll_upp
+    @llp      = char['llp']     ||  set_llp()
+    @morale   = char['morale']  ||  Traveller.roll_dice(6,1,1)
+    @title    = char['title']   ||  Traveller.noble?(@gender, @upp)
   end
 
   def set_name(gender='male')
