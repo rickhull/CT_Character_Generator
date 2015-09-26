@@ -8,10 +8,10 @@ class Character
 
   require 'Traveller'
 
-  attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer, :llp, :morale, :title
+  attr_accessor :career, :gender, :name, :skills, :age, :upp, :officer, :llp, :morale, :title, :rank
   attr_writer :terms, :officer
 
-  def initialize(char = Hash.new)
+  def initialize(char = {})
     @career   = char['career']  ||  ''
     @gender   = char['gender']  ||  set_gender
     @name     = char['name']    ||  set_name(@gender)
@@ -22,6 +22,7 @@ class Character
     @llp      = char['llp']     ||  set_llp()
     @morale   = char['morale']  ||  Traveller.roll_dice(6,1,1)
     @title    = char['title']   ||  Traveller.noble?(@gender, @upp)
+    @rank     = char['rank']    ||  ''
   end
 
   def set_name(gender='male')

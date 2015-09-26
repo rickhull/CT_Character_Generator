@@ -18,8 +18,6 @@ def valid_json?(json)
   end
 end
 
-
-
 data_file = "#{$DATA_PATH}/lot_of_chars.json"
 if File.exists?(data_file)
   chars_in = File.read(data_file)
@@ -34,11 +32,7 @@ if valid_json
     puts  "Looking at #{key} people."
     chars.each_key do |char|
       if chars[char]['career'] == key
-        #puts "#{chars[char]['upp']} #{chars[char]['name']}"
-        #puts "#{chars[char]['name']}"
-        this_char = Hash.new
-        this_char = chars[char]
-        #puts this_char.inspect
+        this_char = Character.new(chars[char])
         Traveller.write(this_char, 'txt')
       end
     end
