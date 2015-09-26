@@ -23,6 +23,8 @@ class Character
     @morale   = char['morale']  ||  Traveller.roll_dice(6,1,1)
     @title    = char['title']   ||  Traveller.noble?(@gender, @upp)
     @rank     = char['rank']    ||  ''
+    @terms    = char['terms']   ||  terms
+    @age      = char['age']     ||  age
   end
 
   def set_name(gender='male')
@@ -96,7 +98,7 @@ class Character
   end
 
   def terms
-    @terms ||= 0
+    @terms ||= Traveller.roll_dice(6,1,1) 
   end
 
   def officer(target_roll=13)

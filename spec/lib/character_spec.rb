@@ -16,28 +16,25 @@ describe Character do
 
   describe '#age' do
     context 'when terms are not set' do
-      it 'returns the default age' do
+      it 'returns the an age within max terms + 3 + DEFAULT_AGE' do
         expect(subject.age).to be >= Character::DEFAULT_AGE
-        expect(subject.age).to be <= Character::DEFAULT_AGE + 3
+        expect(subject.age).to be <= Character::DEFAULT_AGE + 3 + 24
       end
     end
 
     context 'when terms are set' do
-      let(:terms) { 4 }
-
-      before { subject.terms = terms }
-
       it 'calculates age based on terms' do
-        expect(subject.age).to be >= 34
-        expect(subject.age).to be <= 37
+        expect(subject.age).to be >= Character::DEFAULT_AGE + (subject.terms * 4)
+        expect(subject.age).to be <= Character::DEFAULT_AGE + 3 + (subject.terms * 4)
       end
     end
   end
 
   describe '#terms' do
     context 'when not set' do
-      it 'returns 0' do
-        expect(subject.terms).to be 0
+      it 'returns a number between 0 and 6' do
+        expect(subject.terms).to be >= 0
+        expect(subject.terms).to be <= 6
       end
     end
   end

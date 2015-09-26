@@ -28,12 +28,12 @@ end
 if valid_json
   careers = ['Mountainman', 'Warder', 'Path', 'Citizen', 'Guide' ]
   careers.each do |key|
-    puts
-    puts  "Looking at #{key} people."
+    #puts
+    #puts  "Looking at #{key} people."
     chars.each_key do |char|
       if chars[char]['career'] == key
         this_char = Character.new(chars[char])
-        Traveller.write(this_char, 'txt')
+        Traveller.write(this_char, 'csv')
       end
     end
   end
