@@ -79,7 +79,7 @@ module Traveller
     career = c.career
    
     if mode == 'txt' 
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       first_skill = true
       c.skills.each do |skill, level|
         if first_skill == false
@@ -88,8 +88,6 @@ module Traveller
         print "#{skill}-#{level}"
         first_skill = false
       end
-      print "\n"
-      puts llp
       puts""
     elsif mode == 'hash'
       id = Hash.new
@@ -116,7 +114,7 @@ module Traveller
       puts
 
     elsif mode == 'wiki'
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
+      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       puts 
       c.skills.each do |skill, level|
         if first_skill == false
@@ -127,10 +125,8 @@ module Traveller
       end
       puts
       puts
-      puts llp
-      puts
     elsif mode == 'html'
-      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale}"
+      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       print "<p>" 
       c.skills.each do |skill, level|
         if first_skill == false
@@ -140,7 +136,6 @@ module Traveller
         first_skill = false
       end
       puts 
-      puts "<p>#{llp}"
       puts "<br>"
     end
 
