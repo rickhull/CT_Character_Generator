@@ -11,6 +11,7 @@ class Mountainman < Character
     @skills = { 'Survival' => 1 }
     @skill_options = [ 'Brawling', 'Survival', 'Hunting', 'Gambling', 'Vehicle', '+1 Int', 'GunCbt', 'Blade', 'Mechanical', 'JoT' ]
     @advanced_skill_options = ['+1 Edu', 'Medical', 'Vehicle', 'Leader']
+    @morale = morale
   end
 
   def set_rank()
@@ -25,6 +26,7 @@ class Mountainman < Character
     end
 
     rolls = terms + 1 
+    @morale += rolls + 2
     rolls.times do
       new_skill = @skill_options[rand(@skill_options.count)]
       increase_skill(new_skill)

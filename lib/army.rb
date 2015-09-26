@@ -35,6 +35,7 @@ class Army < Character
     @skills = { 'GunCbt' => 1 }
     @skill_options = [ 'Brawling', 'Gambling', '+1 Str', '+1 Dex', 'Medic', '+1 End', 'HeavyWpns', 'Vehicle', 'VaccSuit', 'Recon', 'GunCbt', 'GunCbt', 'Vehicle', 'Mechanical', 'Electronic', 'Tactics', 'Blade', 'GunCbt']
     @advanced_skill_options = ['Engineer', 'Demolition', 'Gunnery', 'Medical', 'Tactics', 'Electronic', 'Computer', 'Admin', 'Vehicle', 'Leader']
+    @morale = morale
   end
 
   def set_rank()
@@ -60,9 +61,10 @@ class Army < Character
 
     if @officer
       increase_skill('GunCbt')
-      rolls = rolls + 1
+      rolls += 1
     end
 
+    @morale += rolls
     rolls.times do
       new_skill = @skill_options[rand(@skill_options.count)]
       increase_skill(new_skill)

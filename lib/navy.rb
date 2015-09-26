@@ -34,6 +34,7 @@ class Navy < Character
     @rank = 'Spacehand Recruit'
     @skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', '+1 Soc', 'ShipsBoat', 'FwdObs', 'Gunnery', 'Blade', 'GunCbt', 'VaccSuit', 'Mechanical', 'Electronic', 'Engineering', 'Gunnery', 'JoT']
     @advanced_skill_options = ['Medical', 'Navigation', 'Engineering', 'Computer', 'Pilot', 'Admin']
+    @morale = morale
   end
 
   def set_rank()
@@ -66,8 +67,10 @@ class Navy < Character
         increase_stat('Soc', '+2')
       end 
       rolls = rolls + 1
+      morale += 1      
     end
 
+    @morale += terms
     rolls.times do
       new_skill = skill_options[rand(skill_options.count)]
       increase_skill(new_skill)

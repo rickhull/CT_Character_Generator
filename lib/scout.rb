@@ -10,6 +10,7 @@ class Scout < Character
     @skills = { 'Pilot' => 1 } 
     @skill_options = [ '+1 Str', '+1 Dex', '+1 End', '+1 Int', '+1 Edu', 'GunCbt', 'Vehicle', 'VaccSuit', 'Mechanical', 'Navigation', 'Electronic', 'JoT', 'Vehicle', 'Mechanical', 'Electronic', 'JoT', 'Gunnery', 'Medical']
     @advanced_skill_options = ['Navigation', 'Engineering', 'Computer', 'JoT', 'Pilot', 'Medical']
+    @morale = morale
   end
 
   def set_rank()
@@ -25,7 +26,7 @@ class Scout < Character
     else
       skill_options = @skill_options
     end
-
+    @morale += [terms, 2].max
     rolls.times do
       new_skill = skill_options[rand(skill_options.count)]
       increase_skill(new_skill)
