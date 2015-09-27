@@ -26,10 +26,8 @@ if File.exists?(data_file)
 end 
 
 if valid_json
-  careers = ['Mountainman', 'Warder', 'Path', 'Citizen', 'Guide' ]
+  careers = %w[ Mountainman Warder Path Citizen Guide Army Navy College Entertainer ]
   careers.each do |key|
-    #puts
-    #puts  "Looking at #{key} people."
     chars.each_key do |char|
       if chars[char]['career'] == key
         this_char = Character.new(chars[char])

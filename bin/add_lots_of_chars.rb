@@ -27,7 +27,16 @@ end
 output_format = 'hash'
 chars = Hash.new
 
-newbies = {'Mountainman' => 374, 'Warder' => 250, 'Path' => 62, 'Citizen' => 250, 'Guide' => 186, 'Army' => 12 }
+newbies = { 'Mountainman'   => 374, 
+            'Warder'        => 250, 
+            'Path'          => 62, 
+            'Citizen'       => 100, 
+            'Army'          => 37, 
+            'Navy'          => 25, 
+            'Entertainer'   => 50,
+            'College'       => 50,
+            'Guide'         => 186 
+          }
 newbies.each do  |career, count| 
   count.times do
     character = gen_char(career)
@@ -37,19 +46,6 @@ newbies.each do  |career, count|
   end
 end
 
-#puts JSON.pretty_generate(chars)
 data_file = File.open("#{$DATA_PATH}/lot_of_chars.json", 'w')
 data_file.write(JSON.pretty_generate(chars))
 data_file.close
-
-
-#newbies.each_key do |key|
-#  puts
-#  puts  "Looking at #{key} people."
-#  chars.each_key do |char|
-#    if chars[char]['career'] == key
-#      puts "#{chars[char]['name']}"
-#    end
-#  end
-#end
- 
