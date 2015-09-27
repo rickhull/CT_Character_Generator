@@ -10,8 +10,8 @@
 
 $LOAD_PATH << File.expand_path("./lib", __FILE__)
 
-require 'lib/trav_functions'
-require 'lib/character'
+require 'Traveller'
+require 'character'
 require 'optparse'
 
 # Data files are stored in data/<gamename>/json
