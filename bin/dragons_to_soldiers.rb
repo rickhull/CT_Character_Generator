@@ -39,22 +39,29 @@ def add_awards(soldier)
   end
 
   award_list = %w[ CC CSR MCUF PH MCG SEH ]
+  leader_rank_list = %w[ LCP CPL SGT NCO LSG LT CPT ]
 
-  award_list.each do |award| 
-    if soldier['awards'].has_key?(award)  
-      soldier['awards'][award] += 1
-    else
-      soldier['awards'][award] = 1
-    end
+  if soldier['awards'].has_key?('CSR')
+    soldier['awards']['CSR'] += 1
+  else
+    soldier['awards']['CSR'] = 1
   end
 
+  if leader_rank_list.include?(soldier['rank'])
+    if soldier['awards'].has_key?('CC')
+      soldier['awards']['CC'] += 1
+    else
+      soldier['awards']['CC'] = 1
+    end
+  end
+  
 end
 
 if valid_json
   soldiers = Hash[dragons]
   puts "Found #{dragons.count} Dragons."
   puts "Looking at Dragon 1."  
-  puts dragons['1'].inspect
+  # puts dragons['1'].inspect
  
   soldiers.each do |key, soldier|
     skills_to_hash(soldier)
