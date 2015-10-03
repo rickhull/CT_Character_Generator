@@ -21,7 +21,16 @@ module Traveller
     end
     return @upp
   end
-    
+   
+  def Traveller.valid_json?(json)
+    begin
+      data = JSON.parse(json)
+      return data, true
+    rescue Exception => e
+      return false
+    end
+  end
+ 
   def Traveller.noble?(gender, upp)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
