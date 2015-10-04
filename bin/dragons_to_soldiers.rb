@@ -7,7 +7,6 @@ DATA_DIR = File.expand_path('../../data', __FILE__)
 require 'json'
 require 'Traveller'
 
-
 def write_soldiers(data)
   soldier_file = File.open("#{DATA_DIR}/soldiers.json", 'w')
   soldier_file.write(JSON.pretty_generate(data))
@@ -42,18 +41,14 @@ def terms(soldier)
     age = soldier['age'].to_i
     terms = (age - 18) / 4
     terms = [terms, 0].max
-    puts "terms is #{terms}."
     soldier['terms'] = terms
   end
 end
 
 def add_awards(soldier)
-
   unless soldier.has_key?('awards')
     soldier['awards'] = Hash.new
   end
-
-  award_list = %w[ CC CSR MCUF PH MCG SEH ]
 
   if soldier['awards'].has_key?('CSR')
     soldier['awards']['CSR'] += 1
@@ -84,20 +79,19 @@ def add_awards(soldier)
   # The Marine Raid Decoration roll is 5+
   decoration = ''
   decoration_roll = Traveller.roll_dice(6,2) - 4
-  case decoration_roll
-    when 1..3: 
-      decoration = 'MCUF'
-      soldier['morale_modifier'] += 1
-    when 4..5: 
-      decoration = 'MCG'
-      soldier['morale_modifier'] += 2
-    when > 5:
-      decoration = 'SEH'
-      soldier['morale_modifier'] += 3
-  end
-  puts "decoration_roll is #{decoration_roll}, for #{decoration}."
-  
-  unless decoration.length == 0
+  if decoration_roll > 0
+    case decoration_roll
+      when 1..3: 
+        decoration = 'MCUF'
+        soldier['morale_modifier'] += 1
+      when 4..5: 
+        decoration = 'MCG'
+        soldier['morale_modifier'] += 2
+      else
+        decoration = 'SEH'
+        soldier['morale_modifier'] += 3
+    end
+   
     if soldier['awards'].has_key?(decoration)
       soldier['awards'][decoration] += 1
     else
@@ -107,38 +101,43 @@ def add_awards(soldier)
 
 end
 
+def adjust_morale(soldier)
+  soldier['morale'] = soldier['morale'].to_i
+  #if soldier['morale'] < 7
+  #  soldier['morale'] = 7
+  #end
+  soldier['morale'] += soldier['morale_modifier'].to_i
+  soldier['morale_modifier'] = 0
+end
+
+def add_title(soldier)
+  soldier['title'] = Traveller.noble?(soldier['gender'], soldier['upp'])
+end
+
 if valid_json
   soldiers = Hash[dragons]
-  #puts "Found #{dragons.count} Dragons."
-  #puts "Looking at Dragon 1."  
-  #puts dragons['1'].inspect
  
   soldiers.each do |key, soldier|
     soldier['morale_modifier'] = 0
     terms(soldier)
     skills_to_hash(soldier)
     add_awards(soldier)
+    add_title(soldier)
+
+    # This should be last.
+    adjust_morale(soldier)
   end
 
   
-  soldiers['1']['awards'] = { 'SEH' => 1, 'CSR' => 1}
   puts "Looking at Soldier 1."  
   soldiers['1']['awards'].each do |key, value|
     puts "#{key}: #{value}"
   end
-  add_awards(soldiers['1'])
-  puts "Added CSR."
-  soldiers['1']['awards'].each do |key, value|
-    puts "#{key}: #{value}"
-  end
   puts "Morale Modifier: #{soldiers['1']['morale_modifier']}."
-  puts "Terms: #{soldiers['1']['terms']}."
+  puts "Morale: #{soldiers['1']['morale']}."
  
   write_soldiers(soldiers)
+
 else
   puts "Kinda lost."
 end
-
-
-
-

@@ -1,2055 +1,4038 @@
 {
-  "3": {
-    "llp": "Responder",
-    "skill_line": "Mechanical-2,GunCbt-1,HeavyWeapon-1",
-    "camp_m_raid_line": "9,7,5,10,MCUF",
-    "age": "30",
-    "morale": "10",
-    "political": "MM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "59755A",
-    "first_name": "Cecilia"
-  },
-  "100": {
-    "llp": "Pleaser",
-    "skill_line": "Recon-2,GunCbt-1",
-    "age": "27",
-    "morale": "7",
-    "political": "FWMM",
+  "18": {
     "gender": "M",
-    "rank": "NR",
-    "last_name": "Huss",
-    "upp": "856536",
-    "first_name": "Lars"
-  },
-  "45": {
+    "skill_line": "BladeCbt-1,GunCbt-1",
     "llp": "Doer",
-    "skill_line": "Brawling-1,Bribery-1,GunCbt-1,Streetwise-1",
-    "camp_m_raid_line": "12,5,8,10,MCUF",
-    "age": "28",
-    "morale": "7",
-    "political": "R",
-    "gender": "F",
+    "terms": 1,
     "rank": "NR",
-    "last_name": "Dudley",
-    "upp": "92A963",
-    "first_name": "Leena"
-  },
-  "11": {
-    "llp": "Responder",
-    "skill_line": "GunCbt-3",
-    "camp_m_raid_line": "7,9,11,12,MCG",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1
+    },
     "age": "23",
-    "morale": "10",
-    "wound": "Deadly",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Forstrom",
-    "upp": "9889A4",
-    "first_name": "FNU"
-  },
-  "51": {
-    "llp": "Doer",
-    "skill_line": "Investigate-1,Blade-1,Stealth-1",
-    "camp_m_raid_line": "7,8,7,11,MCG",
-    "age": "28",
-    "morale": "7",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Parent",
-    "upp": "B96867",
-    "first_name": "Phyllis"
-  },
-  "0": {
-    "llp": "Unk",
-    "skill_line": "Admin-0,Blade-1,Brawling-1,Computer-0,Electronics-0,Gambling-0,GunCgt(Energy)-2,Leader-0,Medical-0,Mechanical-0,Tactics-0,VaccSuit-1,Vehicle(Grav)-0",
-    "camp_m_raid_line": "1,1,1,1",
-    "age": "22",
-    "morale": "13",
-    "political": "D",
-    "gender": "M",
-    "rank": "CPT",
-    "last_name": "Domici",
-    "upp": "78A885",
-    "first_name": "Marco"
-  },
-  "42": {
-    "llp": "Doer",
-    "skill_line": "Electronics-2,CbtR-1",
-    "camp_m_raid_line": "5,10,8,10,PH,MCG",
-    "age": "26",
-    "morale": "7",
-    "political": "MM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "77AA69",
-    "first_name": "Isabella"
-  },
-  "158": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-2,Recon-1",
-    "age": "25",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Thun",
-    "upp": "388676",
-    "first_name": "Manfred"
-  },
-  "149": {
-    "llp": "Innovator",
-    "skill_line": "GunCbt-1,Vehicle-1",
-    "age": "22",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Falen",
-    "upp": "879692",
-    "first_name": "Karla"
-  },
-  "161": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Tactics-1",
-    "age": "22",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Thun",
-    "upp": "5586A4",
-    "first_name": "Hilmar"
-  },
-  "155": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-2",
-    "age": "22",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Orn",
-    "upp": "8998B4",
-    "first_name": "Sonja"
-  },
-  "146": {
-    "llp": "Leader",
-    "skill_line": "Recon-2,GunCbt-1",
-    "age": "26",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Lindvall",
-    "upp": "7C8873",
-    "first_name": "Steffan"
-  },
-  "152": {
-    "llp": "Finisher",
-    "skill_line": "Elec-1,GunCbt-1,Tactics-1",
-    "age": "27",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Lindvall",
-    "upp": "7A9485",
-    "first_name": "Kevin"
-  },
-  "97": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-1,Mech-1,Medic-1",
-    "age": "25",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Landeen",
-    "upp": "78A798",
-    "first_name": "William"
-  },
-  "94": {
-    "llp": "Encourager",
-    "skill_line": "GunCbt-1,Leader-1,Recon-1",
-    "age": "24",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "C46863",
-    "first_name": "Peder"
-  },
-  "88": {
-    "llp": "Innovator",
-    "skill_line": "Recon-2,GunCbt-1,Mech-1,Vehicle-1",
-    "age": "33",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "LCP",
-    "last_name": "Solen",
-    "upp": "474876",
-    "first_name": "Ingemar"
-  },
-  "137": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,BladeCbt-1",
-    "age": "22",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Rydell",
-    "upp": "5A5683",
-    "first_name": "Kasper"
-  },
-  "143": {
-    "llp": "Finisher",
-    "skill_line": "BladeCbt-2,Mech-2,GunCbt-1,Recon-1,Vehicle-1",
-    "age": "41",
-    "morale": "10",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Johansson",
-    "upp": "99676B",
-    "first_name": "Liam"
-  },
-  "85": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Recon-1",
-    "age": "23",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Isenberg",
-    "upp": "B796C3",
-    "first_name": "Stefan"
-  },
-  "79": {
-    "llp": "Innovator",
-    "skill_line": "GunCbt-1,Elec-1,Tactics-1",
-    "age": "25",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Winter",
-    "upp": "79BA55",
-    "first_name": "Gudrun"
-  },
-  "91": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-3",
-    "age": "23",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "796494",
-    "first_name": "Franz"
-  },
-  "140": {
-    "llp": "Encourager",
-    "skill_line": "GunCbt-2,Recon-1,Tactics-1",
-    "age": "27",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Branting",
-    "upp": "96B765",
-    "first_name": "Hilmar"
-  },
-  "128": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-1,Mech-1,Vehicle-1",
-    "age": "27",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Franzen",
-    "upp": "87CA97",
-    "first_name": "Nathanel"
-  },
-  "39": {
-    "llp": "Cbt-3,Tactics",
-    "skill_line": "Gun",
-    "camp_m_raid_line": "5,7,5,6,PH,MCUF",
-    "age": "31",
-    "morale": "10",
-    "political": "MM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "7A755A",
-    "first_name": "Petter"
-  },
-  "134": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2",
-    "age": "22",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Franzen",
-    "upp": "676323",
-    "first_name": "Gunnar"
-  },
-  "82": {
-    "llp": "Encourager",
-    "skill_line": "Brawling-1,Elec-1,GunCbt-1",
-    "age": "24",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Florin",
-    "upp": "49A833",
-    "first_name": "Hans"
-  },
-  "76": {
-    "llp": "Contemplator",
-    "skill_line": "Computer-1,GunCbt-1,Vehicle(tracked)-1",
-    "camp_m_raid_line": "9,10,4,6,MCG",
-    "age": "24",
-    "morale": "7",
+    "title": "",
+    "first_name": "Jakob",
+    "last_name": "Trest",
+    "camp_m_raid_line": "10,2,7,7",
     "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Hellen",
-    "upp": "465AB3",
-    "first_name": "David"
-  },
-  "125": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-1,Mech-1,Medic-1,Vehicle-1",
-    "age": "29",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Byland",
-    "upp": "995953",
-    "first_name": "Lena"
-  },
-  "36": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-1,Medic-1,Survival-1",
-    "camp_m_raid_line": "7,6,8,6,MCUF",
-    "age": "24",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Skogman",
-    "upp": "98B6A4",
-    "first_name": "Maja"
-  },
-  "131": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-2,Medic-2,Leader-1",
-    "age": "28",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Byland",
-    "upp": "A66874",
-    "first_name": "Gertrud"
-  },
-  "119": {
-    "llp": "Manager",
-    "skill_line": "GunCbt-2,Mech-1,Medic-1,Vehicle-1",
-    "age": "32",
-    "morale": "10",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Byland",
-    "upp": "D5A667",
-    "first_name": "Agata"
-  },
-  "67": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-1,HvyWeapon-1,Medic-1",
-    "camp_m_raid_line": "11,5,9,8,MCUF",
-    "age": "25",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Asae",
-    "upp": "969766",
-    "first_name": "FNU"
-  },
-  "73": {
-    "llp": "Influencer",
-    "skill_line": "Tracked-0,CbtRifle-1",
-    "camp_m_raid_line": "3,6,5,3,LW,MCUF",
-    "age": "17",
-    "morale": "7",
-    "political": "G",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "96AA77",
-    "first_name": "Jonatan"
-  },
-  "122": {
-    "llp": "Finisher",
-    "skill_line": "Elec-1,GunCbt-1",
-    "age": "23",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Ehn",
-    "upp": "D96947",
-    "first_name": "Alrik"
-  },
-  "33": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-1,Leader-1,Medic-1,Recon-1",
-    "camp_m_raid_line": "4,2,6,7,SW",
-    "age": "28",
-    "morale": "7",
-    "wound": "Serious",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LSG",
-    "last_name": "Somberg",
-    "upp": "4B98A4",
-    "first_name": "Goran"
-  },
-  "116": {
-    "llp": "Pleaser",
-    "skill_line": "BladeCbt-1,Elec-1,GunCbt-1,Medic-1",
-    "age": "31",
-    "morale": "10",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "CPL",
-    "last_name": "Beckman",
-    "upp": "A759A4",
-    "first_name": "Tora"
-  },
-  "27": {
-    "llp": "Shaper",
-    "skill_line": "GunCbt-1,Leader-1",
-    "camp_m_raid_line": "4,11,7,8,SW,SEH",
-    "age": "22",
-    "morale": "7",
-    "wound": "Deadly",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Kring",
-    "upp": "888A85",
-    "first_name": "Soveig"
-  },
-  "64": {
-    "llp": "7,4,11,3",
-    "skill_line": "CbtRifleman-1,Electronics-1,HvyWeapons-1,Leader-1,Medic-1",
-    "camp_m_raid_line": null,
-    "age": "32",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LT",
-    "last_name": "Arne",
-    "upp": "BA68B9",
-    "first_name": "FNU"
-  },
-  "58": {
-    "llp": "Responder",
-    "skill_line": "Art(metalworking)-1,Streetwise-1,Persuade-1",
-    "camp_m_raid_line": "5,10,7,7,LW,MCG",
-    "age": "23",
-    "morale": "4",
-    "political": "A",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Davidson",
-    "upp": "BC9886",
-    "first_name": "Kayleigh"
-  },
-  "70": {
-    "llp": "Producer",
-    "skill_line": "Grav/ACV-1,GunCbt-1",
-    "camp_m_raid_line": "6,6,8,10,PH,MCUF",
-    "age": "30",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LCP",
-    "last_name": "Isberg",
-    "upp": "7D8875",
-    "first_name": "FNU"
-  },
-  "107": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-4,Mech-1",
-    "age": "32",
-    "morale": "13",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winger",
-    "upp": "47C357",
-    "first_name": "Hermann"
+    "morale_modifier": 0,
+    "upp": "8DA735"
   },
   "30": {
-    "llp": "Responder",
+    "gender": "M",
     "skill_line": "Electronics-1,GunCbt-1,Medic-1",
-    "camp_m_raid_line": "10,7,7,3,MCUF",
-    "age": "24",
-    "morale": "7",
-    "wound": "Serious",
-    "political": "PRMM",
-    "gender": "M",
+    "llp": "Responder",
+    "terms": 1,
     "rank": "CPL",
+    "awards": {
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Electronics": 1,
+      "Medic": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Tage",
+    "wound": "Serious",
     "last_name": "Lunden",
-    "upp": "B98A83",
-    "first_name": "Tage"
-  },
-  "18": {
-    "llp": "Doer",
-    "skill_line": "BladeCbt-1,GunCbt-1",
-    "camp_m_raid_line": "10,2,7,7",
-    "age": "23",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Trest",
-    "upp": "8DA735",
-    "first_name": "Jakob"
-  },
-  "113": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-2,Medic-1",
-    "age": "25",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Thoren",
-    "upp": "7DBB64",
-    "first_name": "Rosa"
+    "camp_m_raid_line": "10,7,7,3,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "B98A83"
   },
   "24": {
-    "llp": "Responder",
+    "gender": "M",
     "skill_line": "Medic-2,Computer-1,GunCbt-1",
-    "camp_m_raid_line": "7,2,10,9",
-    "age": "29",
-    "morale": "10",
-    "wound": "Deadly",
-    "political": "PRMM",
-    "gender": "M",
+    "llp": "Responder",
+    "terms": 2,
     "rank": "LSG",
+    "awards": {
+      "MCG": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "Medic": 2
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Sigvard",
+    "wound": "Deadly",
     "last_name": "Eng",
-    "upp": "7B9685",
-    "first_name": "Sigvard"
-  },
-  "61": {
-    "llp": "Influencer",
-    "skill_line": "Blade-3,Leadership-1,GunCbt-1,Medical-1,Streetwise-1",
-    "camp_m_raid_line": "6,7,12,10,MCUF",
-    "age": "35",
-    "morale": "10",
-    "political": "R",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Guthrie",
-    "upp": "5599B7",
-    "first_name": "Milton"
-  },
-  "55": {
-    "llp": "Doer",
-    "skill_line": "Art(painting)-1,Steward-1,Streetwise-1",
-    "camp_m_raid_line": "7,9,2,6,MCG",
-    "age": "22",
-    "morale": "4",
-    "political": "A",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Vignon",
-    "upp": "963668",
-    "first_name": "Emilee"
-  },
-  "49": {
-    "llp": "Influencer",
-    "skill_line": "Survival-1,Streetwise-3,Investigate-2,GunCbt-1,Bribery-1,Blade-1,Persuade-1",
-    "camp_m_raid_line": "6,6,10,7,MCUF",
-    "age": "49",
-    "morale": "10",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Brand",
-    "upp": "546C82",
-    "first_name": "Harriet"
-  },
-  "104": {
-    "llp": "Scholar",
-    "skill_line": "Comp-1,GunCbt-1,Medic-1,Tactics-1",
-    "age": "28",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winger",
-    "upp": "C546C7",
-    "first_name": "Jesper"
-  },
-  "15": {
-    "llp": "Shaper",
-    "skill_line": "Vehicle-1,JoT-2,Persuade-1,Recon-1,CbtR-1",
-    "camp_m_raid_line": "3,10,9,9,SW,MCG",
-    "age": "34",
-    "morale": "10",
-    "wound": "Deadly",
-    "political": "G",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Singleton",
-    "upp": "59C475",
-    "first_name": "Cory"
-  },
-  "7": {
-    "llp": "Boat-1,Pistol-1",
-    "skill_line": "Recon-0,Ship's",
-    "camp_m_raid_line": "Responder",
-    "age": "21",
-    "morale": "10",
-    "political": "G",
-    "gender": "F",
-    "rank": "LT",
-    "last_name": "LNU",
-    "upp": "366A75",
-    "first_name": "Gabriela"
-  },
-  "110": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Leader-1",
-    "age": "22",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winger",
-    "upp": "4A9876",
-    "first_name": "Alvin"
-  },
-  "21": {
-    "llp": "Doer",
-    "skill_line": "BladeCbt-1,GunCbt-1,Hunter(Recon)-1,Survival-1,Vehicle(Tracked)-1",
-    "camp_m_raid_line": "8,5,7,6,MCUF",
-    "age": "33",
-    "morale": "10",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Wist",
-    "upp": "5B8765",
-    "first_name": "Mikaela"
-  },
-  "52": {
-    "llp": "Contemplator",
-    "skill_line": "Blade-1,Brawling-1,Gambling-1,Streetwise-1",
-    "camp_m_raid_line": "7,6,6,6,MCUF",
-    "age": "28",
-    "morale": "7",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Garnier",
-    "upp": "589B84",
-    "first_name": "Sam"
-  },
-  "46": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-2,Survival-2",
-    "camp_m_raid_line": "7,11,7,7,SEH",
-    "age": "28",
-    "morale": "10",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Lundell",
-    "upp": "98C876",
-    "first_name": "Eugen"
-  },
-  "101": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-2",
-    "age": "22",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Huss",
-    "upp": "75A794",
-    "first_name": "Vilhelm"
-  },
-  "12": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-3",
-    "camp_m_raid_line": "8,9,7,5,MCG",
-    "age": "27",
-    "morale": "10",
+    "camp_m_raid_line": "7,2,10,9",
     "political": "PRMM",
-    "gender": "F",
-    "rank": "CPL",
-    "last_name": "Molen",
-    "upp": "547484",
-    "first_name": "FNU"
-  },
-  "4": {
-    "llp": null,
-    "skill_line": "9,9,6,10,MCG",
-    "camp_m_raid_line": null,
-    "age": "MM",
-    "morale": "7",
-    "political": "M",
-    "gender": "Computer-4,Electronics-3",
-    "rank": "NR",
-    "last_name": "23",
-    "upp": "Contemplator",
-    "first_name": "Derek"
-  },
-  "43": {
-    "llp": "Cbt-2,Leader,Recon",
-    "skill_line": "Gun",
-    "camp_m_raid_line": "5,8,5,7,PH,MCG",
-    "age": "30",
-    "morale": "10",
-    "political": "MM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "A78657",
-    "first_name": "Bertil"
-  },
-  "1": {
-    "llp": "Mover",
-    "skill_line": "Psion-0,CbtR-0,Dance-1,Survival-0",
-    "camp_m_raid_line": "3,6,7,2,LW,MCUF",
-    "age": "17",
-    "morale": "4",
-    "wound": "Light",
-    "political": "R",
-    "gender": "F",
-    "rank": "CPL",
-    "last_name": "Torsten",
-    "upp": "996B22-C",
-    "first_name": "Tala"
-  },
-  "40": {
-    "llp": "Influencer",
-    "skill_line": "Brawling-1,Gambling-1,GunCbt-1,Streetwise-1",
-    "camp_m_raid_line": "7,5,9,4,MCUF",
-    "age": "31",
-    "morale": "10",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Aguilar",
-    "upp": "873672",
-    "first_name": "Vickie"
-  },
-  "159": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-1,Recon-1",
-    "age": "21",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Thun",
-    "upp": "A97746",
-    "first_name": "Edvin"
-  },
-  "162": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Vehicle-1",
-    "age": "22",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Winquist",
-    "upp": "D3A363",
-    "first_name": "Gota"
-  },
-  "156": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Mech-1,Medic-1,Recon-1",
-    "age": "28",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Thun",
-    "upp": "AD5786",
-    "first_name": "Adrian"
-  },
-  "147": {
-    "llp": "Innovator",
-    "skill_line": "GunCbt-2,Mech-2,Vehicle-2,BladeCbt-1,Medic-1",
-    "age": "45",
-    "morale": "10",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Branting",
-    "upp": "886959",
-    "first_name": "Otto"
-  },
-  "98": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Elec-1",
-    "age": "23",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Landeen",
-    "upp": "9B4B86",
-    "first_name": "Joel"
-  },
-  "153": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Tactics-1,Vehicle-1",
-    "age": "27",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Moden",
-    "upp": "987994",
-    "first_name": "Soren"
-  },
-  "95": {
-    "llp": "Pleaser",
-    "skill_line": "Blade-1,GunCbt-1,Tactics-1",
-    "age": "26",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Landeen",
-    "upp": "5B9447",
-    "first_name": "Matteus"
-  },
-  "150": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Mech-1",
-    "age": "22",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Falen",
-    "upp": "A77865",
-    "first_name": "Nikolaus"
-  },
-  "138": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-3,Leader-2,Recon-1,Tactics-1",
-    "age": "44",
-    "morale": "13",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Swanson",
-    "upp": "648579",
-    "first_name": "Lennart"
-  },
-  "89": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Recon-1,Vehicle-1",
-    "age": "26",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Rask",
-    "upp": "AAC863",
-    "first_name": "Berit"
-  },
-  "144": {
-    "llp": "Pleaser",
-    "skill_line": "Recon-2,GunCbt-1",
-    "age": "27",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Johansson",
-    "upp": "6B8B25",
-    "first_name": "Manfred"
-  },
-  "92": {
-    "llp": "Encourager",
-    "skill_line": "GunCbt-1,Medic-1,Recon-1,Vehicle-1",
-    "age": "28",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "8796C3",
-    "first_name": "Ellen"
-  },
-  "135": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-1,Medic-1,Recon-1",
-    "age": "25",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Klang",
-    "upp": "55AC94",
-    "first_name": "Simon"
-  },
-  "86": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-1,Tactics-1",
-    "age": "22",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Isenberg",
-    "upp": "6C5C95",
-    "first_name": "Agnes"
-  },
-  "141": {
-    "llp": "Encourager",
-    "skill_line": "GunCbt-1,Medic-1,Tactics-1",
-    "age": "26",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Branting",
-    "upp": "748658",
-    "first_name": "Brigitta"
-  },
-  "129": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Leader-1,Mech-1",
-    "age": "24",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Rydell",
-    "upp": "C55756",
-    "first_name": "Antonetta"
-  },
-  "37": {
-    "llp": "Mover",
-    "skill_line": "CbtR-4,Recon-3,SkyCrane-1,Tactics-1,Tracked-0,Brawling-0",
-    "camp_m_raid_line": "9,9,5,7,MCG",
-    "age": "45",
-    "morale": "13",
-    "political": "MM",
-    "gender": "M",
-    "rank": "LT",
-    "last_name": "Ottoson",
-    "upp": "9A755A",
-    "first_name": "Verner"
-  },
-  "77": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-3,Elec-1,Recon-1",
-    "age": "33",
-    "morale": "13",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "SGT",
-    "last_name": "Winter",
-    "upp": "96E847",
-    "first_name": "Elias"
-  },
-  "132": {
-    "llp": "Scholar",
-    "skill_line": "Recon-2,GunCbt-1",
-    "age": "25",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Byland",
-    "upp": "9A8B85",
-    "first_name": "Elenora"
-  },
-  "83": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-2,Elec-1,Vehicle-1",
-    "age": "31",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "B5C796",
-    "first_name": "Natalie"
-  },
-  "126": {
-    "llp": "Finisher",
-    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1",
-    "age": "25",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Malmgren",
-    "upp": "7855B5",
-    "first_name": "Roland"
-  },
-  "28": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-1",
-    "camp_m_raid_line": "5,6,8,5,SW,MCUF",
-    "age": "17",
-    "morale": "7",
-    "wound": "Serious",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Arndt",
-    "upp": "968952",
-    "first_name": "Algot"
-  },
-  "34": {
-    "llp": "Responder",
-    "skill_line": "GunCbt-1,Recon-1",
-    "camp_m_raid_line": "7,9,10,10,MCG",
-    "age": "23",
-    "morale": "7",
-    "wound": "Deadly",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "LCP",
-    "last_name": "Gustafson",
-    "upp": "7DA786",
-    "first_name": "Anton"
-  },
-  "117": {
-    "llp": "Pleaser",
-    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1,Vehicle-1",
-    "age": "29",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Ehn",
-    "upp": "9A6545",
-    "first_name": "Tobias"
-  },
-  "80": {
-    "llp": "Innovator",
-    "skill_line": "GunCbt-3,Vehicle-2,Blade-1,Medic-1",
-    "age": "42",
-    "morale": "13",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Florin",
-    "upp": "C7C559",
-    "first_name": "Noah"
-  },
-  "68": {
-    "llp": "Doer",
-    "skill_line": "Electronics-1,GunCbt-1,Mechanical-1,Recon-1",
-    "camp_m_raid_line": "8,6,10,9,MCUF",
-    "age": "27",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "LSG",
-    "last_name": "Sundblad",
-    "upp": "456B86",
-    "first_name": "FNU"
-  },
-  "123": {
-    "llp": "Pleaser",
-    "skill_line": "Tactics-2,Brawling-1,GunCbt-1",
-    "age": "28",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Klang",
-    "upp": "D4C778",
-    "first_name": "Moa"
-  },
-  "74": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-1,Vehicle(tracked)-2",
-    "camp_m_raid_line": "9,7,11,9,MCUF",
-    "age": "26",
-    "morale": "10",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Sjostrand",
-    "upp": "86A674",
-    "first_name": "Olga"
-  },
-  "19": {
-    "llp": "Mover",
-    "skill_line": "Electronics-1,GunCbt-1,Medic-1,Recon-1",
-    "camp_m_raid_line": "11,10,6,6,MCG",
-    "age": "31",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "LSG",
-    "last_name": "Cronbust",
-    "upp": "D699A6",
-    "first_name": "FNU"
-  },
-  "31": {
-    "llp": "Shaper",
-    "skill_line": "Blade-1,Brawling-1,Bribery-1,GunCbt-1,Streetwise-1",
-    "camp_m_raid_line": "3,9,6,11,D,MCG",
-    "age": "31",
-    "morale": "10",
-    "wound": "Serious",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Dillard",
-    "upp": "A97931",
-    "first_name": "Palmira"
-  },
-  "25": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-2,Computer-2,Admin-1,Hunter(Recon)-1,Medic-1,Survival-1,Blade-0,Electronics-0,Leader-0,Mechanical-0,Vehicle(tracked)-0",
-    "camp_m_raid_line": "11,5,10,6,MCUF",
-    "age": "45",
-    "morale": "10",
-    "wound": "Serious",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bergin",
-    "upp": "ADC48C",
-    "first_name": "Evern"
-  },
-  "114": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2,Tactics-1",
-    "age": "24",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Thoren",
-    "upp": "CB5926",
-    "first_name": "Viveka"
-  },
-  "65": {
-    "llp": "Producer",
-    "skill_line": "GunCbt-1,Mechanical-1,Medic-1",
-    "camp_m_raid_line": "3,3,4,8,LW",
-    "age": "25",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Nygrin",
-    "upp": "4958C5",
-    "first_name": "FNU"
-  },
-  "120": {
-    "llp": "Finisher",
-    "skill_line": "Mech-2,GunCbt-1,Recon-1",
-    "age": "28",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Rydell",
-    "upp": "C37875",
-    "first_name": "Jan"
-  },
-  "108": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2,Vehicle-1",
-    "age": "24",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Thoren",
-    "upp": "D6CAA6",
-    "first_name": "Erika"
-  },
-  "71": {
-    "llp": "Responder",
-    "skill_line": "BladeCbt-1,GunCbt-1,Vehicle(tracked)-1",
-    "camp_m_raid_line": "2,5,4,8,D,MCUF",
-    "age": "27",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Bohner",
-    "upp": "9B8474",
-    "first_name": "Viola"
-  },
-  "59": {
-    "llp": "Producer",
-    "skill_line": "Persuade-1,CbtR-1",
-    "camp_m_raid_line": "11,10,10,6,MCG",
-    "age": "27",
-    "morale": "7",
-    "political": "P",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Leclercq",
-    "upp": "57589D",
-    "first_name": "Tama"
-  },
-  "16": {
-    "llp": "Contemplator",
-    "skill_line": "Shotgun-2",
-    "camp_m_raid_line": "9,4,7,4",
-    "age": "25",
-    "morale": "10",
-    "wound": "Serious",
-    "political": "MM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "96AA77",
-    "first_name": "Vega"
-  },
-  "22": {
-    "llp": "Shaper",
-    "skill_line": "Admin-1,BladeCbt-1,GunCbt-1,Hunter(Recon)-1",
-    "camp_m_raid_line": "8,6,8,8,MCUF",
-    "age": "30",
-    "morale": "10",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Roos",
-    "upp": "573986",
-    "first_name": "Kalle"
-  },
-  "62": {
-    "llp": "Influencer",
-    "skill_line": "Admin-1,Electronics-1,GunCbt-1",
-    "camp_m_raid_line": "4,6,11,5,SW,MCUF",
-    "age": "26",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Torkelson",
-    "upp": "A7B736",
-    "first_name": "Herbert"
-  },
-  "105": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-1,Mech-1,Medic-1",
-    "age": "26",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winger",
-    "upp": "986556",
-    "first_name": "Rune"
-  },
-  "56": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-1,Medic-1,Vehicle(tracked)-1",
-    "camp_m_raid_line": "7,11,8,8,SEH",
-    "age": "26",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Norum",
-    "upp": "B35484",
-    "first_name": "Rigmora"
-  },
-  "8": {
-    "llp": "Responder",
-    "skill_line": "CbtRifle-2,Medic-1,Computer-0,Recon-0,Survival-0",
-    "camp_m_raid_line": "11,2,10,6",
-    "age": "19",
-    "morale": "7",
-    "political": "MM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Ottoson",
-    "upp": "785987",
-    "first_name": "Jillia"
-  },
-  "111": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2,Medic-2,Elec-1,Recon-1",
-    "age": "38",
-    "morale": "10",
-    "political": "FWMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Thoren",
-    "upp": "ADA767",
-    "first_name": "Malena"
-  },
-  "47": {
-    "llp": "Influencer",
-    "skill_line": "Streetwise-2,BladeCbt-1(butterfly_knife),Bribery-1,Vehicle-1,Brawling-0,Electronic-0,Forgery-0,Gambling-0,GunCbt(Pistol/SMG)-0,Mechanical-0,Medical-0",
-    "camp_m_raid_line": "9,11,6,5,SEH",
-    "age": "25",
-    "morale": "10",
-    "political": "R",
-    "gender": "M",
-    "rank": "LT",
-    "last_name": "Huss",
-    "upp": "987A42",
-    "first_name": "Patrick"
-  },
-  "102": {
-    "llp": "Finisher",
-    "skill_line": "Elec-1,GunCbt-1,Recon-1",
-    "age": "27",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Oden",
-    "upp": "8A6398",
-    "first_name": "Felix"
-  },
-  "13": {
-    "llp": "Doer",
-    "skill_line": "GunCbt-2",
-    "camp_m_raid_line": "6,7,5,3,MCUF",
-    "age": "21",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LCP",
-    "last_name": "Sjostom",
-    "upp": "76CA54",
-    "first_name": "FNU"
-  },
-  "53": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-1,Medic-1",
-    "camp_m_raid_line": "7,9,10,5,MCG",
-    "age": "22",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LCP",
-    "last_name": "Tornberg",
-    "upp": "796392",
-    "first_name": "FNU"
-  },
-  "5": {
-    "llp": "Responder",
-    "skill_line": "Computer-1",
-    "camp_m_raid_line": "8,7,7,9,MCUF",
-    "age": "29",
-    "morale": "7",
-    "political": "Rep",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Vaden",
-    "upp": "697966",
-    "first_name": "Rasmus"
-  },
-  "44": {
-    "llp": "Shaper",
-    "skill_line": "Medic-0,CbtRifle-2",
-    "camp_m_raid_line": "2,9,9,3,SW,MCG",
-    "age": "21",
-    "morale": "10",
-    "political": "G",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "698587",
-    "first_name": "Paul"
-  },
-  "10": {
-    "llp": "Mover",
-    "skill_line": "BladeCbt-1,GunCbt-1,Medic-1",
-    "camp_m_raid_line": "9,6,6,7,MCUF",
-    "age": "25",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Osterlund",
-    "upp": "BB76A4",
-    "first_name": "FNU"
-  },
-  "50": {
-    "llp": "Responder",
-    "skill_line": "Brawling-1,Forgery-1,Gambling-3",
-    "camp_m_raid_line": "9,8,5,9,MCG",
-    "age": "34",
-    "morale": "10",
-    "political": "R",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Jensen",
-    "upp": "B76967",
-    "first_name": "Dennis"
-  },
-  "2": {
-    "llp": "Cbt-1,Mechanical-1",
-    "skill_line": "AirRaft-2,Electronics-1,Gun",
-    "camp_m_raid_line": "Influencer",
-    "age": "33",
-    "morale": "10",
-    "political": "MM",
-    "gender": "F",
-    "rank": "LT",
-    "last_name": "LNU",
-    "upp": "679655",
-    "first_name": "Johanna"
-  },
-  "41": {
-    "llp": "Doer",
-    "skill_line": "Electronics-1,GunCbt(SMG)-1",
-    "camp_m_raid_line": "10,6,6,5,MCUF",
-    "age": "24",
-    "morale": "7",
-    "political": "MM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "855795",
-    "first_name": "Karin"
+    "morale_modifier": 0,
+    "upp": "7B9685"
   },
   "157": {
-    "llp": "Finisher",
+    "gender": "F",
     "skill_line": "GunCbt-1,Medic-1,Tactics-1",
-    "age": "26",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
+    "llp": "Finisher",
+    "terms": 2,
     "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Medic": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Alma",
     "last_name": "Thun",
-    "upp": "8A98B6",
-    "first_name": "Alma"
-  },
-  "160": {
-    "llp": "Encourager",
-    "skill_line": "Vehicle-2,GunCbt-1",
-    "age": "26",
-    "morale": "7",
     "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Thun",
-    "upp": "9398B3",
-    "first_name": "Albert"
-  },
-  "148": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Mech-1",
-    "age": "23",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Falen",
-    "upp": "668BB6",
-    "first_name": "Isabella"
-  },
-  "99": {
-    "llp": "Encourager",
-    "skill_line": "Tactics-3,GunCbt-2,BladeCbt-1,Mech-1",
-    "age": "40",
-    "morale": "13",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NCO",
-    "last_name": "Huss",
-    "upp": "B6659B",
-    "first_name": "Eddy"
-  },
-  "154": {
-    "llp": "Finisher",
-    "skill_line": "Elec-1,GunCbt-1,Leader-1",
-    "age": "25",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Orn",
-    "upp": "97A455",
-    "first_name": "Elisabet"
-  },
-  "145": {
-    "llp": "Leader",
-    "skill_line": "GunCbt-1,Brawling-1,Recon-1",
-    "age": "27",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Lindvall",
-    "upp": "578665",
-    "first_name": "Britta"
-  },
-  "96": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Mech-1,Medic-1",
-    "age": "25",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Landeen",
-    "upp": "799665",
-    "first_name": "Benedikt"
-  },
-  "151": {
-    "llp": "Pleaser",
-    "skill_line": "Medic-2,GunCbt-1,Recon-1,Vehicle-1",
-    "age": "34",
-    "morale": "10",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Johansson",
-    "upp": "AB7568",
-    "first_name": "Nils"
-  },
-  "139": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-3,BladeCbt-1,Brawling-1,Mech-1",
-    "age": "38",
-    "morale": "13",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Branting",
-    "upp": "996647",
-    "first_name": "Ambrosius"
-  },
-  "142": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Medic-1",
-    "age": "23",
-    "morale": "7",
-    "political": "EMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Branting",
-    "upp": "6C6676",
-    "first_name": "Elliot"
-  },
-  "93": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Medic-1,Recon-1,Tactics-1",
-    "age": "27",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "4A98C7",
-    "first_name": "Andreas"
-  },
-  "136": {
-    "llp": "Manager",
-    "skill_line": "GunCbt-1,Vehicle-1",
-    "age": "22",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Boden",
-    "upp": "8BC875",
-    "first_name": "Viggo"
-  },
-  "87": {
-    "llp": "Scholar",
-    "skill_line": "GunCbt-3,Leader-1",
-    "age": "28",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Rask",
-    "upp": "8B3827",
-    "first_name": "Johanna"
-  },
-  "133": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Recon-1",
-    "age": "21",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Ehn",
-    "upp": "5B6A64",
-    "first_name": "Karl"
-  },
-  "127": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2,Vehicle-2,Elec-1",
-    "age": "33",
-    "morale": "10",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Klang",
-    "upp": "BEB8B9",
-    "first_name": "Magnus"
-  },
-  "38": {
-    "llp": "Doer",
-    "skill_line": "Medic-2,GunCbt-1,Mechanical-1",
-    "camp_m_raid_line": "6,9,8,7,MCG",
-    "age": "29",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "LSG",
-    "last_name": "Birke",
-    "upp": "9B48A6",
-    "first_name": "FNU"
-  },
-  "90": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-1,Recon-1",
-    "age": "22",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Solen",
-    "upp": "937764",
-    "first_name": "Lisa"
-  },
-  "78": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2,Comp-1",
-    "age": "24",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winter",
-    "upp": "5689A5",
-    "first_name": "Klas"
-  },
-  "84": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-2,Recon-1",
-    "age": "27",
-    "morale": "10",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bolen",
-    "upp": "5CB976",
-    "first_name": "Ansgar"
-  },
-  "124": {
-    "llp": "Pleaser",
-    "skill_line": "GunCbt-2",
-    "age": "22",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Boden",
-    "upp": "8D4743",
-    "first_name": "Fabian"
-  },
-  "118": {
-    "llp": "Pleaser",
-    "skill_line": "Comp-1,GunCbt-1,Tactics-1,Vehicle-1",
-    "age": "28",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Rydell",
-    "upp": "698785",
-    "first_name": "Axel"
-  },
-  "130": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-3",
-    "age": "26",
-    "morale": "10",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Vong",
-    "upp": "644925",
-    "first_name": "Evert"
-  },
-  "35": {
-    "llp": "Doer",
-    "skill_line": "Computer-1,GunCbt-1,Hunter(Recon)-1",
-    "camp_m_raid_line": "4,5,6,7,SW,MCUF",
-    "age": "25",
-    "morale": "7",
-    "wound": "Serious",
-    "political": "PMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Corvin",
-    "upp": "BA9886",
-    "first_name": "Arvid"
-  },
-  "75": {
-    "llp": "Contemplator",
-    "skill_line": "JoT-2,Mechanical-1,Streetwise-1",
-    "camp_m_raid_line": "5,6,8,7,PH,MCUF",
-    "age": "28",
-    "morale": "7",
-    "political": "R",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Fortin",
-    "upp": "3B7C74",
-    "first_name": "Brenda"
-  },
-  "29": {
-    "llp": "Influencer",
-    "Kristofer": "30",
-    "skill_line": "GunCbt-2,Electronics-1",
-    "camp_m_raid_line": "6,4,4,9",
-    "age": "24",
-    "morale": "10",
-    "wound": "Serious",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "CPL",
-    "last_name": "Hellstrom",
-    "upp": "B6C824",
-    "first_name": "FNU"
-  },
-  "81": {
-    "llp": "Leader",
-    "skill_line": "Elec-1,GunCbt-1,Medic-1,Recon-1",
-    "age": "28",
-    "morale": "7",
-    "political": "AMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Florin",
-    "upp": "776856",
-    "first_name": "Ake"
-  },
-  "69": {
-    "llp": "Responder",
-    "skill_line": "Computer-1,GunCbt-1,HvyWeapon-1,Mechanical-1",
-    "camp_m_raid_line": "5,5,3,11,LW,MCUF",
-    "age": "30",
-    "morale": "10",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "LSG",
-    "last_name": "Kron",
-    "upp": "698356",
-    "first_name": "FNU"
-  },
-  "109": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Mech-1",
-    "age": "23",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Liljegren",
-    "upp": "8B9985",
-    "first_name": "Mark"
-  },
-  "121": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-1,Vehicle-1",
-    "age": "22",
-    "morale": "7",
-    "political": "MMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Klang",
-    "upp": "9A8885",
-    "first_name": "Adolf"
-  },
-  "115": {
-    "llp": "Finisher",
-    "skill_line": "GunCbt-2,Medic-2,Recon-1,Tactics-1,Vehicle-1",
-    "age": "43",
-    "morale": "10",
-    "political": "MMM",
-    "gender": "F",
-    "rank": "SGT",
-    "last_name": "Ehn",
-    "upp": "BD8348",
-    "first_name": "Ingrid"
-  },
-  "32": {
-    "llp": "Responder",
-    "skill_line": "Gambling-0,CbtRifle-2",
-    "camp_m_raid_line": "7,5,6,8,MCUF",
-    "age": "20",
-    "morale": "10",
-    "wound": "Serious",
-    "political": "G",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Hultberg",
-    "upp": "77734A",
-    "first_name": "Albin"
-  },
-  "72": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-1,Mechanical-1",
-    "camp_m_raid_line": "8,7,6,7,MCUF",
-    "age": "21",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "M",
-    "rank": "LCP",
-    "last_name": "Linden",
-    "upp": "B73A73",
-    "first_name": "FNU"
-  },
-  "26": {
-    "llp": "Doer",
-    "skill_line": "CbtRifle-1",
-    "camp_m_raid_line": "6,6,5,8,PH,MCUF",
-    "age": "16",
-    "morale": "7",
-    "wound": "Deadly",
-    "political": "G",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Buske",
-    "upp": "855795",
-    "first_name": "Monika"
-  },
-  "66": {
-    "llp": "Responder",
-    "skill_line": "Grav/ACV-1,GunCbt-1,Medic-1",
-    "camp_m_raid_line": "6,6,11,4,PH,MCUF",
-    "age": "26",
-    "morale": "7",
-    "political": "PRMM",
-    "gender": "F",
-    "rank": "CPL",
-    "last_name": "Roden",
-    "upp": "76A674",
-    "first_name": "FNU"
-  },
-  "9": {
-    "llp": "Mover",
-    "skill_line": "Vehicle-1,Persuade-1,JoT-1,Recon-1,CbtR-1,Leadership-1",
-    "camp_m_raid_line": "7,9,9,10,MCG",
-    "age": "40",
-    "morale": "10",
-    "political": "G",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Puckett",
-    "upp": "5B7485",
-    "first_name": "Ervin"
-  },
-  "106": {
-    "llp": "Finisher",
-    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1",
-    "age": "24",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Winger",
-    "upp": "755854",
-    "first_name": "Adam"
-  },
-  "112": {
-    "llp": "Manager",
-    "skill_line": "Tactics-2,GunCbt-1,Vechicle-1",
-    "age": "27",
-    "morale": "7",
-    "political": "FWMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Thoren",
-    "upp": "8586B5",
-    "first_name": "Inger"
-  },
-  "17": {
-    "llp": "Shaper",
-    "skill_line": "CbtR-2,BladeCbt-1",
-    "camp_m_raid_line": "5,9,6,9,PH,MCG",
-    "age": "29",
-    "morale": "10",
-    "political": "M",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "LNU",
-    "upp": "783679",
-    "first_name": "Agata"
-  },
-  "57": {
-    "llp": "Responder",
-    "skill_line": "Deception-1,Art(mechanical_sculpture)-4",
-    "camp_m_raid_line": "4,6,6,11,SW,MCUF",
-    "age": "35",
-    "morale": "4",
-    "political": "A",
-    "gender": "M",
-    "rank": "NR",
-    "last_name": "Bob",
-    "upp": "487849",
-    "first_name": "Avery"
-  },
-  "23": {
-    "llp": "Doer",
-    "skill_line": "Electronic-0,Grav-1,CbtRifle-2",
-    "camp_m_raid_line": "5,9,12,6,PH,MCG",
-    "age": "22",
-    "morale": "10",
-    "wound": "Light",
-    "political": "G",
-    "gender": "M",
-    "rank": "SGT",
-    "last_name": "Broden",
-    "upp": "783679",
-    "first_name": "Baltasar"
-  },
-  "63": {
-    "llp": "Mover",
-    "skill_line": "Gambler-1,Streetwise-1,Deception-1,Athletics-3,Comms-1,Art(theatrics)-1",
-    "camp_m_raid_line": "4,10,5,5,SW,MCG",
-    "age": "44",
-    "morale": "10",
-    "political": "A",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Besse",
-    "upp": "788942",
-    "first_name": "Margaret"
+    "morale_modifier": 0,
+    "upp": "8A98B6"
   },
   "6": {
-    "llp": "Shaper",
-    "skill_line": "Computer-1,Electronics-1,GunCbt-1",
-    "camp_m_raid_line": "5,3,7,7,SW",
-    "age": "23",
-    "morale": "7",
-    "political": "PRMM",
     "gender": "M",
+    "skill_line": "Computer-1,Electronics-1,GunCbt-1",
+    "llp": "Shaper",
+    "terms": 1,
     "rank": "CPL",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "Electronics": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Fritz",
     "last_name": "Bohr",
-    "upp": "7869B4",
-    "first_name": "FNU"
+    "camp_m_raid_line": "5,3,7,7,SW",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "7869B4"
+  },
+  "15": {
+    "gender": "M",
+    "skill_line": "Vehicle-1,JoT-2,Persuade-1,Recon-1,CbtR-1",
+    "llp": "Shaper",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "CbtR": 1,
+      "Recon": 1,
+      "JoT": 2,
+      "Persuade": 1,
+      "Vehicle": 1
+    },
+    "age": "34",
+    "title": "",
+    "first_name": "Cory",
+    "wound": "Deadly",
+    "last_name": "Singleton",
+    "camp_m_raid_line": "3,10,9,9,SW,MCG",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "59C475"
+  },
+  "3": {
+    "gender": "F",
+    "skill_line": "Mechanical-2,GunCbt-1,HeavyWeapon-1",
+    "llp": "Responder",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 14,
+    "skills": {
+      "GunCbt": 1,
+      "Mechanical": 2,
+      "HeavyWeapon": 1
+    },
+    "age": "30",
+    "title": "",
+    "first_name": "Cecilia",
+    "last_name": "Prevot",
+    "camp_m_raid_line": "9,7,5,10,MCUF",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "59755A"
+  },
+  "21": {
+    "gender": "F",
+    "skill_line": "BladeCbt-1,GunCbt-1,Hunter(Recon)-1,Survival-1,Vehicle(Tracked)-1",
+    "llp": "Doer",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Vehicle(Tracked)": 1,
+      "Survival": 1,
+      "Hunter(Recon)": 1
+    },
+    "age": "33",
+    "title": "",
+    "first_name": "Mikaela",
+    "last_name": "Wist",
+    "camp_m_raid_line": "8,5,7,6,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "5B8765"
+  },
+  "148": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Mech-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Isabella",
+    "last_name": "Falen",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "668BB6"
+  },
+  "154": {
+    "gender": "F",
+    "skill_line": "Elec-1,GunCbt-1,Leader-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 1,
+      "Elec": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Elisabet",
+    "last_name": "Orn",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "97A455"
+  },
+  "12": {
+    "gender": "F",
+    "skill_line": "GunCbt-3",
+    "llp": "Influencer",
+    "terms": 2,
+    "rank": "CPL",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 3
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Myrtle",
+    "last_name": "Molen",
+    "camp_m_raid_line": "8,9,7,5,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "547484"
+  },
+  "0": {
+    "gender": "M",
+    "skill_line": "Admin-0,Blade-1,Brawling-1,Computer-0,Electronics-0,Gambling-0,GunCgt(Energy)-2,Leader-0,Medical-0,Mechanical-0,Tactics-0,VaccSuit-1,Vehicle(Grav)-0",
+    "llp": "Unk",
+    "terms": 1,
+    "rank": "CPT",
+    "awards": {
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Leader": 0,
+      "Blade": 1,
+      "Computer": 0,
+      "Mechanical": 0,
+      "Medical": 0,
+      "Electronics": 0,
+      "GunCgt(Energy)": 2,
+      "Vehicle(Grav)": 0,
+      "VaccSuit": 1,
+      "Tactics": 0,
+      "Brawling": 1,
+      "Admin": 0,
+      "Gambling": 0
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Marco",
+    "last_name": "Domici",
+    "camp_m_raid_line": "1,1,1,1",
+    "political": "D",
+    "morale_modifier": 0,
+    "upp": "78A885"
+  },
+  "97": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1,Medic-1",
+    "llp": "Leader",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "William",
+    "last_name": "Landeen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "78A798"
+  },
+  "145": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Brawling-1,Recon-1",
+    "llp": "Leader",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Brawling": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Britta",
+    "last_name": "Lindvall",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "578665"
+  },
+  "151": {
+    "gender": "M",
+    "skill_line": "Medic-2,GunCbt-1,Recon-1,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Vehicle": 1,
+      "Medic": 2
+    },
+    "age": "34",
+    "title": "",
+    "first_name": "Nils",
+    "last_name": "Johansson",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "AB7568"
+  },
+  "139": {
+    "gender": "M",
+    "skill_line": "GunCbt-3,BladeCbt-1,Brawling-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 5,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 16,
+    "skills": {
+      "GunCbt": 3,
+      "BladeCbt": 1,
+      "Mech": 1,
+      "Brawling": 1
+    },
+    "age": "38",
+    "title": "",
+    "first_name": "Ambrosius",
+    "last_name": "Branting",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "996647"
+  },
+  "94": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Leader-1,Recon-1",
+    "llp": "Encourager",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "Leader": 1,
+      "GunCbt": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Peder",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "C46863"
+  },
+  "88": {
+    "gender": "M",
+    "skill_line": "Recon-2,GunCbt-1,Mech-1,Vehicle-1",
+    "llp": "Innovator",
+    "terms": 3,
+    "rank": "LCP",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Recon": 2,
+      "Mech": 1,
+      "Vehicle": 1
+    },
+    "age": "33",
+    "title": "",
+    "first_name": "Ingemar",
+    "last_name": "Solen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "474876"
+  },
+  "142": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Medic-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Medic": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Elliot",
+    "last_name": "Branting",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "6C6676"
+  },
+  "136": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Vehicle-1",
+    "llp": "Manager",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Viggo",
+    "last_name": "Boden",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "8BC875"
+  },
+  "79": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Elec-1,Tactics-1",
+    "llp": "Innovator",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Elec": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Gudrun",
+    "last_name": "Winter",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "79BA55"
+  },
+  "91": {
+    "gender": "M",
+    "skill_line": "GunCbt-3",
+    "llp": "Scholar",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 3
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Franz",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "796494"
+  },
+  "85": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Stefan",
+    "last_name": "Isenberg",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "B796C3"
+  },
+  "133": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Pleaser",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Karl",
+    "last_name": "Ehn",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "5B6A64"
+  },
+  "127": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Vehicle-2,Elec-1",
+    "llp": "Pleaser",
+    "terms": 3,
+    "rank": "CPL",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 2,
+      "Elec": 1,
+      "Vehicle": 2
+    },
+    "age": "33",
+    "title": "",
+    "first_name": "Magnus",
+    "last_name": "Klang",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "BEB8B9"
+  },
+  "76": {
+    "gender": "M",
+    "skill_line": "Computer-1,GunCbt-1,Vehicle(tracked)-1",
+    "llp": "Contemplator",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "Vehicle(tracked)": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "David",
+    "last_name": "Hellen",
+    "camp_m_raid_line": "9,10,4,6,MCG",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "465AB3"
+  },
+  "82": {
+    "gender": "M",
+    "skill_line": "Brawling-1,Elec-1,GunCbt-1",
+    "llp": "Encourager",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Elec": 1,
+      "Brawling": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Hans",
+    "last_name": "Florin",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "49A833"
+  },
+  "124": {
+    "gender": "M",
+    "skill_line": "GunCbt-2",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 2
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Fabian",
+    "last_name": "Boden",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "8D4743"
+  },
+  "118": {
+    "gender": "M",
+    "skill_line": "Comp-1,GunCbt-1,Tactics-1,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Comp": 1,
+      "Tactics": 1,
+      "Vehicle": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Axel",
+    "last_name": "Rydell",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "698785"
+  },
+  "130": {
+    "gender": "M",
+    "skill_line": "GunCbt-3",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 3
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Evert",
+    "last_name": "Vong",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "644925"
+  },
+  "73": {
+    "gender": "M",
+    "skill_line": "Tracked-0,CbtRifle-1",
+    "llp": "Influencer",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Tracked": 0,
+      "CbtRifle": 1
+    },
+    "age": "17",
+    "title": "",
+    "first_name": "Jonatan",
+    "last_name": "Buisson",
+    "camp_m_raid_line": "3,6,5,3,LW,MCUF",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "96AA77"
+  },
+  "161": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Tactics-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Hilmar",
+    "last_name": "Thun",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "5586A4"
+  },
+  "67": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,HvyWeapon-1,Medic-1",
+    "llp": "Influencer",
+    "terms": 1,
+    "rank": "CPL",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "HvyWeapon": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Jacinto",
+    "last_name": "Asae",
+    "camp_m_raid_line": "11,5,9,8,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "969766"
+  },
+  "109": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Mark",
+    "last_name": "Liljegren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "8B9985"
+  },
+  "121": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Adolf",
+    "last_name": "Klang",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "9A8885"
+  },
+  "115": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Medic-2,Recon-1,Tactics-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 6,
+    "rank": "SGT",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 2,
+      "Tactics": 1,
+      "Vehicle": 1,
+      "Medic": 2
+    },
+    "age": "43",
+    "title": "",
+    "first_name": "Ingrid",
+    "last_name": "Ehn",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "BD8348"
+  },
+  "58": {
+    "gender": "F",
+    "skill_line": "Art(metalworking)-1,Streetwise-1,Persuade-1",
+    "llp": "Responder",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 5,
+    "skills": {
+      "Persuade": 1,
+      "Art(metalworking)": 1,
+      "Streetwise": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Kayleigh",
+    "last_name": "Davidson",
+    "camp_m_raid_line": "5,10,7,7,LW,MCG",
+    "political": "A",
+    "morale_modifier": 0,
+    "upp": "BC9886"
+  },
+  "70": {
+    "gender": "M",
+    "skill_line": "Grav/ACV-1,GunCbt-1",
+    "llp": "Producer",
+    "terms": 3,
+    "rank": "LCP",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Grav/ACV": 1
+    },
+    "age": "30",
+    "title": "",
+    "first_name": "Brant",
+    "last_name": "Isberg",
+    "camp_m_raid_line": "6,6,8,10,PH,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "7D8875"
+  },
+  "64": {
+    "gender": "M",
+    "skill_line": "CbtRifleman-1,Electronics-1,HvyWeapons-1,Leader-1,Medic-1",
+    "llp": "7,4,11,3",
+    "terms": 3,
+    "rank": "LT",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Leader": 1,
+      "HvyWeapons": 1,
+      "Electronics": 1,
+      "CbtRifleman": 1,
+      "Medic": 1
+    },
+    "age": "32",
+    "title": "",
+    "first_name": "Richard",
+    "last_name": "Arne",
+    "camp_m_raid_line": null,
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "BA68B9"
+  },
+  "106": {
+    "gender": "M",
+    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Mech": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Adam",
+    "last_name": "Winger",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "755854"
+  },
+  "112": {
+    "gender": "F",
+    "skill_line": "Tactics-2,GunCbt-1,Vechicle-1",
+    "llp": "Manager",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Vechicle": 1,
+      "Tactics": 2
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Inger",
+    "last_name": "Thoren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "8586B5"
+  },
+  "55": {
+    "gender": "F",
+    "skill_line": "Art(painting)-1,Steward-1,Streetwise-1",
+    "llp": "Doer",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 7,
+    "skills": {
+      "Art(painting)": 1,
+      "Steward": 1,
+      "Streetwise": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Emilee",
+    "last_name": "Vignon",
+    "camp_m_raid_line": "7,9,2,6,MCG",
+    "political": "A",
+    "morale_modifier": 0,
+    "upp": "963668"
+  },
+  "49": {
+    "gender": "F",
+    "skill_line": "Survival-1,Streetwise-3,Investigate-2,GunCbt-1,Bribery-1,Blade-1,Persuade-1",
+    "llp": "Influencer",
+    "terms": 7,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Blade": 1,
+      "GunCbt": 1,
+      "Bribery": 1,
+      "Persuade": 1,
+      "Survival": 1,
+      "Investigate": 2,
+      "Streetwise": 3
+    },
+    "age": "49",
+    "title": "",
+    "first_name": "Harriet",
+    "last_name": "Brand",
+    "camp_m_raid_line": "6,6,10,7,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "546C82"
+  },
+  "61": {
+    "gender": "M",
+    "skill_line": "Blade-3,Leadership-1,GunCbt-1,Medical-1,Streetwise-1",
+    "llp": "Influencer",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Blade": 3,
+      "Medical": 1,
+      "Leadership": 1,
+      "Streetwise": 1
+    },
+    "age": "35",
+    "title": "",
+    "first_name": "Milton",
+    "last_name": "Guthrie",
+    "camp_m_raid_line": "6,7,12,10,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "5599B7"
   },
   "103": {
-    "llp": "Finisher",
+    "gender": "M",
     "skill_line": "Comp-2,Elec-1,GunCbt-1,Mech-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Comp": 2,
+      "Mech": 1,
+      "Elec": 1,
+      "Vehicle": 1
+    },
     "age": "37",
-    "morale": "10",
-    "political": "FWMM",
-    "gender": "M",
-    "rank": "NR",
+    "title": "",
+    "first_name": "Oskar",
     "last_name": "Winger",
-    "upp": "6AA957",
-    "first_name": "Oskar"
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "6AA957"
   },
-  "54": {
-    "llp": "Responder",
-    "skill_line": "Art(poet)-1",
-    "camp_m_raid_line": "6,9,9,5,PH,MCG",
-    "age": "22",
-    "morale": "4",
-    "political": "A",
+  "46": {
     "gender": "M",
+    "skill_line": "GunCbt-2,Survival-2",
+    "llp": "Doer",
+    "terms": 2,
     "rank": "NR",
-    "last_name": "Perrot",
-    "upp": "3B98AA",
-    "first_name": "Benton"
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 2,
+      "Survival": 2
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Eugen",
+    "last_name": "Lundell",
+    "camp_m_raid_line": "7,11,7,7,SEH",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "98C876"
+  },
+  "52": {
+    "gender": "F",
+    "skill_line": "Blade-1,Brawling-1,Gambling-1,Streetwise-1",
+    "llp": "Contemplator",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Blade": 1,
+      "Brawling": 1,
+      "Streetwise": 1,
+      "Gambling": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Sam",
+    "last_name": "Garnier",
+    "camp_m_raid_line": "7,6,6,6,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "589B84"
+  },
+  "100": {
+    "gender": "M",
+    "skill_line": "Recon-2,GunCbt-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Recon": 2
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Lars",
+    "last_name": "Huss",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "856536"
+  },
+  "43": {
+    "gender": "M",
+    "skill_line": "Gun",
+    "llp": "Cbt-2,Leader,Recon",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Gun": 0
+    },
+    "age": "30",
+    "title": "",
+    "first_name": "Bertil",
+    "last_name": "Brock",
+    "camp_m_raid_line": "5,8,5,7,PH,MCG",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "A78657"
+  },
+  "37": {
+    "gender": "M",
+    "skill_line": "CbtR-4,Recon-3,SkyCrane-1,Tactics-1,Tracked-0,Brawling-0",
+    "llp": "Mover",
+    "terms": 6,
+    "rank": "LT",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 16,
+    "skills": {
+      "Tracked": 0,
+      "Recon": 3,
+      "CbtR": 4,
+      "Tactics": 1,
+      "Brawling": 0,
+      "SkyCrane": 1
+    },
+    "age": "45",
+    "title": "",
+    "first_name": "Verner",
+    "last_name": "Ottoson",
+    "camp_m_raid_line": "9,9,5,7,MCG",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "9A755A"
+  },
+  "28": {
+    "gender": "M",
+    "skill_line": "GunCbt-1",
+    "llp": "Influencer",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1
+    },
+    "age": "17",
+    "title": "",
+    "first_name": "Algot",
+    "wound": "Serious",
+    "last_name": "Arndt",
+    "camp_m_raid_line": "5,6,8,5,SW,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "968952"
+  },
+  "40": {
+    "gender": "F",
+    "skill_line": "Brawling-1,Gambling-1,GunCbt-1,Streetwise-1",
+    "llp": "Influencer",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Brawling": 1,
+      "Streetwise": 1,
+      "Gambling": 1
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Vickie",
+    "last_name": "Aguilar",
+    "camp_m_raid_line": "7,5,9,4,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "873672"
+  },
+  "34": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Responder",
+    "terms": 1,
+    "rank": "LCP",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Anton",
+    "wound": "Deadly",
+    "last_name": "Gustafson",
+    "camp_m_raid_line": "7,9,10,10,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "7DA786"
+  },
+  "25": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Computer-2,Admin-1,Hunter(Recon)-1,Medic-1,Survival-1,Blade-0,Electronics-0,Leader-0,Mechanical-0,Vehicle(tracked)-0",
+    "llp": "Influencer",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Leader": 0,
+      "Blade": 0,
+      "GunCbt": 2,
+      "Computer": 2,
+      "Vehicle(tracked)": 0,
+      "Mechanical": 0,
+      "Electronics": 0,
+      "Survival": 1,
+      "Hunter(Recon)": 1,
+      "Admin": 1,
+      "Medic": 1
+    },
+    "age": "45",
+    "title": "Baron",
+    "first_name": "Evern",
+    "wound": "Serious",
+    "last_name": "Bergin",
+    "camp_m_raid_line": "11,5,10,6,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "ADC48C"
+  },
+  "19": {
+    "gender": "F",
+    "skill_line": "Electronics-1,GunCbt-1,Medic-1,Recon-1",
+    "llp": "Mover",
+    "terms": 3,
+    "rank": "LSG",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Electronics": 1,
+      "Medic": 1
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Catherina",
+    "last_name": "Cronbust",
+    "camp_m_raid_line": "11,10,6,6,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "D699A6"
+  },
+  "31": {
+    "gender": "F",
+    "skill_line": "Blade-1,Brawling-1,Bribery-1,GunCbt-1,Streetwise-1",
+    "llp": "Shaper",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Blade": 1,
+      "Bribery": 1,
+      "Brawling": 1,
+      "Streetwise": 1
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Palmira",
+    "wound": "Serious",
+    "last_name": "Dillard",
+    "camp_m_raid_line": "3,9,6,11,D,MCG",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "A97931"
+  },
+  "7": {
+    "gender": "F",
+    "skill_line": "Recon-0,Ship's",
+    "llp": "Boat-1,Pistol-1",
+    "terms": 0,
+    "rank": "LT",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Recon": 0,
+      "Ship's": 0
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Gabriela",
+    "last_name": "Wright",
+    "camp_m_raid_line": "Responder",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "366A75"
+  },
+  "158": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Recon-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 2
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Manfred",
+    "last_name": "Thun",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "388676"
+  },
+  "155": {
+    "gender": "F",
+    "skill_line": "GunCbt-2",
+    "llp": "Leader",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 2
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Sonja",
+    "last_name": "Orn",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "8998B4"
+  },
+  "22": {
+    "gender": "M",
+    "skill_line": "Admin-1,BladeCbt-1,GunCbt-1,Hunter(Recon)-1",
+    "llp": "Shaper",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Hunter(Recon)": 1,
+      "Admin": 1
+    },
+    "age": "30",
+    "title": "",
+    "first_name": "Kalle",
+    "last_name": "Roos",
+    "camp_m_raid_line": "8,6,8,8,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "573986"
+  },
+  "149": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Vehicle-1",
+    "llp": "Innovator",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Karla",
+    "last_name": "Falen",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "879692"
+  },
+  "16": {
+    "gender": "F",
+    "skill_line": "Shotgun-2",
+    "llp": "Contemplator",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "Shotgun": 2
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Vega",
+    "wound": "Serious",
+    "last_name": "Diaz",
+    "camp_m_raid_line": "9,4,7,4",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "96AA77"
+  },
+  "4": {
+    "gender": "Computer-4,Electronics-3",
+    "skill_line": "9,9,6,10,MCG",
+    "llp": null,
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "MCG": 0,
+      "6": 0,
+      "9": 0,
+      "10": 0
+    },
+    "age": "MM",
+    "title": "",
+    "first_name": "Derek",
+    "last_name": "23",
+    "camp_m_raid_line": null,
+    "political": "M",
+    "morale_modifier": 0,
+    "upp": "Contemplator"
+  },
+  "1": {
+    "gender": "F",
+    "skill_line": "Psion-0,CbtR-0,Dance-1,Survival-0",
+    "llp": "Mover",
+    "terms": 0,
+    "rank": "CPL",
+    "awards": {
+      "PH": 1,
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 9,
+    "skills": {
+      "CbtR": 0,
+      "Survival": 0,
+      "Dance": 1,
+      "Psion": 0
+    },
+    "age": "17",
+    "title": "",
+    "first_name": "Tala",
+    "wound": "Light",
+    "last_name": "Torsten",
+    "camp_m_raid_line": "3,6,7,2,LW,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "996B22",
+    "psi_rating": "C"
+  },
+  "152": {
+    "gender": "M",
+    "skill_line": "Elec-1,GunCbt-1,Tactics-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Elec": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Kevin",
+    "last_name": "Lindvall",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "7A9485"
+  },
+  "98": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Elec-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Elec": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Joel",
+    "last_name": "Landeen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "9B4B86"
+  },
+  "146": {
+    "gender": "M",
+    "skill_line": "Recon-2,GunCbt-1",
+    "llp": "Leader",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Recon": 2
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Steffan",
+    "last_name": "Lindvall",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "7C8873"
+  },
+  "13": {
+    "gender": "M",
+    "skill_line": "GunCbt-2",
+    "llp": "Doer",
+    "terms": 0,
+    "rank": "LCP",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "GunCbt": 2
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Everette",
+    "last_name": "Sjostom",
+    "camp_m_raid_line": "6,7,5,3,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "76CA54"
+  },
+  "10": {
+    "gender": "M",
+    "skill_line": "BladeCbt-1,GunCbt-1,Medic-1",
+    "llp": "Mover",
+    "terms": 1,
+    "rank": "CPL",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Renaldo",
+    "last_name": "Osterlund",
+    "camp_m_raid_line": "9,6,6,7,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "BB76A4"
+  },
+  "89": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Recon-1,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Vehicle": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Berit",
+    "last_name": "Rask",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "AAC863"
+  },
+  "137": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,BladeCbt-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Kasper",
+    "last_name": "Rydell",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "5A5683"
+  },
+  "95": {
+    "gender": "M",
+    "skill_line": "Blade-1,GunCbt-1,Tactics-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Blade": 1,
+      "Tactics": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Matteus",
+    "last_name": "Landeen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "5B9447"
+  },
+  "143": {
+    "gender": "M",
+    "skill_line": "BladeCbt-2,Mech-2,GunCbt-1,Recon-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 5,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "BladeCbt": 2,
+      "Mech": 2,
+      "Vehicle": 1
+    },
+    "age": "41",
+    "title": "Knight",
+    "first_name": "Liam",
+    "last_name": "Johansson",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "99676B"
+  },
+  "86": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Tactics-1",
+    "llp": "Leader",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Agnes",
+    "last_name": "Isenberg",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "6C5C95"
+  },
+  "134": {
+    "gender": "M",
+    "skill_line": "GunCbt-2",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 2
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Gunnar",
+    "last_name": "Franzen",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "676323"
+  },
+  "92": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Medic-1,Recon-1,Vehicle-1",
+    "llp": "Encourager",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Vehicle": 1,
+      "Medic": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Ellen",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "8796C3"
+  },
+  "128": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1,Vehicle-1",
+    "llp": "Scholar",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1,
+      "Vehicle": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Nathanel",
+    "last_name": "Franzen",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "87CA97"
+  },
+  "140": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Recon-1,Tactics-1",
+    "llp": "Encourager",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 2,
+      "Tactics": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Hilmar",
+    "last_name": "Branting",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "96B765"
+  },
+  "83": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Elec-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 2,
+      "Elec": 1,
+      "Vehicle": 1
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Natalie",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "B5C796"
+  },
+  "119": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Mech-1,Medic-1,Vehicle-1",
+    "llp": "Manager",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 2,
+      "Mech": 1,
+      "Vehicle": 1,
+      "Medic": 1
+    },
+    "age": "32",
+    "title": "",
+    "first_name": "Agata",
+    "last_name": "Byland",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "D5A667"
+  },
+  "131": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Medic-2,Leader-1",
+    "llp": "Leader",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 2,
+      "Medic": 2
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Gertrud",
+    "last_name": "Byland",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "A66874"
+  },
+  "77": {
+    "gender": "M",
+    "skill_line": "GunCbt-3,Elec-1,Recon-1",
+    "llp": "Pleaser",
+    "terms": 3,
+    "rank": "SGT",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 17,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 3,
+      "Elec": 1
+    },
+    "age": "33",
+    "title": "",
+    "first_name": "Elias",
+    "last_name": "Winter",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "96E847"
+  },
+  "125": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Mech-1,Medic-1,Vehicle-1",
+    "llp": "Leader",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1,
+      "Vehicle": 1,
+      "Medic": 1
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Lena",
+    "last_name": "Byland",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "995953"
+  },
+  "122": {
+    "gender": "M",
+    "skill_line": "Elec-1,GunCbt-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Elec": 1
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Alrik",
+    "last_name": "Ehn",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "D96947"
+  },
+  "68": {
+    "gender": "F",
+    "skill_line": "Electronics-1,GunCbt-1,Mechanical-1,Recon-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "LSG",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Mechanical": 1,
+      "Electronics": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Donetta",
+    "last_name": "Sundblad",
+    "camp_m_raid_line": "8,6,10,9,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "456B86"
+  },
+  "80": {
+    "gender": "M",
+    "skill_line": "GunCbt-3,Vehicle-2,Blade-1,Medic-1",
+    "llp": "Innovator",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Blade": 1,
+      "GunCbt": 3,
+      "Medic": 1,
+      "Vehicle": 2
+    },
+    "age": "42",
+    "title": "",
+    "first_name": "Noah",
+    "last_name": "Florin",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "C7C559"
+  },
+  "116": {
+    "gender": "F",
+    "skill_line": "BladeCbt-1,Elec-1,GunCbt-1,Medic-1",
+    "llp": "Pleaser",
+    "terms": 3,
+    "rank": "CPL",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Elec": 1,
+      "Medic": 1
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Tora",
+    "last_name": "Beckman",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "A759A4"
+  },
+  "74": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Vehicle(tracked)-2",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle(tracked)": 2
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Olga",
+    "last_name": "Sjostrand",
+    "camp_m_raid_line": "9,7,11,9,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "86A674"
+  },
+  "162": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Gota",
+    "last_name": "Winquist",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "D3A363"
+  },
+  "71": {
+    "gender": "F",
+    "skill_line": "BladeCbt-1,GunCbt-1,Vehicle(tracked)-1",
+    "llp": "Responder",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Vehicle(tracked)": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Viola",
+    "last_name": "Bohner",
+    "camp_m_raid_line": "2,5,4,8,D,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "9B8474"
+  },
+  "107": {
+    "gender": "M",
+    "skill_line": "GunCbt-4,Mech-1",
+    "llp": "Finisher",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 14,
+    "skills": {
+      "GunCbt": 4,
+      "Mech": 1
+    },
+    "age": "32",
+    "title": "",
+    "first_name": "Hermann",
+    "last_name": "Winger",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "47C357"
+  },
+  "65": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mechanical-1,Medic-1",
+    "llp": "Producer",
+    "terms": 1,
+    "rank": "CPL",
+    "awards": {
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Mechanical": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Eldon",
+    "last_name": "Nygrin",
+    "camp_m_raid_line": "3,3,4,8,LW",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "4958C5"
+  },
+  "113": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Medic-1",
+    "llp": "Scholar",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 2,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Rosa",
+    "last_name": "Thoren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "7DBB64"
+  },
+  "59": {
+    "gender": "F",
+    "skill_line": "Persuade-1,CbtR-1",
+    "llp": "Producer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "CbtR": 1,
+      "Persuade": 1
+    },
+    "age": "27",
+    "title": "Marquis",
+    "first_name": "Tama",
+    "last_name": "Leclercq",
+    "camp_m_raid_line": "11,10,10,6,MCG",
+    "political": "P",
+    "morale_modifier": 0,
+    "upp": "57589D"
+  },
+  "56": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Medic-1,Vehicle(tracked)-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle(tracked)": 1,
+      "Medic": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Rigmora",
+    "last_name": "Norum",
+    "camp_m_raid_line": "7,11,8,8,SEH",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "B35484"
+  },
+  "104": {
+    "gender": "M",
+    "skill_line": "Comp-1,GunCbt-1,Medic-1,Tactics-1",
+    "llp": "Scholar",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Comp": 1,
+      "Tactics": 1,
+      "Medic": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Jesper",
+    "last_name": "Winger",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "C546C7"
+  },
+  "62": {
+    "gender": "M",
+    "skill_line": "Admin-1,Electronics-1,GunCbt-1",
+    "llp": "Influencer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Electronics": 1,
+      "Admin": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Herbert",
+    "last_name": "Torkelson",
+    "camp_m_raid_line": "4,6,11,5,SW,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "A7B736"
+  },
+  "110": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Leader-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Alvin",
+    "last_name": "Winger",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "4A9876"
+  },
+  "53": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Medic-1",
+    "llp": "Influencer",
+    "terms": 1,
+    "rank": "LCP",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Medic": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Micheal",
+    "last_name": "Tornberg",
+    "camp_m_raid_line": "7,9,10,5,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "796392"
+  },
+  "101": {
+    "gender": "M",
+    "skill_line": "GunCbt-2",
+    "llp": "Leader",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 2
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Vilhelm",
+    "last_name": "Huss",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "75A794"
+  },
+  "47": {
+    "gender": "M",
+    "skill_line": "Streetwise-2,BladeCbt-1(butterfly_knife),Bribery-1,Vehicle-1,Brawling-0,Electronic-0,Forgery-0,Gambling-0,GunCbt(Pistol/SMG)-0,Mechanical-0,Medical-0",
+    "llp": "Influencer",
+    "terms": 1,
+    "rank": "LT",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Forgery": 0,
+      "BladeCbt": 1,
+      "Medical": 0,
+      "Mechanical": 0,
+      "Bribery": 1,
+      "Brawling": 0,
+      "GunCbt(Pistol/SMG)": 0,
+      "Gambling": 0,
+      "Electronic": 0,
+      "Streetwise": 2,
+      "Vehicle": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Patrick",
+    "last_name": "Huss",
+    "camp_m_raid_line": "9,11,6,5,SEH",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "987A42"
+  },
+  "50": {
+    "gender": "M",
+    "skill_line": "Brawling-1,Forgery-1,Gambling-3",
+    "llp": "Responder",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Forgery": 1,
+      "Brawling": 1,
+      "Gambling": 3
+    },
+    "age": "34",
+    "title": "",
+    "first_name": "Dennis",
+    "last_name": "Jensen",
+    "camp_m_raid_line": "9,8,5,9,MCG",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "B76967"
+  },
+  "44": {
+    "gender": "M",
+    "skill_line": "Medic-0,CbtRifle-2",
+    "llp": "Shaper",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "CbtRifle": 2,
+      "Medic": 0
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Paul",
+    "last_name": "Barriere",
+    "camp_m_raid_line": "2,9,9,3,SW,MCG",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "698587"
+  },
+  "38": {
+    "gender": "F",
+    "skill_line": "Medic-2,GunCbt-1,Mechanical-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "LSG",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Mechanical": 1,
+      "Medic": 2
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Tiffiny",
+    "last_name": "Birke",
+    "camp_m_raid_line": "6,9,8,7,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "9B48A6"
+  },
+  "41": {
+    "gender": "F",
+    "skill_line": "Electronics-1,GunCbt(SMG)-1",
+    "llp": "Doer",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Electronics": 1,
+      "GunCbt(SMG)": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Karin",
+    "last_name": "Vigouroux",
+    "camp_m_raid_line": "10,6,6,5,MCUF",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "855795"
+  },
+  "35": {
+    "gender": "M",
+    "skill_line": "Computer-1,GunCbt-1,Hunter(Recon)-1",
+    "llp": "Doer",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "Hunter(Recon)": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Arvid",
+    "wound": "Serious",
+    "last_name": "Corvin",
+    "camp_m_raid_line": "4,5,6,7,SW,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "BA9886"
+  },
+  "29": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Electronics-1",
+    "llp": "Influencer",
+    "terms": 1,
+    "rank": "CPL",
+    "awards": {
+      "MCG": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "GunCbt": 2,
+      "Electronics": 1
+    },
+    "age": "24",
+    "Kristofer": "30",
+    "title": "",
+    "first_name": "Titus",
+    "wound": "Serious",
+    "last_name": "Hellstrom",
+    "camp_m_raid_line": "6,4,4,9",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "B6C824"
+  },
+  "8": {
+    "gender": "F",
+    "skill_line": "CbtRifle-2,Medic-1,Computer-0,Recon-0,Survival-0",
+    "llp": "Responder",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 0,
+      "Computer": 0,
+      "Survival": 0,
+      "CbtRifle": 2,
+      "Medic": 1
+    },
+    "age": "19",
+    "title": "",
+    "first_name": "Jillia",
+    "last_name": "Ottoson",
+    "camp_m_raid_line": "11,2,10,6",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "785987"
+  },
+  "159": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Leader",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Edvin",
+    "last_name": "Thun",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "A97746"
+  },
+  "32": {
+    "gender": "M",
+    "skill_line": "Gambling-0,CbtRifle-2",
+    "llp": "Responder",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "CbtRifle": 2,
+      "Gambling": 0
+    },
+    "age": "20",
+    "title": "",
+    "first_name": "Albin",
+    "wound": "Serious",
+    "last_name": "Hultberg",
+    "camp_m_raid_line": "7,5,6,8,MCUF",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "77734A"
+  },
+  "26": {
+    "gender": "F",
+    "skill_line": "CbtRifle-1",
+    "llp": "Doer",
+    "terms": 0,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "CbtRifle": 1
+    },
+    "age": "16",
+    "title": "",
+    "first_name": "Monika",
+    "wound": "Deadly",
+    "last_name": "Buske",
+    "camp_m_raid_line": "6,6,5,8,PH,MCUF",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "855795"
+  },
+  "5": {
+    "gender": "M",
+    "skill_line": "Computer-1",
+    "llp": "Responder",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Computer": 1
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Rasmus",
+    "last_name": "Vaden",
+    "camp_m_raid_line": "8,7,7,9,MCUF",
+    "political": "Rep",
+    "morale_modifier": 0,
+    "upp": "697966"
+  },
+  "156": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1,Medic-1,Recon-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Mech": 1,
+      "Medic": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Adrian",
+    "last_name": "Thun",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "AD5786"
+  },
+  "17": {
+    "gender": "F",
+    "skill_line": "CbtR-2,BladeCbt-1",
+    "llp": "Shaper",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "CbtR": 2,
+      "BladeCbt": 1
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Agata",
+    "last_name": "Clark",
+    "camp_m_raid_line": "5,9,6,9,PH,MCG",
+    "political": "M",
+    "morale_modifier": 0,
+    "upp": "783679"
+  },
+  "23": {
+    "gender": "M",
+    "skill_line": "Electronic-0,Grav-1,CbtRifle-2",
+    "llp": "Doer",
+    "terms": 1,
+    "rank": "SGT",
+    "awards": {
+      "MCG": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Grav": 1,
+      "CbtRifle": 2,
+      "Electronic": 0
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Baltasar",
+    "wound": "Light",
+    "last_name": "Broden",
+    "camp_m_raid_line": "5,9,12,6,PH,MCG",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "783679"
+  },
+  "147": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Mech-2,Vehicle-2,BladeCbt-1,Medic-1",
+    "llp": "Innovator",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 2,
+      "BladeCbt": 1,
+      "Mech": 2,
+      "Medic": 1,
+      "Vehicle": 2
+    },
+    "age": "45",
+    "title": "",
+    "first_name": "Otto",
+    "last_name": "Branting",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "886959"
+  },
+  "2": {
+    "gender": "F",
+    "skill_line": "AirRaft-2,Electronics-1,Gun",
+    "llp": "Cbt-1,Mechanical-1",
+    "terms": 3,
+    "rank": "LT",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 12,
+    "skills": {
+      "Gun": 0,
+      "AirRaft": 2,
+      "Electronics": 1
+    },
+    "age": "33",
+    "title": "",
+    "first_name": "Johanna",
+    "last_name": "Castillo",
+    "camp_m_raid_line": "Influencer",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "679655"
+  },
+  "153": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Tactics-1,Vehicle-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Vehicle": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Soren",
+    "last_name": "Moden",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "987994"
+  },
+  "99": {
+    "gender": "M",
+    "skill_line": "Tactics-3,GunCbt-2,BladeCbt-1,Mech-1",
+    "llp": "Encourager",
+    "terms": 5,
+    "rank": "NCO",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 18,
+    "skills": {
+      "GunCbt": 2,
+      "BladeCbt": 1,
+      "Mech": 1,
+      "Tactics": 3
+    },
+    "age": "40",
+    "title": "Knight",
+    "first_name": "Eddy",
+    "last_name": "Huss",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "B6659B"
   },
   "20": {
-    "llp": "Influencer",
-    "skill_line": "GunCbt-1,Recon-1",
-    "camp_m_raid_line": "7,11,3,4,SEH",
-    "age": "22",
-    "morale": "7",
-    "wound": "Serious",
-    "political": "PRMM",
     "gender": "M",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Influencer",
+    "terms": 1,
     "rank": "LCP",
+    "awards": {
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Aurelio",
+    "wound": "Serious",
     "last_name": "Brood",
-    "upp": "D38686",
-    "first_name": "FNU"
-  },
-  "60": {
-    "llp": "Shaper",
-    "skill_line": "JoT-1,Leadership-1,Persuade-1,CbtR-1,GunCbt-1",
-    "camp_m_raid_line": "6,9,10,9,PH,MCG",
-    "age": "43",
-    "morale": "10",
-    "political": "P",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Jimenez",
-    "upp": "566527",
-    "first_name": "Betty"
-  },
-  "48": {
-    "llp": "Contemplator",
-    "skill_line": "BladeCbt-1,Electronics-1,GunCbt-1",
-    "camp_m_raid_line": "5,7,6,10,LW,MCUF",
-    "age": "27",
-    "morale": "7",
-    "political": "PMM",
-    "gender": "F",
-    "rank": "NR",
-    "last_name": "Forss",
-    "upp": "978C55",
-    "first_name": "Tilda"
+    "camp_m_raid_line": "7,11,3,4,SEH",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "D38686"
   },
   "14": {
-    "llp": "Responder",
-    "skill_line": "BladeCbt-2,Computer-1,GunCbt-1",
-    "camp_m_raid_line": "5,5,5,7,PH,MCUF",
-    "age": "31",
-    "morale": "10",
-    "wound": "Light",
-    "political": "PMM",
     "gender": "M",
+    "skill_line": "BladeCbt-2,Computer-1,GunCbt-1",
+    "llp": "Responder",
+    "terms": 3,
     "rank": "NR",
+    "awards": {
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "BladeCbt": 2
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Gregor",
+    "wound": "Light",
     "last_name": "Roden",
-    "upp": "786988",
-    "first_name": "Gregor"
+    "camp_m_raid_line": "5,5,5,7,PH,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "786988"
+  },
+  "144": {
+    "gender": "M",
+    "skill_line": "Recon-2,GunCbt-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Recon": 2
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Manfred",
+    "last_name": "Johansson",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "6B8B25"
+  },
+  "11": {
+    "gender": "M",
+    "skill_line": "GunCbt-3",
+    "llp": "Responder",
+    "terms": 1,
+    "rank": "CPL",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 3
+    },
+    "age": "23",
+    "title": "",
+    "first_name": "Alexander",
+    "wound": "Deadly",
+    "last_name": "Forstrom",
+    "camp_m_raid_line": "7,9,11,12,MCG",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "9889A4"
+  },
+  "138": {
+    "gender": "M",
+    "skill_line": "GunCbt-3,Leader-2,Recon-1,Tactics-1",
+    "llp": "Finisher",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 16,
+    "skills": {
+      "Recon": 1,
+      "Leader": 2,
+      "GunCbt": 3,
+      "Tactics": 1
+    },
+    "age": "44",
+    "title": "",
+    "first_name": "Lennart",
+    "last_name": "Swanson",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "648579"
+  },
+  "150": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Nikolaus",
+    "last_name": "Falen",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "A77865"
+  },
+  "96": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1,Medic-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Benedikt",
+    "last_name": "Landeen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "799665"
+  },
+  "129": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Leader-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 1,
+      "Mech": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Antonetta",
+    "last_name": "Rydell",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "C55756"
+  },
+  "141": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Medic-1,Tactics-1",
+    "llp": "Encourager",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Medic": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Brigitta",
+    "last_name": "Branting",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "748658"
+  },
+  "135": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Medic-1,Recon-1",
+    "llp": "Scholar",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Medic": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Simon",
+    "last_name": "Klang",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "55AC94"
+  },
+  "93": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Medic-1,Recon-1,Tactics-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Tactics": 1,
+      "Medic": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Andreas",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "4A98C7"
+  },
+  "87": {
+    "gender": "F",
+    "skill_line": "GunCbt-3,Leader-1",
+    "llp": "Scholar",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 14,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 3
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Johanna",
+    "last_name": "Rask",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "8B3827"
+  },
+  "132": {
+    "gender": "F",
+    "skill_line": "Recon-2,GunCbt-1",
+    "llp": "Scholar",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Recon": 2
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Elenora",
+    "last_name": "Byland",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "9A8B85"
+  },
+  "126": {
+    "gender": "M",
+    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1",
+    "llp": "Finisher",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Mech": 1
+    },
+    "age": "25",
+    "title": "",
+    "first_name": "Roland",
+    "last_name": "Malmgren",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "7855B5"
+  },
+  "90": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Recon-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Lisa",
+    "last_name": "Solen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "937764"
+  },
+  "78": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Comp-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 2,
+      "Comp": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Klas",
+    "last_name": "Winter",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "5689A5"
+  },
+  "84": {
+    "gender": "M",
+    "skill_line": "GunCbt-2,Recon-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 2
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Ansgar",
+    "last_name": "Bolen",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "5CB976"
+  },
+  "117": {
+    "gender": "M",
+    "skill_line": "BladeCbt-1,GunCbt-1,Mech-1,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Mech": 1,
+      "Vehicle": 1
+    },
+    "age": "29",
+    "title": "",
+    "first_name": "Tobias",
+    "last_name": "Ehn",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "9A6545"
+  },
+  "123": {
+    "gender": "F",
+    "skill_line": "Tactics-2,Brawling-1,GunCbt-1",
+    "llp": "Pleaser",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 1,
+      "Tactics": 2,
+      "Brawling": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Moa",
+    "last_name": "Klang",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "D4C778"
+  },
+  "75": {
+    "gender": "F",
+    "skill_line": "JoT-2,Mechanical-1,Streetwise-1",
+    "llp": "Contemplator",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Mechanical": 1,
+      "JoT": 2,
+      "Streetwise": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Brenda",
+    "last_name": "Fortin",
+    "camp_m_raid_line": "5,6,8,7,PH,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "3B7C74"
+  },
+  "81": {
+    "gender": "M",
+    "skill_line": "Elec-1,GunCbt-1,Medic-1,Recon-1",
+    "llp": "Leader",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Elec": 1,
+      "Medic": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Ake",
+    "last_name": "Florin",
+    "political": "AMM",
+    "morale_modifier": 0,
+    "upp": "776856"
+  },
+  "69": {
+    "gender": "F",
+    "skill_line": "Computer-1,GunCbt-1,HvyWeapon-1,Mechanical-1",
+    "llp": "Responder",
+    "terms": 3,
+    "rank": "LSG",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 13,
+    "skills": {
+      "GunCbt": 1,
+      "Computer": 1,
+      "Mechanical": 1,
+      "HvyWeapon": 1
+    },
+    "age": "30",
+    "title": "",
+    "first_name": "Nelia",
+    "last_name": "Kron",
+    "camp_m_raid_line": "5,5,3,11,LW,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "698356"
+  },
+  "114": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Tactics-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 2,
+      "Tactics": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Viveka",
+    "last_name": "Thoren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "CB5926"
+  },
+  "108": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Vehicle-1",
+    "llp": "Pleaser",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 2,
+      "Vehicle": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Erika",
+    "last_name": "Thoren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "D6CAA6"
+  },
+  "120": {
+    "gender": "M",
+    "skill_line": "Mech-2,GunCbt-1,Recon-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Mech": 2
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Jan",
+    "last_name": "Rydell",
+    "political": "MMM",
+    "morale_modifier": 0,
+    "upp": "C37875"
+  },
+  "160": {
+    "gender": "M",
+    "skill_line": "Vehicle-2,GunCbt-1",
+    "llp": "Encourager",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Vehicle": 2
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Albert",
+    "last_name": "Thun",
+    "political": "EMM",
+    "morale_modifier": 0,
+    "upp": "9398B3"
+  },
+  "72": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mechanical-1",
+    "llp": "Influencer",
+    "terms": 0,
+    "rank": "LCP",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Mechanical": 1
+    },
+    "age": "21",
+    "title": "",
+    "first_name": "Danny",
+    "last_name": "Linden",
+    "camp_m_raid_line": "8,7,6,7,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "B73A73"
+  },
+  "66": {
+    "gender": "F",
+    "skill_line": "Grav/ACV-1,GunCbt-1,Medic-1",
+    "llp": "Responder",
+    "terms": 2,
+    "rank": "CPL",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1,
+      "CC": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "Grav/ACV": 1,
+      "Medic": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Lyn",
+    "last_name": "Roden",
+    "camp_m_raid_line": "6,6,11,4,PH,MCUF",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "76A674"
+  },
+  "111": {
+    "gender": "F",
+    "skill_line": "GunCbt-2,Medic-2,Elec-1,Recon-1",
+    "llp": "Pleaser",
+    "terms": 5,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 2,
+      "Elec": 1,
+      "Medic": 2
+    },
+    "age": "38",
+    "title": "",
+    "first_name": "Malena",
+    "last_name": "Thoren",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "ADA767"
+  },
+  "105": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Mech-1,Medic-1",
+    "llp": "Scholar",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "GunCbt": 1,
+      "Mech": 1,
+      "Medic": 1
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Rune",
+    "last_name": "Winger",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "986556"
+  },
+  "57": {
+    "gender": "M",
+    "skill_line": "Deception-1,Art(mechanical_sculpture)-4",
+    "llp": "Responder",
+    "terms": 4,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 7,
+    "skills": {
+      "Art(mechanical_sculpture)": 4,
+      "Deception": 1
+    },
+    "age": "35",
+    "title": "",
+    "first_name": "Avery",
+    "last_name": "Bob",
+    "camp_m_raid_line": "4,6,6,11,SW,MCUF",
+    "political": "A",
+    "morale_modifier": 0,
+    "upp": "487849"
+  },
+  "63": {
+    "gender": "F",
+    "skill_line": "Gambler-1,Streetwise-1,Deception-1,Athletics-3,Comms-1,Art(theatrics)-1",
+    "llp": "Mover",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 13,
+    "skills": {
+      "Comms": 1,
+      "Deception": 1,
+      "Gambler": 1,
+      "Art(theatrics)": 1,
+      "Streetwise": 1,
+      "Athletics": 3
+    },
+    "age": "44",
+    "title": "",
+    "first_name": "Margaret",
+    "last_name": "Besse",
+    "camp_m_raid_line": "4,10,5,5,SW,MCG",
+    "political": "A",
+    "morale_modifier": 0,
+    "upp": "788942"
+  },
+  "102": {
+    "gender": "M",
+    "skill_line": "Elec-1,GunCbt-1,Recon-1",
+    "llp": "Finisher",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Recon": 1,
+      "GunCbt": 1,
+      "Elec": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Felix",
+    "last_name": "Oden",
+    "political": "FWMM",
+    "morale_modifier": 0,
+    "upp": "8A6398"
+  },
+  "54": {
+    "gender": "M",
+    "skill_line": "Art(poet)-1",
+    "llp": "Responder",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 6,
+    "skills": {
+      "Art(poet)": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Benton",
+    "last_name": "Perrot",
+    "camp_m_raid_line": "6,9,9,5,PH,MCG",
+    "political": "A",
+    "morale_modifier": 0,
+    "upp": "3B98AA"
+  },
+  "60": {
+    "gender": "F",
+    "skill_line": "JoT-1,Leadership-1,Persuade-1,CbtR-1,GunCbt-1",
+    "llp": "Shaper",
+    "terms": 6,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "GunCbt": 1,
+      "CbtR": 1,
+      "JoT": 1,
+      "Persuade": 1,
+      "Leadership": 1
+    },
+    "age": "43",
+    "title": "",
+    "first_name": "Betty",
+    "last_name": "Jimenez",
+    "camp_m_raid_line": "6,9,10,9,PH,MCG",
+    "political": "P",
+    "morale_modifier": 0,
+    "upp": "566527"
+  },
+  "48": {
+    "gender": "F",
+    "skill_line": "BladeCbt-1,Electronics-1,GunCbt-1",
+    "llp": "Contemplator",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1,
+      "SEH": 1
+    },
+    "morale": 11,
+    "skills": {
+      "GunCbt": 1,
+      "BladeCbt": 1,
+      "Electronics": 1
+    },
+    "age": "27",
+    "title": "",
+    "first_name": "Tilda",
+    "last_name": "Forss",
+    "camp_m_raid_line": "5,7,6,10,LW,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "978C55"
+  },
+  "45": {
+    "gender": "F",
+    "skill_line": "Brawling-1,Bribery-1,GunCbt-1,Streetwise-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCG": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "GunCbt": 1,
+      "Bribery": 1,
+      "Brawling": 1,
+      "Streetwise": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Leena",
+    "last_name": "Dudley",
+    "camp_m_raid_line": "12,5,8,10,MCUF",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "92A963"
+  },
+  "39": {
+    "gender": "M",
+    "skill_line": "Gun",
+    "llp": "Cbt-3,Tactics",
+    "terms": 3,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 11,
+    "skills": {
+      "Gun": 0
+    },
+    "age": "31",
+    "title": "",
+    "first_name": "Petter",
+    "last_name": "Moens",
+    "camp_m_raid_line": "5,7,5,6,PH,MCUF",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "7A755A"
+  },
+  "51": {
+    "gender": "F",
+    "skill_line": "Investigate-1,Blade-1,Stealth-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "Blade": 1,
+      "Stealth": 1,
+      "Investigate": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Phyllis",
+    "last_name": "Parent",
+    "camp_m_raid_line": "7,8,7,11,MCG",
+    "political": "R",
+    "morale_modifier": 0,
+    "upp": "B96867"
+  },
+  "42": {
+    "gender": "F",
+    "skill_line": "Electronics-2,CbtR-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 9,
+    "skills": {
+      "CbtR": 1,
+      "Electronics": 2
+    },
+    "age": "26",
+    "title": "",
+    "first_name": "Isabella",
+    "last_name": "McDaniel",
+    "camp_m_raid_line": "5,10,8,10,PH,MCG",
+    "political": "MM",
+    "morale_modifier": 0,
+    "upp": "77AA69"
+  },
+  "36": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Medic-1,Survival-1",
+    "llp": "Doer",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "CSR": 1
+    },
+    "morale": 8,
+    "skills": {
+      "GunCbt": 1,
+      "Survival": 1,
+      "Medic": 1
+    },
+    "age": "24",
+    "title": "",
+    "first_name": "Maja",
+    "last_name": "Skogman",
+    "camp_m_raid_line": "7,6,8,6,MCUF",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "98B6A4"
+  },
+  "33": {
+    "gender": "M",
+    "skill_line": "GunCbt-1,Leader-1,Medic-1,Recon-1",
+    "llp": "Doer",
+    "terms": 2,
+    "rank": "LSG",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1,
+      "CC": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Recon": 1,
+      "Leader": 1,
+      "GunCbt": 1,
+      "Medic": 1
+    },
+    "age": "28",
+    "title": "",
+    "first_name": "Goran",
+    "wound": "Serious",
+    "last_name": "Somberg",
+    "camp_m_raid_line": "4,2,6,7,SW",
+    "political": "PRMM",
+    "morale_modifier": 0,
+    "upp": "4B98A4"
+  },
+  "27": {
+    "gender": "F",
+    "skill_line": "GunCbt-1,Leader-1",
+    "llp": "Shaper",
+    "terms": 1,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "PH": 1,
+      "CSR": 1
+    },
+    "morale": 10,
+    "skills": {
+      "Leader": 1,
+      "GunCbt": 1
+    },
+    "age": "22",
+    "title": "",
+    "first_name": "Soveig",
+    "wound": "Deadly",
+    "last_name": "Kring",
+    "camp_m_raid_line": "4,11,7,8,SW,SEH",
+    "political": "PMM",
+    "morale_modifier": 0,
+    "upp": "888A85"
+  },
+  "9": {
+    "gender": "M",
+    "skill_line": "Vehicle-1,Persuade-1,JoT-1,Recon-1,CbtR-1,Leadership-1",
+    "llp": "Mover",
+    "terms": 5,
+    "rank": "NR",
+    "awards": {
+      "MCUF": 1,
+      "CSR": 1
+    },
+    "morale": 12,
+    "skills": {
+      "CbtR": 1,
+      "Recon": 1,
+      "JoT": 1,
+      "Persuade": 1,
+      "Leadership": 1,
+      "Vehicle": 1
+    },
+    "age": "40",
+    "title": "",
+    "first_name": "Ervin",
+    "last_name": "Puckett",
+    "camp_m_raid_line": "7,9,9,10,MCG",
+    "political": "G",
+    "morale_modifier": 0,
+    "upp": "5B7485"
   }
 }
