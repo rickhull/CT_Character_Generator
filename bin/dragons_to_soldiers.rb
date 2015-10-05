@@ -13,13 +13,6 @@ def write_soldiers(data)
   soldier_file.close
 end
 
-dragon_file = "#{DATA_DIR}/blue_dragon_roster.json"
-if File.exists?(dragon_file)
-  dragons_in = File.read(dragon_file)
-  dragons = Hash.new
-  dragons, valid_json = Traveller.valid_json?(dragons_in)
-end
-
 def skills_to_hash(soldier)
   unless soldier.has_key?('skills')
     soldier['skills'] = Hash.new
@@ -101,6 +94,48 @@ def add_awards(soldier)
 
 end
 
+def sort_politics(soldier)
+  case soldier['political']
+    when 'A':   
+      soldier['political']  = 'Citizen'
+      soldier['career']     = 'Entertainer'
+    when 'D':
+      soldier['political']  = 'Domici'
+      soldier['career']     = 'Marine'
+    when 'G':
+      soldier['political']  = 'Guide'
+      soldier['career']     = 'Guide'
+    when 'P':
+      soldier['political']  = 'Guide'
+      soldier['career']     = 'Path'
+    when /MM$/:
+      soldier['political']  = 'Mountain Man'
+      soldier['career']     = 'Mountain Man'
+    when 'R':
+      soldier['political']  = 'Red Card'
+      soldier['career']     = 'Warder'
+    else
+      soldier['political']  = 'Biter'
+      soldier['career']     = 'Citizen'
+  end
+end
+    
+def add_politics(soldier)
+  case soldier['career']
+    when 'Army', 'Navy', 'Citizen', 'College', 'Entertainer':
+      soldier['political']  = 'Biter'
+    when 'Mountainman':
+      soldier['political']  = 'Mountain Man'
+      soldier['career']     = 'Mountain Man'
+    when 'Guide', 'Path':
+      soldier['political']  = 'Guide'
+    when 'Warder':
+      soldier['political']  = 'Red Card'
+    else
+      soldier['political']  = 'Biter'
+  end 
+end
+
 def adjust_morale(soldier)
   soldier['morale'] = soldier['morale'].to_i
   #if soldier['morale'] < 7
@@ -114,7 +149,62 @@ def add_title(soldier)
   soldier['title'] = Traveller.noble?(soldier['gender'], soldier['upp'])
 end
 
-if valid_json
+def change_gender(soldier)
+  if soldier['gender'] = 'female'
+    soldier['gender'] = 'F'
+  elsif soldier['gender'] = 'male'
+    soldier['gender'] = 'M'
+  end
+end
+
+def split_name(soldier)
+  soldier['first_name'], soldier['last_name'] = soldier['name'].split
+end
+
+def fix_llp(soldier)
+  case soldier['llp']
+    when /^Contemplator/:
+      soldier['llp']  = 'Contemplator'
+    when /^Doer/:
+      soldier['llp']  = 'Doer'
+    when /^Encourager/:
+      soldier['llp']  = 'Encourager'
+    when /^Finisher/:
+      soldier['llp']  = 'Finisher'
+    when /^Influencer/:
+      soldier['llp']  = 'Influencer'
+    when /^Innovator/:
+      soldier['llp']  = 'Innovator'
+    when /^Leader/:
+      soldier['llp']  = 'Leader'
+    when /^Manager/:
+      soldier['llp']  = 'Manager'
+    when /^Mover/:
+      soldier['llp']  = 'Mover'
+    when /^Pleaser/:
+      soldier['llp']  = 'Pleaser'
+    when /^Producer/:
+      soldier['llp']  = 'Producer'
+    when /^Responder/:
+      soldier['llp']  = 'Responder'
+    when /^Scholar/:
+      soldier['llp']  = 'Scholar'
+    when /^Shaper/:
+      soldier['llp']  = 'Shaper'
+    else 
+      puts "#{soldier['first_name']} #{soldier['last_name']}"
+  end
+end
+    
+
+dragon_file = "#{DATA_DIR}/blue_dragon_roster.json"
+if File.exists?(dragon_file)
+  dragons_in = File.read(dragon_file)
+  dragons = Hash.new
+  dragons, blue_valid_json = Traveller.valid_json?(dragons_in)
+end
+
+if blue_valid_json
   soldiers = Hash[dragons]
  
   soldiers.each do |key, soldier|
@@ -123,21 +213,30 @@ if valid_json
     skills_to_hash(soldier)
     add_awards(soldier)
     add_title(soldier)
-
+    sort_politics(soldier)
+    fix_llp(soldier)
     # This should be last.
     adjust_morale(soldier)
   end
-
-  
-  puts "Looking at Soldier 1."  
-  soldiers['1']['awards'].each do |key, value|
-    puts "#{key}: #{value}"
-  end
-  puts "Morale Modifier: #{soldiers['1']['morale_modifier']}."
-  puts "Morale: #{soldiers['1']['morale']}."
- 
-  write_soldiers(soldiers)
-
-else
-  puts "Kinda lost."
+  dragon_count = soldiers.count
 end
+
+new_dragon_file = "#{DATA_DIR}/lot_of_chars.json"
+if File.exists?(new_dragon_file)
+  new_dragons_in = File.read(new_dragon_file)
+  new_dragons = Hash.new
+  new_dragons, new_valid_json = Traveller.valid_json?(new_dragons_in)
+end
+
+if new_valid_json
+  new_dragons.each do |key, soldier|
+    change_gender(soldier)
+    add_politics(soldier)  
+    fix_llp(soldier)
+    split_name(soldier)
+  end
+   
+end
+
+soldiers.merge!(new_dragons)
+write_soldiers(soldiers)

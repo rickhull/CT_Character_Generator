@@ -65,7 +65,7 @@
     "first_name": "Phyllis"
   },
   "0": {
-    "llp": "Unk",
+    "llp": "Mover",
     "skill_line": "Admin-0,Blade-1,Brawling-1,Computer-0,Electronics-0,Gambling-0,GunCgt(Energy)-2,Leader-0,Medical-0,Mechanical-0,Tactics-0,VaccSuit-1,Vehicle(Grav)-0",
     "camp_m_raid_line": "1,1,1,1",
     "age": "22",
@@ -283,8 +283,8 @@
     "first_name": "Nathanel"
   },
   "39": {
-    "llp": "Cbt-3,Tactics",
-    "skill_line": "Gun",
+    "llp": "Pleaser",
+    "skill_line": "GunCbt-3,Tactics-1",
     "camp_m_raid_line": "5,7,5,6,PH,MCUF",
     "age": "31",
     "morale": "10",
@@ -460,9 +460,9 @@
     "first_name": "Soveig"
   },
   "64": {
-    "llp": "7,4,11,3",
+    "llp": "Mover",
     "skill_line": "CbtRifleman-1,Electronics-1,HvyWeapons-1,Leader-1,Medic-1",
-    "camp_m_raid_line": null,
+    "camp_m_raid_line": "7,4,11,3",
     "age": "32",
     "morale": "10",
     "political": "PRMM",
@@ -629,8 +629,8 @@
     "first_name": "Cory"
   },
   "7": {
-    "llp": "Boat-1,Pistol-1",
-    "skill_line": "Recon-0,Ship's",
+    "llp": "Mover",
+    "skill_line": "Recon-0,ShipsBoat-1,Pistol-1",
     "camp_m_raid_line": "Responder",
     "age": "21",
     "morale": "10",
@@ -718,21 +718,21 @@
     "first_name": "Myrtle"
   },
   "4": {
-    "llp": null,
-    "skill_line": "9,9,6,10,MCG",
-    "camp_m_raid_line": null,
-    "age": "MM",
+    "llp": "Contemplator",
+    "skill_line": "",
+    "camp_m_raid_line": "",
+    "age": "23",
     "morale": "7",
-    "political": "M",
-    "gender": "Computer-4,Electronics-3",
+    "political": "MM",
+    "gender": "M",
     "rank": "NR",
-    "last_name": "23",
+    "last_name": "LNU",
     "upp": "Contemplator",
     "first_name": "Derek"
   },
   "43": {
-    "llp": "Cbt-2,Leader,Recon",
-    "skill_line": "Gun",
+    "llp": "Pleaser",
+    "skill_line": "GunCbt-2,Leader-1,Recon-1",
     "camp_m_raid_line": "5,8,5,7,PH,MCG",
     "age": "30",
     "morale": "10",
@@ -1377,7 +1377,7 @@
     "camp_m_raid_line": "8,7,7,9,MCUF",
     "age": "29",
     "morale": "7",
-    "political": "Rep",
+    "political": "A",
     "gender": "M",
     "rank": "NR",
     "last_name": "Vaden",
@@ -1424,9 +1424,8 @@
     "first_name": "Dennis"
   },
   "2": {
-    "llp": "Cbt-1,Mechanical-1",
-    "skill_line": "AirRaft-2,Electronics-1,Gun",
-    "camp_m_raid_line": "Influencer",
+    "llp": "Influencer",
+    "skill_line": "AirRaft-2,Electronics-1,GunCbt-1,Mechanical-1",
     "age": "33",
     "morale": "10",
     "political": "MM",
