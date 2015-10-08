@@ -150,9 +150,9 @@ def add_title(soldier)
 end
 
 def change_gender(soldier)
-  if soldier['gender'] = 'female'
+  if soldier['gender'] == 'female'
     soldier['gender'] = 'F'
-  elsif soldier['gender'] = 'male'
+  elsif soldier['gender'] == 'male'
     soldier['gender'] = 'M'
   end
 end
@@ -195,7 +195,10 @@ def fix_llp(soldier)
       puts "#{soldier['first_name']} #{soldier['last_name']}"
   end
 end
-    
+
+def full_name(soldier)
+  soldier['name'] = "#{soldier['first_name']} #{soldier['last_name']}"    
+end
 
 dragon_file = "#{DATA_DIR}/blue_dragon_roster.json"
 if File.exists?(dragon_file)
@@ -215,6 +218,7 @@ if blue_valid_json
     add_title(soldier)
     sort_politics(soldier)
     fix_llp(soldier)
+    full_name(soldier)
     # This should be last.
     adjust_morale(soldier)
   end
