@@ -7,12 +7,17 @@ Class Character
   For example, the name method returns a concatantaion
     of first_name and last_name
 
+  ?? Something to take a hash and set Character attributes. 
+    ?? Is that Present, as output is what matters?
+
+
 Class Chargen
   ?? Should this be a module, since it is never instantiated?
 
   Subclass of Character, it provides many of the tools 
     for generating Character.attributes.
   This class is usually a super class of a particular career. 
+  Note that Chargen generates attributes. 
 
 Class Marine
   A subclass of Chargen, it will provide tables for the 
