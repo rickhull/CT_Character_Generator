@@ -1,0 +1,26 @@
+9 Oct 15  I'm re-thinking the code and program flow, asking for critique.
+  Some of the names and classes exist, but will get heavily refactored.
+
+
+Class Character
+  Holds attributes of a character, and minimal methods.
+  For example, the name method returns a concatantaion
+    of first_name and last_name
+
+Class Chargen
+  Subclass of Character, it provides many of the tools 
+    for generating Character.attributes.
+  This class is usually a super class of a particular career. 
+
+Class Marine
+  A subclass of Chargen, it will provide tables for the 
+    Chargen methods to act on. 
+  There are several careers like "Marine", they all subclass Chargen.
+
+
+Class Present
+  Takes an object of class Character and provides methods to 
+    display the object.
+
+ 
+
