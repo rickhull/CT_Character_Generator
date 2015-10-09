@@ -8,6 +8,8 @@ Class Character
     of first_name and last_name
 
 Class Chargen
+  ?? Should this be a module, since it is never instantiated?
+
   Subclass of Character, it provides many of the tools 
     for generating Character.attributes.
   This class is usually a super class of a particular career. 
