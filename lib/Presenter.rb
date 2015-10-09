@@ -2,12 +2,10 @@ class Presenter
 
   def initialize(soldier)
     @headers = Array.new
-    @rank   = soldier.rank
-    @headers << @rank
-    @name   = soldier.name 
-    @headers << @name
-    @upp    = soldier.upp
-    @headers << @upp
+    @headers << @rank   = soldier.rank
+    @headers << @name   = soldier.name 
+    @headers << @upp    = soldier.upp
+    @headers << @morale = soldier.morale
   end
 
   def show(method = 'txt')
