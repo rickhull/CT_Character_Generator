@@ -7,6 +7,33 @@ DATA_DIR = File.expand_path('../../data', __FILE__)
 require 'json'
 require 'Traveller'
 
+def get_keepers()
+  keepers = Array.new
+  File.open("#{DATA_DIR}/keepers.txt", 'r') do |file|
+    file.each_line do |line|
+      next if line.length < 10
+
+      first_name = line.split[1]
+      if line.split[3].length == 6
+        upp = "#{line.split[3]}"
+      elsif line.split[6].length == 6
+        upp = "#{line.split[6]}"
+      else
+        puts "Can't understand #{line}."
+        exit
+      end
+      keeper_hash_key = hash_key(first_name, upp)
+      unless keepers.include?(keeper_hash_key)
+        keepers << keeper_hash_key
+      else
+        puts "Already have #{keeper_hash_key}."
+      end
+ 
+    end
+  end 
+  return keepers
+end
+
 def write_soldiers(data)
   soldier_file = File.open("#{DATA_DIR}/soldiers.json", 'w')
   soldier_file.write(JSON.pretty_generate(data))
@@ -200,6 +227,25 @@ def full_name(soldier)
   soldier['name'] = "#{soldier['first_name']} #{soldier['last_name']}"    
 end
 
+def hash_key(first_name, upp)
+  first_name_key = 'zzzz'
+  if first_name.length >= 4
+    for pos in 0..first_name_key.length - 1
+      first_name_key[pos] = first_name[pos]
+    end
+  else
+    for pos in 0..first_name.length - 1
+      first_name_key[pos] = first_name[pos]
+    end
+  end
+  return "#{first_name_key}-#{upp}"
+end
+
+####  Main
+
+soldiers = Hash.new
+keepers = get_keepers
+
 dragon_file = "#{DATA_DIR}/blue_dragon_roster.json"
 if File.exists?(dragon_file)
   dragons_in = File.read(dragon_file)
@@ -208,21 +254,23 @@ if File.exists?(dragon_file)
 end
 
 if blue_valid_json
-  soldiers = Hash[dragons]
- 
-  soldiers.each do |key, soldier|
-    soldier['morale_modifier'] = 0
-    terms(soldier)
-    skills_to_hash(soldier)
-    add_awards(soldier)
-    add_title(soldier)
-    sort_politics(soldier)
-    fix_llp(soldier)
-    full_name(soldier)
-    # This should be last.
-    adjust_morale(soldier)
+  dragons.each do |key, dragon|
+    soldier_hash_key = hash_key(dragon['first_name'], dragon['upp'])
+    if keepers.include?(soldier_hash_key)
+      dragon['morale_modifier'] = 0
+      terms(dragon)
+      skills_to_hash(dragon)
+      add_awards(dragon)
+      add_title(dragon)
+      sort_politics(dragon)
+      fix_llp(dragon)
+      full_name(dragon)
+
+      # This should be last.
+      adjust_morale(dragon)
+      soldiers[soldier_hash_key] = dragons[key]
+    end
   end
-  dragon_count = soldiers.count
 end
 
 new_dragon_file = "#{DATA_DIR}/lot_of_chars.json"
@@ -233,14 +281,15 @@ if File.exists?(new_dragon_file)
 end
 
 if new_valid_json
-  new_dragons.each do |key, soldier|
-    change_gender(soldier)
-    add_politics(soldier)  
-    fix_llp(soldier)
-    split_name(soldier)
+  new_dragons.each do |key, new_dragon|
+    soldier_hash_key = hash_key(new_dragon['name'], new_dragon['upp'])
+    change_gender(new_dragon)
+    add_politics(new_dragon)  
+    fix_llp(new_dragon)
+    split_name(new_dragon)
+    soldiers[soldier_hash_key] = new_dragons[key]
   end
    
 end
 
-soldiers.merge!(new_dragons)
 write_soldiers(soldiers)

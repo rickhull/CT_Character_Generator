@@ -6,9 +6,7 @@ DATA_DIR = File.expand_path('../../data', __FILE__)
 requests = Hash.new
 File.open("#{DATA_DIR}/keepers.txt") do |file|
   file.each_line do |line|
-    if line.length < 20
-      next
-    end
+    next if line.length < 20
 
     if line.split[3].length == 6
       upp = "#{line.split[3]}-#{line.split[1]}"

@@ -155,6 +155,8 @@ NR Axel Rydell 28 MMM M 698785 Comp-1, GunCbt-1, Tactics-1, Vehicle-1 Pleaser Mo
 
 NR Agata Byland 32 MMM F D5A667 GunCbt-2, Mech-1, Medic-1, Vehicle-1 Manager Morale 10
 
+LT Patrick Huss  987A42 Streetwise-2,BladeCbt-1(butterfly_knife),Bribery-1,Vehicle-1,Brawling-0,Electronic-0,Forgery-0,Gambling-0,GunCbt(Pistol/SMG)-0,Mechanical-0,Medical-0 10
+
 NR Jan Rydell 28 MMM M C37875 Mech-2, GunCbt-1, Recon-1 Finisher Morale 7
 
 NR Adolf Klang 22 MMM M 9A8885 GunCbt-1, Vehicle-1 Finisher Morale 7
