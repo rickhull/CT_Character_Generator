@@ -17,14 +17,17 @@ class Character
   include Pirate
 
   def set_career(career)
-    @career = career
+    puts career.instance_methods
     career.show_rank
   end
 end
 
 Fred = Character.new
-Fred.set_career('Marine')
-Fred.show_rank
+Fred.set_career(Marine)
 
+# Running this gets:
+# show_rank
+# ./test_module.rb:21:in `set_career': undefined method `show_rank' for Marine:Module (NoMethodError)
+#   from ./test_module.rb:26
 
 
