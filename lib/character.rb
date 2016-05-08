@@ -24,7 +24,8 @@ class Character
     @title    = char['title']   ||  Traveller.noble?(@gender, @upp)
     @rank     = char['rank']    ||  ''
     @terms    = char['terms']   ||  terms
-    @age      = char['age']     ||  age
+#    @age      = char['age']     ||  (@terms * 4) + DEFAULT_AGE + rand(3)
+    @age      = char['age']     ||  18
   end
 
   def set_name(gender='male')
@@ -93,12 +94,15 @@ class Character
     return @gender 
   end
 
-  def age
-    @age ||= (terms * 4) + DEFAULT_AGE + rand(3)
-  end
+#  def age
+#    puts "terms is #{@terms}"
+#    @age ||= (@terms * 4) + DEFAULT_AGE + rand(3)
+#  end
 
   def terms
     @terms ||= Traveller.roll_dice(6,1,1) 
+    @age = (@terms * 4) + DEFAULT_AGE + rand(3)
+    return @terms
   end
 
   def officer(target_roll=13)
