@@ -11,9 +11,9 @@ require 'Chargen'
 
 def gen_char(career)
   # Need a failure mode if the files don't exist. 
-  name = career.capitalize
-  character = Chargen.const_get(name).new
-  character.career = name
+  career_name = career.capitalize
+  character = Chargen.const_get(career_name).new
+  character.career = career_name
   character.terms = Traveller.roll_dice(6,1,1)
   character.upp
   character.set_rank
