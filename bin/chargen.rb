@@ -14,11 +14,12 @@ def gen_char(career)
   career_name = career.capitalize
   character = Chargen.const_get(career_name).new
   character.career = career_name
-  character.terms = Traveller.roll_dice(6,1,1)
+  character.terms
   character.upp
   character.set_rank
   character.set_name(character.gender)
   character.set_skills()
+  character.age
   return character
 end
 
@@ -43,6 +44,4 @@ parser.parse!
 
 character = gen_char(career)
 
-#Traveller.out_txt(character)
 Traveller.write(character, output_format)
-
