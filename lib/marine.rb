@@ -74,4 +74,3 @@ class Marine < Character
   end
 
 end
-

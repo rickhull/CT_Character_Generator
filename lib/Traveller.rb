@@ -64,7 +64,7 @@ module Traveller
     title = c.title
    
     if mode == 'txt' 
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
+      puts "#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       first_skill = true
       c.skills.each do |skill, level|
         if first_skill == false
@@ -100,7 +100,7 @@ module Traveller
       puts
 
     elsif mode == 'wiki'
-      puts "#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
+      puts "#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       puts 
       c.skills.each do |skill, level|
         if first_skill == false
@@ -114,7 +114,7 @@ module Traveller
     elsif mode == 'soldier'
       puts "#{rank} #{name} #{morale}"
     elsif mode == 'html'
-      puts "<p>#{career} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
+      puts "<p>#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}"
       print "<p>" 
       c.skills.each do |skill, level|
         if first_skill == false
