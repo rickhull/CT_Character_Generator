@@ -28,7 +28,7 @@ class Entertainer < Character
       new_skill = @skill_options[rand(@skill_options.count)]
       increase_skill(new_skill)
     end
-    @title = Traveller.noble?(@gender, @upp) 
+    @title = Traveller.noble(@gender, @upp) 
   end
 
 end

@@ -76,7 +76,7 @@ class Navy < Character
       increase_skill(new_skill)
     end
 
-    @title = Traveller.noble?(@gender, @upp)
+    @title = Traveller.noble(@gender, @upp)
   end
   
   

@@ -30,8 +30,18 @@ module Traveller
       return false
     end
   end
- 
-  def Traveller.noble?(gender, upp)
+
+  def Traveller.noble?(upp)
+    soc = upp[5,1].to_i
+    if soc > 9
+      return true
+    else
+      return false
+    end
+  end 
+
+
+  def Traveller.noble(gender, upp)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
     nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }

@@ -173,7 +173,7 @@ def adjust_morale(soldier)
 end
 
 def add_title(soldier)
-  soldier['title'] = Traveller.noble?(soldier['gender'], soldier['upp'])
+  soldier['title'] = Traveller.noble(soldier['gender'], soldier['upp'])
 end
 
 def change_gender(soldier)

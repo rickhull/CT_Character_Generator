@@ -21,7 +21,7 @@ class Character
     @upp      = char['upp']     ||  Traveller.roll_upp
     @llp      = char['llp']     ||  set_llp()
     @morale   = char['morale']  ||  Traveller.roll_dice(6,1,1)
-    @title    = char['title']   ||  Traveller.noble?(@gender, @upp)
+    @title    = char['title']   ||  Traveller.noble(@gender, @upp)
     @rank     = char['rank']    ||  ''
     @terms    = char['terms']   ||  terms
     @age      = char['age']     ||  age
