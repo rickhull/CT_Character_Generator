@@ -37,8 +37,22 @@ module Traveller
   end
 
 
+  describe 'Should return true if nobility.' do
+    it 'returns true if upp 11+' do
+      @upp = '77777B'
+      @is_noble = Traveller.noble?(@upp)
+      expect(@is_noble).to eq(true)
+    end
+
+    it 'returns false if upp <= 10' do
+      @upp = '77777A'
+      @is_noble = Traveller.noble?(@upp)
+      expect(@is_noble).to eq(false)
+    end
+  end
+
   describe 'Should return a title if nobility.' do
-    
+
     it 'returns Knight if gender male and Soc B.' do
       @gender = 'male'
       @upp = '77777B'

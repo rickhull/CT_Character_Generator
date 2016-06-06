@@ -32,8 +32,8 @@ module Traveller
   end
 
   def Traveller.noble?(upp)
-    soc = upp[5,1].to_i
-    if soc > 9
+    soc = upp[5,1].to_i(16)
+    if soc >= 11
       return true
     else
       return false
