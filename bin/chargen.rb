@@ -3,7 +3,7 @@
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require 'Traveller'
-
+require 'Write'
 require 'sqlite3'
 require 'optparse'
 require 'character'
@@ -44,4 +44,4 @@ parser.parse!
 
 character = gen_char(career)
 
-Traveller.write(character, output_format)
+Write.write(character, output_format)
