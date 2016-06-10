@@ -1,0 +1,38 @@
+NR Lennart Swanson 44 EMM M 648579 GunCbt-3, Leader-2, Recon-1, Tactics-1 Finisher Morale 13
+
+EMM, 1st Squad, 1st Team (Morale 9)
+NR Ambrosius Branting 38 EMM M 996647 GunCbt-3, BladeCbt-1, Brawling-1, Mech-1 Finisher Morale 13
+NR Hilmar Branting 27 EMM M 96B765 GunCbt-2, Recon-1, Tactics-1 Encourager Morale 7
+NR Brigitta Branting 26 EMM F 748658 GunCbt-1, Medic-1, Tactics-1 Encourager Morale 7
+NR Elliot Branting 23 EMM M 6C6676 GunCbt-1, Medic-1 Pleaser Morale 7
+
+EMM, 1st Squad, 2nd Team (Morale 8)
+NR Liam Johansson 41 EMM M 99676B BladeCbt-2, Mech-2, GunCbt-1, Recon-1, Vehicle-1 Finisher Morale 10
+NR Manfred Johansson 27 EMM M 6B8B25 Recon-2, GunCbt-1 Pleaser Morale 7
+NR Britta Lindvall 27 EMM F 578665 GunCbt-1, Brawling-1, Recon-1 Leader Morale 7
+NR Steffan Lindvall 26 EMM M 7C8873 Recon-2, GunCbt-1 Leader Morale 7
+
+EMM, 1st Squad, 3rd Team (Morale 8)
+NR Otto Branting 45 EMM M 886959 GunCbt-2, Mech-2, Vehicle-2, BladeCbt-1, Medic-1 Innovator Morale 10
+NR Isabella Falen 23 EMM F 668BB6 GunCbt-1, Mech-1 Pleaser Morale 7
+NR Karla Falen 22 EMM F 879692 GunCbt-1, Vehicle-1 Innovator Morale 7
+NR Nikolaus Falen 22 EMM M A77865 GunCbt-1, Mech-1 Finisher Morale 7
+
+EMM, 1st Squad, 4th Team (Morale 8)
+NR Nils Johansson 34 EMM M AB7568 Medic-2, GunCbt-1, Recon-1, Vehicle-1 Pleaser Morale 10
+NR Kevin Lindvall 27 EMM M 7A9485 Elec-1, GunCbt-1, Tactics-1 Finisher Morale 7
+NR Soren Moden 27 EMM M 987994 GunCbt-1, Tactics-1, Vehicle-1 Finisher Morale 7
+NR Elisabet Orn 25 EMM F 97A455 Elec-1, GunCbt-1, Leader-1 Finisher Morale 7
+
+EMM, 1st Squad, 5th Team (Morale 7)
+NR Sonja Orn 22 EMM F 8998B4 GunCbt-2 Leader Morale 7
+NR Adrian Thun 28 EMM M AD5786 GunCbt-1, Mech-1, Medic-1, Recon-1 Finisher Morale 7
+NR Alma Thun 26 EMM F 8A98B6 GunCbt-1, Medic-1, Tactics-1 Finisher Morale 7
+NR Manfred Thun 25 EMM M 388676 GunCbt-2, Recon-1 Finisher Morale 7
+
+EMM, 1st Squad, 6th Team (Morale 7)
+NR Edvin Thun 21 EMM M A97746 GunCbt-1, Recon-1 Leader Morale 7
+NR Albert Thun 26 EMM M 9398B3 Vehicle-2, GunCbt-1 Encourager Morale 7
+NR Hilmar Thun 22 EMM M 5586A4 GunCbt-1, Tactics-1 Finisher Morale 7
+NR Gota Winquist 22 EMM F D3A363 GunCbt-1, Vehicle-1 Pleaser Morale 7
+

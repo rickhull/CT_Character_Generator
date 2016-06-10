@@ -30,37 +30,12 @@ module Traveller
     end
   end
 
-  def Traveller.first_name(gender='Male')
-    require 'sqlite3'
-    gender = gender.downcase
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
-      first_name_result = first_name_query.execute
-      first_name = first_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      first_name_query.close if first_name_query
-      db.close if db
-    end
-    return first_name
+  def Traveller.first_name(gender='male')
+
   end
 
   def Traveller.last_name
-    require 'sqlite3'
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
-      last_name_result = last_name_query.execute
-      last_name = last_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      last_name_query.close if last_name_query
-      db.close if db
-    end
-    return last_name
+
   end
 
   def Traveller.name(gender)

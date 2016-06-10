@@ -5,14 +5,14 @@ class Character
   $DATA_PATH = File.expand_path("../../data", __FILE__)
 
   require 'Traveller'
-  attr_accessor :gender, :name, :upp
-                # :career, :officer, :morale, :rank, :terms,
-                # :awards, :wounds, :skills, :age, :title
+  attr_accessor :gender, :name, :skills, :age, :upp, :title,
+                :career, :officer, :morale, :rank, :terms,
+                :awards, :wounds
 
   def initialize()
     @upp      = Traveller.upp
     @gender   = Traveller.gender.capitalize
-    @name     = Traveller.name(@gender)
+    #@name     = Traveller.name
     #attributes.each do |attr, value|
     #  setter = "#{attr}="
     #  send(setter, value) if self.respond_to?(setter)
@@ -21,3 +21,10 @@ class Character
   end
 
 end
+
+
+me = Character.new
+puts "#{me.gender} #{me.upp}"
+
+
+

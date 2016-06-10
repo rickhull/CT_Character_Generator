@@ -1,0 +1,170 @@
+
+
+CPT Marco Domici  78A885 Admin-0,Blade-1,Brawling-1,Computer-0,Electronics-0,Gambling-0,GunCgt(Energy)-2,Leader-0, Medical-0,Mechanical-0,Tactics-0,VaccSuit-1,Vehicle(Grav)-0 13
+
+CPL Tala Torsten  996B22 Psion-0(C),CbtR-0,Dance-1,Survival-0 4
+
+NR Ervin Puckett  5B7485 Vehicle-1,Persuade-1,JoT-1,Recon-1,CbtR-1,Leadership-1 10
+
+CPL Myrtle Molen  547484 GunCbt-3 10
+
+NR Agata Clark  783679 CbtR-2,BladeCbt-1 10
+
+NR Jakob Trest  8DA735 BladeCbt-1,GunCbt-1 7
+
+LSG Catherina Cronbust  D699A6 Electronics-1,GunCbt-1,Medic-1,Recon-1 10
+
+LCP Aurelio Brood  D38686 GunCbt-1,Recon-1 7
+
+SGT Baltasar Broden  783679 Electronic-0,Grav-1,CbtRifle-2 10
+
+NR Evern Bergin  ADC48C GunCbt-2,Computer-2,Admin-1,Hunter(Recon)-1,Medic-1,Survival-1,Blade-0,Electronics-0,Leader-0,Mechanical-0,Vehicle(tracked)-0 10
+
+NR Monika Buske  855795 CbtRifle-1 7
+
+NR Soveig Kring  888A85 GunCbt-1,Leader-1 7
+
+NR Algot Arndt  968952 GunCbt-1 7
+
+CPL Titus Hellstrom  B6C824 GunCbt-2,Electronics-1 10
+
+CPL Tage Lunden  B98A83 Electronics-1,GunCbt-1,Medic-1 7
+
+LCP Anton Gustafson  7DA786 GunCbt-1,Recon-1 7
+
+NR Arvid Corvin  BA9886 Computer-1,GunCbt-1,Hunter(Recon)-1 7
+
+LSG Tiffiny Birke  9B48A6 Medic-2,GunCbt-1,Mechanical-1 10
+
+NR Isabella McDaniel  77AA69 Electronics-2,CbtR-1 7
+
+NR Bertil Brock  A78657 Gun 10
+
+NR Eugen Lundell  98C876 GunCbt-2,Survival-2 10
+
+SGT Elias Winter  96E847 GunCbt-3,Elec-1,Recon-1 13
+
+NR Klas Winter  5689A5 GunCbt-2,Comp-1 10
+
+NR Natalie Bolen  B5C796 GunCbt-2,Elec-1,Vehicle-1 10
+
+NR Ansgar Bolen  5CB976 GunCbt-2,Recon-1 10
+
+
+NR Franz Bolen  796494 GunCbt-3 10
+
+NR Andreas Bolen  4A98C7 GunCbt-1,Medic-1,Recon-1,Tactics-1 7
+
+
+NR Joel Landeen  9B4B86 GunCbt-1,Elec-1 7
+
+SGT Eddy Huss  B6659B Tactics-3,GunCbt-2,BladeCbt-1,Mech-1 13
+
+NR Lars Huss  856536 Recon-2,GunCbt-1 7
+
+
+NR Jesper Winger  C546C7 Comp-1,GunCbt-1,Medic-1,Tactics-1 7
+
+NR Rune Winger  986556 GunCbt-1,Mech-1,Medic-1 7
+
+NR Alvin Winger  4A9876 GunCbt-1,Leader-1 7
+
+
+NR Moa Klang  D4C778 Tactics-2,Brawling-1,GunCbt-1 7
+
+NR Evert Vong  644925 GunCbt-3 10
+
+NR Viggo Boden  8BC875 GunCbt-1,Vehicle-1 7
+
+NR Kasper Rydell  5A5683 GunCbt-1,BladeCbt-1 7
+
+NR Harriet Brand  546C82 Survival-1,Streetwise-3,Investigate-2,GunCbt-1,Bribery-1,Blade-1,Persuade-1  10
+
+NR Dennis Jensen  B76967 Brawling-1,Forgery-1,Gambling-3 10
+
+NR Phyllis Parent  B96867 Investigate-1,Blade-1,Stealth-1 7
+
+NR Benton Perrot  3B98AA Art(poet)-1 4
+
+NR Emilee Vignon  963668 Art(painting)-1,Steward-1,Streetwise-1 4
+
+NR Rigmora Norum  B35484 GunCbt-1,Medic-1,Vehicle(tracked)-1 7
+
+NR Kayleigh Davidson  BC9886 Art(metalworking)-1,Streetwise-1,Persuade-1 4
+
+NR Tama Leclercq  57589D Persuade-1,CbtR-1 7
+
+NR Betty Jimenez  566527 JoT-1,Leadership-1,Persuade-1,CbtR-1,GunCbt-1 10
+
+NR Milton Guthrie  5599B7 Blade-3,Leadership-1,GunCbt-1,Medical-1,Streetwise-1 10
+
+CPL Lyn Roden  76A674 Grav/ACV-1,GunCbt-1,Medic-1 7
+
+LSG Lyn Kron  698356 Computer-1,GunCbt-1,HvyWeapon-1,Mechanical-1 10
+
+NR Viola Bohner  9B8474 BladeCbt-1,GunCbt-1,Vehicle(tracked)-1 7
+
+NR Jonatan Buisson  96AA77 Tracked-0,CbtRifle-1 7
+
+NR Ake Florin 28 AMM M 776856 Elec-1, GunCbt-1, Medic-1, Recon-1 Leader Morale 7
+
+NR Hans Florin 24 AMM M 49A833 Brawling-1, Elec-1, GunCbt-1 Encourager Morale 7
+
+NR Ingemar Solen 33 AMM M 474876 Recon-2, GunCbt-1, Mech-1, Vehicle-1 Innovator Morale 10
+
+NR Berit Rask 26 AMM F AAC863 GunCbt-1, Recon-1, Vehicle-1 Pleaser Morale 7
+
+
+NR Peder Bolen 24 AMM M C46863 GunCbt-1, Leader-1, Recon-1 Encourager  Morale 7
+
+NR Matteus Landeen 26 AMM M 5B9447 Blade-1, GunCbt-1, Tactics-1 Pleaser Morale 7
+
+CPT Lennart Swanson 44 EMM M 648579 GunCbt-3, Leader-2, Recon-1, Tactics-1 Finisher Morale 13
+
+NR Ambrosius Branting 38 EMM M 996647 GunCbt-3, BladeCbt-1, Brawling-1, Mech-1 Finisher Morale 13
+
+NR Hilmar Branting 27 EMM M 96B765 GunCbt-2, Recon-1, Tactics-1 Encourager Morale 7
+
+NR Brigitta Branting 26 EMM F 748658 GunCbt-1, Medic-1, Tactics-1 Encourager Morale 7
+
+NR Elliot Branting 23 EMM M 6C6676 GunCbt-1, Medic-1 Pleaser Morale 7 
+
+NR Nils Johansson 34 EMM M AB7568 Medic-2, GunCbt-1, Recon-1, Vehicle-1 Pleaser Morale 10
+
+NR Kevin Lindvall 27 EMM M 7A9485 Elec-1, GunCbt-1, Tactics-1 Finisher Morale 7
+
+NR Soren Moden 27 EMM M 987994 GunCbt-1, Tactics-1, Vehicle-1 Finisher Morale 7
+
+NR Elisabet Orn 25 EMM F 97A455 Elec-1, GunCbt-1, Leader-1 Finisher Morale 7 
+
+NR Hilmar Thun 22 EMM M 5586A4 GunCbt-1, Tactics-1 Finisher Morale 7
+
+NR Vilhelm  Huss 22 FWMM M 75A794 GunCbt-2 Leader Morale 7
+
+NR Felix Oden 27 FWMM M 8A6398 Elec-1, GunCbt-1, Recon-1 Finisher Morale 7 
+
+NR Adam Winger 24 FWMM M 755854 BladeCbt-1, GunCbt-1, Mech-1 Finisher Morale 7 
+
+NR Hermann Winger 32 FWMM M 47C357 GunCbt-4, Mech-1 Finisher Morale 13
+
+SGT Ingrid Ehn 43 MMM F BD8348 GunCbt-2, Medic-2, Recon-1, Tactics-1, Vehicle-1 Finisher Morale 10 
+
+CPL Tora Beckman 31 MMM F A759A4 BladeCbt-1, Elec-1, GunCbt-1, Medic-1 Pleaser Morale 10
+NR Tobias Ehn 29 MMM M 9A6545 BladeCbt-1, GunCbt-1, Mech-1, Vehicle-1 Pleaser Morale 7
+NR Axel Rydell 28 MMM M 698785 Comp-1, GunCbt-1, Tactics-1, Vehicle-1 Pleaser Morale 7
+
+NR Agata Byland 32 MMM F D5A667 GunCbt-2, Mech-1, Medic-1, Vehicle-1 Manager Morale 10
+
+LT Patrick Huss  987A42 Streetwise-2,BladeCbt-1(butterfly_knife),Bribery-1,Vehicle-1,Brawling-0,Electronic-0,Forgery-0,Gambling-0,GunCbt(Pistol/SMG)-0,Mechanical-0,Medical-0 10
+
+NR Jan Rydell 28 MMM M C37875 Mech-2, GunCbt-1, Recon-1 Finisher Morale 7
+
+NR Adolf Klang 22 MMM M 9A8885 GunCbt-1, Vehicle-1 Finisher Morale 7
+
+NR Roland Malmgren 25 MMM M 7855B5 BladeCbt-1, GunCbt-1, Mech-1 Finisher Morale 7
+ 
+NR Elenora Byland 25 MMM F 9A8B85 Recon-2, GunCbt-1 Scholar Morale 7
+NR Nathanel Franzen 27 MMM M 87CA97 GunCbt-1, Mech-1, Vehicle-1 Scholar Morale 7
+NR Antonetta Rydell 24 MMM F C55756 GunCbt-1, Leader-1, Mech-1 Finisher Morale 7
+        
+NR Simon Klang 25 MMM M 55AC94 GunCbt-1, Medic-1, Recon-1 Scholar Morale 7
