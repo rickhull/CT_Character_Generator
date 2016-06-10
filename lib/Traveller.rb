@@ -12,7 +12,40 @@ module Traveller
     return @total.to_i
   end
 
+  def Traveller.upp
+    @upp = ''
+    6.times do
+      @stat = Traveller.roll_dice(6,2,1)
+      @stat = @stat.to_s(16).upcase
+      @upp  = @upp + @stat
+    end
+    return @upp
+  end
+
+  def Traveller.gender
+    if Traveller.roll_dice(6,1,1) >= 4
+      return 'male'
+    else
+      return 'female'
+    end
+  end
+
+  def Traveller.first_name(gender='male')
+
+  end
+
+  def Traveller.last_name
+
+  end
+
+  def Traveller.name(gender)
+    first_name  = Traveller.first_name(gender)
+    last_name   = Traveller.last_name
+    return "#{first_name} #{last_name}"
+  end
+
   def Traveller.roll_upp
+  # Same as Travller.upp, Phase out.
     @upp = ''
     6.times do
       @stat = Traveller.roll_dice(6,2,1)

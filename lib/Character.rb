@@ -1,17 +1,30 @@
 class Character
 
-  #$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-  #$DATA_PATH = File.expand_path("../../data", __FILE__)
 
-  attr_accessor :gender, :name, :skills, :age, :upp, :llp, :title,
-                :career, :officer, :morale, :title, :rank, :terms,
-                :dragon_rank, :awards, :wounds
+  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
+  $DATA_PATH = File.expand_path("../../data", __FILE__)
 
-  def initialize( attributes = {})
-    attributes.each do |attr, value|
-      setter = "#{attr}="
-      send(setter, value) if self.respond_to?(setter)
-    end
+  require 'Traveller'
+  attr_accessor :gender, :name, :skills, :age, :upp, :title,
+                :career, :officer, :morale, :rank, :terms,
+                :awards, :wounds
+
+  def initialize()
+    @upp      = Traveller.upp
+    @gender   = Traveller.gender.capitalize
+    #@name     = Traveller.name
+    #attributes.each do |attr, value|
+    #  setter = "#{attr}="
+    #  send(setter, value) if self.respond_to?(setter)
+    #end
+    
   end
 
 end
+
+
+me = Character.new
+puts "#{me.gender} #{me.upp}"
+
+
+
