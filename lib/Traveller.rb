@@ -44,7 +44,7 @@ module Traveller
       first_name_query.close if first_name_query
       db.close if db
     end
-    return first_name
+    return first_name.to_s
   end
 
   def Traveller.last_name
@@ -60,7 +60,7 @@ module Traveller
       last_name_query.close if last_name_query
       db.close if db
     end
-    return last_name
+    return last_name.to_s
   end
 
   def Traveller.name(gender)
@@ -87,6 +87,16 @@ module Traveller
     rescue Exception => e
       return false
     end
+  end
+
+  def Traveller.set_stat(upp, index, difference)
+    return upp if index > 5
+    stat = upp[index, 1].to_i(16)
+    new_stat = stat + difference
+    new_stat = 0 if new_stat < 0
+    new_stat = 15 if new_stat > 15
+    upp[index] = new_stat.to_s(16).upcase
+    return upp
   end
 
   def Traveller.noble?(upp)
