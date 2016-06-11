@@ -13,11 +13,6 @@ class Character
     @upp      = Traveller.upp
     @gender   = Traveller.gender.capitalize
     @name     = Traveller.name(@gender)
-    #attributes.each do |attr, value|
-    #  setter = "#{attr}="
-    #  send(setter, value) if self.respond_to?(setter)
-    #end
-    
   end
-
+  
 end
