@@ -31,6 +31,14 @@ module Traveller
 
   end
 
+  describe 'Set stat' do
+    it 'should set a stat to a specific number' do
+      @upp = '777777'
+      @new_upp = Traveller.set_stat(@upp, 0, "A")
+      expect(@new_upp).to eq('A77777')
+    end
+  end
+
   describe 'Modify stats' do
     before (:each) do
       @upp = '777777'
@@ -38,20 +46,20 @@ module Traveller
 
     it 'should change a stat' do
       @old_stat = @upp[0,1].to_i(16)
-      @new_upp = Traveller.set_stat(@upp, 0, -2)
+      @new_upp = Traveller.modify_stat(@upp, 0, -2)
       @new_stat = @new_upp[0,1].to_i(16)
       @difference = @old_stat - @new_stat
       expect(@difference).to equal(2)
     end
 
     it 'should max a stat out' do
-      @new_upp = Traveller.set_stat(@upp, 0, 25)
+      @new_upp = Traveller.modify_stat(@upp, 0, 25)
       @new_stat = @new_upp[0,1].to_i(16)
       expect(@new_stat).to eq(15)
     end
      
     it 'should min a stat out' do
-      @new_upp = Traveller.set_stat(@upp, 0, -20)
+      @new_upp = Traveller.modify_stat(@upp, 0, -20)
       @new_stat = @new_upp[0,1].to_i(16)
       expect(@new_stat).to eq(0)
     end 

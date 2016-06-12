@@ -89,7 +89,7 @@ module Traveller
     end
   end
 
-  def Traveller.set_stat(upp, index, difference)
+  def Traveller.modify_stat(upp, index, difference)
     return upp if index > 5
     stat = upp[index, 1].to_i(16)
     new_stat = stat + difference
@@ -97,6 +97,11 @@ module Traveller
     new_stat = 15 if new_stat > 15
     upp[index] = new_stat.to_s(16).upcase
     return upp
+  end
+
+  def Traveller.set_stat(upp, index, number)
+    upp[index,1] = number
+    return upp 
   end
 
   def Traveller.noble?(upp)
