@@ -2,6 +2,27 @@ require 'Traveller'
 
 module Traveller
 
+  describe 'Adding a skill' do
+
+    it 'should add a skill when one does not exist.' do
+      person = Character.new
+      @skill = 'GunCbt'
+      @level = 1
+      person.skills = Traveller.add_skill(person.skills, @skill, @level)
+      expect(person.skills[@skill]).to eq(1) 
+    end
+
+    it 'should increase a skill that exists.' do
+      person = Character.new
+      @skill = 'GunCbt'
+      @level = 1
+      person.skills = Traveller.add_skill(person.skills, @skill, @level)
+      person.skills = Traveller.add_skill(person.skills, @skill, @level)
+      person.skills = Traveller.add_skill(person.skills, @skill, @level)
+      expect(person.skills[@skill]).to eq(3)  
+    end
+  end
+
   describe 'First name' do
     it 'should be more than one character long.' do
       @first_name = Traveller.first_name('female')

@@ -99,6 +99,15 @@ module Traveller
     return upp
   end
 
+  def Traveller.add_skill(skills, skill, level=1)
+    if skills.has_key?(skill)
+      skills[skill] += level
+    else
+      skills[skill] = level
+    end
+    return skills 
+  end
+
   def Traveller.set_stat(upp, index, number)
     upp[index,1] = number
     return upp 
