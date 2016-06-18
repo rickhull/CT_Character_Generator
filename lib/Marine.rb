@@ -1,4 +1,4 @@
-require 'character'
+require 'Character'
 
 class Marine < Character
   Grade = Hash.new
@@ -27,11 +27,11 @@ class Marine < Character
 
   def initialize()
     super
-    @career = 'Marine'
+    @careers << 'Marine'
     @comission_roll = 9
     @grade_set = 'Enlisted'
-    @officer = officer(@comission_roll)
     @rank = 'Private'
+    @officer = officer(@comission_roll)
     @skills = { 'Blade' => 1 , 'GunCbt' => 1 }
     @skill_options = [ 'Brawling', 'Gambling', '+1 Str', '+1 Dex', '+1 End', 'Blade', 'Vehicle', 'VaccSuit', 'Blade', 'GunCbt', 'GunCbt', 'Vehicle', 'Mechanical', 'Electronic', 'Tactics', 'Blade', 'GunCbt']
     @advanced_skill_options = ['Medical', 'Tactics', 'Tactics', 'Computer', 'Admin', 'Leader']

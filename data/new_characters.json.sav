@@ -1,0 +1,22 @@
+{
+  "Kimb-9597BB": {
+    "rank": "",
+    "last_name": "Collin",
+    "age": 22,
+    "morale": 3,
+    "career": "Guide",
+    "upp": "9597BB",
+    "gender": "F",
+    "terms": 1,
+    "name": "Kimberly Collin",
+    "llp": "Responder",
+    "title": "Dame",
+    "skills": {
+      "Persuade": 1,
+      "CbtR": 1
+    },
+    "first_name": "Kimberly",
+    "political": "Guide"
+  }
+}
+
