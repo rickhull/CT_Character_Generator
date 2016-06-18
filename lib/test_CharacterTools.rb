@@ -1,7 +1,6 @@
+require 'CharacterTools'
 
-require 'CharacterCreate'
-
-character = CharacterCreate.init
+character = CharacterTools.init
 name      = character.name
 upp       = character.upp
 age       = character.age

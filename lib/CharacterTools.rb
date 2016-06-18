@@ -1,4 +1,4 @@
-module CharacterCreate
+module CharacterTools
 
   $LOAD_PATH << File.expand_path("../../lib", __FILE__)
   $DATA_PATH = File.expand_path("../../data", __FILE__)
