@@ -68,6 +68,7 @@ module CharacterTools
         printf("%s ", characters[key]['upp'])
         printf("%s ", characters[key]['gender'])
         printf("Age: %s ", characters[key]['age'])
+        puts
         characters[key]['careers'].each do |career, terms|
           printf("%s %s ", career, terms)
         end

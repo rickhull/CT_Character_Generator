@@ -1,92 +1,101 @@
 {
-  "768759-Diego Bogaerts": {
+  "8B9895-HomerGentry": {
+    "upp": "8B9895",
+    "name": "Homer Gentry",
     "careers": {
-      "Marines": 2,
-      "Navy": 4
+      "Navy": 4,
+      "Marines": 2
     },
-    "age": 42,
-    "name": "Diego Bogaerts",
-    "upp": "768759"
-  },
-  "7588B6-Raul Cariou": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Raul Cariou",
-    "upp": "7588B6"
-  },
-  "4A78C6-AlphonsoCrepin": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Alphonso Crepin",
-    "upp": "4A78C6"
-  },
-  "675387-RobtBakos": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Robt Bakos",
-    "upp": "675387"
-  },
-  "89A694-GalenCohen": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Galen Cohen",
-    "upp": "89A694"
-  },
-  "486857-CourtneyFortin": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Courtney Fortin",
-    "upp": "486857"
-  },
-  "5C5A68-DaveTellier": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Dave Tellier",
-    "upp": "5C5A68"
-  },
-  "8BA959-JessieWolff": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Jessie Wolff",
-    "upp": "8BA959"
-  },
-  "776947-SeymourCottin": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
-    "name": "Seymour Cottin",
-    "upp": "776947"
+    "age": 42
   },
   "748998-KarlBlanchard": {
-    "careers": {
-      "Marines": 2,
-      "Navy": 4
-    },
-    "age": 42,
+    "upp": "748998",
     "name": "Karl Blanchard",
-    "upp": "748998"
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "89A694-GalenCohen": {
+    "upp": "89A694",
+    "name": "Galen Cohen",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "8BA959-JessieWolff": {
+    "upp": "8BA959",
+    "name": "Jessie Wolff",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "4A78C6-AlphonsoCrepin": {
+    "upp": "4A78C6",
+    "name": "Alphonso Crepin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "675387-RobtBakos": {
+    "upp": "675387",
+    "name": "Robt Bakos",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "776947-SeymourCottin": {
+    "upp": "776947",
+    "name": "Seymour Cottin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "7588B6-Raul Cariou": {
+    "upp": "7588B6",
+    "name": "Raul Cariou",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "5C5A68-DaveTellier": {
+    "upp": "5C5A68",
+    "name": "Dave Tellier",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "486857-CourtneyFortin": {
+    "upp": "486857",
+    "name": "Courtney Fortin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
+  },
+  "768759-Diego Bogaerts": {
+    "upp": "768759",
+    "name": "Diego Bogaerts",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    },
+    "age": 42
   }
 }

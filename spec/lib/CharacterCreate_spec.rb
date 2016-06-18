@@ -1,20 +1,14 @@
 require 'spec_helper'
 
 describe CharacterCreate do
- 
-  before (:each) do
-    subject = CharacterCreate.init
-  end
- 
+  
   describe '#upp' do
     context 'when first created' do
       it 'is 6 hexidecimal characters' do
         expect(subject.upp).to match(/[0-9A-F]{6}/)
       end
     end
-  end
 
-  describe '#name' do
     context 'after creation' do
       it 'can be changed.' do
         subject.name = "Fred Flintstone"
