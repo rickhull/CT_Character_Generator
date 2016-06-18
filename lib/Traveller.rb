@@ -13,7 +13,7 @@ module Traveller
   end
 
   def Traveller.upp
-    @upp = ''
+    @upp = String.new
     6.times do
       @stat = Traveller.roll_dice(6,2,1)
       @stat = @stat.to_s(16).upcase
