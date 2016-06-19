@@ -24,6 +24,10 @@ module CharacterTools
       character.careers[career] = terms
     end
     character.age += terms * 4
+    if career == "Marine"
+      require 'Marine'
+      Marine.first_term(character)
+    end
   end
 
   def self.hash_character(character)
@@ -32,6 +36,7 @@ module CharacterTools
     c_hash['upp']     = character.upp
     c_hash['age']     = character.age
     c_hash['careers'] = character.careers
+    c_hash['skills']  = character.skills
     return c_hash
   end
 
