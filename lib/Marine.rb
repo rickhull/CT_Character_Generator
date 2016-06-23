@@ -32,7 +32,7 @@ module Marine
     @advanced_skill_options = ['Medical', 'Tactics', 'Tactics', 'Computer', 'Admin', 'Leader']
   end
 
-  def self.first_term(character)
+  def Marine.first_term(character)
     Traveller.add_skill(character.skills, 'Blade', 1)
     Traveller.add_skill(character.skills, 'GunCbt', 1)
   end

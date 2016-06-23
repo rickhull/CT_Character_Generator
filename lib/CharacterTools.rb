@@ -5,6 +5,7 @@ module CharacterTools
 
   require 'Traveller'
   require 'Character'
+  require 'Presenter'
   require 'json'
   require 'pp'
 
@@ -17,7 +18,7 @@ module CharacterTools
     return character
   end
 
-  def self.add_career(character, career, terms)
+  def CharacterTools.add_career(character, career, terms)
     if character.careers.has_key?(career)
       character.careers[career] += terms
     else
@@ -63,22 +64,33 @@ module CharacterTools
     end
   end
   
-  def self.show_characters(file, format=json)
+  def self.show_characters(file, format=json, mode='txt')
     if File.exists?(file)
       characters = Hash.new
       characters_in = File.read(file)
       characters = JSON.parse(characters_in)
+      #characters.each do |character|
+      #  puts characters[character]
+      #  #Presenter.show(character, mode)
+      #end
       characters.each do |key, array|
-        printf("%s ", characters[key]['name'])
-        printf("%s ", characters[key]['upp'])
-        printf("%s ", characters[key]['gender'])
-        printf("Age: %s ", characters[key]['age'])
-        puts
-        characters[key]['careers'].each do |career, terms|
-          printf("%s %s ", career, terms)
-        end
-        puts
+        character = Character.new
+        character.name    = characters[key]['name']
+        character.upp     = characters[key]['upp']
+        character.gender  = characters[key]['gender']
+        character.age     = characters[key]['age']
+        Presenter.show(character, mode)
       end
+      #  printf("%s ", characters[key]['name'])
+      #  printf("%s ", characters[key]['upp'])
+      #  printf("%s ", characters[key]['gender'])
+      #  printf("Age: %s ", characters[key]['age'])
+      #  puts
+      #  characters[key]['careers'].each do |career, terms|
+      #    printf("%s %s ", career, terms)
+      #  end
+      #  puts
+      #end
     end
   end
 

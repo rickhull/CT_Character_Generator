@@ -1,22 +1,28 @@
-class Presenter
+module Presenter
 
-  def initialize(character)
-    @headers = Array.new
-    @headers << @rank   = character.rank
-    @headers << @name   = character.name 
-    @headers << @upp    = character.upp
-    @headers << @morale = character.morale
-  end
-
-  def show(method = 'txt')
+  def Presenter.show(character, method = 'txt')
+    headers = Array.new
+    headers <<  character.name 
+    headers <<  character.upp
+    headers <<  character.age
+    headers <<  character.gender
     case method
       when 'csv'
-        @headers.each { |hdr| print "#{hdr}:" }
+        print_colon = false
+        headers.each { |hdr|
+          print ":" if print_colon == true
+          print_colon = true 
+          print "#{hdr}" 
+        }
       when 'wiki'
         print " == "
-        @headers.each { |hdr| print "#{hdr} " }
+        headers.each { 
+          |hdr| print "#{hdr} " 
+        }
       else
-        @headers.each { |hdr| print "#{hdr} " }
+        headers.each { 
+          |hdr| print "#{hdr} " 
+        }
     end
     puts
   end
