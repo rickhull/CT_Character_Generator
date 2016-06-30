@@ -1,4 +1,7 @@
+require 'spec_helper'
 require 'Traveller'
+
+#$DATA_PATH << File.expand_path("../../data", __FILE__)
 
 module Traveller
 

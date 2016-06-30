@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CharacterCreate do
+describe 'CharacterCreate' do
  
   before (:each) do
     subject = CharacterCreate.init

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CharacterCreate do
+describe 'CharacterCreate' do
   
   describe '#upp' do
     context 'when first created' do

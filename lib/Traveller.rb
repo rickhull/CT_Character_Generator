@@ -1,5 +1,7 @@
 module Traveller
 
+##$DATA_DIR << File.expand_path("../../data", __FILE__)
+
   def Traveller.roll_dice(dice_type, dice_number, average_of = 1)
     @total = 0.0 
     dice_number.times do
