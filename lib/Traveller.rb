@@ -3,25 +3,25 @@ module Traveller
 ##$DATA_DIR << File.expand_path("../../data", __FILE__)
 
   def Traveller.roll_dice(dice_type, dice_number, average_of = 1)
-    @total = 0.0 
+    total = 0.0 
     dice_number.times do
-      @average_total = 0
+      average_total = 0
       average_of.times do
-        @average_total += rand(dice_type) + 1
+        average_total += rand(dice_type) + 1
       end
-      @total += (@average_total / average_of).round 
+      total += (average_total / average_of).round 
     end
-    return @total.to_i
+    return total.to_i
   end
 
   def Traveller.upp
-    @upp = String.new
+    upp = String.new
     6.times do
-      @stat = Traveller.roll_dice(6,2,1)
-      @stat = @stat.to_s(16).upcase
-      @upp  = @upp + @stat
+      stat = Traveller.roll_dice(6,2,1)
+      stat = stat.to_s(16).upcase
+      upp  = upp + stat
     end
-    return @upp
+    return upp
   end
 
   def Traveller.gender
