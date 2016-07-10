@@ -1,0 +1,22 @@
+
+Class Character
+  Holds data like UPP, Gender, Name, Skills, Equipment Objects.
+
+Module Character_Tools
+  Factory methods to generate Character data.
+
+Module Traveller
+  Methods for common game conventions like dice rolling.
+
+Module Present
+  Methods to format output. 
+
+Module <Career>
+  Methods, Attributes, and other stuff to modifiy a character in line
+  with a specific career. Common career items like college might go 
+  in Character_Tools. These modules will use Character_Tools for things
+  like upp.modify_stat(x,y). 
+
+
+
+Data is currently stored in JSON.
