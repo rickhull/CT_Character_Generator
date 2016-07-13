@@ -1,7 +1,13 @@
+# Traveller implements game mechanisms for the 
+# Traveller[https://en.wikipedia.org/wiki/Traveller_(role-playing_game)] 
+# Role-Playing Game, copyright 
+# {Far Future Enterprises}[http://farfuture.net]. 
+# This code module is copyright {Leam Hall}[https://github.com/LeamHall], 
+# and open for free fair use. Need a better license. 
+
 module Traveller
 
-##$DATA_DIR << File.expand_path("../../data", __FILE__)
-
+  # Generic dice roller.
   def Traveller.roll_dice(dice_type, dice_number, average_of = 1)
     total = 0.0 
     dice_number.times do
@@ -14,6 +20,7 @@ module Traveller
     return total.to_i
   end
 
+  # Provides UPP as a 6 Hexidecimal character string.
   def Traveller.upp
     upp = String.new
     6.times do
@@ -24,6 +31,7 @@ module Traveller
     return upp
   end
 
+  # Returns gender in lowercase, "male" or "female". Even odds.
   def Traveller.gender
     if Traveller.roll_dice(6,1,1) >= 4
       return 'male'
@@ -32,6 +40,9 @@ module Traveller
     end
   end
 
+  # Pulls a first name from the database, based on gender. 
+  # Gender required but defaults to male.
+  # Requires sqlite3 functionality and the database file.
   def Traveller.first_name(gender='Male')
     require 'sqlite3'
     gender = gender.downcase
@@ -49,6 +60,8 @@ module Traveller
     return first_name.to_s
   end
 
+  # Pulls a last name from the database. In the future based on culture. 
+  # Requires sqlite3 functionality and the database file.
   def Traveller.last_name
     require 'sqlite3'
     begin 
@@ -65,14 +78,15 @@ module Traveller
     return last_name.to_s
   end
 
+  # Needs gender, produces first and last name as a single string.
   def Traveller.name(gender)
     first_name  = Traveller.first_name(gender)
     last_name   = Traveller.last_name
     return "#{first_name} #{last_name}"
   end
 
-  def Traveller.roll_upp
   # Same as Travller.upp, Phase out.
+  def Traveller.roll_upp
     @upp = ''
     6.times do
       @stat = Traveller.roll_dice(6,2,1)
@@ -81,7 +95,8 @@ module Traveller
     end
     return @upp
   end
-   
+  
+  # Tests if the input is valid JSON, returns JSON parsed data and true. 
   def Traveller.valid_json?(json)
     begin
       data = JSON.parse(json)
@@ -91,6 +106,7 @@ module Traveller
     end
   end
 
+  # Adjusts stat in UPP, needs UPP, stat index, and change difference.
   def Traveller.modify_stat(upp, index, difference)
     return upp if index > 5
     stat = upp[index, 1].to_i(16)
@@ -101,6 +117,8 @@ module Traveller
     return upp
   end
 
+  # Add a skill to the skills hash. 
+  # *Need to re-work skills per Martins' Hans.new(0) info.*
   def Traveller.add_skill(skills, skill, level=1)
     if skills.has_key?(skill)
       skills[skill] += level
@@ -110,11 +128,13 @@ module Traveller
     return skills 
   end
 
+  # Set a stat to a specific value. 
   def Traveller.set_stat(upp, index, number)
     upp[index,1] = number
     return upp 
   end
 
+  # Return true if UPP is a Noble.
   def Traveller.noble?(upp)
     soc = upp[5,1].to_i(16)
     if soc >= 11
@@ -125,6 +145,7 @@ module Traveller
   end 
 
 
+  # Returns title if Character is a noble. Needs gender and UPP.
   def Traveller.noble(gender, upp)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
@@ -145,6 +166,7 @@ module Traveller
     return title
   end 
 
+  # this needs to all be moved to Presenter, or something else.
   def Traveller.write(c, mode)
     rank = c.rank
     name = c.name
