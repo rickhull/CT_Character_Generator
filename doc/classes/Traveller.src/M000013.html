@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>noble (Traveller)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/Traveller.rb, line 149</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Traveller</span>.<span class="ruby-identifier">noble</span>(<span class="ruby-identifier">gender</span>, <span class="ruby-identifier">upp</span>)
+    <span class="ruby-identifier">nobility</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">nobility</span>[<span class="ruby-value str">'B'</span>] = { <span class="ruby-value str">'f'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Dame'</span>,      <span class="ruby-value str">'m'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Knight'</span> }
+    <span class="ruby-identifier">nobility</span>[<span class="ruby-value str">'C'</span>] = { <span class="ruby-value str">'f'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Baroness'</span>,  <span class="ruby-value str">'m'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Baron'</span> }
+    <span class="ruby-identifier">nobility</span>[<span class="ruby-value str">'D'</span>] = { <span class="ruby-value str">'f'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Marquesa'</span>,  <span class="ruby-value str">'m'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Marquis'</span> }
+    <span class="ruby-identifier">nobility</span>[<span class="ruby-value str">'E'</span>] = { <span class="ruby-value str">'f'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Countess'</span>,  <span class="ruby-value str">'m'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Count'</span> }
+    <span class="ruby-identifier">nobility</span>[<span class="ruby-value str">'F'</span>] = { <span class="ruby-value str">'f'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Duchess'</span>,   <span class="ruby-value str">'m'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Duke'</span> }
+ 
+    <span class="ruby-identifier">title</span> = <span class="ruby-value str">''</span> 
+    <span class="ruby-identifier">soc</span> = <span class="ruby-identifier">upp</span>[<span class="ruby-value">5</span>,<span class="ruby-value">1</span>].<span class="ruby-identifier">upcase</span> 
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">nobility</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">soc</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">gender</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'female'</span>
+        <span class="ruby-identifier">title</span> = <span class="ruby-identifier">nobility</span>[<span class="ruby-identifier">soc</span>][<span class="ruby-value str">'f'</span>]
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">title</span> = <span class="ruby-identifier">nobility</span>[<span class="ruby-identifier">soc</span>][<span class="ruby-value str">'m'</span>]
+      <span class="ruby-keyword kw">end</span> 
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

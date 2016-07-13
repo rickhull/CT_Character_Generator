@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>write (Traveller)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/Traveller.rb, line 170</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Traveller</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">mode</span>)
+    <span class="ruby-identifier">rank</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">rank</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">upp</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">upp</span>
+    <span class="ruby-identifier">gender</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">gender</span>
+    <span class="ruby-identifier">age</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">age</span>
+    <span class="ruby-identifier">terms</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">terms</span>
+    <span class="ruby-identifier">llp</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">llp</span>
+    <span class="ruby-identifier">morale</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">morale</span>
+    <span class="ruby-identifier">career</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">career</span>
+    <span class="ruby-identifier">title</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">title</span>
+   
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'txt'</span> 
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}&quot;</span>
+      <span class="ruby-identifier">first_skill</span> = <span class="ruby-keyword kw">true</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">skills</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">skill</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first_skill</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+          <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;, &quot;</span>
+        <span class="ruby-keyword kw">end</span> 
+        <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{skill}-#{level}&quot;</span>
+        <span class="ruby-identifier">first_skill</span> = <span class="ruby-keyword kw">false</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">puts</span><span class="ruby-value str">&quot;&quot;</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'hash'</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'name'</span>] = <span class="ruby-identifier">name</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'rank'</span>] = <span class="ruby-identifier">rank</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'upp'</span>] = <span class="ruby-identifier">upp</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'gender'</span>] = <span class="ruby-identifier">gender</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'age'</span>] = <span class="ruby-identifier">age</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'terms'</span>] = <span class="ruby-identifier">terms</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'llp'</span>] = <span class="ruby-identifier">llp</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'career'</span>] = <span class="ruby-identifier">career</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'morale'</span>] = <span class="ruby-identifier">morale</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'skills'</span>] = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">skills</span>
+      <span class="ruby-identifier">id</span>[<span class="ruby-value str">'title'</span>] = <span class="ruby-identifier">title</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">id</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'csv'</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{career}:#{rank}:#{title}:#{name}:#{upp}:#{gender.capitalize}:#{age}:#{terms}:#{morale}:#{llp}:&quot;</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">skills</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">skill</span>,<span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first_skill</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+          <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;,&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{skill}-#{level}&quot;</span>
+        <span class="ruby-identifier">first_skill</span> = <span class="ruby-keyword kw">false</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">puts</span>
+
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'wiki'</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}&quot;</span>
+      <span class="ruby-identifier">puts</span> 
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">skills</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">skill</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first_skill</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+          <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;, &quot;</span>
+        <span class="ruby-keyword kw">end</span> 
+        <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{skill}-#{level}&quot;</span>
+        <span class="ruby-identifier">first_skill</span> = <span class="ruby-keyword kw">false</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">puts</span>
+      <span class="ruby-identifier">puts</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'soldier'</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{rank} #{name} #{morale}&quot;</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'html'</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&lt;p&gt;#{career} #{title} #{rank} #{name} #{upp} Gender #{gender.capitalize} Age #{age} Terms  #{terms} Morale #{morale} LLP #{llp}&quot;</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;&lt;p&gt;&quot;</span> 
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">skills</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">skill</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first_skill</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+          <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;, &quot;</span>
+        <span class="ruby-keyword kw">end</span> 
+        <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{skill}-#{level}&quot;</span>
+        <span class="ruby-identifier">first_skill</span> = <span class="ruby-keyword kw">false</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">puts</span> 
+      <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;&lt;br&gt;&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+
+<span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
