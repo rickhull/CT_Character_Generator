@@ -118,7 +118,7 @@ module Traveller
   end
 
   # Add a skill to the skills hash. 
-  # *Need to re-work skills per Martins' Hans.new(0) info.*
+  # <em>Need to re-work skills per Martin's Hash.new(0) note.</em>
   def Traveller.add_skill(skills, skill, level=1)
     if skills.has_key?(skill)
       skills[skill] += level
