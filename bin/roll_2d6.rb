@@ -4,5 +4,12 @@ $LOAD_PATH << File.expand_path('../../lib', __FILE__)
 
 require 'Traveller'
 
-roll =Traveller.roll_dice(6,2)
-puts roll
+if Integer(ARGV[0]) > 1
+  rolls = Integer(ARGV[0])
+else
+  rolls = 1
+end
+
+rolls.times do 
+  puts Traveller.roll_dice(6,2)
+end
