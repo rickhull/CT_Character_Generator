@@ -9,6 +9,7 @@
 /test/version_tmp/
 /tmp/
 output/**
+/data/new_characters.json
 
 ## Specific to RubyMotion:
 .dat*
