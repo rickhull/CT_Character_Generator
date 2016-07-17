@@ -36,4 +36,5 @@ build/
 ############  Local mods
 # Active vi sessions.
 *.swp
+*.swo
 
