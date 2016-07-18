@@ -120,11 +120,12 @@ module Traveller
   # Add a skill to the skills hash. 
   # <em>Need to re-work skills per Martin's Hash.new(0) note.</em>
   def Traveller.add_skill(skills, skill, level=1)
-    if skills.has_key?(skill)
-      skills[skill] += level
-    else
-      skills[skill] = level
-    end
+    #if skills.has_key?(skill)
+    #  skills[skill] += level
+    #else
+    #  skills[skill] = level
+    #end
+    skills[skill] += level
     return skills 
   end
 
@@ -153,11 +154,11 @@ module Traveller
     nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
     nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
     nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
- 
-    title = '' 
+
+    title = ""
     soc = upp[5,1].upcase 
     if nobility.has_key?(soc)
-      if gender.downcase == 'female'
+      if gender.downcase == "female"
         title = nobility[soc]['f']
       else
         title = nobility[soc]['m']
