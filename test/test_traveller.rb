@@ -90,4 +90,17 @@ class TestTraveller < Test::Unit::TestCase
     assert(Traveller.noble(gender, upp) == "Duke")
   end
 
+  def test_add_skill
+    skills = Hash.new(0)
+    skills["GunCbt"] = 2
+    Traveller.add_skill(skills, 'GunCbt', 1)
+    assert(skills['GunCbt'] == 3) 
+    new_skills = {"GunCbt" => 3, "Pilot" => 1}
+    Traveller.add_skill(skills, 'Pilot', 1)
+    assert(skills == new_skills)
+    very_new_skills = {"GunCbt" => 3, "Pilot" => 1, "Leader" => 1}
+    Traveller.add_skill(skills, 'Leader')
+    assert(skills == very_new_skills)
+  end
+
 end
