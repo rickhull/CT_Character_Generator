@@ -6,8 +6,8 @@ class Character
     @upp      = String.new
     @gender   = String.new
     @name     = String.new
-    @skills   = Hash.new
-    @careers  = Hash.new
+    @skills   = Hash.new(0)
+    @careers  = Hash.new(0)
   end
  
 end
