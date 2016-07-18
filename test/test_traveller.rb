@@ -56,5 +56,38 @@ class TestTraveller < Test::Unit::TestCase
     assert(Traveller.noble?(upp))
   end
 
+  def test_noble
+    # Should be nil, non-noble values.
+    upp = "77777A"
+    gender = "male"
+    assert(Traveller.noble(gender,upp) == "")
+    upp = "77777G"
+    gender = "female"
+    assert(Traveller.noble(gender,upp) == "")
+    
+    #Should be correct.
+    gender = "female"
+    upp = "77777B"
+    assert(Traveller.noble(gender, upp) == "Dame")
+    upp = "77777C" 
+    assert(Traveller.noble(gender, upp) == "Baroness")
+    upp = "77777D" 
+    assert(Traveller.noble(gender, upp) == "Marquesa")
+    upp = "77777E" 
+    assert(Traveller.noble(gender, upp) == "Countess")
+    upp = "77777F" 
+    assert(Traveller.noble(gender, upp) == "Duchess")
+    gender = "male"
+    upp = "77777B"
+    assert(Traveller.noble(gender, upp) == "Knight")
+    upp = "77777C" 
+    assert(Traveller.noble(gender, upp) == "Baron")
+    upp = "77777D" 
+    assert(Traveller.noble(gender, upp) == "Marquis")
+    upp = "77777E" 
+    assert(Traveller.noble(gender, upp) == "Count")
+    upp = "77777F" 
+    assert(Traveller.noble(gender, upp) == "Duke")
+  end
 
 end
