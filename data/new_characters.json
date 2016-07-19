@@ -1,101 +1,633 @@
 {
-  "8B9895-HomerGentry": {
-    "upp": "8B9895",
-    "name": "Homer Gentry",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
+  "A76C85-JewelGrimaud": {
+    "age": 22,
+    "upp": "A76C85",
+    "name": "Jewel Grimaud",
+    "skills": {
     },
-    "age": 42
+    "careers": {
+      "Marine": 1
+    }
   },
-  "748998-KarlBlanchard": {
-    "upp": "748998",
-    "name": "Karl Blanchard",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
+  "2C976B-BrianQuentin": {
+    "age": 22,
+    "upp": "2C976B",
+    "name": "Brian Quentin",
+    "skills": {
     },
-    "age": 42
-  },
-  "89A694-GalenCohen": {
-    "upp": "89A694",
-    "name": "Galen Cohen",
     "careers": {
-      "Navy": 4,
-      "Marines": 2
-    },
-    "age": 42
+      "Marine": 1
+    }
   },
   "8BA959-JessieWolff": {
+    "age": 42,
     "upp": "8BA959",
     "name": "Jessie Wolff",
     "careers": {
       "Navy": 4,
       "Marines": 2
-    },
-    "age": 42
+    }
   },
-  "4A78C6-AlphonsoCrepin": {
-    "upp": "4A78C6",
-    "name": "Alphonso Crepin",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
+  "89AA4C-TasiaGilliam": {
+    "age": 38,
+    "upp": "89AA4C",
+    "name": "Tasia Gilliam",
+    "skills": {
     },
-    "age": 42
+    "careers": {
+      "Scout": 5
+    }
   },
-  "675387-RobtBakos": {
-    "upp": "675387",
-    "name": "Robt Bakos",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
+  "579636-CedrickMontoya": {
+    "age": 22,
+    "upp": "579636",
+    "name": "Cedrick Montoya",
+    "skills": {
     },
-    "age": 42
+    "careers": {
+      "Marine": 1
+    }
   },
-  "776947-SeymourCottin": {
-    "upp": "776947",
-    "name": "Seymour Cottin",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
+  "675486-SaulCoffey": {
+    "age": 22,
+    "upp": "675486",
+    "name": "Saul Coffey",
+    "skills": {
     },
-    "age": 42
-  },
-  "7588B6-Raul Cariou": {
-    "upp": "7588B6",
-    "name": "Raul Cariou",
     "careers": {
-      "Navy": 4,
-      "Marines": 2
-    },
-    "age": 42
-  },
-  "5C5A68-DaveTellier": {
-    "upp": "5C5A68",
-    "name": "Dave Tellier",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
-    },
-    "age": 42
-  },
-  "486857-CourtneyFortin": {
-    "upp": "486857",
-    "name": "Courtney Fortin",
-    "careers": {
-      "Navy": 4,
-      "Marines": 2
-    },
-    "age": 42
+      "Marine": 1
+    }
   },
   "768759-Diego Bogaerts": {
+    "age": 42,
     "upp": "768759",
     "name": "Diego Bogaerts",
     "careers": {
       "Navy": 4,
       "Marines": 2
+    }
+  },
+  "5C5A68-DaveTellier": {
+    "age": 42,
+    "upp": "5C5A68",
+    "name": "Dave Tellier",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "368748-ShirleyGodefroy": {
+    "age": 22,
+    "upp": "368748",
+    "name": "Shirley Godefroy",
+    "skills": {
     },
-    "age": 42
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "85695A-MyrnaKelemen": {
+    "age": 22,
+    "upp": "85695A",
+    "name": "Myrna Kelemen",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "7A757A-KathleenChurch": {
+    "age": 26,
+    "upp": "7A757A",
+    "name": "Kathleen Church",
+    "skills": {
+    },
+    "careers": {
+      "Navy": 2
+    }
+  },
+  "4C9589-LoryWhitaker": {
+    "age": 22,
+    "upp": "4C9589",
+    "name": "Lory Whitaker",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "998777-EmmaGodefroy": {
+    "age": 22,
+    "upp": "998777",
+    "name": "Emma Godefroy",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "94A64A-DiegoCharbonnier": {
+    "age": 22,
+    "upp": "94A64A",
+    "name": "Diego Charbonnier",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "584867-ChristiaBarrera": {
+    "age": 22,
+    "upp": "584867",
+    "name": "Christia Barrera",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "BC9548-PiaDuchene": {
+    "age": 22,
+    "upp": "BC9548",
+    "name": "Pia Duchene",
+    "skills": {
+      "Leader": 2,
+      "GunCbt": 1
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "6B3B47-HeikeJardin": {
+    "age": 22,
+    "upp": "6B3B47",
+    "name": "Heike Jardin",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "854A64-SylvesterGibert": {
+    "age": 22,
+    "upp": "854A64",
+    "name": "Sylvester Gibert",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "4A78C6-AlphonsoCrepin": {
+    "age": 42,
+    "upp": "4A78C6",
+    "name": "Alphonso Crepin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "855798-GlennieDevos": {
+    "age": 22,
+    "upp": "855798",
+    "name": "Glennie Devos",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "754765-SolomonGardner": {
+    "age": 22,
+    "upp": "754765",
+    "name": "Solomon Gardner",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "65C765-RoderickHickman": {
+    "age": 22,
+    "upp": "65C765",
+    "name": "Roderick Hickman",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "A79783-JayeBrown": {
+    "age": 22,
+    "upp": "A79783",
+    "name": "Jaye Brown",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "392967-WayneGuignard": {
+    "age": 22,
+    "upp": "392967",
+    "name": "Wayne Guignard",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "BA25A6-OrphaBall": {
+    "age": 22,
+    "upp": "BA25A6",
+    "name": "Orpha Ball",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "8A487A-SocorroGuthrie": {
+    "age": 22,
+    "upp": "8A487A",
+    "name": "Socorro Guthrie",
+    "skills": {
+    },
+    "careers": {
+      "Merchant": 1
+    }
+  },
+  "7687B8-BryonNilsen": {
+    "age": 34,
+    "upp": "7687B8",
+    "name": "Bryon Nilsen",
+    "skills": {
+    },
+    "careers": {
+      "Army": 4
+    }
+  },
+  "7972C9-HungRush": {
+    "age": 22,
+    "upp": "7972C9",
+    "name": "Hung Rush",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "858668-CameronGuitton": {
+    "age": 22,
+    "upp": "858668",
+    "name": "Cameron Guitton",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "648786-DuncanMallet": {
+    "age": 38,
+    "upp": "648786",
+    "name": "Duncan Mallet",
+    "skills": {
+    },
+    "careers": {
+      "Army": 5
+    }
+  },
+  "3895A6-JesusHenderson": {
+    "age": 22,
+    "upp": "3895A6",
+    "name": "Jesus Henderson",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "454584-LesterDenis": {
+    "age": 34,
+    "upp": "454584",
+    "name": "Lester Denis",
+    "skills": {
+    },
+    "careers": {
+      "Scout": 4
+    }
+  },
+  "AA7455-UlaRoth": {
+    "age": 22,
+    "upp": "AA7455",
+    "name": "Ula Roth",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "A53585-AlizaPerry": {
+    "age": 22,
+    "upp": "A53585",
+    "name": "Aliza Perry",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "8776A5-ShawnKlein": {
+    "age": 22,
+    "upp": "8776A5",
+    "name": "Shawn Klein",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "545996-JayAitken": {
+    "age": 22,
+    "upp": "545996",
+    "name": "Jay Aitken",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "6A6995-DemetriusGrandjean": {
+    "age": 22,
+    "upp": "6A6995",
+    "name": "Demetrius Grandjean",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "7588B6-Raul Cariou": {
+    "age": 42,
+    "upp": "7588B6",
+    "name": "Raul Cariou",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "B78775-DarrinRousset": {
+    "age": 22,
+    "upp": "B78775",
+    "name": "Darrin Rousset",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "35A685-AlisaDeshayes": {
+    "age": 22,
+    "upp": "35A685",
+    "name": "Alisa Deshayes",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "652883-SeymourFlores": {
+    "age": 22,
+    "upp": "652883",
+    "name": "Seymour Flores",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "6C9656-JimmieSanford": {
+    "age": 38,
+    "upp": "6C9656",
+    "name": "Jimmie Sanford",
+    "skills": {
+    },
+    "careers": {
+      "Other": 5
+    }
+  },
+  "748998-KarlBlanchard": {
+    "age": 42,
+    "upp": "748998",
+    "name": "Karl Blanchard",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "99AA87-LloydFülöp": {
+    "age": 22,
+    "upp": "99AA87",
+    "name": "Lloyd Fülöp",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "B42279-RossKiss": {
+    "age": 22,
+    "upp": "B42279",
+    "name": "Ross Kiss",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "563696-JudsonMullins": {
+    "age": 22,
+    "upp": "563696",
+    "name": "Judson Mullins",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "776947-SeymourCottin": {
+    "age": 42,
+    "upp": "776947",
+    "name": "Seymour Cottin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "A9A38B-ErichRollins": {
+    "age": 38,
+    "upp": "A9A38B",
+    "name": "Erich Rollins",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 5
+    }
+  },
+  "378376-RustyNovák": {
+    "age": 30,
+    "upp": "378376",
+    "skills": {
+    },
+    "name": "Rusty Novák",
+    "careers": {
+      "Army": 3
+    }
+  },
+  "675387-RobtBakos": {
+    "age": 42,
+    "upp": "675387",
+    "name": "Robt Bakos",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "486857-CourtneyFortin": {
+    "age": 42,
+    "upp": "486857",
+    "name": "Courtney Fortin",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "55874C-RaulWilkinson": {
+    "age": 22,
+    "upp": "55874C",
+    "name": "Raul Wilkinson",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "87668A-BertieMouton": {
+    "age": 30,
+    "upp": "87668A",
+    "name": "Bertie Mouton",
+    "skills": {
+    },
+    "careers": {
+      "Merchant": 3
+    }
+  },
+  "657984-DuaneCase": {
+    "age": 22,
+    "upp": "657984",
+    "name": "Duane Case",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "2B4634-LorrianeArmstrong": {
+    "age": 22,
+    "upp": "2B4634",
+    "name": "Lorriane Armstrong",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "B947B7-ArmandMyers": {
+    "age": 22,
+    "upp": "B947B7",
+    "name": "Armand Myers",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "524A26-FerminaBlomqvist": {
+    "age": 22,
+    "upp": "524A26",
+    "name": "Fermina Blomqvist",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "738377-ZackRowland": {
+    "age": 34,
+    "upp": "738377",
+    "name": "Zack Rowland",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 4
+    }
+  },
+  "A76974-RenateMelendez": {
+    "age": 22,
+    "upp": "A76974",
+    "name": "Renate Melendez",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "8B9895-HomerGentry": {
+    "age": 42,
+    "upp": "8B9895",
+    "name": "Homer Gentry",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "878598-FranciscoNedelec": {
+    "age": 30,
+    "upp": "878598",
+    "name": "Francisco Nedelec",
+    "skills": {
+    },
+    "careers": {
+      "Army": 3
+    }
+  },
+  "349636-BillyGilmore": {
+    "age": 22,
+    "upp": "349636",
+    "name": "Billy Gilmore",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
+  },
+  "89A694-GalenCohen": {
+    "age": 42,
+    "upp": "89A694",
+    "name": "Galen Cohen",
+    "careers": {
+      "Navy": 4,
+      "Marines": 2
+    }
+  },
+  "3B3575-DonnieBret": {
+    "age": 22,
+    "upp": "3B3575",
+    "name": "Donnie Bret",
+    "skills": {
+    },
+    "careers": {
+      "Marine": 1
+    }
   }
 }
