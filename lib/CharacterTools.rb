@@ -69,6 +69,8 @@ module CharacterTools
         character.upp     = characters[key]['upp']
         character.gender  = characters[key]['gender']
         character.age     = characters[key]['age']
+        character.careers = characters[key]['careers']
+        character.skills  = characters[key]['skills']
         Presenter.show(character, mode)
       end
     end
