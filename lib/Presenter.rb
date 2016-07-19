@@ -1,28 +1,24 @@
 module Presenter
 
+  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
+
   def Presenter.show(character, method = 'txt')
-    headers = Array.new
-    headers <<  character.name 
-    headers <<  character.upp
-    headers <<  character.age
-    headers <<  character.gender
     case method
       when 'csv'
         print_colon = false
         headers.each { |hdr|
           print ":" if print_colon == true
           print_colon = true 
-          print "#{hdr}" 
+          print "#{character.hdr}" 
         }
       when 'wiki'
         print " == "
         headers.each { 
-          |hdr| print "#{hdr} " 
+          |hdr| print "#{character[hdr]} " 
         }
       else
-        headers.each { 
-          |hdr| print "#{hdr} " 
-        }
+        require 'PresenterDefault'
+        PresenterDefault.show(character)
     end
     puts
   end
