@@ -18,17 +18,11 @@ module CharacterTools
     return character
   end
 
+  # Adds a career and modifies the age. 
+  # Where to add the skills?
   def CharacterTools.add_career(character, career, terms)
-    if character.careers.has_key?(career)
-      character.careers[career] += terms
-    else
-      character.careers[career] = terms
-    end
+    character.careers[career] += terms
     character.age += terms * 4
-    if career == "Marine"
-      require 'Marine'
-      Marine.first_term(character)
-    end
   end
 
   def self.hash_character(character)
@@ -69,10 +63,6 @@ module CharacterTools
       characters = Hash.new
       characters_in = File.read(file)
       characters = JSON.parse(characters_in)
-      #characters.each do |character|
-      #  puts characters[character]
-      #  #Presenter.show(character, mode)
-      #end
       characters.each do |key, array|
         character = Character.new
         character.name    = characters[key]['name']
@@ -81,16 +71,6 @@ module CharacterTools
         character.age     = characters[key]['age']
         Presenter.show(character, mode)
       end
-      #  printf("%s ", characters[key]['name'])
-      #  printf("%s ", characters[key]['upp'])
-      #  printf("%s ", characters[key]['gender'])
-      #  printf("Age: %s ", characters[key]['age'])
-      #  puts
-      #  characters[key]['careers'].each do |career, terms|
-      #    printf("%s %s ", career, terms)
-      #  end
-      #  puts
-      #end
     end
   end
 
