@@ -85,17 +85,6 @@ module Traveller
     return "#{first_name} #{last_name}"
   end
 
-  # Same as Travller.upp, Phase out.
-  def self.roll_upp
-    @upp = ''
-    6.times do
-      @stat = self.roll_dice(6,2,1)
-      @stat = @stat.to_s(16).upcase
-      @upp  = @upp + @stat
-    end
-    return @upp
-  end
-  
   # Tests if the input is valid JSON, returns JSON parsed data and true. 
   def self.valid_json?(json)
     begin
