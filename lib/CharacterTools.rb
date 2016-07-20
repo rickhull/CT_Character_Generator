@@ -76,4 +76,15 @@ module CharacterTools
     end
   end
 
+  def self.stat_modifier(options)
+    stat_mod  = 0 
+    upp       = options['upp']
+    index     = options['index']
+    minimum   = options['minimum'].to_i(16)
+    modifier  = options['modifier']
+    stat      = upp[index,1].to_i(16)
+    stat_mod  = modifier if stat >= minimum
+    return    stat_mod
+  end 
+
 end

@@ -1,9 +1,5 @@
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-# Note the following error which needs to be researched:
-# /usr/lib64/ruby/site_ruby/1.8/x86_64-linux/sqlite3_api.so: warning: global variable `$swig_runtime_data_type_pointer2' not initialized
-
-require "test/unit"
 require "CharacterTools"
 
 class TestCharacterTools < Test::Unit::TestCase
@@ -38,5 +34,23 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(@character.careers.has_key?(career2))
     assert(@character.careers[career2] == terms2) 
   end
+
+  def test_add_college
+
+  end
+
+  def test_stat_modifier
+    options = Hash.new(0)
+    options['upp'] = "777777"
+    options['index'] = 5 
+    options['minimum'] = "A" 
+    options['modifier'] = 1 
+    # This test should not provide a modifier.
+    assert(CharacterTools.stat_modifier(options) == 0)
+    # This test should provide a modifier.
+    options['upp'] = "77777A"
+    assert(CharacterTools.stat_modifier(options) == 1)
+  end 
+
 
 end
