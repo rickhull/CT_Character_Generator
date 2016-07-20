@@ -8,7 +8,7 @@
 module Traveller
 
   # Generic dice roller.
-  def Traveller.roll_dice(dice_type, dice_number, average_of = 1)
+  def self.roll_dice(dice_type, dice_number, average_of = 1)
     total = 0.0 
     dice_number.times do
       average_total = 0
@@ -21,10 +21,10 @@ module Traveller
   end
 
   # Provides UPP as a 6 Hexidecimal character string.
-  def Traveller.upp
+  def self.upp
     upp = String.new
     6.times do
-      stat = Traveller.roll_dice(6,2,1)
+      stat = self.roll_dice(6,2,1)
       stat = stat.to_s(16).upcase
       upp  = upp + stat
     end
@@ -32,8 +32,8 @@ module Traveller
   end
 
   # Returns gender in lowercase, "male" or "female". Even odds.
-  def Traveller.gender
-    if Traveller.roll_dice(6,1,1) >= 4
+  def self.gender
+    if self.roll_dice(6,1,1) >= 4
       return 'male'
     else
       return 'female'
@@ -43,7 +43,7 @@ module Traveller
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
-  def Traveller.first_name(gender='Male')
+  def self.first_name(gender='Male')
     require 'sqlite3'
     gender = gender.downcase
     begin 
@@ -62,7 +62,7 @@ module Traveller
 
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
-  def Traveller.last_name
+  def self.last_name
     require 'sqlite3'
     begin 
       db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
@@ -79,17 +79,17 @@ module Traveller
   end
 
   # Needs gender, produces first and last name as a single string.
-  def Traveller.name(gender)
-    first_name  = Traveller.first_name(gender)
-    last_name   = Traveller.last_name
+  def self.name(gender)
+    first_name  = self.first_name(gender)
+    last_name   = self.last_name
     return "#{first_name} #{last_name}"
   end
 
   # Same as Travller.upp, Phase out.
-  def Traveller.roll_upp
+  def self.roll_upp
     @upp = ''
     6.times do
-      @stat = Traveller.roll_dice(6,2,1)
+      @stat = self.roll_dice(6,2,1)
       @stat = @stat.to_s(16).upcase
       @upp  = @upp + @stat
     end
@@ -97,7 +97,7 @@ module Traveller
   end
   
   # Tests if the input is valid JSON, returns JSON parsed data and true. 
-  def Traveller.valid_json?(json)
+  def self.valid_json?(json)
     begin
       data = JSON.parse(json)
       return data, true
@@ -107,7 +107,7 @@ module Traveller
   end
 
   # Adjusts stat in UPP, needs UPP, stat index, and change difference.
-  def Traveller.modify_stat(upp, index, difference)
+  def self.modify_stat(upp, index, difference)
     return upp if index > 5
     stat = upp[index, 1].to_i(16)
     new_stat = stat + difference
@@ -118,25 +118,19 @@ module Traveller
   end
 
   # Add a skill to the skills hash. 
-  # <em>Need to re-work skills per Martin's Hash.new(0) note.</em>
-  def Traveller.add_skill(skills, skill, level=1)
-    #if skills.has_key?(skill)
-    #  skills[skill] += level
-    #else
-    #  skills[skill] = level
-    #end
+  def self.add_skill(skills, skill, level=1)
     skills[skill] += level
     return skills 
   end
 
   # Set a stat to a specific value. 
-  def Traveller.set_stat(upp, index, number)
+  def self.set_stat(upp, index, number)
     upp[index,1] = number
     return upp 
   end
 
   # Return true if UPP is a Noble.
-  def Traveller.noble?(upp)
+  def self.noble?(upp)
     soc = upp[5,1].to_i(16)
     if soc >= 11
       return true
@@ -147,7 +141,7 @@ module Traveller
 
 
   # Returns title if Character is a noble. Needs gender and UPP.
-  def Traveller.noble(gender, upp)
+  def self.noble(gender, upp)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
     nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
@@ -166,4 +160,6 @@ module Traveller
     end
     return title
   end 
+
+# End of module
 end
