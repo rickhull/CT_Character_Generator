@@ -1,6 +1,5 @@
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-require 'test/unit'
 require 'Traveller'
 
 class TestTraveller < Test::Unit::TestCase
