@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: CharacterTools</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">CharacterTools</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/CharacterTools_rb.html">
+                lib/CharacterTools.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+<a href="CharacterTools.html">CharacterTools</a> implements modules for
+modifying Character objects. These methods are outside career data sets.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000002">add_career</a>&nbsp;&nbsp;
+      <a href="#M000003">hash_character</a>&nbsp;&nbsp;
+      <a href="#M000001">init</a>&nbsp;&nbsp;
+      <a href="#M000004">save_character</a>&nbsp;&nbsp;
+      <a href="#M000005">show_character_file</a>&nbsp;&nbsp;
+      <a href="#M000006">show_characters</a>&nbsp;&nbsp;
+      <a href="#M000007">stat_modifier</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000002.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000002.html');return false;">
+          <span class="method-name">add_career</span><span class="method-args">(character, career, terms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Adds a career and modifies the age.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000003.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000003.html');return false;">
+          <span class="method-name">hash_character</span><span class="method-args">(character)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Pull Character data into a hash.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000001" class="method-detail">
+        <a name="M000001"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000001.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000001.html');return false;">
+          <span class="method-name">init</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a Character, with UPP, name, and gender.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000004.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000004.html');return false;">
+          <span class="method-name">save_character</span><span class="method-args">(character, file, format=json)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Save the Character data. Still not sure on this one. It works for the
+moment.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000005.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000005.html');return false;">
+          <span class="method-name">show_character_file</span><span class="method-args">(file, format=json)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prints the character file in Pretty JSON.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000006.html');return false;">
+          <span class="method-name">show_characters</span><span class="method-args">(file, format=json, mode='txt')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prints the character in some specific format. Or &#8216;txt&#8217; if
+unspecified.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000007.html');return false;">
+          <span class="method-name">stat_modifier</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides the modifier based on a high stat.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
