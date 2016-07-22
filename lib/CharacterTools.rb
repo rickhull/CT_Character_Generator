@@ -1,3 +1,6 @@
+# CharacterTools implements modules for modifying Character objects.
+# These methods are outside career data sets.
+
 module CharacterTools
 
   $LOAD_PATH << File.expand_path("../../lib", __FILE__)
@@ -9,6 +12,7 @@ module CharacterTools
   require 'json'
   require 'pp'
 
+  # Create a Character, with UPP, name, and gender.
   def self.init()
     character          = Character.new
     character.upp      = Traveller.upp
@@ -19,12 +23,12 @@ module CharacterTools
   end
 
   # Adds a career and modifies the age. 
-  # Where to add the skills?
   def CharacterTools.add_career(character, career, terms)
     character.careers[career] += terms
     character.age += terms * 4
   end
 
+  # Pull Character data into a hash.
   def self.hash_character(character)
     c_hash = Hash.new
     c_hash['name']    = character.name
@@ -35,6 +39,8 @@ module CharacterTools
     return c_hash
   end
 
+  # Save the Character data.
+  # Still not sure on this one. It works for the moment.
   def self.save_character(character, file, format=json)
     if File.exists?(file)
       characters = Hash.new
@@ -49,6 +55,7 @@ module CharacterTools
     end
   end
 
+  # Prints the character file in Pretty JSON.
   def self.show_character_file(file, format=json)
     if File.exists?(file)
       characters = Hash.new
@@ -57,7 +64,9 @@ module CharacterTools
       puts JSON.pretty_generate(characters) 
     end
   end
-  
+ 
+  # Prints the character in some specific format. Or 'txt'
+  # if unspecified. 
   def self.show_characters(file, format=json, mode='txt')
     if File.exists?(file)
       characters = Hash.new
@@ -76,6 +85,7 @@ module CharacterTools
     end
   end
 
+  # Provides the modifier based on a high stat. 
   def self.stat_modifier(options)
     stat_mod  = 0 
     upp       = options['upp']
