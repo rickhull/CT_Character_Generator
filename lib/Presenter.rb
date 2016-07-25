@@ -5,12 +5,8 @@ module Presenter
   def Presenter.show(character, method = 'txt')
     case method
       when 'csv'
-        print_colon = false
-        headers.each { |hdr|
-          print ":" if print_colon == true
-          print_colon = true 
-          print "#{character.hdr}" 
-        }
+        require 'PresenterCSV'
+        PresenterCSV.show(character)
       when 'wiki'
         print " == "
         headers.each { 
