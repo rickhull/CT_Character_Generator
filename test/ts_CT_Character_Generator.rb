@@ -6,4 +6,4 @@
 require 'test/unit'
 require 'tc_CharacterTools'
 require 'tc_Traveller'
-
+#require 'tc_PresenterDefault'
