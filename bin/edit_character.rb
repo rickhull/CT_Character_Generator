@@ -1,3 +1,6 @@
+# This lets you edit characters once they are created. 
+
+$LOAD_PATH <<  File.expand_path("../../../lib", __FILE__)
 
 require 'optparse'
 
@@ -10,6 +13,7 @@ character['notes'] << "Smart"
 character['careers'] = Hash.new(0)
 character['careers'] = {"Noble" => 1, "Marine" => 2}
 
+# Print a character as is.
 def print_character(character)
   puts "###"
   character.each_pair do |k,v|
@@ -30,12 +34,14 @@ def print_character(character)
 end
 
 
+# Edit a string value.
 def edit_string(character, key)
   print "What value? "
   string = gets.chomp!
   character[key] = string
 end
 
+# Show indices (?)
 def get_index(character, key)
   index = 0
   character[key].each do |value|
@@ -46,11 +52,13 @@ def get_index(character, key)
   index = gets.chomp!
 end
 
+# What mode to operate in. 
 def get_mode
   puts "(a)dd, (e)dit, or (d)elete?"
   mode = gets.chomp!
 end 
 
+# Edit an array.
 def edit_array(character, key)
   mode = get_mode
   case mode
@@ -72,6 +80,7 @@ def edit_array(character, key)
   end
 end
 
+# Add an element to a datastore.
 def add_element(character, key)
   puts "Add (a)rray, (h)ash, or (s)tring?"
   element_type = gets.chomp!
@@ -87,7 +96,8 @@ def add_element(character, key)
       exit
     end
 end
- 
+
+# Edit a character 
 def edit_character(character)
   key = ''
   puts "Current keys are: "
@@ -116,6 +126,10 @@ def edit_character(character)
   return character
 end
 
+
+###### Main 
+
+
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
   opts.on('-p', '--print', 'Print') do |p|
@@ -127,7 +141,14 @@ option_parser = OptionParser.new do |opts|
 end
 option_parser.parse!
 
+continue = true
+
 print_character(character) if (options['print'] == true)
-new_char = edit_character(character) if (options['edit'] == true)
-print_character(new_char) if new_char
+while options['edit'] == true && continue != false
+  new_char = edit_character(character) if (options['edit'] == true)
+  print_character(new_char) if new_char
+  print "(q)uit?"
+  continue_key = gets.chomp!
+  exit if continue_key == "q"
+end
 
