@@ -54,9 +54,17 @@ end
 
 # What mode to operate in. 
 def get_mode
+  modes = ['a', 'e', 'd']
   puts "(a)dd, (e)dit, or (d)elete?"
   mode = gets.chomp!
+  verbose_exit("Sorry, unknown mode.") unless modes.include?(mode) 
 end 
+
+# Exit with commentary.
+def verbose_exit(exit_string)
+  puts exit_string
+  exit 
+end
 
 # Edit an array.
 def edit_array(character, key)
@@ -75,8 +83,7 @@ def edit_array(character, key)
       new_text = gets.chomp!
       character[key][index] = new_text
     else
-      puts "I'm not there yet."
-      exit
+      verbose_exit("Not sure how to do that to an array.")
   end
 end
 
@@ -92,8 +99,7 @@ def add_element(character, key)
     when "s"
       character[key] = ""
     else
-      puts "Sorry, not sure on that."
-      exit
+      verbose_exit("Not sure what element type that is.")
     end
 end
 
