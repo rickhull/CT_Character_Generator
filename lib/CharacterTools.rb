@@ -22,6 +22,17 @@ module CharacterTools
     return character
   end
 
+  # Return general social status based on Soc.
+  def self.social_status(character)
+    soc = character.upp[5,1].to_i(16)
+    status = case soc     
+      when 0..5   then "Other"
+      when 10..15 then  "Noble"
+      else        "Citizen"
+    end
+    return status 
+  end
+
   # Adds a career and modifies the age. 
   def CharacterTools.add_career(character, career, terms)
     character.careers[career] += terms
