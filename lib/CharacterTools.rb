@@ -12,6 +12,8 @@ module CharacterTools
   require 'json'
   require 'pp'
 
+  STAT_NAMES = %w{Str Dex End Int Edu Soc}
+
   # Create a Character, with UPP, name, and gender.
   def self.init()
     character          = Character.new
@@ -31,6 +33,32 @@ module CharacterTools
       else        "Citizen"
     end
     return status 
+  end
+
+  # Increase a skill
+  def self.increase_skill(character, skill, level = 1)
+    puts "Skill is #{skill}."
+    if skill.split.length > 1
+      amount  = skill.split[0].to_i
+      stat    = skill.split[1]
+      self.modify_stat(character, stat, amount)
+    else
+      if character.skills.has_key?(skill)
+        character.skills[skill] += level 
+      else
+        character.skills[skill] = level
+      end
+    end
+  end
+
+  # Modify a stat.
+  def self.modify_stat(character, stat, level)
+    stat_index = STAT_NAMES.index(stat)
+    new_stat = character.upp[stat_index,1].to_i(16) + level
+    new_stat = [new_stat, 15].min
+    new_stat = [new_stat, 2].max
+    new_stat = new_stat.to_s(16).upcase
+    character.upp[stat_index] = new_stat
   end
 
   # Adds a career and modifies the age. 
@@ -74,6 +102,10 @@ module CharacterTools
       characters = JSON.parse(characters_in)
       puts JSON.pretty_generate(characters) 
     end
+  end
+
+  def self.show_one_character(character, mode = "txt")
+    Presenter.show(character, mode)
   end
  
   # Prints the character in some specific format. Or 'txt'
