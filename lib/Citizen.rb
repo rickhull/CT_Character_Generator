@@ -47,7 +47,8 @@ class Citizen
     end
   end
 
-  def self.run_career(character, terms)
+  def self.run_career(character)
+    terms = character.careers['Citizen']
     edu = character.upp[4].chr.to_i(16)
     if edu >= 8
       @skill_options = @skill_options + @advanced_skill_options
@@ -59,6 +60,4 @@ class Citizen
       CharacterTools.increase_skill(character, new_skill)
     end 
   end
-
 end
-

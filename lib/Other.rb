@@ -12,7 +12,7 @@ class Other
       '-1 Soc', 
       'Brawling', 
       'Blade', 
-      'Drive(any)', 
+      'Drive(any)',
       'Gambling', 
       'Brawling', 
       'Bribery', 
@@ -48,7 +48,8 @@ class Other
     end
   end
 
-  def self.run_career(character, terms)
+  def self.run_career(character)
+    terms = character.careers['Other']
     edu = character.upp[4].chr.to_i(16)
     if edu >= 8
       @skill_options = @skill_options + @advanced_skill_options

@@ -17,7 +17,7 @@ module CharacterTools
   # Create a Character, with UPP, name, and gender.
   def self.init()
     character          = Character.new
-    character.upp      = Traveller.upp
+    character.upp      = self.upp
     character.gender   = Traveller.gender.capitalize
     character.name     = Traveller.name(character.gender)
     character.age      = 18
@@ -35,9 +35,28 @@ module CharacterTools
     return status 
   end
 
+  # Provides UPP as a 6 Hexidecimal character string.
+  def self.upp
+    upp = String.new
+    6.times do
+      stat = Traveller.roll_dice(6,2,1)
+      stat = stat.to_s(16).upcase
+      upp  = upp + stat
+    end
+    return upp
+  end
+
+  # Returns gender in lowercase, "male" or "female". Even odds.
+  def self.gender
+    if self.roll_dice(6,1,1) >= 4
+      return 'male'
+    else
+      return 'female'
+    end
+  end
+
   # Increase a skill
   def self.increase_skill(character, skill, level = 1)
-    puts "Skill is #{skill}."
     if skill.split.length > 1
       amount  = skill.split[0].to_i
       stat    = skill.split[1]
@@ -128,7 +147,28 @@ module CharacterTools
     end
   end
 
-  # Provides the modifier based on a high stat. 
+  # Returns title if Character is a noble.
+  def self.title(character)
+    nobility = Hash.new
+    nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
+    nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
+    nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
+    nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
+    nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
+
+    title = ""
+    soc = character.upp[5,1].upcase 
+    
+    if nobility.has_key?(soc)
+      if character.gender.downcase == "female"
+        title = nobility[soc]['f']
+      else
+        title = nobility[soc]['m']
+      end 
+    end
+    return title
+  end 
+
   def self.stat_modifier(options)
     stat_mod  = 0 
     upp       = options['upp']
