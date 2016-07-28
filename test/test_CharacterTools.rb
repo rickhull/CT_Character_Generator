@@ -18,17 +18,17 @@ case status
     career = "Noble"
     CharacterTools.add_career(character, career, terms)
     require "Noble"
-    Noble.run_career(character, terms)
+    Noble.run_career(character)
   when "Other" then
     career = "Other"
     CharacterTools.add_career(character, career, terms)
     require "Other"
-    Other.run_career(character, terms)
+    Other.run_career(character)
   else
     career = "Citizen"
     CharacterTools.add_career(character, career, terms)
     require "Citizen"
-    Citizen.run_career(character, terms)
+    Citizen.run_career(character)
 end
 
 CharacterTools.show_one_character(character, 'txt')
