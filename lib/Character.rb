@@ -1,6 +1,6 @@
 class Character
 
-  attr_accessor :gender, :name, :upp, :skills, :careers, :age
+  attr_accessor :gender, :name, :upp, :skills, :careers, :age, :rank, :title
 
   def initialize()
     @upp      = String.new
