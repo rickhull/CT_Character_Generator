@@ -53,14 +53,15 @@ class TestCharacterTools < Test::Unit::TestCase
 
   def test_stat_modifier
     options = Hash.new(0)
-    options['upp'] = "777777"
+    @character.upp = "777777"
+    options['character'] = @character
     options['index'] = 5 
     options['minimum'] = "A" 
     options['modifier'] = 1 
     # This test should not provide a modifier.
     assert(CharacterTools.stat_modifier(options) == 0)
     # This test should provide a modifier.
-    options['upp'] = "77777A"
+    @character.upp = "77777A"
     assert(CharacterTools.stat_modifier(options) == 1)
   end 
 
