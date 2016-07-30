@@ -30,12 +30,15 @@ end
 option_parser.parse!
 
 # Set the options not provided.
-
 career = CharacterTools.social_status(character) if career.empty?
 srand && terms = rand(5) + 1 if terms == 0
 
+# Set up the char hash to be passed around.
+char = { 'character' => character, 'career' => career, 'terms' => terms}
+
 # Modify the character's career.
-CharacterTools.add_career(character, career, terms)
+#CharacterTools.add_career(character, career, terms)
+CharacterTools.add_career(char)
 
 # Run the character through the career.
 #CharacterTools.run_career(character)

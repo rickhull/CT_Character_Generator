@@ -81,9 +81,13 @@ module CharacterTools
   end
 
   # Adds a career and modifies the age. 
-  def CharacterTools.add_career(character, career, terms)
-    character.careers[career] += terms
+  #def CharacterTools.add_career(character, career, terms)
+  def CharacterTools.add_career(char)
+    terms         = char['terms']
+    career        = char['career']
+    character     = char['character']
     character.age += terms * 4
+    character.careers[career] += terms
   end
 
   # Pull Character data into a hash.

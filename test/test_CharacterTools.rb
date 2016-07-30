@@ -4,7 +4,8 @@ require 'CharacterTools'
 
 character = CharacterTools.init
 #CharacterTools.show_one_character(character, 'txt')
-careers = ['Navy', 'Scout', 'Merchant', 'Army', 'Marine', 'Other']
+#careers = ['Navy', 'Scout', 'Merchant', 'Army', 'Marine', 'Other']
+careers = ['Other', 'Noble', 'Citizen']
 #career = careers[rand(careers.length)]
 terms = rand(5) + 1
 #character.careers["Citizen"] = terms
@@ -12,21 +13,22 @@ terms = rand(5) + 1
 #CharacterTools.add_career(character, career, terms)
 CharacterTools.show_one_character(character, "txt")
 
+char = { 'character' => character, 'career' => career, 'terms' => terms}
 status = CharacterTools.social_status(character)
 case status 
   when "Noble" then
     career = "Noble"
-    CharacterTools.add_career(character, career, terms)
+    CharacterTools.add_career(char)
     require "Noble"
     Noble.run_career(character)
   when "Other" then
     career = "Other"
-    CharacterTools.add_career(character, career, terms)
+    CharacterTools.add_career(char)
     require "Other"
     Other.run_career(character)
   else
     career = "Citizen"
-    CharacterTools.add_career(character, career, terms)
+    CharacterTools.add_career(char)
     require "Citizen"
     Citizen.run_career(character)
 end
