@@ -8,6 +8,7 @@ module PresenterDefault
     character.careers.each_pair do |career, terms|
       print " #{career}: #{terms} "
     end
+    puts
     if character.skills 
       character.skills.each_pair do |skill, level|
         print "#{skill}-#{level} "
