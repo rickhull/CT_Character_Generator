@@ -43,47 +43,47 @@ module Traveller
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
-  def self.first_name(gender='Male')
-    require 'sqlite3'
-    gender = gender.downcase
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
-      first_name_result = first_name_query.execute
-      first_name = first_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      first_name_query.close if first_name_query
-      db.close if db
-    end
-    return first_name.to_s
-  end
+  #def self.first_name(gender='Male')
+  #  require 'sqlite3'
+  #  gender = gender.downcase
+  #  begin 
+  #    db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+  #    first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
+  #    first_name_result = first_name_query.execute
+  #    first_name = first_name_result.first
+  #  rescue SQLite3::Exception => e
+  #    abort(e)
+  #  ensure
+  #    first_name_query.close if first_name_query
+  #    db.close if db
+  #  end
+  #  return first_name.to_s
+  #end
 
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
-  def self.last_name
-    require 'sqlite3'
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
-      last_name_result = last_name_query.execute
-      last_name = last_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      last_name_query.close if last_name_query
-      db.close if db
-    end
-    return last_name.to_s
-  end
+  #def self.last_name
+  #  require 'sqlite3'
+  #  begin 
+  #    db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+  #    last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
+  #    last_name_result = last_name_query.execute
+  #    last_name = last_name_result.first
+  #  rescue SQLite3::Exception => e
+  #    abort(e)
+  #  ensure
+  #    last_name_query.close if last_name_query
+  #    db.close if db
+  #  end
+  #  return last_name.to_s
+  #end
 
   # Needs gender, produces first and last name as a single string.
-  def self.name(gender)
-    first_name  = self.first_name(gender)
-    last_name   = self.last_name
-    return "#{first_name} #{last_name}"
-  end
+  #def self.name(gender)
+  #  first_name  = self.first_name(gender)
+  #  last_name   = self.last_name
+  #  return "#{first_name} #{last_name}"
+  #end
 
   # Tests if the input is valid JSON, returns JSON parsed data and true. 
   def self.valid_json?(json)
@@ -96,59 +96,59 @@ module Traveller
   end
 
   # Adjusts stat in UPP, needs UPP, stat index, and change difference.
-  def self.modify_stat(upp, index, difference)
-    return upp if index > 5
-    stat = upp[index, 1].to_i(16)
-    new_stat = stat + difference
-    new_stat = 0 if new_stat < 0
-    new_stat = 15 if new_stat > 15
-    upp[index] = new_stat.to_s(16).upcase
-    return upp
-  end
+  #def self.modify_stat(upp, index, difference)
+  #  return upp if index > 5
+  #  stat = upp[index, 1].to_i(16)
+  #  new_stat = stat + difference
+  #  new_stat = 0 if new_stat < 0
+  #  new_stat = 15 if new_stat > 15
+  #  upp[index] = new_stat.to_s(16).upcase
+  #  return upp
+  #end
 
   # Add a skill to the skills hash. 
-  def self.add_skill(skills, skill, level=1)
-    skills[skill] += level
-    return skills 
-  end
+  #def self.add_skill(skills, skill, level=1)
+  #  skills[skill] += level
+  #  return skills 
+  #end
 
   # Set a stat to a specific value. 
-  def self.set_stat(upp, index, number)
-    upp[index,1] = number
-    return upp 
-  end
+  #def self.set_stat(upp, index, number)
+  #  upp[index,1] = number
+  #  return upp 
+  #end
 
   # Return true if UPP is a Noble.
-  def self.noble?(upp)
-    soc = upp[5,1].to_i(16)
-    if soc >= 11
-      return true
-    else
-      return false
-    end
-  end 
+  #def self.noble?(upp)
+  #  soc = upp[5,1].to_i(16)
+  #  if soc >= 11
+  #    return true
+  #  else
+  #    return false
+  #  end
+  #end 
 
 
   # Returns title if Character is a noble. Needs gender and UPP.
-  def self.noble(gender, upp)
-    nobility = Hash.new
-    nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
-    nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
-    nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
-    nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
-    nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
+  #def self.noble(gender, upp)
+  #  nobility = Hash.new
+  #  nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
+  #  nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
+  #  nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
+  #  nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
+  #  nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
 
-    title = ""
-    soc = upp[5,1].upcase 
-    if nobility.has_key?(soc)
-      if gender.downcase == "female"
-        title = nobility[soc]['f']
-      else
-        title = nobility[soc]['m']
-      end 
-    end
-    return title
-  end 
+  #  title = ""
+  #  soc = upp[5,1].upcase 
+  #  if nobility.has_key?(soc)
+  #    if gender.downcase == "female"
+  #      title = nobility[soc]['f']
+  #    else
+  #      title = nobility[soc]['m']
+  #    end 
+  #  end
+  #  return title
+  #end 
 
 # End of module
 end

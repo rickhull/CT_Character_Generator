@@ -18,11 +18,12 @@ module CharacterTools
   def self.init()
     character          = Character.new
     character.upp      = self.upp
-    character.gender   = Traveller.gender.capitalize
-    character.name     = Traveller.name(character.gender)
+    character.gender   = self.gender.capitalize
+    character.name     = self.name(character.gender)
     character.age      = 18
     return character
   end
+
 
   # Return general social status based on Soc.
   def self.social_status(character)
@@ -48,11 +49,56 @@ module CharacterTools
 
   # Returns gender in lowercase, "male" or "female". Even odds.
   def self.gender
-    if self.roll_dice(6,1,1) >= 4
+    if Traveller.roll_dice(6,1,1) >= 4
       return 'male'
     else
       return 'female'
     end
+  end
+
+  # Pulls a first name from the database, based on gender. 
+  # Gender required but defaults to male.
+  # Requires sqlite3 functionality and the database file.
+  def self.first_name(gender='Male')
+    require 'sqlite3'
+    gender = gender.downcase
+    begin 
+      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+      first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
+      first_name_result = first_name_query.execute
+      first_name = first_name_result.first
+    rescue SQLite3::Exception => e
+      abort(e)
+    ensure
+      first_name_query.close if first_name_query
+      db.close if db
+    end
+    return first_name.to_s
+  end
+
+  # Pulls a last name from the database. In the future based on culture. 
+  # Requires sqlite3 functionality and the database file.
+  def self.last_name
+    require 'sqlite3'
+    begin 
+      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+      last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
+      last_name_result = last_name_query.execute
+      last_name = last_name_result.first
+    rescue SQLite3::Exception => e
+      abort(e)
+    ensure
+      last_name_query.close if last_name_query
+      db.close if db
+    end
+    return last_name.to_s
+  end
+
+  # Needs gender, produces first and last name as a single string.
+  def self.name(gender)
+    first_name  = self.first_name(gender)
+    last_name   = self.last_name
+    return "#{first_name} #{last_name}"
   end
 
   # Increase a skill
@@ -81,7 +127,6 @@ module CharacterTools
   end
 
   # Adds a career and modifies the age. 
-  #def CharacterTools.add_career(character, career, terms)
   def CharacterTools.add_career(char)
     terms         = char['terms']
     career        = char['career']
