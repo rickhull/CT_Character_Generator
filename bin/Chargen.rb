@@ -12,7 +12,7 @@ require 'Presenter'
 # Default values for options.
 career = ""
 terms  = 0
-available_careers = ['Marine', 'Navy', 'Noble', 'Citizen', 'Other']
+available_careers = ['Noble', 'Citizen', 'Other']
 
 # Build the base character.
 character = CharacterTools.init
@@ -20,8 +20,8 @@ character = CharacterTools.init
 # Parse the options.
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
-  opts.on('-c career', 'Career') do |c|
-    career = c
+  opts.on('-c career', 'Career') do |c| 
+    career = c if available_careers.include?(c)
   end
   opts.on('-t terms', 'Terms') do |t|
     terms = t.to_i
@@ -31,13 +31,14 @@ option_parser.parse!
 
 # Set the options not provided.
 
-if career.empty?
-  career = CharacterTools.social_status(character) 
-end
+career = CharacterTools.social_status(character) if career.empty?
 srand && terms = rand(5) + 1 if terms == 0
 
-# Modify the character
+# Modify the character's career.
 CharacterTools.add_career(character, career, terms)
+
+# Run the character through the career.
+#CharacterTools.run_career(character)
 
 # Just the output.
 Presenter.show(character)
