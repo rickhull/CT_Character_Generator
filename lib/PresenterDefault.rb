@@ -16,5 +16,13 @@ module PresenterDefault
         print "#{skill}-#{level} "
       end
     end
+    puts
+    print "Cash: #{character.stuff['cash']} " if character.stuff['cash'] > 0
+    if character.stuff['benefits'].count > 0
+      character.stuff['benefits'].each do |k,v|
+        print "#{k} (#{v}) "
+      end
+    end
+    pp character
   end
 end

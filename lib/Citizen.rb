@@ -4,35 +4,44 @@ require 'CharacterTools'
 require 'Traveller'
 
 class Citizen 
-    @skill_options = [ '+1 Str',
-      '+1 Dex',
-      '+1 Edu', 
-      '+1 Int', 
-      'Carouse', 
-      'Brawling', 
-      'GunCbt', 
-      'Blade', 
-      'Hunting', 
-      '+1 Dex',
-      'Bribery', 
-      'Drive(any)', 
-      'Pilot', 
-      'ShipsBoat', 
-      'Drive(any)', 
-      'Navigation', 
-      'Engineering', 
-      'Leader',
-      'Athletics'
-      ]
-    @advanced_skill_options = [
-      'Medic',
-      'Computer',
-      'Admin',
-      'Liaison',
-      'Leader',
-      'JoT'
-      ]
+  @skill_options = [ '+1 Str',
+    '+1 Dex',
+    '+1 Edu', 
+    '+1 Int', 
+    'Carouse', 
+    'Brawling', 
+    'GunCbt', 
+    'Blade', 
+    'Hunting', 
+    '+1 Dex',
+    'Bribery', 
+    'Drive(any)', 
+    'Pilot', 
+    'ShipsBoat', 
+    'Drive(any)', 
+    'Navigation', 
+    'Engineering', 
+    'Leader',
+    'Athletics'
+    ]
+  @advanced_skill_options = [
+    'Medic',
+    'Computer',
+    'Admin',
+    'Liaison',
+    'Leader',
+    'JoT'
+    ]
 
+  @muster_out = Hash.new
+  @muster_out['cash'] = [ 1000, 3000, 5000, 7000, 9000 ]
+  @muster_out['benefits'] = [
+    'Low Passage',
+    'Blade',
+    'Gun',
+    'Middle Passage'
+    ]
+     
   # Setting default skill points.
   @skill_points = 2 
 
@@ -43,6 +52,22 @@ class Citizen
   # Set rank to nil so it and the space aren't printed.
   def self.rank(character)
     character.rank = nil    
+  end
+
+  def self.muster_out(character)
+    career = "Citizen"
+    terms = character.careers[career]
+    terms.times do |roll|
+      character.stuff['cash'] += @muster_out['cash'][rand(@muster_out['cash'].length)]
+    end
+    terms.times do |term|
+      benefit = @muster_out['benefits'][rand(@muster_out['benefits'].length)]
+      if character.stuff['benefits'].has_key?(benefit)
+        character.stuff['benefits'][benefit]  += 1
+      else
+        character.stuff['benefits'][benefit]  = 1 
+      end
+    end
   end
 
   # The generic run_career method. 
@@ -63,6 +88,9 @@ class Citizen
       new_skill = @skill_options[rand(@skill_options.count)]
       CharacterTools.increase_skill(character, new_skill)
     end 
+
+    muster_out(character)
+
     # Some careers can raise Soc, so do this after skills.
     CharacterTools.title(character)
   end
