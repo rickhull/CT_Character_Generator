@@ -2,6 +2,8 @@ module PresenterDefault
 
 
   def PresenterDefault.show(character)
+    print "#{character.title} " if character.title
+    print "#{character.rank} " if character.rank
     print "#{character.name} "
     print "#{character.upp} "
     print "#{character.age} "

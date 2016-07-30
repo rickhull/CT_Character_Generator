@@ -151,7 +151,7 @@ module CharacterTools
     end
   end
 
-  # Returns title if Character is a noble.
+  # Sets and Returns title if Character is a noble.
   def self.title(character)
     nobility = Hash.new
     nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
@@ -160,14 +160,16 @@ module CharacterTools
     nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
     nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
 
-    title = ""
+    #title = ""
     soc = character.upp[5,1].upcase 
     
     if nobility.has_key?(soc)
       if character.gender.downcase == "female"
         title = nobility[soc]['f']
+        character.title = title
       else
         title = nobility[soc]['m']
+        character.title = title
       end 
     end
     return title
@@ -175,7 +177,7 @@ module CharacterTools
 
   def self.stat_modifier(options)
     stat_mod  = 0 
-    upp       = options['upp']
+    upp       = options['character'].upp
     index     = options['index']
     minimum   = options['minimum'].to_i(16)
     modifier  = options['modifier']

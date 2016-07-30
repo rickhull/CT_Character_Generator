@@ -1,5 +1,4 @@
-# Class for the regular citizens. Takes a character, and 
-# optional number of terms.
+# Class for the regular citizens. Takes a character, and optional number of terms.
 
 require 'CharacterTools'
 require 'Traveller'
@@ -33,21 +32,20 @@ class Citizen
       'Leader',
       'JoT'
       ]
-  
-  #def initialize(char)
-  #  @character          = char['character']
-  #  @career             = char['career']
-  #  Citizen.run_career(@character)
-  #end
 
-  def self.first_term(character, skill_options)
-    character.rank     = ""
-    2.times do
-      new_skill = skill_options[rand(skill_options.count)]
-      CharacterTools.increase_skill(character, new_skill)
-    end
+  # Setting default skill points.
+  @skill_points = 2 
+
+  # Initial set up. For Citizens there's no default skill. 
+  def self.first_term(character)
   end
 
+  # Set rank to nil so it and the space aren't printed.
+  def self.rank(character)
+    character.rank = nil    
+  end
+
+  # The generic run_career method. 
   def self.run_career(char)
     character          = char['character']
     career             = char['career']
@@ -56,12 +54,16 @@ class Citizen
     if edu >= 8
       @skill_options = @skill_options + @advanced_skill_options
     end
-    first_term(character, @skill_options)
-    terms -= 1
-    0.upto(terms) do
+    rank(character)
+    first_term(character)
+    # Keep @skill_points late as rank can add to it.
+    @skill_points += terms
+    @skill_points -= 1
+    0.upto(@skill_points) do
       new_skill = @skill_options[rand(@skill_options.count)]
       CharacterTools.increase_skill(character, new_skill)
     end 
-      CharacterTools.title(character)
+    # Some careers can raise Soc, so do this after skills.
+    CharacterTools.title(character)
   end
 end
