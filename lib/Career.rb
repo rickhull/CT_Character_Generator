@@ -14,17 +14,25 @@ class Career
   # Setting default skill points.
   @skill_points = 2 
 
+  def initialize(char)
+    run_career(char)
+  end
+
   # Initial term. Some careers half default skills.
-  def self.first_term(character)
+  def self.first_term(char)
   end
 
   # Set rank 
-  def self.rank(character)
+  def self.rank(char)
+    raise NotImplementedError,
+      "#{self} cannot respond to:"
   end
 
-  def self.muster_out(character, career, muster_out)
-    terms = character.careers[career]
-    puts character.careers[career]
+  def self.muster_out(char)
+    career      = char['career']
+    character   = char['character']
+    muster_out  = char['muster_out']
+    terms       = character.careers[career]
     until terms < 1 do
       terms -= 2
       character.stuff['cash'] += muster_out['cash'][rand(muster_out['cash'].length)]
@@ -35,30 +43,33 @@ class Career
         character.stuff['benefits'][benefit]  = 1 
       end
     end
-    pp character
-    pp muster_out
   end
 
   # The generic run_career method. 
   def self.run_career(char)
-    character          = char['character']
-    career             = char['career']
-    terms = character.careers[career]
-    edu = character.upp[4].chr.to_i(16)
-    if edu >= 8
-      @skill_options = @skill_options + @advanced_skill_options
+    character         = char['character']
+    career            = char['career']
+    terms             = char['terms'] 
+    
+    if char['character'].upp[4].chr.to_i(16) >= 8
+      char['skill_options'] = @skill_options + @advanced_skill_options
+    else
+      char['skill_options'] = @skill_options
     end
-    rank(character)
-    first_term(character)
+    char['muster_out']      = @muster_out
+    char['skill_points']    = @skill_points + terms
+    rank(char)
+    first_term(char)
+
     # Keep @skill_points late as rank can add to it.
-    @skill_points += terms
-    @skill_points -= 1
-    0.upto(@skill_points) do
-      new_skill = @skill_options[rand(@skill_options.count)]
+    skill_points      = char['skill_points']
+    skill_options     = char['skill_options'] 
+    0.upto(skill_points) do
+      new_skill = skill_options[rand(skill_options.count)]
       CharacterTools.increase_skill(character, new_skill)
     end 
 
-    muster_out(character)
+    muster_out(char)
 
     # Some careers can raise Soc, so do this after skills.
     CharacterTools.title(character)
