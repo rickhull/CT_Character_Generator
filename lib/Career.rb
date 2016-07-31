@@ -11,9 +11,6 @@ class Career
   @muster_out['cash'] = Array.new
   @muster_out['benefits'] = Array.new
   
-  # Setting default skill points.
-  @skill_points = 2 
-
   def initialize(char)
     run_career(char)
   end
@@ -47,17 +44,17 @@ class Career
 
   # The generic run_career method. 
   def self.run_career(char)
-    character         = char['character']
-    career            = char['career']
-    terms             = char['terms'] 
-    
+    character               = char['character']
+    career                  = char['career']
+    terms                   = char['terms'] 
+    char['skill_points']    = 1 + terms
+
     if char['character'].upp[4].chr.to_i(16) >= 8
       char['skill_options'] = @skill_options + @advanced_skill_options
     else
       char['skill_options'] = @skill_options
     end
     char['muster_out']      = @muster_out
-    char['skill_points']    = @skill_points + terms
     rank(char)
     first_term(char)
 

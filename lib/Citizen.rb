@@ -45,10 +45,7 @@ class Citizen < Career
     'Gun',
     'Middle Passage'
     ]
-     
-  # Setting default skill points.
-  @skill_points = 2 
-
+  
   def initialize(char)
     char['career'] = "Citizen" 
     super

@@ -38,7 +38,10 @@ career = CharacterTools.social_status(character) if career.empty?
 srand && terms = rand(5) + 1 if terms == 0
 
 # Set up the char hash to be passed around.
-char = { 'character' => character, 'career' => career, 'terms' => terms}
+char = Hash.new(0)
+char['character'] = character
+char['career']    = career
+char['terms']     = terms
 
 # Modify the character's career.
 CharacterTools.add_career(char)
