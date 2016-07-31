@@ -12,7 +12,7 @@ class Career
   @muster_out['benefits'] = Array.new
   
   def initialize(char)
-    run_career(char)
+    #run_career(char)
   end
 
   # Initial term. Some careers half default skills.

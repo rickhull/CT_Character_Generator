@@ -46,10 +46,21 @@ class Citizen < Career
     'Middle Passage'
     ]
   
-  def initialize(char)
-    char['career'] = "Citizen" 
-    super
-  end
+  #def initialize(char)
+  #  char['career'] = "Citizen" 
+  #  char['muster_out'] = {
+  #    'cash'      => [ 1000, 3000, 5000, 7000, 9000 ],
+  #    'benefits'  => [
+  #      'Low Passage',
+  #      'Blade',
+  #      'Gun',
+  #      'Middle Passage'
+  #      ]
+  #    }
+  #  puts char['muster_out'].class
+  #  exit
+  #  super
+  #end
 
   # Set rank to nil so it and the space aren't printed.
   def self.rank(char)
