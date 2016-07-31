@@ -20,10 +20,10 @@ character = CharacterTools.init
 # Parse the options.
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
-  opts.on('-c career', 'Career') do |c| 
+  opts.on('-c career', 'Career, defaults based on Soc') do |c| 
     career = c if available_careers.include?(c)
   end
-  opts.on('-t terms', 'Terms') do |t|
+  opts.on('-t terms', 'Terms, defaults to range of 1-5') do |t|
     terms = t.to_i
   end
 end
