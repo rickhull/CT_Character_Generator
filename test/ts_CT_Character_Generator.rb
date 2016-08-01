@@ -9,4 +9,7 @@ $LOAD_PATH << File.expand_path("../../test", __FILE__)
 require 'test/unit'
 require 'tc_CharacterTools'
 require 'tc_Traveller'
+#require 'tc_Chargen'
+#require 'tc_Career'
+require 'tc_Citizen'
 #require 'tc_PresenterDefault'
