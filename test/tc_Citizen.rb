@@ -14,7 +14,7 @@ class TestCitizen < Test::Unit::TestCase
     @char['character']  = @character
     @char['career']     = "Citizen"
     @char['terms']      = 2
-    Citizen.run_career(@char)
+    Citizen.new(@char)
   end
 
   def test_career

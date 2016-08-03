@@ -56,7 +56,8 @@ case career
     Other.run_career(char)
   else
     require 'Citizen'
-    Citizen.run_career(char)
+    #Citizen.run_career(char)
+    Citizen.new(char)
 end
 
 # Just the output.

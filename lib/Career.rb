@@ -12,20 +12,20 @@ class Career
   @muster_out['benefits'] = Array.new
   
   def initialize(char)
-    #run_career(char)
+    run_career(char)
   end
 
   # Initial term. Some careers half default skills.
-  def self.first_term(char)
+  def first_term(char)
   end
 
   # Set rank 
-  def self.rank(char)
+  def rank(char)
     raise NotImplementedError,
       "#{self} cannot respond to:"
   end
 
-  def self.muster_out(char)
+  def muster_out(char)
     career      = char['career']
     character   = char['character']
     muster_out  = char['muster_out']
@@ -43,11 +43,13 @@ class Career
   end
 
   # The generic run_career method. 
-  def self.run_career(char)
+  #def self.run_career(char)
+  def run_career(char)
     character               = char['character']
     career                  = char['career']
     terms                   = char['terms'] 
     char['skill_points']    = 1 + terms
+    char['skill_options']   = Array.new
 
     if char['character'].upp[4].chr.to_i(16) >= 8
       char['skill_options'] = @skill_options + @advanced_skill_options

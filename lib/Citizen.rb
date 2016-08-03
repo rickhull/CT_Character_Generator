@@ -7,7 +7,8 @@ require 'Traveller'
 require 'Career'
 
 class Citizen < Career
-
+  
+  def initialize(char)
   @skill_options = [ '+1 Str',
     '+1 Dex',
     '+1 Edu', 
@@ -45,8 +46,7 @@ class Citizen < Career
     'Gun',
     'Middle Passage'
     ]
-  
-  #def initialize(char)
+  super(char)
   #  char['career'] = "Citizen" 
   #  char['muster_out'] = {
   #    'cash'      => [ 1000, 3000, 5000, 7000, 9000 ],
@@ -60,10 +60,10 @@ class Citizen < Career
   #  puts char['muster_out'].class
   #  exit
   #  super
-  #end
+  end
 
   # Set rank to nil so it and the space aren't printed.
-  def self.rank(char)
+  def rank(char)
     char['character'].rank = nil    
   end
 end
