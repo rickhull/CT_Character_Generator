@@ -11,6 +11,7 @@ module PresenterDefault
       print " #{career}: #{terms} "
     end
     puts
+    puts "#{character.hair} hair and #{character.skin} skin."
     if character.skills 
       character.skills.each_pair do |skill, level|
         print "#{skill}-#{level} "

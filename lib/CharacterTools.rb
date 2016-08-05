@@ -21,6 +21,8 @@ module CharacterTools
     character.gender   = self.gender.capitalize
     character.name     = self.name(character.gender)
     character.age      = 18
+    character.hair     = self.hair
+    character.skin     = self.skin
     return character
   end
 
@@ -230,5 +232,58 @@ module CharacterTools
     stat_mod  = modifier if stat >= minimum
     return    stat_mod
   end 
+
+  def self.hair
+    tone = ['light', 'medium', 'full' ]
+    body = ['straight', 'wavey', 'curly', 'frizzed']
+    color = ['blond', 
+        'auburn',
+        'brown',
+        'chestnut',
+        'red',
+        'orange',
+        'green',
+        'blue',
+        'black',
+        'white',
+        'gold',
+        'silver',
+        'yellow',
+        'gray'
+      ]
+    length  = ['close cropped',
+        'short',
+        'medium length',
+        'shoulder length',
+        'very long',
+        'waist length'
+      ]
+
+    t = tone[rand(tone.length)]
+    b = body[rand(body.length)].capitalize
+    c = color[rand(color.length)]
+    l = length[rand(length.length)]
+  
+    hair = "#{b} #{t} #{c} #{l}"
+    return hair
+  end
+
+  def self.skin
+    skin_tone = ['albino',
+      'pale',
+      'medium',
+      'tanned',
+      'brown',
+      'chocolate',
+      'black',
+      'blue',
+      'gold',
+      'green',
+      'silver',
+      'translucent',
+      'orange'
+    ]
+    return skin_tone[rand(skin_tone.length)]
+  end
 
 end
