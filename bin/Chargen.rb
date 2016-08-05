@@ -50,13 +50,12 @@ CharacterTools.add_career(char)
 case career 
   when "Noble" then
     require 'Noble'
-    Noble.run_career(char)
+    Noble.new(char)
   when "Other" then
     require 'Other'
-    Other.run_career(char)
+    Other.new(char)
   else
     require 'Citizen'
-    #Citizen.run_career(char)
     Citizen.new(char)
 end
 
