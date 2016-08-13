@@ -30,7 +30,7 @@ class Career
     character   = char['character']
     muster_out  = char['muster_out']
     terms       = character.careers[career]
-    pp          character.upp
+    skill_stuff = ["Gun", "Blade", "Weapon"]
     until terms < 1 do
       terms -= 2
       character.stuff['cash'] += muster_out['cash'][rand(muster_out['cash'].length)]
@@ -38,8 +38,13 @@ class Career
       if benefit.match(/\+/)
         level = benefit.split[0].to_i
         stat  = benefit.split[1]
-        puts "Going to modify #{stat} by #{level}."
         CharacterTools.modify_stat(character, stat, level)
+      elsif skill_stuff.include?(benefit) && character.stuff['benefits'].has_key?(benefit)
+        case benefit
+          when "Gun" then CharacterTools.increase_skill(character, "GunCbt")
+          when "Blade" then CharacterTools.increase_skill(character, "BladeCbt")
+          when "Weapon" then CharacterTools.increase_skill(character, "Weapon")
+        end 
       elsif character.stuff['benefits'].has_key?(benefit)
         character.stuff['benefits'][benefit]  += 1
       else
