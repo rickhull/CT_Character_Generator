@@ -43,6 +43,8 @@ class Other < Career
     @muster_out['cash'] = [1000, 5000, 10000, 10000, 10000, 50000, 100000]
     @muster_out['benefits'] = [
       'LowPsg',
+      "+1 Int",
+      "+1 Edu",
       'Gun',
       'HighPsg'
     ]
