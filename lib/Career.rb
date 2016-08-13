@@ -30,11 +30,17 @@ class Career
     character   = char['character']
     muster_out  = char['muster_out']
     terms       = character.careers[career]
+    pp          character.upp
     until terms < 1 do
       terms -= 2
       character.stuff['cash'] += muster_out['cash'][rand(muster_out['cash'].length)]
       benefit = muster_out['benefits'][rand(muster_out['benefits'].length)]
-      if character.stuff['benefits'].has_key?(benefit)
+      if benefit.match(/\+/)
+        level = benefit.split[0].to_i
+        stat  = benefit.split[1]
+        puts "Going to modify #{stat} by #{level}."
+        CharacterTools.modify_stat(character, stat, level)
+      elsif character.stuff['benefits'].has_key?(benefit)
         character.stuff['benefits'][benefit]  += 1
       else
         character.stuff['benefits'][benefit]  = 1 

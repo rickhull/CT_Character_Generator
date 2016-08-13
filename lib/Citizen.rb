@@ -41,10 +41,13 @@ class Citizen < Career
   @muster_out = Hash.new
   @muster_out['cash'] = [ 1000, 3000, 5000, 7000, 9000 ]
   @muster_out['benefits'] = [
-    'Low Passage',
-    'Blade',
-    'Gun',
-    'Middle Passage'
+    #'Low Passage',
+    #'Blade',
+    #'Gun',
+    #'Middle Passage'
+    "+2 Str",
+    "+2 Int",
+    "+2 Edu"
     ]
   super(char)
   #  char['career'] = "Citizen" 
