@@ -1,0 +1,18 @@
+** DRAFT -- Needs testing and verfication **
+
+To create your own customaized careers, go in to the lib subdirectory and
+copy CareerTemplate.rb to whatever name you want. Mostly. Ruby needs Class 
+names to start with an uppercase Alpha character, and the program may not 
+deal well with exotic names. 
+
+Read the notes that are in your new career file, the process is explained step
+by step. Refer to other careers if you need ideas.
+
+Edit bin/Chargen.rb to add your career to the "available_careers" array.
+
+The program is usually called with:
+ ruby lib/Chargen.rb [-t <terms>] [-c <career>]
+
+If you create a Spacer career and want to create a 4 term NPC, use:
+  ruby lib/Chargen.rb -t 4 -c Spacer
+
