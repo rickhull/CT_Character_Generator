@@ -41,28 +41,14 @@ class Citizen < Career
   @muster_out = Hash.new
   @muster_out['cash'] = [ 1000, 3000, 5000, 7000, 9000 ]
   @muster_out['benefits'] = [
-    #'Low Passage',
-    #'Blade',
-    #'Gun',
-    #'Middle Passage'
-    "+2 Str",
-    "+2 Int",
-    "+2 Edu"
+    'Low Passage',
+    'Blade',
+    "+1 Int",
+    "+2 Edu",
+    'Gun',
+    'Middle Passage'
     ]
   super(char)
-  #  char['career'] = "Citizen" 
-  #  char['muster_out'] = {
-  #    'cash'      => [ 1000, 3000, 5000, 7000, 9000 ],
-  #    'benefits'  => [
-  #      'Low Passage',
-  #      'Blade',
-  #      'Gun',
-  #      'Middle Passage'
-  #      ]
-  #    }
-  #  puts char['muster_out'].class
-  #  exit
-  #  super
   end
 
   # Set rank to nil so it and the space aren't printed.
