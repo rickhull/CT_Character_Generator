@@ -117,4 +117,14 @@ class TestCharacterTools < Test::Unit::TestCase
     CharacterTools.increase_skill(@character, "-10 Soc")
     assert(@character.upp == "222222")
   end
+
+  def test_modify_stat
+    @character.upp        = "777777"
+    options               = Hash.new(0)
+    options['character']  = @character
+    options['stat']       = "Int"
+    options['level']      = 2
+    CharacterTools.modify_stat(options)
+    assert(@character.upp == "777977")
+  end
 end

@@ -36,9 +36,11 @@ class Career
       character.stuff['cash'] += muster_out['cash'][rand(muster_out['cash'].length)]
       benefit = muster_out['benefits'][rand(muster_out['benefits'].length)]
       if benefit.match(/\+/)
-        level = benefit.split[0].to_i
-        stat  = benefit.split[1]
-        CharacterTools.modify_stat(character, stat, level)
+        options               = Hash.new(0)
+        options['character']  = character
+        options['level']      = benefit.split[0].to_i
+        options['stat']       = benefit.split[1]
+        CharacterTools.modify_stat(options)
       elsif skill_stuff.include?(benefit) && character.stuff['benefits'].has_key?(benefit)
         case benefit
           when "Gun" then CharacterTools.increase_skill(character, "GunCbt")
