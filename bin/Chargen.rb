@@ -12,7 +12,7 @@ require 'Presenter'
 # Default values for options.
 career = ""
 terms  = 0
-available_careers = ['Noble', 'Citizen', 'Other']
+available_careers = ['Noble', 'Citizen', 'Other', "Navy"]
 
 # Build the base character.
 character = CharacterTools.init
