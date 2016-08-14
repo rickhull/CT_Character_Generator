@@ -90,5 +90,31 @@ class TestCharacterTools < Test::Unit::TestCase
     CharacterTools.increase_skill(@character, "GunCbt", 2)
     assert(@character.skills.has_key?("GunCbt"))
     assert(@character.skills["GunCbt"] == 2)
+    CharacterTools.increase_skill(@character, "GunCbt", 2)
+    assert(@character.skills["GunCbt"] == 4)
+    @character.upp = "777777"
+    CharacterTools.increase_skill(@character, "+1 Str")
+    CharacterTools.increase_skill(@character, "+1 Dex")
+    CharacterTools.increase_skill(@character, "+1 End")
+    CharacterTools.increase_skill(@character, "+1 Int")
+    CharacterTools.increase_skill(@character, "+1 Edu")
+    CharacterTools.increase_skill(@character, "+1 Soc")
+    assert(@character.upp == "888888")
+    @character.upp = "777777"
+    CharacterTools.increase_skill(@character, "+10 Str")
+    CharacterTools.increase_skill(@character, "+10 Dex")
+    CharacterTools.increase_skill(@character, "+10 End")
+    CharacterTools.increase_skill(@character, "+10 Int")
+    CharacterTools.increase_skill(@character, "+10 Edu")
+    CharacterTools.increase_skill(@character, "+10 Soc")
+    assert(@character.upp == "FFFFFF")
+    @character.upp = "777777"
+    CharacterTools.increase_skill(@character, "-10 Str")
+    CharacterTools.increase_skill(@character, "-10 Dex")
+    CharacterTools.increase_skill(@character, "-10 End")
+    CharacterTools.increase_skill(@character, "-10 Int")
+    CharacterTools.increase_skill(@character, "-10 Edu")
+    CharacterTools.increase_skill(@character, "-10 Soc")
+    assert(@character.upp == "222222")
   end
 end
