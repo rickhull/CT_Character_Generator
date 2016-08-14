@@ -76,4 +76,19 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(CharacterTools.stat_modifier(options) == 1)
   end 
 
+  def test_social_status
+    @character.upp = "777771"
+    assert(CharacterTools.social_status(@character) == "Other")
+    @character.upp = "777777"
+    assert(CharacterTools.social_status(@character) == "Citizen")
+    @character.upp = "77777F"
+    assert(CharacterTools.social_status(@character) == "Noble")
+  end
+
+  def test_increase_skill
+    assert(@character.skills.length == 0)
+    CharacterTools.increase_skill(@character, "GunCbt", 2)
+    assert(@character.skills.has_key?("GunCbt"))
+    assert(@character.skills["GunCbt"] == 2)
+  end
 end
