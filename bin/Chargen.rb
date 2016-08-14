@@ -48,6 +48,9 @@ CharacterTools.add_career(char)
 
 # Run the character through the career.
 case career 
+  when "Navy" then
+    require "Navy"
+    Navy.new(char)
   when "Noble" then
     require 'Noble'
     Noble.new(char)
