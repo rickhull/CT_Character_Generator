@@ -9,9 +9,18 @@ class TestCharacterTools < Test::Unit::TestCase
     @character = CharacterTools.init
   end
 
-#  def test_init
-  def test_age
+  def test_init
+    genders = ["Male", "Female"]
     assert(@character.age == 18) 
+    assert(@character.upp.length == 6)
+    assert(@character.upp.match(/[0-9A-F]/))
+    assert(@character.name.length > 1)
+    assert(genders.include?(@character.gender))
+    assert(@character.hair.length >= 4)
+    assert(@character.hair.match(/[a-zA-Z]/))
+    assert(@character.skin.length >= 4)
+    assert(@character.skin.length <= 15)
+    assert(@character.skin.match(/[a-z]/))
   end
 
   def test_add_career
@@ -66,6 +75,5 @@ class TestCharacterTools < Test::Unit::TestCase
     @character.upp = "77777A"
     assert(CharacterTools.stat_modifier(options) == 1)
   end 
-
 
 end
