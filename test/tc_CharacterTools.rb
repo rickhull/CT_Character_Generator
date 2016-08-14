@@ -1,6 +1,7 @@
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "CharacterTools"
+require "test/unit"
 
 class TestCharacterTools < Test::Unit::TestCase
 
@@ -8,6 +9,7 @@ class TestCharacterTools < Test::Unit::TestCase
     @character = CharacterTools.init
   end
 
+#  def test_init
   def test_age
     assert(@character.age == 18) 
   end
