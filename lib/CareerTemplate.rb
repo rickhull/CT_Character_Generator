@@ -21,6 +21,13 @@
 #     Add the names of the ranks. 
 #     Recommended, but not required, to use terms as roll modifier.
 #
+# 7. Add the following stanza to the case statement in Chargen.rb:
+#     when "Mycareer" then
+#       require "Mycareer"
+#       Mycareer.new(char)
+#
+# 8. Add "Mycareer" to the "available_careers" array in Chargen.rb.
+#
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
