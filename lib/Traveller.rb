@@ -34,17 +34,17 @@ module Traveller
   # Returns gender in lowercase, "male" or "female". Even odds.
   def self.gender
     if self.roll_dice(6,1,1) >= 4
-      return 'male'
+      return "male"
     else
-      return 'female'
+      return "female"
     end
   end
 
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
-  #def self.first_name(gender='Male')
-  #  require 'sqlite3'
+  #def self.first_name(gender="Male")
+  #  require "sqlite3"
   #  gender = gender.downcase
   #  begin 
   #    db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
@@ -63,7 +63,7 @@ module Traveller
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
   #def self.last_name
-  #  require 'sqlite3'
+  #  require "sqlite3"
   #  begin 
   #    db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
   #    last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
@@ -132,7 +132,7 @@ module Traveller
   # Returns title if Character is a noble. Needs gender and UPP.
   #def self.noble(gender, upp)
   #  nobility = Hash.new
-  #  nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
+  #  nobility["B"] = { "f" => "Dame",      'm' => 'Knight' }
   #  nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
   #  nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
   #  nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }

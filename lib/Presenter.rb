@@ -2,18 +2,18 @@ module Presenter
 
   $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-  def Presenter.show(character, method = 'txt')
+  def Presenter.show(character, method = "txt")
     case method
-      when 'csv'
-        require 'PresenterCSV'
+      when "csv"
+        require "PresenterCSV"
         PresenterCSV.show(character)
-      when 'wiki'
+      when "wiki"
         print " == "
         headers.each { 
           |hdr| print "#{character[hdr]} " 
         }
       else
-        require 'PresenterDefault'
+        require "PresenterDefault"
         PresenterDefault.show(character)
     end
     puts

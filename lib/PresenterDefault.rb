@@ -22,8 +22,8 @@ module PresenterDefault
       end
     end
     lines[4] =  ""
-    lines[4] += "Cash: #{character.stuff['cash']} " if character.stuff['cash'] > 0
-    character.stuff['benefits'].each do |k,v|
+    lines[4] += "Cash: #{character.stuff["cash"]} " if character.stuff["cash"] > 0
+    character.stuff["benefits"].each do |k,v|
       lines[4] +=  "#{k} (#{v}) "
     end
 

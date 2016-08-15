@@ -10,8 +10,8 @@ class Character
     @name     = String.new
     @skills   = Hash.new(0)
     @careers  = Hash.new(0)
-    @stuff    = { 'cash' => 0,
-      'benefits'  => Hash.new(0)
+    @stuff    = { "cash" => 0,
+      "benefits"  => Hash.new(0)
       }
   end
  

@@ -6,11 +6,11 @@ module CharacterTools
   $LOAD_PATH << File.expand_path("../../lib", __FILE__)
   $DATA_PATH = File.expand_path("../../data", __FILE__)
 
-  require 'Traveller'
-  require 'Character'
-  require 'Presenter'
-  require 'json'
-  require 'pp'
+  require "Traveller"
+  require "Character"
+  require "Presenter"
+  require "json"
+  require "pp"
 
   STAT_NAMES = %w{Str Dex End Int Edu Soc}
 
@@ -52,17 +52,17 @@ module CharacterTools
   # Returns gender in lowercase, "male" or "female". Even odds.
   def self.gender
     if Traveller.roll_dice(6,1,1) >= 4
-      return 'male'
+      return "male"
     else
-      return 'female'
+      return "female"
     end
   end
 
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
-  def self.first_name(gender='Male')
-    require 'sqlite3'
+  def self.first_name(gender="Male")
+    require "sqlite3"
     gender = gender.downcase
     begin 
       db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
@@ -81,7 +81,7 @@ module CharacterTools
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
   def self.last_name
-    require 'sqlite3'
+    require "sqlite3"
     begin 
       db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
       last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
@@ -107,9 +107,9 @@ module CharacterTools
   def self.increase_skill(character, skill, level = 1)
     if skill.split.length > 1
       options               = Hash.new(0)
-      options['character']  = character
-      options['level']      = skill.split[0].to_i
-      options['stat']       = skill.split[1]
+      options["character"]  = character
+      options["level"]      = skill.split[0].to_i
+      options["stat"]       = skill.split[1]
       self.modify_stat(options)
     else
       if character.skills.has_key?(skill)
@@ -122,8 +122,8 @@ module CharacterTools
 
   # Modify a stat.
   def self.modify_stat(options)
-    character = options['character']
-    stat      = options['stat']
+    character = options["character"]
+    stat      = options["stat"]
     return    unless STAT_NAMES.include?(stat)
     level     = options.has_key?("level") ? options["level"] : 1
     stat_index = STAT_NAMES.index(stat)
@@ -136,9 +136,9 @@ module CharacterTools
 
   # Adds a career and modifies the age. 
   def CharacterTools.add_career(char)
-    terms         = char['terms']
-    career        = char['career']
-    character     = char['character']
+    terms         = char["terms"]
+    career        = char["career"]
+    character     = char["character"]
     character.age += terms * 4
     character.careers[career] += terms
   end
@@ -146,11 +146,11 @@ module CharacterTools
   # Pull Character data into a hash.
   def self.hash_character(character)
     c_hash = Hash.new
-    c_hash['name']    = character.name
-    c_hash['upp']     = character.upp
-    c_hash['age']     = character.age
-    c_hash['careers'] = character.careers
-    c_hash['skills']  = character.skills
+    c_hash["name"]    = character.name
+    c_hash["upp"]     = character.upp
+    c_hash["age"]     = character.age
+    c_hash["careers"] = character.careers
+    c_hash["skills"]  = character.skills
     return c_hash
   end
 
@@ -162,9 +162,9 @@ module CharacterTools
       characters_in = File.read(file)
       characters = JSON.parse(characters_in) 
       character_key = "#{character.upp}-#{character.name}"
-      character_key.gsub!(/[ ,']/, '')
+      character_key.gsub!(/[ ,']/, "")
       characters[character_key] = self.hash_character(character)
-      c_file = File.open(file, 'w')
+      c_file = File.open(file, "w")
       c_file.write(JSON.pretty_generate(characters))
       c_file.close
     end
@@ -184,21 +184,21 @@ module CharacterTools
     Presenter.show(character, mode)
   end
  
-  # Prints the character in some specific format. Or 'txt'
+  # Prints the character in some specific format. Or "txt"
   # if unspecified. 
-  def self.show_characters(file, format=json, mode='txt')
+  def self.show_characters(file, format=json, mode="txt")
     if File.exists?(file)
       characters = Hash.new
       characters_in = File.read(file)
       characters = JSON.parse(characters_in)
       characters.each do |key, array|
         character = Character.new
-        character.name    = characters[key]['name']
-        character.upp     = characters[key]['upp']
-        character.gender  = characters[key]['gender']
-        character.age     = characters[key]['age']
-        character.careers = characters[key]['careers']
-        character.skills  = characters[key]['skills']
+        character.name    = characters[key]["name"]
+        character.upp     = characters[key]["upp"]
+        character.gender  = characters[key]["gender"]
+        character.age     = characters[key]["age"]
+        character.careers = characters[key]["careers"]
+        character.skills  = characters[key]["skills"]
         Presenter.show(character, mode)
       end
     end
@@ -207,21 +207,21 @@ module CharacterTools
   # Sets and Returns title if Character is a noble.
   def self.title(character)
     nobility = Hash.new
-    nobility['B'] = { 'f' => 'Dame',      'm' => 'Knight' }
-    nobility['C'] = { 'f' => 'Baroness',  'm' => 'Baron' }
-    nobility['D'] = { 'f' => 'Marquesa',  'm' => 'Marquis' }
-    nobility['E'] = { 'f' => 'Countess',  'm' => 'Count' }
-    nobility['F'] = { 'f' => 'Duchess',   'm' => 'Duke' }
+    nobility["B"] = { "f" => "Dame",      "m" => "Knight" }
+    nobility["C"] = { "f" => "Baroness",  "m" => "Baron" }
+    nobility["D"] = { "f" => "Marquesa",  "m" => "Marquis" }
+    nobility["E"] = { "f" => "Countess",  "m" => "Count" }
+    nobility["F"] = { "f" => "Duchess",   "m" => "Duke" }
 
     #title = ""
     soc = character.upp[5,1].upcase 
     
     if nobility.has_key?(soc)
       if character.gender.downcase == "female"
-        title = nobility[soc]['f']
+        title = nobility[soc]["f"]
         character.title = title
       else
-        title = nobility[soc]['m']
+        title = nobility[soc]["m"]
         character.title = title
       end 
     end
@@ -230,39 +230,39 @@ module CharacterTools
 
   def self.stat_modifier(options)
     stat_mod  = 0 
-    upp       = options['character'].upp
-    index     = options['index']
-    minimum   = options['minimum'].to_i(16)
-    modifier  = options['modifier']
+    upp       = options["character"].upp
+    index     = options["index"]
+    minimum   = options["minimum"].to_i(16)
+    modifier  = options["modifier"]
     stat      = upp[index,1].to_i(16)
     stat_mod  = modifier if stat >= minimum
     return    stat_mod
   end 
 
   def self.hair
-    tone = ['light', 'medium', 'full' ]
-    body = ['straight', 'wavey', 'curly', 'frizzed']
-    color = ['blond', 
-        'auburn',
-        'brown',
-        'chestnut',
-        'red',
-        'orange',
-        'green',
-        'blue',
-        'black',
-        'white',
-        'gold',
-        'silver',
-        'yellow',
-        'gray'
+    tone = ["light", "medium", "full" ]
+    body = ["straight", "wavey", "curly", "frizzed"]
+    color = ["blond", 
+        "auburn",
+        "brown",
+        "chestnut",
+        "red",
+        "orange",
+        "green",
+        "blue",
+        "black",
+        "white",
+        "gold",
+        "silver",
+        "yellow",
+        "gray"
       ]
-    length  = ['close cropped',
-        'short',
-        'medium length',
-        'shoulder length',
-        'very long',
-        'waist length'
+    length  = ["close cropped",
+        "short",
+        "medium length",
+        "shoulder length",
+        "very long",
+        "waist length"
       ]
 
     t = tone[rand(tone.length)]
@@ -275,19 +275,19 @@ module CharacterTools
   end
 
   def self.skin
-    skin_tone = ['albino',
-      'pale',
-      'medium',
-      'tanned',
-      'brown',
-      'chocolate',
-      'black',
-      'blue',
-      'gold',
-      'green',
-      'silver',
-      'translucent',
-      'orange'
+    skin_tone = ["albino",
+      "pale",
+      "medium",
+      "tanned",
+      "brown",
+      "chocolate",
+      "black",
+      "blue",
+      "gold",
+      "green",
+      "silver",
+      "translucent",
+      "orange"
     ]
     return skin_tone[rand(skin_tone.length)]
   end
