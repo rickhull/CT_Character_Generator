@@ -4,15 +4,15 @@
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-require 'optparse'
-require 'Character'
-require 'CharacterTools'
-require 'Presenter'
+require "optparse"
+require "Character"
+require "CharacterTools"
+require "Presenter"
 
 # Default values for options.
 career = ""
 terms  = 0
-available_careers = ['Noble', 'Citizen', 'Other', "Navy"]
+available_careers = ["Noble", "Citizen", "Other", "Navy"]
 
 # Build the base character.
 character = CharacterTools.init
@@ -20,10 +20,10 @@ character = CharacterTools.init
 # Parse the options.
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
-  opts.on('-c career', 'Career, defaults based on Soc') do |c| 
+  opts.on("-c career", "Career, defaults based on Soc") do |c| 
     career = c if available_careers.include?(c)
   end
-  opts.on('-t terms', 'Terms, defaults to range of 1-5') do |t|
+  opts.on("-t terms", "Terms, defaults to range of 1-5") do |t|
     terms = t.to_i
   end
 end
@@ -39,9 +39,9 @@ srand && terms = rand(5) + 1 if terms == 0
 
 # Set up the char hash to be passed around.
 char = Hash.new(0)
-char['character'] = character
-char['career']    = career
-char['terms']     = terms
+char["character"] = character
+char["career"]    = career
+char["terms"]     = terms
 
 # Modify the character's career.
 CharacterTools.add_career(char)
@@ -52,13 +52,13 @@ case career
     require "Navy"
     Navy.new(char)
   when "Noble" then
-    require 'Noble'
+    require "Noble"
     Noble.new(char)
   when "Other" then
-    require 'Other'
+    require "Other"
     Other.new(char)
   else
-    require 'Citizen'
+    require "Citizen"
     Citizen.new(char)
 end
 
