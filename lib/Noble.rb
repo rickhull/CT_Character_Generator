@@ -1,4 +1,7 @@
-# Class for the Nobility. Takes a character and optional number of terms.
+# Class for the Nobility based on Robert Weaver's article. 
+# The skill choices are used by permission from 
+# http://ancientfarfuture.blogspot.com/2014/05/lords-of-imperium-revisiting-noble.html
+# Thanks Robert!
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
@@ -9,32 +12,32 @@ require "Traveller"
 class Noble < Career 
   def initialize(char)
     @skill_options = [ 
-      "+1 Str",
-      "+1 Dex",
-      "+1 End", 
       "+1 Int", 
-      "Carouse", 
-      "Brawling", 
-      "GunCbt", 
-      "Blade", 
-      "Hunting", 
-      "Drive(any)",
-      "Bribery", 
-      "+1 Dex",
-      "Pilot", 
-      "ShipsBoat", 
-      "Drive(any)", 
-      "Navigation", 
-      "Engineering", 
-      "Leader"
+      "+1 Edu", 
+      "Carousing", 
+      "JoT",
+      "Leader",
+      "Brawling",
+      "Hunting",
+      "Pilot",
+      "Leader",
+      "GunCbt",
+      "Vehicle",
+      "Medical",
+      "Leader",
+      "Admin",
+      "Carousing",
+      "Liaison",
+      "Bribery",
+      "Gabmling"
       ]
     @advanced_skill_options = [
-      "Medic",
-      "Computer",
+      "Leader",
       "Admin",
       "Liaison",
-      "Leader",
-      "JoT"
+      "Bribery",
+      "JoT",
+      "Computer"
       ]
 
     @muster_out = Hash.new
@@ -62,7 +65,9 @@ class Noble < Career
     promotion_roll_required = 12 - terms
     promotion_level = (Traveller.roll_dice(6,2) - promotion_roll_required) / 3
     if promotion_level > 0 
-      CharacterTools.modify_stat(char["character"], "Soc", promotion_level) 
+      options["level"]      = promotion_level
+      options["stat"]       = "Soc"
+      CharacterTools.modify_stat(options) 
       char["skill_points"] += promotion_level
     end
   end
