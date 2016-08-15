@@ -171,7 +171,7 @@ class Navy < Career
     if commission_roll >= 0
       char['character'].rank = officers[commission_roll/2]
     else
-      char['character'].rank = enlisted[char['terms'] + 1]
+      char['character'].rank = enlisted[char['terms'] + rand(2)]
     end
   end
 end
