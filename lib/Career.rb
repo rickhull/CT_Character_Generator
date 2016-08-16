@@ -44,7 +44,7 @@ class Career
       elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
         case benefit
           when "Gun" then CharacterTools.increase_skill(character, "GunCbt")
-          when "Blade" then CharacterTools.increase_skill(character, "BladeCbt")
+          when "Blade" then CharacterTools.increase_skill(character, "Blade")
           when "Weapon" then CharacterTools.increase_skill(character, "Weapon")
         end 
       elsif character.stuff["benefits"].has_key?(benefit)
