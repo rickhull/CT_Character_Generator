@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Citizen)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/Citizen.rb, line 11</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-ivar">@skill_options</span> = [ <span class="ruby-value str">&quot;+1 Str&quot;</span>,
+    <span class="ruby-value str">&quot;+1 Dex&quot;</span>,
+    <span class="ruby-value str">&quot;+1 Edu&quot;</span>, 
+    <span class="ruby-value str">&quot;+1 Int&quot;</span>, 
+    <span class="ruby-value str">&quot;Carouse&quot;</span>, 
+    <span class="ruby-value str">&quot;Brawling&quot;</span>, 
+    <span class="ruby-value str">&quot;GunCbt&quot;</span>, 
+    <span class="ruby-value str">&quot;Blade&quot;</span>, 
+    <span class="ruby-value str">&quot;Hunting&quot;</span>, 
+    <span class="ruby-value str">&quot;+1 Dex&quot;</span>,
+    <span class="ruby-value str">&quot;Bribery&quot;</span>, 
+    <span class="ruby-value str">&quot;Drive(any)&quot;</span>, 
+    <span class="ruby-value str">&quot;Pilot&quot;</span>, 
+    <span class="ruby-value str">&quot;ShipsBoat&quot;</span>, 
+    <span class="ruby-value str">&quot;Drive(any)&quot;</span>, 
+    <span class="ruby-value str">&quot;Navigation&quot;</span>, 
+    <span class="ruby-value str">&quot;Engineering&quot;</span>, 
+    <span class="ruby-value str">&quot;Leader&quot;</span>,
+    <span class="ruby-value str">&quot;Athletics&quot;</span>
+    ]
+  <span class="ruby-ivar">@advanced_skill_options</span> = [
+    <span class="ruby-value str">&quot;Medic&quot;</span>,
+    <span class="ruby-value str">&quot;Computer&quot;</span>,
+    <span class="ruby-value str">&quot;Admin&quot;</span>,
+    <span class="ruby-value str">&quot;Liaison&quot;</span>,
+    <span class="ruby-value str">&quot;Leader&quot;</span>,
+    <span class="ruby-value str">&quot;JoT&quot;</span>
+    ]
+
+  <span class="ruby-ivar">@muster_out</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@muster_out</span>[<span class="ruby-value str">&quot;cash&quot;</span>] = [ <span class="ruby-value">1000</span>, <span class="ruby-value">3000</span>, <span class="ruby-value">5000</span>, <span class="ruby-value">7000</span>, <span class="ruby-value">9000</span> ]
+  <span class="ruby-ivar">@muster_out</span>[<span class="ruby-value str">&quot;benefits&quot;</span>] = [
+    <span class="ruby-value str">&quot;Low Passage&quot;</span>,
+    <span class="ruby-value str">&quot;Blade&quot;</span>,
+    <span class="ruby-value str">&quot;+1 Int&quot;</span>,
+    <span class="ruby-value str">&quot;+2 Edu&quot;</span>,
+    <span class="ruby-value str">&quot;Gun&quot;</span>,
+    <span class="ruby-value str">&quot;Middle Passage&quot;</span>
+    ]
+  <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -75,7 +75,8 @@
     <div id="description">
       <p>
 <a href="CharacterTools.html">CharacterTools</a> implements modules for
-modifying Character objects. These methods are outside career data sets.
+modifying <a href="Character.html">Character</a> objects. These methods are
+outside career data sets.
 </p>
 
     </div>
@@ -87,13 +88,25 @@ modifying Character objects. These methods are outside career data sets.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000002">add_career</a>&nbsp;&nbsp;
-      <a href="#M000003">hash_character</a>&nbsp;&nbsp;
-      <a href="#M000001">init</a>&nbsp;&nbsp;
-      <a href="#M000004">save_character</a>&nbsp;&nbsp;
-      <a href="#M000005">show_character_file</a>&nbsp;&nbsp;
-      <a href="#M000006">show_characters</a>&nbsp;&nbsp;
-      <a href="#M000007">stat_modifier</a>&nbsp;&nbsp;
+      <a href="#M000112">add_career</a>&nbsp;&nbsp;
+      <a href="#M000107">first_name</a>&nbsp;&nbsp;
+      <a href="#M000106">gender</a>&nbsp;&nbsp;
+      <a href="#M000120">hair</a>&nbsp;&nbsp;
+      <a href="#M000113">hash_character</a>&nbsp;&nbsp;
+      <a href="#M000110">increase_skill</a>&nbsp;&nbsp;
+      <a href="#M000103">init</a>&nbsp;&nbsp;
+      <a href="#M000108">last_name</a>&nbsp;&nbsp;
+      <a href="#M000111">modify_stat</a>&nbsp;&nbsp;
+      <a href="#M000109">name</a>&nbsp;&nbsp;
+      <a href="#M000114">save_character</a>&nbsp;&nbsp;
+      <a href="#M000115">show_character_file</a>&nbsp;&nbsp;
+      <a href="#M000117">show_characters</a>&nbsp;&nbsp;
+      <a href="#M000116">show_one_character</a>&nbsp;&nbsp;
+      <a href="#M000121">skin</a>&nbsp;&nbsp;
+      <a href="#M000104">social_status</a>&nbsp;&nbsp;
+      <a href="#M000119">stat_modifier</a>&nbsp;&nbsp;
+      <a href="#M000118">title</a>&nbsp;&nbsp;
+      <a href="#M000105">upp</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -105,6 +118,19 @@ modifying Character objects. These methods are outside career data sets.
     <div id="section">
 
 
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">STAT_NAMES</td>
+          <td>=</td>
+          <td class="context-item-value">%w{Str Dex End Int Edu Soc}</td>
+        </tr>
+        </table>
+      </div>
+    </div>
 
 
 
@@ -115,13 +141,13 @@ modifying Character objects. These methods are outside career data sets.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000002" class="method-detail">
-        <a name="M000002"></a>
+      <div id="method-M000112" class="method-detail">
+        <a name="M000112"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000002.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000002.html');return false;">
-          <span class="method-name">add_career</span><span class="method-args">(character, career, terms)</span>
+          <a href="CharacterTools.src/M000112.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000112.html');return false;">
+          <span class="method-name">add_career</span><span class="method-args">(char)</span>
           </a>
         </div>
       
@@ -132,64 +158,189 @@ Adds a career and modifies the age.
         </div>
       </div>
 
-      <div id="method-M000003" class="method-detail">
-        <a name="M000003"></a>
+      <div id="method-M000107" class="method-detail">
+        <a name="M000107"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000003.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000003.html');return false;">
+          <a href="CharacterTools.src/M000107.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000107.html');return false;">
+          <span class="method-name">first_name</span><span class="method-args">(gender=&quot;Male&quot;)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Pulls a first <a href="CharacterTools.html#M000109">name</a> from the
+database, based on <a href="CharacterTools.html#M000106">gender</a>. Gender
+required but defaults to male. Requires sqlite3 functionality and the
+database file.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000106" class="method-detail">
+        <a name="M000106"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000106.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000106.html');return false;">
+          <span class="method-name">gender</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns <a href="CharacterTools.html#M000106">gender</a> in lowercase,
+&quot;male&quot; or &quot;female&quot;. Even odds.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000120" class="method-detail">
+        <a name="M000120"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000120.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000120.html');return false;">
+          <span class="method-name">hair</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000113" class="method-detail">
+        <a name="M000113"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000113.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000113.html');return false;">
           <span class="method-name">hash_character</span><span class="method-args">(character)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Pull Character data into a hash.
+Pull <a href="Character.html">Character</a> data into a hash.
 </p>
         </div>
       </div>
 
-      <div id="method-M000001" class="method-detail">
-        <a name="M000001"></a>
+      <div id="method-M000110" class="method-detail">
+        <a name="M000110"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000001.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000001.html');return false;">
+          <a href="CharacterTools.src/M000110.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000110.html');return false;">
+          <span class="method-name">increase_skill</span><span class="method-args">(character, skill, level = 1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Increase a skill
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000103" class="method-detail">
+        <a name="M000103"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000103.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000103.html');return false;">
           <span class="method-name">init</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Create a Character, with UPP, name, and gender.
+Create a <a href="Character.html">Character</a>, with UPP, <a
+href="CharacterTools.html#M000109">name</a>, and <a
+href="CharacterTools.html#M000106">gender</a>.
 </p>
         </div>
       </div>
 
-      <div id="method-M000004" class="method-detail">
-        <a name="M000004"></a>
+      <div id="method-M000108" class="method-detail">
+        <a name="M000108"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000004.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000004.html');return false;">
+          <a href="CharacterTools.src/M000108.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000108.html');return false;">
+          <span class="method-name">last_name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Pulls a last <a href="CharacterTools.html#M000109">name</a> from the
+database. In the future based on culture. Requires sqlite3 functionality
+and the database file.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000111" class="method-detail">
+        <a name="M000111"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000111.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000111.html');return false;">
+          <span class="method-name">modify_stat</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Modify a stat.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000109" class="method-detail">
+        <a name="M000109"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000109.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000109.html');return false;">
+          <span class="method-name">name</span><span class="method-args">(gender)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Needs <a href="CharacterTools.html#M000106">gender</a>, produces first and
+last <a href="CharacterTools.html#M000109">name</a> as a single string.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000114" class="method-detail">
+        <a name="M000114"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000114.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000114.html');return false;">
           <span class="method-name">save_character</span><span class="method-args">(character, file, format=json)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Save the Character data. Still not sure on this one. It works for the
-moment.
+Save the <a href="Character.html">Character</a> data. Still not sure on
+this one. It works for the moment.
 </p>
         </div>
       </div>
 
-      <div id="method-M000005" class="method-detail">
-        <a name="M000005"></a>
+      <div id="method-M000115" class="method-detail">
+        <a name="M000115"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000005.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000005.html');return false;">
+          <a href="CharacterTools.src/M000115.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000115.html');return false;">
           <span class="method-name">show_character_file</span><span class="method-args">(file, format=json)</span>
           </a>
         </div>
@@ -201,37 +352,114 @@ Prints the character file in Pretty JSON.
         </div>
       </div>
 
-      <div id="method-M000006" class="method-detail">
-        <a name="M000006"></a>
+      <div id="method-M000117" class="method-detail">
+        <a name="M000117"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000006.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000006.html');return false;">
-          <span class="method-name">show_characters</span><span class="method-args">(file, format=json, mode='txt')</span>
+          <a href="CharacterTools.src/M000117.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000117.html');return false;">
+          <span class="method-name">show_characters</span><span class="method-args">(file, format=json, mode=&quot;txt&quot;)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Prints the character in some specific format. Or &#8216;txt&#8217; if
+Prints the character in some specific format. Or &quot;txt&quot; if
 unspecified.
 </p>
         </div>
       </div>
 
-      <div id="method-M000007" class="method-detail">
-        <a name="M000007"></a>
+      <div id="method-M000116" class="method-detail">
+        <a name="M000116"></a>
 
         <div class="method-heading">
-          <a href="CharacterTools.src/M000007.html" target="Code" class="method-signature"
-            onclick="popupCode('CharacterTools.src/M000007.html');return false;">
-          <span class="method-name">stat_modifier</span><span class="method-args">(options)</span>
+          <a href="CharacterTools.src/M000116.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000116.html');return false;">
+          <span class="method-name">show_one_character</span><span class="method-args">(character, mode = &quot;txt&quot;)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000121" class="method-detail">
+        <a name="M000121"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000121.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000121.html');return false;">
+          <span class="method-name">skin</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000104" class="method-detail">
+        <a name="M000104"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000104.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000104.html');return false;">
+          <span class="method-name">social_status</span><span class="method-args">(character)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Provides the modifier based on a high stat.
+Return general social status based on Soc.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000119" class="method-detail">
+        <a name="M000119"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000119.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000119.html');return false;">
+          <span class="method-name">stat_modifier</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000118" class="method-detail">
+        <a name="M000118"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000118.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000118.html');return false;">
+          <span class="method-name">title</span><span class="method-args">(character)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets and Returns <a href="CharacterTools.html#M000118">title</a> if <a
+href="Character.html">Character</a> is a noble.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000105" class="method-detail">
+        <a name="M000105"></a>
+
+        <div class="method-heading">
+          <a href="CharacterTools.src/M000105.html" target="Code" class="method-signature"
+            onclick="popupCode('CharacterTools.src/M000105.html');return false;">
+          <span class="method-name">upp</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides UPP as a 6 Hexidecimal character string.
 </p>
         </div>
       </div>

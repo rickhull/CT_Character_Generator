@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>rank (Marine)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/Marine.rb, line 87</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rank</span>(<span class="ruby-identifier">char</span>)
+    <span class="ruby-identifier">officers</span> = <span class="ruby-node">%w[ LT CPT FC LTC COL BG ]</span>
+    <span class="ruby-identifier">enlisted</span> = <span class="ruby-node">%w[ PVT LCP CPL LSGT SGT LDSG 1SGT GSGT SMSG ]</span>
+    <span class="ruby-identifier">commission</span>   = <span class="ruby-value">9</span>
+    <span class="ruby-identifier">commission_roll</span>  = <span class="ruby-constant">Traveller</span>.<span class="ruby-identifier">roll_dice</span>(<span class="ruby-value">6</span>,<span class="ruby-value">2</span>,<span class="ruby-value">1</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">char</span>[<span class="ruby-value str">'terms'</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">commission</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">commission_roll</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">char</span>[<span class="ruby-value str">'character'</span>].<span class="ruby-identifier">rank</span> = <span class="ruby-identifier">officers</span>[<span class="ruby-identifier">commission_roll</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>]
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">char</span>[<span class="ruby-value str">'character'</span>].<span class="ruby-identifier">rank</span> = <span class="ruby-identifier">enlisted</span>[<span class="ruby-identifier">char</span>[<span class="ruby-value str">'terms'</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">2</span>)]
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

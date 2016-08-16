@@ -92,20 +92,10 @@ use. Need a better license.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000010">add_skill</a>&nbsp;&nbsp;
-      <a href="#M000004">first_name</a>&nbsp;&nbsp;
-      <a href="#M000003">gender</a>&nbsp;&nbsp;
-      <a href="#M000005">last_name</a>&nbsp;&nbsp;
-      <a href="#M000009">modify_stat</a>&nbsp;&nbsp;
-      <a href="#M000006">name</a>&nbsp;&nbsp;
-      <a href="#M000013">noble</a>&nbsp;&nbsp;
-      <a href="#M000012">noble?</a>&nbsp;&nbsp;
-      <a href="#M000001">roll_dice</a>&nbsp;&nbsp;
-      <a href="#M000007">roll_upp</a>&nbsp;&nbsp;
-      <a href="#M000011">set_stat</a>&nbsp;&nbsp;
-      <a href="#M000002">upp</a>&nbsp;&nbsp;
-      <a href="#M000008">valid_json?</a>&nbsp;&nbsp;
-      <a href="#M000014">write</a>&nbsp;&nbsp;
+      <a href="#M000125">gender</a>&nbsp;&nbsp;
+      <a href="#M000123">roll_dice</a>&nbsp;&nbsp;
+      <a href="#M000124">upp</a>&nbsp;&nbsp;
+      <a href="#M000126">valid_json?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -127,156 +117,30 @@ use. Need a better license.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000010" class="method-detail">
-        <a name="M000010"></a>
+      <div id="method-M000125" class="method-detail">
+        <a name="M000125"></a>
 
         <div class="method-heading">
-          <a href="Traveller.src/M000010.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000010.html');return false;">
-          <span class="method-name">add_skill</span><span class="method-args">(skills, skill, level=1)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Add a skill to the skills hash. <em>Need to re-work skills per
-Martin&#8216;s Hash.new(0) note.</em>
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000004" class="method-detail">
-        <a name="M000004"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000004.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000004.html');return false;">
-          <span class="method-name">first_name</span><span class="method-args">(gender='Male')</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Pulls a first <a href="Traveller.html#M000006">name</a> from the database,
-based on <a href="Traveller.html#M000003">gender</a>. Gender required but
-defaults to male. Requires sqlite3 functionality and the database file.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000003" class="method-detail">
-        <a name="M000003"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000003.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000003.html');return false;">
+          <a href="Traveller.src/M000125.html" target="Code" class="method-signature"
+            onclick="popupCode('Traveller.src/M000125.html');return false;">
           <span class="method-name">gender</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Returns <a href="Traveller.html#M000003">gender</a> in lowercase,
+Returns <a href="Traveller.html#M000125">gender</a> in lowercase,
 &quot;male&quot; or &quot;female&quot;. Even odds.
 </p>
         </div>
       </div>
 
-      <div id="method-M000005" class="method-detail">
-        <a name="M000005"></a>
+      <div id="method-M000123" class="method-detail">
+        <a name="M000123"></a>
 
         <div class="method-heading">
-          <a href="Traveller.src/M000005.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000005.html');return false;">
-          <span class="method-name">last_name</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Pulls a last <a href="Traveller.html#M000006">name</a> from the database.
-In the future based on culture. Requires sqlite3 functionality and the
-database file.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000009" class="method-detail">
-        <a name="M000009"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000009.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000009.html');return false;">
-          <span class="method-name">modify_stat</span><span class="method-args">(upp, index, difference)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Adjusts stat in UPP, needs UPP, stat index, and change difference.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000006" class="method-detail">
-        <a name="M000006"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000006.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000006.html');return false;">
-          <span class="method-name">name</span><span class="method-args">(gender)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Needs <a href="Traveller.html#M000003">gender</a>, produces first and last
-<a href="Traveller.html#M000006">name</a> as a single string.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000013" class="method-detail">
-        <a name="M000013"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000013.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000013.html');return false;">
-          <span class="method-name">noble</span><span class="method-args">(gender, upp)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Returns title if Character is a <a href="Traveller.html#M000013">noble</a>.
-Needs <a href="Traveller.html#M000003">gender</a> and UPP.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000012" class="method-detail">
-        <a name="M000012"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000012.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000012.html');return false;">
-          <span class="method-name">noble?</span><span class="method-args">(upp)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Return true if UPP is a Noble.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000001" class="method-detail">
-        <a name="M000001"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000001.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000001.html');return false;">
+          <a href="Traveller.src/M000123.html" target="Code" class="method-signature"
+            onclick="popupCode('Traveller.src/M000123.html');return false;">
           <span class="method-name">roll_dice</span><span class="method-args">(dice_type, dice_number, average_of = 1)</span>
           </a>
         </div>
@@ -288,46 +152,12 @@ Generic dice roller.
         </div>
       </div>
 
-      <div id="method-M000007" class="method-detail">
-        <a name="M000007"></a>
+      <div id="method-M000124" class="method-detail">
+        <a name="M000124"></a>
 
         <div class="method-heading">
-          <a href="Traveller.src/M000007.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000007.html');return false;">
-          <span class="method-name">roll_upp</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Same as Travller.upp, Phase out.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000011" class="method-detail">
-        <a name="M000011"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000011.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000011.html');return false;">
-          <span class="method-name">set_stat</span><span class="method-args">(upp, index, number)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Set a stat to a specific value.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000002" class="method-detail">
-        <a name="M000002"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000002.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000002.html');return false;">
+          <a href="Traveller.src/M000124.html" target="Code" class="method-signature"
+            onclick="popupCode('Traveller.src/M000124.html');return false;">
           <span class="method-name">upp</span><span class="method-args">()</span>
           </a>
         </div>
@@ -339,12 +169,12 @@ Provides UPP as a 6 Hexidecimal character string.
         </div>
       </div>
 
-      <div id="method-M000008" class="method-detail">
-        <a name="M000008"></a>
+      <div id="method-M000126" class="method-detail">
+        <a name="M000126"></a>
 
         <div class="method-heading">
-          <a href="Traveller.src/M000008.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000008.html');return false;">
+          <a href="Traveller.src/M000126.html" target="Code" class="method-signature"
+            onclick="popupCode('Traveller.src/M000126.html');return false;">
           <span class="method-name">valid_json?</span><span class="method-args">(json)</span>
           </a>
         </div>
@@ -352,23 +182,6 @@ Provides UPP as a 6 Hexidecimal character string.
         <div class="method-description">
           <p>
 Tests if the input is valid JSON, returns JSON parsed data and true.
-</p>
-        </div>
-      </div>
-
-      <div id="method-M000014" class="method-detail">
-        <a name="M000014"></a>
-
-        <div class="method-heading">
-          <a href="Traveller.src/M000014.html" target="Code" class="method-signature"
-            onclick="popupCode('Traveller.src/M000014.html');return false;">
-          <span class="method-name">write</span><span class="method-args">(c, mode)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-this needs to all be moved to Presenter, or something else.
 </p>
         </div>
       </div>

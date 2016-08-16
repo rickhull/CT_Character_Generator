@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>hair (CharacterTools)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/CharacterTools.rb, line 242</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">hair</span>
+    <span class="ruby-identifier">tone</span> = [<span class="ruby-value str">&quot;light&quot;</span>, <span class="ruby-value str">&quot;medium&quot;</span>, <span class="ruby-value str">&quot;full&quot;</span> ]
+    <span class="ruby-identifier">body</span> = [<span class="ruby-value str">&quot;straight&quot;</span>, <span class="ruby-value str">&quot;wavey&quot;</span>, <span class="ruby-value str">&quot;curly&quot;</span>, <span class="ruby-value str">&quot;frizzed&quot;</span>]
+    <span class="ruby-identifier">color</span> = [<span class="ruby-value str">&quot;blond&quot;</span>, 
+        <span class="ruby-value str">&quot;auburn&quot;</span>,
+        <span class="ruby-value str">&quot;brown&quot;</span>,
+        <span class="ruby-value str">&quot;chestnut&quot;</span>,
+        <span class="ruby-value str">&quot;red&quot;</span>,
+        <span class="ruby-value str">&quot;orange&quot;</span>,
+        <span class="ruby-value str">&quot;green&quot;</span>,
+        <span class="ruby-value str">&quot;blue&quot;</span>,
+        <span class="ruby-value str">&quot;black&quot;</span>,
+        <span class="ruby-value str">&quot;white&quot;</span>,
+        <span class="ruby-value str">&quot;gold&quot;</span>,
+        <span class="ruby-value str">&quot;silver&quot;</span>,
+        <span class="ruby-value str">&quot;yellow&quot;</span>,
+        <span class="ruby-value str">&quot;gray&quot;</span>
+      ]
+    <span class="ruby-identifier">length</span>  = [<span class="ruby-value str">&quot;close cropped&quot;</span>,
+        <span class="ruby-value str">&quot;short&quot;</span>,
+        <span class="ruby-value str">&quot;medium length&quot;</span>,
+        <span class="ruby-value str">&quot;shoulder length&quot;</span>,
+        <span class="ruby-value str">&quot;very long&quot;</span>,
+        <span class="ruby-value str">&quot;waist length&quot;</span>
+      ]
+
+    <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tone</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">tone</span>.<span class="ruby-identifier">length</span>)]
+    <span class="ruby-identifier">b</span> = <span class="ruby-identifier">body</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">body</span>.<span class="ruby-identifier">length</span>)].<span class="ruby-identifier">capitalize</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-identifier">color</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">color</span>.<span class="ruby-identifier">length</span>)]
+    <span class="ruby-identifier">l</span> = <span class="ruby-identifier">length</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">length</span>.<span class="ruby-identifier">length</span>)]
+  
+    <span class="ruby-identifier">hair</span> = <span class="ruby-node">&quot;#{b} #{t} #{c} #{l}&quot;</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hair</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

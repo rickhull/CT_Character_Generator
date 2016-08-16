@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Navy)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/Navy.rb, line 32</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">char</span>)
+    <span class="ruby-ivar">@skill_options</span> = [ 
+      <span class="ruby-value str">&quot;Brawling&quot;</span>,
+      <span class="ruby-value str">'+1 Str'</span>,
+      <span class="ruby-value str">'Carouse'</span>, 
+      <span class="ruby-value str">&quot;Gambling&quot;</span>,
+      <span class="ruby-value str">'+1 End'</span>, 
+      <span class="ruby-value str">'+1 Dex'</span>,
+      <span class="ruby-value str">'+1 End'</span>, 
+      <span class="ruby-value str">'+1 Edu'</span>, 
+      <span class="ruby-value str">'Carouse'</span>, 
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">&quot;Gambling&quot;</span>,
+      <span class="ruby-value str">'+1 Dex'</span>,
+      <span class="ruby-value str">'Blade'</span>, 
+      <span class="ruby-value str">'Brawling'</span>, 
+      <span class="ruby-value str">'GunCbt'</span>, 
+      <span class="ruby-value str">'Blade'</span>, 
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">'ShipsBoat'</span>, 
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">&quot;ZeroG&quot;</span>,
+      <span class="ruby-value str">&quot;Commo&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">&quot;JoT&quot;</span>,
+      <span class="ruby-value str">'Carouse'</span>, 
+      <span class="ruby-value str">'Drive(any)'</span>,
+      <span class="ruby-value str">&quot;FwdObs&quot;</span>,
+      <span class="ruby-value str">&quot;Survival&quot;</span>,
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">&quot;BattleDress&quot;</span>, 
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">'GunCbt'</span>, 
+      <span class="ruby-value str">'Blade'</span>, 
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">'Leader'</span>,
+      <span class="ruby-value str">'Medic'</span>,
+      <span class="ruby-value str">&quot;ZeroG&quot;</span>,
+      <span class="ruby-value str">'+1 Edu'</span>, 
+      <span class="ruby-value str">&quot;Instruction&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">'Drive(any)'</span>, 
+      <span class="ruby-value str">'+1 End'</span>, 
+      <span class="ruby-value str">&quot;GunCbt&quot;</span>,
+      <span class="ruby-value str">&quot;ShipsBoat&quot;</span>,
+      <span class="ruby-value str">'Bribery'</span>, 
+      <span class="ruby-value str">'+1 Dex'</span>,
+      <span class="ruby-value str">&quot;+1 Soc&quot;</span>,
+      <span class="ruby-value str">'ShipsBoat'</span>, 
+      <span class="ruby-value str">'Drive(any)'</span>, 
+      <span class="ruby-value str">'Navigation'</span>, 
+      <span class="ruby-value str">'Engineering'</span>, 
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">&quot;Electronics&quot;</span>,
+      <span class="ruby-value str">&quot;GunCbt&quot;</span>,
+      <span class="ruby-value str">&quot;Navigation&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Liaison&quot;</span>,
+      <span class="ruby-value str">&quot;ZeroG&quot;</span>,
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">&quot;GunCbt&quot;</span>,
+      <span class="ruby-value str">&quot;Commo&quot;</span>,
+      <span class="ruby-value str">&quot;ShipsBoat&quot;</span>,
+      <span class="ruby-value str">&quot;Navigation&quot;</span>,
+      <span class="ruby-value str">&quot;Pilot&quot;</span>,
+      <span class="ruby-value str">&quot;FwdObs&quot;</span>,
+      <span class="ruby-value str">&quot;GunCbt&quot;</span>,
+      <span class="ruby-value str">&quot;Commo&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Gunnery&quot;</span>,
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">&quot;Electronic&quot;</span>,
+      <span class="ruby-value str">&quot;Eng&quot;</span>,
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">&quot;VaccSuit&quot;</span>,
+      <span class="ruby-value str">&quot;Eng&quot;</span>,
+      <span class="ruby-value str">&quot;Eng&quot;</span>,
+      <span class="ruby-value str">&quot;Eng&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">&quot;JoT&quot;</span>,
+      <span class="ruby-value str">&quot;Electronic&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">&quot;Medical&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Medical&quot;</span>,
+      <span class="ruby-value str">&quot;Medical&quot;</span>,
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">&quot;Mechanical&quot;</span>,
+      <span class="ruby-value str">&quot;Electronic&quot;</span>,
+      <span class="ruby-value str">&quot;Electronic&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Gravitics&quot;</span>,
+      <span class="ruby-value str">&quot;JoT&quot;</span>,
+      <span class="ruby-value str">'Leader'</span>
+      ]
+    <span class="ruby-ivar">@advanced_skill_options</span> = [
+      <span class="ruby-value str">'Medic'</span>,
+      <span class="ruby-value str">'Computer'</span>,
+      <span class="ruby-value str">'Admin'</span>,
+      <span class="ruby-value str">'Liaison'</span>,
+      <span class="ruby-value str">'Leader'</span>,
+      <span class="ruby-value str">&quot;Pilot&quot;</span>,
+      <span class="ruby-value str">&quot;ShipTactics&quot;</span>,
+      <span class="ruby-value str">&quot;Leader&quot;</span>,
+      <span class="ruby-value str">&quot;ShipTactics&quot;</span>,
+      <span class="ruby-value str">&quot;Computer&quot;</span>,
+      <span class="ruby-value str">&quot;Electronics&quot;</span>,
+      <span class="ruby-value str">&quot;GunCbt&quot;</span>,
+      <span class="ruby-value str">&quot;Admin&quot;</span>,
+      <span class="ruby-value str">&quot;Bribery&quot;</span>,
+      <span class="ruby-value str">&quot;ShipTactics&quot;</span>,
+      <span class="ruby-value str">&quot;FleetTactics&quot;</span>,
+      <span class="ruby-value str">&quot;+1 Int&quot;</span>,
+      <span class="ruby-value str">&quot;ShipTactics&quot;</span>,
+      <span class="ruby-value str">&quot;FleetTactics&quot;</span>,
+      <span class="ruby-value str">'JoT'</span>
+      ]
+
+    <span class="ruby-ivar">@muster_out</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@muster_out</span>[<span class="ruby-value str">'cash'</span>] = [<span class="ruby-value">1000</span>, <span class="ruby-value">5000</span>, <span class="ruby-value">5000</span>, <span class="ruby-value">10000</span>, <span class="ruby-value">20000</span>, <span class="ruby-value">50000</span>, <span class="ruby-value">50000</span>]
+    <span class="ruby-ivar">@muster_out</span>[<span class="ruby-value str">'benefits'</span>] = [
+      <span class="ruby-value str">'LowPsg'</span>,
+      <span class="ruby-value str">&quot;+1 Int&quot;</span>,
+      <span class="ruby-value str">&quot;+1 Edu&quot;</span>,
+      <span class="ruby-value str">&quot;Blade&quot;</span>,
+      <span class="ruby-value str">'TAS'</span>,
+      <span class="ruby-value str">'HighPsg'</span>,
+      <span class="ruby-value str">'+2 Soc'</span>
+    ] 
+    <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">char</span>) 
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

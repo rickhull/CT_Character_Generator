@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>edit_character (bin/edit_character.rb)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File bin/edit_character.rb, line 107</span>
+<span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edit_character</span>(<span class="ruby-identifier">character</span>)
+  <span class="ruby-identifier">key</span> = <span class="ruby-value str">''</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Current keys are: &quot;</span>
+  <span class="ruby-identifier">character</span>.<span class="ruby-identifier">each_key</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{k} &quot;</span>
+  <span class="ruby-keyword kw">end</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'q'</span>
+      <span class="ruby-identifier">print_character</span>(<span class="ruby-identifier">character</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Enter 'q' to quit&quot;</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Which key? &quot;</span>
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp!</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">character</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'q'</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">character</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-identifier">edit_string</span>(<span class="ruby-identifier">character</span>, <span class="ruby-identifier">key</span>)
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">character</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Hash</span>
+        <span class="ruby-identifier">edit_hash</span>(<span class="ruby-identifier">character</span>, <span class="ruby-identifier">key</span>)
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">character</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Array</span>
+        <span class="ruby-identifier">edit_array</span>(<span class="ruby-identifier">character</span>, <span class="ruby-identifier">key</span>)
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">add_element</span>(<span class="ruby-identifier">character</span>, <span class="ruby-identifier">key</span>)
+      <span class="ruby-keyword kw">end</span>
+      
+  <span class="ruby-keyword kw">end</span>
+  <span class="ruby-identifier">print_character</span>(<span class="ruby-identifier">character</span>)
+  <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">character</span>
+<span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
