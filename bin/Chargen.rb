@@ -12,7 +12,7 @@ require "Presenter"
 # Default values for options.
 career = ""
 terms  = 0
-available_careers = ["Army", "Citizen", "Marine", "Merchant", "Navy", "Noble", "Other"]
+available_careers = ["Army", "Guide", "Citizen", "Marine", "Merchant", "Navy", "Noble", "Other"]
 
 # Build the base character.
 character = CharacterTools.init
@@ -51,6 +51,9 @@ case career
   when "Army" then
     require "Army"
     Army.new(char)
+  when "Guide" then
+    require "Guide"
+    Guide.new(char)
   when "Marine" then
     require "Marine"
     Marine.new(char)
