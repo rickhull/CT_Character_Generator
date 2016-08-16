@@ -1,14 +1,14 @@
 *.gem
 *.rbc
 /.config
-/coverage/
+#/coverage/
 /InstalledFiles
 /pkg/
 /spec/reports/
 /test/tmp/
 /test/version_tmp/
 /tmp/
-output/**
+/output/
 /data/new_characters.json
 
 ## Specific to RubyMotion:
