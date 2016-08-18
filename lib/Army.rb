@@ -134,7 +134,7 @@ class Army < Career
 
   def rank(char)
     officers = %w[ 2LT 1LT CPT MAJ LTC COL BG MG LG GEN ]
-    enlisted = %w[ PVT LCP CPL LSGT SGT LDSG 1SGT GSGT SMSG ]
+    enlisted = %w[ PVT LCP CPL LSGT SGT GSGT LDSGT 1SGT SGTM ]
     commission   = 5
     commission_roll  = Traveller.roll_dice(6,2,1) + char['terms'] - commission
     if commission_roll >= 0
