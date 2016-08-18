@@ -9,6 +9,7 @@ module CharacterTools
   require "Traveller"
   require "Character"
   require "Presenter"
+  require "Name"
   require "json"
   require "pp"
 
@@ -19,7 +20,9 @@ module CharacterTools
     character          = Character.new
     character.upp      = self.upp
     character.gender   = self.gender.capitalize
-    character.name     = self.name(character.gender)
+    character.species = "humaniti"
+    options           = { "gender" => character.gender, "species" => character.species }
+    character.name     = Name.new(options).to_s
     character.age      = 18
     character.hair     = self.hair
     character.skin     = self.skin
@@ -57,7 +60,8 @@ module CharacterTools
       return "female"
     end
   end
-
+  
+=begin
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
@@ -102,6 +106,7 @@ module CharacterTools
     last_name   = self.last_name
     return "#{first_name} #{last_name}"
   end
+=end
 
   # Increase a skill
   def self.increase_skill(character, skill, level = 1)
