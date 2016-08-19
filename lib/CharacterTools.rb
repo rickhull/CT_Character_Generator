@@ -61,53 +61,6 @@ module CharacterTools
     end
   end
   
-=begin
-  # Pulls a first name from the database, based on gender. 
-  # Gender required but defaults to male.
-  # Requires sqlite3 functionality and the database file.
-  def self.first_name(gender="Male")
-    require "sqlite3"
-    gender = gender.downcase
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
-      first_name_result = first_name_query.execute
-      first_name = first_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      first_name_query.close if first_name_query
-      db.close if db
-    end
-    return first_name.to_s
-  end
-
-  # Pulls a last name from the database. In the future based on culture. 
-  # Requires sqlite3 functionality and the database file.
-  def self.last_name
-    require "sqlite3"
-    begin 
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
-      last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
-      last_name_result = last_name_query.execute
-      last_name = last_name_result.first
-    rescue SQLite3::Exception => e
-      abort(e)
-    ensure
-      last_name_query.close if last_name_query
-      db.close if db
-    end
-    return last_name.to_s
-  end
-
-  # Needs gender, produces first and last name as a single string.
-  def self.name(gender)
-    first_name  = self.first_name(gender)
-    last_name   = self.last_name
-    return "#{first_name} #{last_name}"
-  end
-=end
-
   # Increase a skill
   def self.increase_skill(character, skill, level = 1)
     if skill.split.length > 1
