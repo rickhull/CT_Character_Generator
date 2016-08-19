@@ -1,0 +1,31 @@
+Hey, I appreciate you looking at my code. Feel free to suggest ways
+to improve.
+
+Sample run from the base directory:
+
+  ruby bin/Chargen.rb -c Navy -t 4
+
+  LT Janna Merle Female Age: 34 477685 Navy: 4 
+  Curly medium blond shoulder length hair translucent skin 
+  Electronic-1 Blade-1 Computer-1 GunCbt-1 Navigation-1 
+  Cash: 70000 TAS (1) 
+
+Tests:
+
+  ruby test/ts_CT_Character_Generator.rb 
+  
+  Loaded suite test/ts_CT_Character_Generator
+  Started
+  ....................................................................
+  Finished in 0.565284 seconds.
+
+  68 tests, 135 assertions, 0 failures, 0 errors
+
+
+The code currently requires SQLite and JSON. I'm moving to make those 
+optional.
+
+A high level code overview is in docs/class_structure_version_2.txt
+
+I'm currently working on better and cleaner Objects and OOP. 
+
