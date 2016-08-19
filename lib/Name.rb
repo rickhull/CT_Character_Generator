@@ -11,7 +11,6 @@ class Name
     @gender       ||= options["gender"]
     @species      ||= options["species"]
     @name         = name(@gender, @species)
-    #return        @name
   end
 
   # Pulls a first name from the database, based on gender. 
@@ -49,6 +48,7 @@ class Name
       name = "Fred"
     end
   end
+
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
   def last_name(species)
