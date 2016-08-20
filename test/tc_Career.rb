@@ -2,7 +2,8 @@
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-require 'Career'
+require "Career"
+require "test/unit"
 
 class TestCareer < Test::Unit::TestCase
 
