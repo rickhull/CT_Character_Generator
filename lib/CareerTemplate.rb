@@ -46,7 +46,7 @@ class Mycareer < Career
       "Brawling", 
       "GunCbt", 
       "Blade", 
-      "Drive(any)",
+      "Vehicle",
       "Bribery", 
       "Pilot", 
       "ShipsBoat", 

@@ -129,7 +129,7 @@ class Merchant < Career
       "+1 Str",
       "+1 End", 
       "+1 Int", 
-      "Drive(any)",
+      "Vehicle",
       "Bribery", 
       "Pilot", 
       "ShipsBoat", 

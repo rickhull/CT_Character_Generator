@@ -16,7 +16,7 @@ class Other < Career
       "-1 Soc", 
       "Brawling", 
       "Blade", 
-      "Drive(any)",
+      "Vehicle",
       "Gambling", 
       "Brawling", 
       "Bribery", 
