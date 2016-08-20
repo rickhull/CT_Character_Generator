@@ -4,6 +4,7 @@ $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 require "Marine"
 require "CharacterTools"
 require "test/unit"
+require "pp"
 
 class TestMarine < Test::Unit::TestCase
 
@@ -18,8 +19,8 @@ class TestMarine < Test::Unit::TestCase
   end
 
   def test_rank
-    ranks = %w[ PVT LCP CPL LSGT SGT LDSG 1SGT GSGT SMSG LT CPT FC LTC COL BG]
-    assert(ranks.include?(@char["character"].rank))
+   ranks = %w[ PVT LCP CPL LSGT SGT LDSG 1SGT GSGT SMSG LT CPT FC LTC COL BG]
+   assert(ranks.include?(@char["character"].rank))
   end
 
   def test_career
@@ -52,5 +53,4 @@ class TestMarine < Test::Unit::TestCase
     max_benefits = (@char["terms"] / 2) + 1
     assert(@char["character"].stuff["benefits"].count <= max_benefits)
   end
-
 end

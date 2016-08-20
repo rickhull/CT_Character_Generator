@@ -2,6 +2,7 @@ $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "CharacterTools"
 require "test/unit"
+require "pp"
 
 class TestCharacterTools < Test::Unit::TestCase
 
@@ -86,44 +87,68 @@ class TestCharacterTools < Test::Unit::TestCase
   end
 
   def test_increase_skill
+    options               = Hash.new(0)
+    options["character"]  = @character
     assert(@character.skills.length == 0)
-    CharacterTools.increase_skill(@character, "GunCbt", 2)
+    options["skill"]      = "GunCbt"
+    options["level"]      = 2
+    CharacterTools.increase_skill(options)
     assert(@character.skills.has_key?("GunCbt"))
     assert(@character.skills["GunCbt"] == 2)
-    CharacterTools.increase_skill(@character, "GunCbt", 2)
+    CharacterTools.increase_skill(options)
     assert(@character.skills["GunCbt"] == 4)
     @character.upp = "777777"
-    CharacterTools.increase_skill(@character, "+1 Str")
-    CharacterTools.increase_skill(@character, "+1 Dex")
-    CharacterTools.increase_skill(@character, "+1 End")
-    CharacterTools.increase_skill(@character, "+1 Int")
-    CharacterTools.increase_skill(@character, "+1 Edu")
-    CharacterTools.increase_skill(@character, "+1 Soc")
+    options["skill"]      = "+1 Str"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+1 Dex"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+1 End"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+1 Int"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+1 Edu"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+1 Soc"
+    CharacterTools.increase_skill(options)
     assert(@character.upp == "888888")
+
     @character.upp = "777777"
-    CharacterTools.increase_skill(@character, "+10 Str")
-    CharacterTools.increase_skill(@character, "+10 Dex")
-    CharacterTools.increase_skill(@character, "+10 End")
-    CharacterTools.increase_skill(@character, "+10 Int")
-    CharacterTools.increase_skill(@character, "+10 Edu")
-    CharacterTools.increase_skill(@character, "+10 Soc")
+    options["skill"]      = "+10 Str"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+10 Dex"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+10 End"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+10 Int"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+10 Edu"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "+10 Soc"
+    CharacterTools.increase_skill(options)
     assert(@character.upp == "FFFFFF")
+
     @character.upp = "777777"
-    CharacterTools.increase_skill(@character, "-10 Str")
-    CharacterTools.increase_skill(@character, "-10 Dex")
-    CharacterTools.increase_skill(@character, "-10 End")
-    CharacterTools.increase_skill(@character, "-10 Int")
-    CharacterTools.increase_skill(@character, "-10 Edu")
-    CharacterTools.increase_skill(@character, "-10 Soc")
+    options["skill"]      = "-10 Str"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "-10 Dex"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "-10 End"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "-10 Int"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "-10 Edu"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "-10 Soc"
+    CharacterTools.increase_skill(options)
     assert(@character.upp == "222222")
   end
 
   def test_modify_stat
     @character.upp        = "777777"
     options               = Hash.new(0)
-    options['character']  = @character
-    options['stat']       = "Int"
-    options['level']      = 2
+    options["character"]  = @character
+    options["stat"]       = "Int"
+    options["stat_level"]      = 2
     CharacterTools.modify_stat(options)
     assert(@character.upp == "777977")
   end

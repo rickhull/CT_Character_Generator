@@ -62,14 +62,20 @@ module CharacterTools
   end
   
   # Increase a skill
-  def self.increase_skill(character, skill, level = 1)
+  #def self.increase_skill(character, skill, level = 1)
+  def self.increase_skill(options)
+  # Assume an options hash is passed. 
+    character = options["character"]
+    skill     = options["skill"] 
+    level     = options.has_key?("level") ? options["level"] : 1
     if skill.split.length > 1
-      options               = Hash.new(0)
-      options["character"]  = character
-      options["level"]      = skill.split[0].to_i
+      #options               = Hash.new(0)
+      #options["character"]  = character
+      options["stat_level"] = skill.split[0].to_i
       options["stat"]       = skill.split[1]
       self.modify_stat(options)
     else
+
       if character.skills.has_key?(skill)
         character.skills[skill] += level 
       else
@@ -83,9 +89,9 @@ module CharacterTools
     character = options["character"]
     stat      = options["stat"]
     return    unless STAT_NAMES.include?(stat)
-    level     = options.has_key?("level") ? options["level"] : 1
+    stat_level     = options.has_key?("stat_level") ? options["stat_level"] : 1
     stat_index = STAT_NAMES.index(stat)
-    new_stat = character.upp[stat_index,1].to_i(16) + level
+    new_stat = character.upp[stat_index,1].to_i(16) + stat_level
     new_stat = [new_stat, 15].min
     new_stat = [new_stat, 2].max
     new_stat = new_stat.to_s(16).upcase

@@ -43,9 +43,21 @@ class Career
         CharacterTools.modify_stat(options)
       elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
         case benefit
-          when "Gun" then CharacterTools.increase_skill(character, "GunCbt")
-          when "Blade" then CharacterTools.increase_skill(character, "Blade")
-          when "Weapon" then CharacterTools.increase_skill(character, "Weapon")
+          when "Gun" 
+            options["character"]  = character
+            options["skill"]      = "GunCbt"
+            options["level"]      = 1
+            CharacterTools.increase_skill(options)
+          when "Blade"
+            options["character"]  = character
+            options["skill"]      = "Blade"
+            options["level"]      = 1
+            CharacterTools.increase_skill(options)
+          when "Weapon"
+            options["character"]  = character
+            options["skill"]      = "Weapon"
+            options["level"]      = 1
+            CharacterTools.increase_skill(options)
         end 
       elsif character.stuff["benefits"].has_key?(benefit)
         character.stuff["benefits"][benefit]  += 1
@@ -64,21 +76,25 @@ class Career
     char["skill_points"]    = 1 + terms
     char["skill_options"]   = Array.new
 
-    if char["character"].upp[4].chr.to_i(16) >= 8
+    if character.upp[4].chr.to_i(16) >= 8
       char["skill_options"] = @skill_options + @advanced_skill_options
     else
       char["skill_options"] = @skill_options
     end
     char["muster_out"]      = @muster_out
+    
     rank(char)
     first_term(char)
-
     # Keep @skill_points late as rank can add to it.
-    skill_points      = char["skill_points"]
-    skill_options     = char["skill_options"] 
+    skill_points          = char["skill_points"]
+    skill_options         = char["skill_options"] 
+    options               = Hash.new(0)
+    options["character"]  = character
     0.upto(skill_points) do
       new_skill = skill_options[rand(skill_options.count)]
-      CharacterTools.increase_skill(character, new_skill)
+      options["skill"]      = new_skill
+      options["level"]      = 1
+      CharacterTools.increase_skill(options)
     end 
 
     muster_out(char)

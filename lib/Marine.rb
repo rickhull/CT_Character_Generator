@@ -1,34 +1,3 @@
-# Template for new Careers. To create your own Career:
-
-# 1. Change Mycareer to your career name. One word, and Ruby 
-#     classes must begin with an uppercase Alpha character.
-#
-# 2. Change the skill_options array to use the list of skills
-#     that don"t require Edu 8+. Look at existing skill lists
-#     for the format. 
-#    You can duplicate entries if a career should have a higher
-#     instance of some skill. 
-#
-# 3. Change advanced_skill_options for skills requiring an Edu 8+
-#     to get in CharGen.
-#
-# 4. Change values in muster_out["cash"] array.
-#
-# 5. Change values in muster_out["benefits"] array.
-#
-# 6. Change the rank method if the career has ranks. 
-#     Add a commission roll as needed.
-#     Add the names of the ranks. 
-#     Recommended, but not required, to use terms as roll modifier.
-#
-# 7. Add the following stanza to the case statement in Chargen.rb:
-#     when "Mycareer" then
-#       require "Mycareer"
-#       Mycareer.new(char)
-#
-# 8. Add "Mycareer" to the "available_careers" array in Chargen.rb.
-#
-
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "CharacterTools"
@@ -80,8 +49,13 @@ class Marine < Career
   end
   
   def first_term(char)
-    CharacterTools.increase_skill(char["character"], "Blade", 1)
-    CharacterTools.increase_skill(char["character"], "GunCbt", 1)
+    options               = Hash.new(0)
+    options["character"]  = char["character"]
+    options["level"]      = 1
+    options["skill"]      = "GunCbt"
+    CharacterTools.increase_skill(options)
+    options["skill"]      = "Blade"
+    CharacterTools.increase_skill(options)
   end
   
   def rank(char)
