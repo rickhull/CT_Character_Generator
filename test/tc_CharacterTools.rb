@@ -37,6 +37,13 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(@character.careers[career] == terms) 
   end
 
+  def test_plot
+    plot  = CharacterTools.plot
+    assert(plot.class == String)
+    assert(plot.length >=5)
+    puts plot 
+  end
+
   def test_add_second_career
     terms = 2
     career = "Scout"

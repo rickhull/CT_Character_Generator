@@ -60,7 +60,8 @@ module CharacterTools
       return "female"
     end
   end
-  
+ 
+   
   # Increase a skill
   #def self.increase_skill(character, skill, level = 1)
   def self.increase_skill(options)
@@ -254,6 +255,22 @@ module CharacterTools
       "orange"
     ]
     return skin_tone[rand(skin_tone.length)]
+  end
+
+  def self.plot
+    if File.exist?("../data/plots.txt")
+      plot_file   = File.open("../data/plots.txt", "r")
+      plots       = Array.new
+      plot_file.each do |line|
+        line.chomp!
+        if line !~ /#/ and line.length > 4
+          plots << line
+        end
+      end
+      return plots[rand(plots.length - 1)]
+    else
+      return "Rainbow bright"
+    end
   end
 
 end
