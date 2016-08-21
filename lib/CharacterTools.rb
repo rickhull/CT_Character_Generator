@@ -3,9 +3,9 @@
 
 module CharacterTools
 
-  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
-  $DATA_PATH = File.expand_path("../../data", __FILE__)
-
+#  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
+  $DATA_PATH  = File.expand_path("../../data", __FILE__)
+  DATADIR     = "../../data"
   require "Traveller"
   require "Character"
   require "Presenter"
@@ -258,8 +258,8 @@ module CharacterTools
   end
 
   def self.plot
-    if File.exist?("../data/plots.txt")
-      plot_file   = File.open("../data/plots.txt", "r")
+    if File.exist?("#{$DATA_PATH}/plots.txt")
+      plot_file   = File.open("#{$DATA_PATH}/plots.txt", "r")
       plots       = Array.new
       plot_file.each do |line|
         line.chomp!
@@ -273,4 +273,21 @@ module CharacterTools
     end
   end
 
+  def self.temprament
+    #if File.exist?("#{DATADIR}/tempraments.txt")
+    #  temprament_file   = File.open("#{DATADIR}/tempraments.txt", "r")
+    if File.exist?("#{$DATA_PATH}/tempraments.txt")
+      temprament_file   = File.open("#{$DATA_PATH}/tempraments.txt", "r")
+      tempraments       = Array.new
+      temprament_file.each do |line|
+        line.chomp!
+        if line !~ /#/ and line.length > 4
+          tempraments << line
+        end
+      end
+      return tempraments[rand(tempraments.length - 1)]
+    else
+      return "Raving Lunatic"
+    end 
+  end
 end

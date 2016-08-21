@@ -37,11 +37,16 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(@character.careers[career] == terms) 
   end
 
+  def test_temprament
+    temprament  = CharacterTools.temprament
+    assert(temprament.class == String)
+    assert(temprament.length >=5)
+  end
+
   def test_plot
     plot  = CharacterTools.plot
     assert(plot.class == String)
     assert(plot.length >=5)
-    puts plot 
   end
 
   def test_add_second_career
