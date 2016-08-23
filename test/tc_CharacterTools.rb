@@ -160,8 +160,30 @@ class TestCharacterTools < Test::Unit::TestCase
     options               = Hash.new(0)
     options["character"]  = @character
     options["stat"]       = "Int"
-    options["stat_level"]      = 2
+    options["stat_level"] = 2
     CharacterTools.modify_stat(options)
     assert(@character.upp == "777977")
   end
+
+  def test_modify_stat_failure_empty_upp
+    assert_raise(ArgumentError){
+    @character.upp        = ""
+    options               = Hash.new(0)
+    options["character"]  = @character
+    options["stat"]       = "Int"
+    options["stat_level"] = 2
+    CharacterTools.modify_stat(options)  
+    }
+  end  
+
+  def test_modify_stat_failure_non_hex_upp
+    assert_raise(TypeError){
+    @character.upp        = "1ZZZZZ"
+    options               = Hash.new(0)
+    options["character"]  = @character
+    options["stat"]       = "Int"
+    options["stat_level"] = 2
+    CharacterTools.modify_stat(options)  
+    }
+  end  
 end
