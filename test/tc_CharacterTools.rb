@@ -188,4 +188,14 @@ class TestCharacterTools < Test::Unit::TestCase
     }
   end  
 =end
+
+  def test_morale_method
+    morale    = CharacterTools.morale
+    assert(morale >= 1)
+    assert(morale <= 6) 
+  end
+
+  def test_morale_with_character
+  end
+   
 end

@@ -299,4 +299,18 @@ module CharacterTools
       return "Raving Lunatic"
     end 
   end
+
+  def self.morale(options = "")
+    morale   = Traveller.roll_dice(1,6,1)
+    if options.class == Hash and options["character"].careers.length > 0
+      high_morales    = ["Marine", "Army"]
+      medium_morales  = ["Navy", "Scout"]
+      options["character"].careers.each do |career, terms|
+        morale += (1 * terms)      if high_morales.include?(career)
+        morale += (0.5 * terms)    if high_morales.include?(career)
+      end 
+    end
+    return morale
+  end
+
 end
