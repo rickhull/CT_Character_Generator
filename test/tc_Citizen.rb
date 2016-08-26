@@ -2,8 +2,9 @@
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
-require 'Citizen'
-require 'CharacterTools'
+require "test/unit"
+require "CharacterTools"
+require "Citizen"
 
 class TestCitizen < Test::Unit::TestCase
 
@@ -48,7 +49,4 @@ class TestCitizen < Test::Unit::TestCase
     assert(@char['character'].stuff['benefits'].count <= max_benefits)
   end
 
-  #def test_char_hash
-  #  pp @char
-  #end
 end

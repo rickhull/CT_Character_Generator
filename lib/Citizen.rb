@@ -1,7 +1,5 @@
 # Class for the regular citizens. Takes a character, and optional number of terms.
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "CharacterTools"
 require "Traveller"
 require "Career"
@@ -9,25 +7,25 @@ require "Career"
 class Citizen < Career
   
   def initialize(char)
-  @skill_options = [ "+1 Str",
+  @skill_options = [ 
+    "+1 Str",
     "+1 Dex",
     "+1 Edu", 
     "+1 Int", 
     "Carouse", 
     "Brawling", 
-    "GunCbt", 
-    "Blade", 
-    "Hunting", 
-    "+1 Dex",
-    "Bribery", 
-    "Vehicle", 
-    "Pilot", 
-    "ShipsBoat", 
-    "Vehicle", 
-    "Navigation", 
-    "Engineering", 
-    "Leader",
-    "Athletics"
+    "Mechanical",
+    "Vehicle",  
+    "Streetwise",
+    "Bribery",
+    "Gambling",
+    "Blade",
+    "Steward",
+    "Electronics",
+    "Medical",
+    "Computer",
+    "Admin",
+    "+1 Soc"
     ]
   @advanced_skill_options = [
     "Medic",
@@ -35,6 +33,7 @@ class Citizen < Career
     "Admin",
     "Liaison",
     "Leader",
+    "Electronics",
     "JoT"
     ]
 
