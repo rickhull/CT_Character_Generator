@@ -33,8 +33,10 @@ class Career
     skill_stuff = ["Gun", "Blade", "Weapon"]
     until terms < 1 do
       terms -= 2
-      character.stuff["cash"] += muster_out["cash"][rand(muster_out["cash"].length)]
-      benefit = muster_out["benefits"][rand(muster_out["benefits"].length)]
+      cash_length     = muster_out["cash"].length - 1
+      benefits_length = muster_out["benefits"].length - 1
+      character.stuff["cash"] += muster_out["cash"][rand(cash_length)]
+      benefit = muster_out["benefits"][rand(benefits_length)]
       if benefit.match(/\+/)
         options               = Hash.new(0)
         options["character"]  = character
