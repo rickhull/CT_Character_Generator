@@ -44,6 +44,7 @@ class Career
         options["stat"]       = benefit.split[1]
         CharacterTools.modify_stat(options)
       elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
+        options               = Hash.new(0)
         case benefit
           when "Gun" 
             options["character"]  = character
@@ -98,7 +99,6 @@ class Career
       options["level"]      = 1
       CharacterTools.increase_skill(options)
     end 
-
     muster_out(char)
 
     # Some careers can raise Soc, so do this after skills.
