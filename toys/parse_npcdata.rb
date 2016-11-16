@@ -9,6 +9,8 @@ rank      = ""
 header    = ""
 location  = ""
 name      = ""
+age       = ""
+yob       = ""
 
 locations = ["(core)", "(convoy)", "(Oregrund)"]
 ranks = ["1SGT", "Captain", "'Captain", "(Captain)", "Cpl.", "CPL", "Corporal", "L.Cpl.", "LCPL", "Lt.", "Lieutenant", "(Lieutenant)", "Pvt."]
@@ -33,17 +35,28 @@ groups = [
   "Jerry's Family:"
   ]
 
+oddstarts = ["Term", "\.\.\. ", "Ally", "5", "frequent "]
+
 npc_file.each do |line|
   name      = ""
   gender    = nil
   rank      = nil
   location  = nil
 
-  next if line.start_with?("Term")
+  if line.length < 2
+    next
+  end
+
+  starter = line[0..3]
+  if oddstarts.include?(starter) 
+    outlier_file.puts line  
+    next
+  end
 
   if groups.include?(line.strip!)
     header = line
-    puts header
+    out_file.puts
+    out_file.puts header
     next
   end
 
@@ -52,7 +65,6 @@ npc_file.each do |line|
       when locations.include?(item)
         location = item.gsub!(/\)/, '')
         location = item.gsub!(/\(/, '')
-        has_location = true
       when ranks.include?(item)
         case item
           when "Captain"      : rank = "CPT"
@@ -68,17 +80,31 @@ npc_file.each do |line|
           else rank = item
         end
     when item == "[F]", item == "(F)"
-      gender = "female"
+      gender = "F"
     when item == "[M]", item == "(M)"
-      gender = "male"
+      gender = "M"
     when gender.nil?
       name = name + " " + item
+    when item.match(/\A[0-9].\)/)
+      item.gsub!(/\)/, '')
+      item.gsub!(/\:/, '')
+      age = item.to_i
+      yob = 1416 - age 
+    end
+
   end
-  end
-  print "  "
-  print "#{location} " unless location.nil?
-  print "#{rank} " unless rank.nil?
-  puts  "#{name} "
+
+  # Setting baseline.
+  location = "Nowhere" if location.nil?
+  name.strip!
+ 
+  string  = "   "
+  string += "#{rank} " unless rank.nil?
+  string += "#{name} "
+  string += "[#{gender}] "
+  string += "[#{age}/IC-#{yob}] "
+  string += "(Currently at: #{location}) "
+  out_file.puts string
 end
 
 
