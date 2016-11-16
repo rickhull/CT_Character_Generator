@@ -11,6 +11,7 @@ location  = ""
 name      = ""
 age       = ""
 yob       = ""
+psr       = ""
 
 locations = ["(core)", "(convoy)", "(Oregrund)"]
 ranks = ["1SGT", "Captain", "'Captain", "(Captain)", "Cpl.", "CPL", "Corporal", "L.Cpl.", "LCPL", "Lt.", "Lieutenant", "(Lieutenant)", "Pvt."]
@@ -42,6 +43,7 @@ npc_file.each do |line|
   gender    = nil
   rank      = nil
   location  = nil
+  psr       = nil
 
   if line.length < 2
     next
@@ -90,6 +92,10 @@ npc_file.each do |line|
       item.gsub!(/\:/, '')
       age = item.to_i
       yob = 1416 - age 
+    when item.match(/\(PSR=[0-9A-F]./)
+      item.gsub!(/\)/, '')
+      item.gsub!(/\(PSR=/, '')
+      psr = item.to_i
     end
 
   end
@@ -103,6 +109,7 @@ npc_file.each do |line|
   string += "#{name} "
   string += "[#{gender}] "
   string += "[#{age}/IC-#{yob}] "
+  string += "[PSR=#{psr}] " unless psr.nil?
   string += "(Currently at: #{location}) "
   out_file.puts string
 end
