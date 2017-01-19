@@ -1,9 +1,9 @@
 ** DRAFT -- Needs testing and verfication **
 
 To create your own customized careers, go in to the lib subdirectory and
-copy CareerTemplate.rb to whatever name you want. Mostly. Ruby needs Class 
+copy MyCareer.rb to whatever name you want. Mostly. Ruby needs Class 
 names to start with an uppercase Alpha character, and the program may not 
-deal well with exotic names. 
+deal well with exotic names. Stick to ASCII for now. 
 
 Read the notes that are in your new career file, the process is explained 
 step by step. Refer to other careers if you need ideas.
