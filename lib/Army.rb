@@ -138,7 +138,7 @@ class Army < Career
     commission   = 5
     commission_roll  = Traveller.roll_dice(6,2,1) + char['terms'] - commission
     if commission_roll >= 0
-      grade                   = [commission_roll/2 , officers.length - 1].min
+      grade                   = [commission_roll/3 , officers.length - 1].min
       char['character'].rank = officers[grade]
     else
       grade                   = [char['terms'] + rand(2), enlisted.length - 1].min
