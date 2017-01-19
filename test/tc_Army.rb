@@ -25,7 +25,7 @@ class TestArmy < Test::Unit::TestCase
   end
 
   def test_rank
-    ranks = %w[ PVT LCP CPL LSG SGT GSGT LDSGT 1SGT SGTM 2LT 1LT CPT MAJ LTC COL BG MG LG GEN ]
+    ranks = %w[ PVT LCP CPL LSGT SGT GSGT LDSGT 1SGT SGTM 2LT 1LT CPT MAJ LTC COL BG MG LG GEN ]
     assert(ranks.include?(@char["character"].rank))
   end
 
