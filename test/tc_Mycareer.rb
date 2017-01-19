@@ -49,7 +49,7 @@ class TestMycareer < Test::Unit::TestCase
   def test_muster_out_cash
     assert(@char["character"].stuff.has_key?("cash"))
     min_cash = 1000 * (@char["terms"] / 2)
-    max_cash = 50000 * (@char["terms"] / 2)
+    max_cash = 200000 * (@char["terms"] / 2)
     assert(@char["character"].stuff["cash"] >= min_cash) 
     assert(@char["character"].stuff["cash"] <= max_cash) 
   end 
