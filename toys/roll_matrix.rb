@@ -9,11 +9,9 @@ srand()
 f_times = 0
 
 first.times do
- # puts f_times
   f_times += 1
   s_times = 0
   second.times do
-  #  puts s_times
     s_times += 1
     roll = rand(6) + rand(6) + 2
     roll = "x" if s_times == f_times
