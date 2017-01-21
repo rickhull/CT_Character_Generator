@@ -76,7 +76,7 @@ class Career
     character               = char["character"]
     career                  = char["career"]
     terms                   = char["terms"] 
-    char["skill_points"]    = 1 + terms
+    char["skill_points"]    = terms
     char["skill_options"]   = Array.new
 
     if character.upp[4].chr.to_i(16) >= 8
