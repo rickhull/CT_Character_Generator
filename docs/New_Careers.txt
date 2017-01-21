@@ -15,12 +15,9 @@ Copy test/tc_Mycareer.rb to a file for your new career.
     ruby test/tc_Mycareer.rb
     ruby test/ts_CT_Character_Generator.rb
 
-Edit bin/Chargen.rb to add your career to the "available_careers" array.
-
 The program is usually called with:
  ruby bin/Chargen.rb [-t <terms>] [-c <career>]
 
 For example, if you create a Spacer career and want to create a 4 term
   NPC, use:
   ruby lib/Chargen.rb -t 4 -c Spacer
-

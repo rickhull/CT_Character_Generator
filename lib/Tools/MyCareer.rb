@@ -26,8 +26,6 @@
 #       require "Mycareer"
 #       Mycareer.new(char)
 #
-# 8. Add "Mycareer" to the "available_careers" array in Chargen.rb.
-#
 
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 

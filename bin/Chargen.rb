@@ -10,10 +10,20 @@ require "Character"
 require "CharacterTools"
 require "Presenter"
 
+def list_careers(career_dir)
+  careers = []  
+  Dir.foreach(career_dir) do |file|
+    fname = "#{career_dir}/#{file}"
+    careers << File.basename(file, '.rb') if File.file?(fname)
+  end
+  careers
+end
+ 
 # Default values for options.
 career = ""
 terms  = 0
-available_careers = ["Army", "Guide", "Citizen", "LEO", "Marine", "Merchant", "Navy", "Noble", "Other"]
+available_careers = []
+available_careers = list_careers("lib/Careers")
 
 # Build the base character.
 character = CharacterTools.init
