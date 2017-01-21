@@ -2,7 +2,8 @@
 # ruby Chargen <-c career> <-t terms>
 #   career defaults based on Soc and terms to 1-5.
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
+$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
 require "optparse"
 require "Character"
