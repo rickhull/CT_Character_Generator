@@ -8,14 +8,14 @@ class TestTraveller < Test::Unit::TestCase
     @die = Traveller.roll_dice(6,1,1)
     assert(@die <= 6)
     assert(@die => 1)
-    assert_instance_of(Fixnum, @die)
+    assert_kind_of(Integer, @die)
   end
 
   def test_roll_two_dice
     @dice = Traveller.roll_dice(6,2,1)
     assert(@dice <=12)
     assert(@dice >= 2)
-    assert_instance_of(Fixnum, @dice)
+    assert_kind_of(Integer, @dice)
   end
 
   def test_upp
