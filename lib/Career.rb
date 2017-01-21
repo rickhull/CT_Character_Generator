@@ -15,7 +15,7 @@ class Career
     run_career(char)
   end
 
-  # Initial term. Some careers half default skills.
+  # Initial term. Some careers have default skills.
   def first_term(char)
   end
 
