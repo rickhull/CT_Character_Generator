@@ -29,8 +29,6 @@
 # 8. Add "Mycareer" to the "available_careers" array in Chargen.rb.
 #
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "CharacterTools"
 require "Career"
 require "Traveller"

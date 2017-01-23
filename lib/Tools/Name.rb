@@ -1,12 +1,10 @@
 
 class Name
 
-  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
   $DATA_PATH = File.expand_path("../../data", __FILE__)
 
   attr_reader :name
 
-  # Create a Character, with UPP, name, and gender.
   def initialize(options)
     @gender       ||= options["gender"]
     @species      ||= options["species"]

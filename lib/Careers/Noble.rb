@@ -3,8 +3,6 @@
 # http://ancientfarfuture.blogspot.com/2014/05/lords-of-imperium-revisiting-noble.html
 # Thanks Robert!
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "CharacterTools"
 require "Career"
 require "Traveller"

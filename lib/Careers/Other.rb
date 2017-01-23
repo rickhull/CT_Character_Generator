@@ -1,8 +1,3 @@
-# Class for the other citizens. Takes a character, and 
-# optional number of terms.
-
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "CharacterTools"
 require "Career"
 require "Traveller"

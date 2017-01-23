@@ -3,7 +3,6 @@
 
 module CharacterTools
 
-#  $LOAD_PATH << File.expand_path("../../lib", __FILE__)
   $DATA_PATH  = File.expand_path("../../data", __FILE__)
   DATADIR     = "../../data"
   require "Traveller"

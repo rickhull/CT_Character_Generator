@@ -27,8 +27,6 @@
 #       Mycareer.new(char)
 #
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "CharacterTools"
 require "Career"
 require "Traveller"
