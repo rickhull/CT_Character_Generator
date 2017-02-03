@@ -1,8 +1,9 @@
 
 class Name
 
-  $DATA_PATH = File.expand_path("../../data", __FILE__)
-
+  PROJECT_PATH = File.expand_path(File.dirname(__FILE__))
+  DATA_PATH = File.join(PROJECT_PATH, "../../data")
+  
   attr_reader :name
 
   def initialize(options)
@@ -19,7 +20,7 @@ class Name
     species   = species.downcase
     begin 
       require "sqlite3"
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+      db = SQLite3::Database.open "#{DATA_PATH}/names.db"
       first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
       first_name_result = first_name_query.execute
       first_name = first_name_result.first
@@ -53,7 +54,7 @@ class Name
     species   = species.downcase
     begin 
       require "sqlite3"
-      db = SQLite3::Database.open "#{$DATA_PATH}/names.db"
+      db = SQLite3::Database.open "#{DATA_PATH}/names.db"
       last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
       last_name_result = last_name_query.execute
       last_name = last_name_result.first
