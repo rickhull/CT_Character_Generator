@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # Base tool to create a quick NPC.
 # ruby Chargen <-c career> <-t terms>
 #   career defaults based on Soc and terms to 1-5.
@@ -11,6 +12,7 @@ require "CharacterTools"
 require "Presenter"
 
 def list_careers(career_dir)
+  
   careers = []  
   Dir.foreach(career_dir) do |file|
     fname = "#{career_dir}/#{file}"
@@ -19,16 +21,18 @@ def list_careers(career_dir)
   careers
 end
  
-# Default values for options.
 career = ""
 terms  = 0
 available_careers = []
-available_careers = list_careers("lib/Careers")
+load_dirs = $LOAD_PATH.uniq
+load_dirs.each do |dir|
+  if dir.end_with?("Careers")
+    available_careers = list_careers(dir)
+  end
+end
 
-# Build the base character.
 character = CharacterTools.init
 
-# Parse the options.
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
   opts.on("-c career", "Career, defaults based on Soc") do |c| 
@@ -40,24 +44,16 @@ option_parser = OptionParser.new do |opts|
 end
 option_parser.parse!
 
-# Stuff for testing method triggers.
-#character.upp[5] = "F"
-#character.upp[3] = "F"
-
-# Set the options not provided.
 career = CharacterTools.social_status(character) if career.empty?
 srand && terms = rand(5) + 1 if terms == 0
 
-# Set up the char hash to be passed around.
 char = Hash.new(0)
 char["character"] = character
 char["career"]    = career
 char["terms"]     = terms
 
-# Modify the character's career.
 CharacterTools.add_career(char)
 
-# Run the character through the career.
 case career 
   when "Army" then
     require "Army"
@@ -88,5 +84,4 @@ case career
     Citizen.new(char)
 end
 
-# Just the output.
 Presenter.show(character)
