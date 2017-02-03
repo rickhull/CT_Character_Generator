@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.test_file     = "test/ts_CT_Character_Generator.rb"
   s.has_rdoc      = false
   s.require_paths = ["lib/Tools", "lib/Careers"]
+  s.add_dependency("sqlite3-ruby", ">= 0")
 end
