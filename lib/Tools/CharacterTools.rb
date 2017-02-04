@@ -62,20 +62,16 @@ module CharacterTools
  
    
   # Increase a skill
-  #def self.increase_skill(character, skill, level = 1)
   def self.increase_skill(options)
   # Assume an options hash is passed. 
     character = options["character"]
     skill     = options["skill"] 
     level     = options.has_key?("level") ? options["level"] : 1
     if skill.split.length > 1
-      #options               = Hash.new(0)
-      #options["character"]  = character
       options["stat_level"] = skill.split[0].to_i
       options["stat"]       = skill.split[1]
       self.modify_stat(options)
     else
-
       if character.skills.has_key?(skill)
         character.skills[skill] += level 
       else
