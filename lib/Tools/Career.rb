@@ -1,7 +1,6 @@
 # Class for careers. Should be subclassed by the specific careers.
 
-require "CharacterTools"
-require "Traveller"
+include CharacterTools
 
 class Career
   @skill_options = Hash.new(0)
