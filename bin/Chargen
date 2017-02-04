@@ -23,6 +23,8 @@ end
  
 career = ""
 terms  = 0
+basic_character = false
+
 available_careers = []
 load_dirs = $LOAD_PATH.uniq
 load_dirs.each do |dir|
@@ -41,47 +43,52 @@ option_parser = OptionParser.new do |opts|
   opts.on("-t terms", "Terms, defaults to range of 1-5") do |t|
     terms = t.to_i
   end
+  opts.on("-b", "Just a basic Character") do
+    basic_character = true
+  end
 end
 option_parser.parse!
 
-career = CharacterTools.social_status(character) if career.empty?
-srand && terms = rand(5) + 1 if terms == 0
+unless basic_character
+  career = CharacterTools.social_status(character) if career.empty?
+  srand && terms = rand(5) + 1 if terms == 0
 
-char = Hash.new(0)
-char["character"] = character
-char["career"]    = career
-char["terms"]     = terms
+  char = Hash.new(0)
+  char["character"] = character
+  char["career"]    = career
+  char["terms"]     = terms
 
-CharacterTools.add_career(char)
+  CharacterTools.add_career(char)
 
-case career 
-  when "Army" then
-    require "Army"
-    Army.new(char)
-  when "Guide" then
-    require "Guide"
-    Guide.new(char)
-  when "LEO" then
-    require "LEO"
-    LEO.new(char)
-  when "Marine" then
-    require "Marine"
-    Marine.new(char)
-  when "Merchant" then
-    require "Merchant"
-    Merchant.new(char)
-  when "Navy" then
-    require "Navy"
-    Navy.new(char)
-  when "Noble" then
-    require "Noble"
-    Noble.new(char)
-  when "Other" then
-    require "Other"
-    Other.new(char)
-  else
-    require "Citizen"
+  case career 
+    when "Army" then
+      require "Army"
+      Army.new(char)
+    when "Guide" then
+      require "Guide"
+      Guide.new(char)
+    when "LEO" then
+      require "LEO"
+      LEO.new(char)
+    when "Marine" then
+      require "Marine"
+      Marine.new(char)
+    when "Merchant" then
+      require "Merchant"
+      Merchant.new(char)
+    when "Navy" then
+      require "Navy"
+      Navy.new(char)
+    when "Noble" then
+      require "Noble"
+      Noble.new(char)
+    when "Other" then
+      require "Other"
+      Other.new(char)
+    else
+      require "Citizen"
     Citizen.new(char)
+  end
 end
 
 Presenter.show(character)
