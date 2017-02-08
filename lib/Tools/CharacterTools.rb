@@ -6,16 +6,26 @@ module CharacterTools
   $DATA_PATH  = File.expand_path("../../data", __FILE__)
   DATADIR     = "../../data"
   require "Traveller"
-  require "Character"
   require "Presenter"
   require "Name"
   require "json"
   require "pp"
 
+  # Provides UPP as a 6 Hexidecimal character string.
+  def upp
+    upp = String.new
+    6.times do
+      stat = Traveller.roll_dice(6,2,1)
+      stat = stat.to_s(16).upcase
+      upp  = upp + stat
+    end
+    puts upp
+    return upp
+  end
+=begin
   STAT_NAMES = %w{Str Dex End Int Edu Soc}
-
   # Create a Character, with UPP, name, and gender.
-  def self.init()
+  def self.init
     character          = Character.new
     character.upp      = self.upp
     character.gender   = self.gender.capitalize
@@ -26,6 +36,10 @@ module CharacterTools
     character.hair     = self.hair
     character.skin     = self.skin
     return character
+  end
+
+  def species
+    return "humaniti"
   end
 
 
@@ -39,20 +53,8 @@ module CharacterTools
     end
     return status 
   end
-
-  # Provides UPP as a 6 Hexidecimal character string.
-  def self.upp
-    upp = String.new
-    6.times do
-      stat = Traveller.roll_dice(6,2,1)
-      stat = stat.to_s(16).upcase
-      upp  = upp + stat
-    end
-    return upp
-  end
-
   # Returns gender in lowercase, "male" or "female". Even odds.
-  def self.gender
+  def gender
     if Traveller.roll_dice(6,1,1) >= 4
       return "male"
     else
@@ -208,6 +210,13 @@ module CharacterTools
     return    stat_mod
   end 
 
+  def appearence
+    app = String.new
+    app << hair
+    app << skin
+    return app
+  end
+
   def self.hair
     tone = ["light", "medium", "medium", "full" ]
     body = ["straight", "straight", "wavey", "curly", "frizzed"]
@@ -332,4 +341,5 @@ module CharacterTools
     return morale
   end
 
+=end
 end

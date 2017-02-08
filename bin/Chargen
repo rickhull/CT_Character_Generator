@@ -8,7 +8,7 @@ $LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
 require "optparse"
 require "Character"
-require "CharacterTools"
+#require "CharacterTools"
 require "Presenter"
 
 def list_careers(career_dir)
@@ -33,8 +33,6 @@ load_dirs.each do |dir|
   end
 end
 
-character = CharacterTools.init
-
 options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
   opts.on("-c career", "Career, defaults based on Soc") do |c| 
@@ -49,6 +47,13 @@ option_parser = OptionParser.new do |opts|
 end
 option_parser.parse!
 
+#c = {"upp" => "7777"}
+c = {}
+#character = CharacterTools.init
+character = Character.new(c)
+Presenter.show(character)
+
+=begin
 unless basic_character
   career = CharacterTools.social_status(character) if career.empty?
   srand && terms = rand(5) + 1 if terms == 0
@@ -90,5 +95,4 @@ unless basic_character
     Citizen.new(char)
   end
 end
-
-Presenter.show(character)
+=end
