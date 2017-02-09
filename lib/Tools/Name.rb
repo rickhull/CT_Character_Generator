@@ -9,7 +9,7 @@ class Name
   def initialize(options)
     @gender       ||= options["gender"]
     @species      ||= options["species"]
-    @name         = name(@gender, @species)
+    @name         = new_name(@gender, @species)
   end
 
   # Pulls a first name from the database, based on gender. 
@@ -70,7 +70,7 @@ class Name
   end
 
   # Needs gender, produces first and last name as a single string.
-  def name(gender, species)
+  def new_name(gender, species)
     f_name   = first_name(gender,species)
     l_name    = last_name(species)
     return        "#{f_name} #{l_name}"

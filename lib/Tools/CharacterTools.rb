@@ -3,6 +3,7 @@
 
 module CharacterTools
 
+  puts "In CharacterTools.rb."
   $DATA_PATH  = File.expand_path("../../data", __FILE__)
   DATADIR     = "../../data"
   require "Traveller"
@@ -13,6 +14,7 @@ module CharacterTools
 
   # Provides UPP as a 6 Hexidecimal character string.
   def upp
+    puts "In upp method."
     upp = String.new
     6.times do
       stat = Traveller.roll_dice(6,2,1)

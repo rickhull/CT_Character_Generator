@@ -47,10 +47,12 @@ option_parser = OptionParser.new do |opts|
 end
 option_parser.parse!
 
-#c = {"upp" => "7777"}
-c = {}
+c = {"upp" => "7777"}
+#c = {}
 #character = CharacterTools.init
+puts "Before Character."
 character = Character.new(c)
+puts "After Character."
 Presenter.show(character)
 
 =begin
