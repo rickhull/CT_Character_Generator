@@ -3,28 +3,63 @@
 
 module CharacterTools
 
-  puts "In CharacterTools.rb."
-  $DATA_PATH  = File.expand_path("../../data", __FILE__)
-  DATADIR     = "../../data"
+  $DATA_PATH  = File.expand_path("../../../data", __FILE__)
   require "Traveller"
-  require "Presenter"
+  #require "Presenter"
   require "Name"
-  require "json"
-  require "pp"
+  #require "json"
+  #require "pp"
 
   # Provides UPP as a 6 Hexidecimal character string.
-  def upp
-    puts "In upp method."
-    upp = String.new
+  def generate_upp
+    new_upp = String.new
     6.times do
       stat = Traveller.roll_dice(6,2,1)
       stat = stat.to_s(16).upcase
-      upp  = upp + stat
+      new_upp  = new_upp + stat
     end
-    puts upp
-    return upp
+    return new_upp
   end
-=begin
+
+  def generate_gender
+    if Traveller.roll_dice(6,1,1) >= 4
+      gender = "male"
+    else
+      gender = "female"
+    end
+    return gender
+  end
+ 
+  def generate_appearence
+    app = String.new
+    skin = generate_skin
+    hair = generate_hair
+    app << hair + " hair "
+    app << skin + " skin"
+    return app
+  end
+
+  def generate_hair
+    t = get_random_line_from_file("hair_tone.txt")
+    b = get_random_line_from_file("hair_body.txt")
+    c = get_random_line_from_file("hair_colors.txt")
+    l = get_random_line_from_file("hair_length.txt")
+    new_hair = "#{b} #{t} #{c} #{l}"
+    return new_hair
+  end
+
+  def generate_skin
+    return get_random_line_from_file("skin_tones.txt")
+  end
+  
+  def generate_name(options)
+    Name.new(options).to_s
+  end
+  
+  def generate_species
+    return "humaniti"
+  end
+ 
   STAT_NAMES = %w{Str Dex End Int Edu Soc}
   # Create a Character, with UPP, name, and gender.
   def self.init
@@ -40,10 +75,6 @@ module CharacterTools
     return character
   end
 
-  def species
-    return "humaniti"
-  end
-
 
   # Return general social status based on Soc.
   def self.social_status(character)
@@ -55,16 +86,7 @@ module CharacterTools
     end
     return status 
   end
-  # Returns gender in lowercase, "male" or "female". Even odds.
-  def gender
-    if Traveller.roll_dice(6,1,1) >= 4
-      return "male"
-    else
-      return "female"
-    end
-  end
- 
-   
+  
   # Increase a skill
   def self.increase_skill(options)
   # Assume an options hash is passed. 
@@ -212,122 +234,26 @@ module CharacterTools
     return    stat_mod
   end 
 
-  def appearence
-    app = String.new
-    app << hair
-    app << skin
-    return app
-  end
-
-  def self.hair
-    tone = ["light", "medium", "medium", "full" ]
-    body = ["straight", "straight", "wavey", "curly", "frizzed"]
-    color = ["blond", 
-        "auburn",
-        "auburn",
-        "gold",
-        "auburn",
-        "brown",
-        "brown",
-        "white",
-        "brown",
-        "chestnut",
-        "chestnut",
-        "blue",
-        "chestnut",
-        "chestnut",
-        "red",
-        "orange",
-        "green",
-        "black",
-        "black",
-        "black",
-        "black",
-        "silver",
-        "yellow",
-        "gray"
-      ]
-    length  = ["close cropped",
-        "short",
-        "short",
-        "neck length",
-        "neck length",
-        "shoulder length",
-        "very long",
-        "waist length"
-      ]
-
-    t = tone[rand(tone.length)]
-    b = body[rand(body.length)].capitalize
-    c = color[rand(color.length)]
-    l = length[rand(length.length)]
-  
-    hair = "#{b} #{t} #{c} #{l}"
-    return hair
-  end
-
-  def self.skin
-    skin_tone = ["albino",
-      "pale",
-      "medium",
-      "medium",
-      "medium",
-      "medium",
-      "tanned",
-      "tanned",
-      "tanned",
-      "tanned",
-      "brown",
-      "brown",
-      "brown",
-      "brown",
-      "chocolate",
-      "chocolate",
-      "chocolate",
-      "chocolate",
-      "black",
-      "blue",
-      "gold",
-      "green",
-      "silver",
-      "translucent",
-      "orange"
-    ]
-    return skin_tone[rand(skin_tone.length)]
-  end
-
-  def self.plot
-    if File.exist?("#{$DATA_PATH}/plots.txt")
-      plot_file   = File.open("#{$DATA_PATH}/plots.txt", "r")
-      plots       = Array.new
-      plot_file.each do |line|
-        line.chomp!
-        if line !~ /#/ and line.length > 4
-          plots << line
-        end
+  def get_random_line_from_file(file)
+    fname       = $DATA_PATH + "/" + file
+    new_file    = File.open(fname, "r")
+    new_array   = Array.new
+    new_file.each do |line|
+      line.chomp!
+      if line !~ /#/ and line.length > 4
+        new_array << line
       end
-      return plots[rand(plots.length - 1)]
-    else
-      return "Rainbow bright"
     end
+    new_file.close()
+    return new_array[rand(new_array.length - 1)]
   end
 
-  def self.temprament
-    #if File.exist?("#{DATADIR}/tempraments.txt")
-    #  temprament_file   = File.open("#{DATADIR}/tempraments.txt", "r")
-    if File.exist?("#{$DATA_PATH}/tempraments.txt")
-      temprament_file   = File.open("#{$DATA_PATH}/tempraments.txt", "r")
-      tempraments       = Array.new
-      temprament_file.each do |line|
-        line.chomp!
-        if line !~ /#/ and line.length > 4
-          tempraments << line
-        end
-      end
-      return tempraments[rand(tempraments.length - 1)]
-    else
-      return "Raving Lunatic"
-    end 
+  def generate_plot
+    return get_random_line_from_file("plots.txt")
+  end
+
+  def generate_temperament
+    return get_random_line_from_file("temperaments.txt")
   end
 
   def self.morale(options = "")
@@ -343,5 +269,4 @@ module CharacterTools
     return morale
   end
 
-=end
 end

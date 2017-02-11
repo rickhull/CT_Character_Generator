@@ -47,13 +47,9 @@ option_parser = OptionParser.new do |opts|
 end
 option_parser.parse!
 
-c = {"upp" => "7777"}
-#c = {}
-#character = CharacterTools.init
-puts "Before Character."
-character = Character.new(c)
-puts "After Character."
-Presenter.show(character)
+character = Character.new
+character.generate
+character.to_s
 
 =begin
 unless basic_character
