@@ -40,16 +40,25 @@ module CharacterTools
   end
 
   def generate_hair
-    t = get_random_line_from_file("hair_tone.txt")
-    b = get_random_line_from_file("hair_body.txt")
-    c = get_random_line_from_file("hair_colors.txt")
-    l = get_random_line_from_file("hair_length.txt")
-    new_hair = "#{b} #{t} #{c} #{l}"
+    begin
+      t = get_random_line_from_file("hair_tone.txt")
+      b = get_random_line_from_file("hair_body.txt")
+      c = get_random_line_from_file("hair_colors.txt")
+      l = get_random_line_from_file("hair_length.txt")
+      new_hair = "#{b} #{t} #{c} #{l}"
+    rescue SystemCallError => e
+      new_hair = "Straight medium brown short" 
+    end
     return new_hair
   end
 
   def generate_skin
-    return get_random_line_from_file("skin_tones.txt")
+    begin
+      skin_tone =  get_random_line_from_file("skin_tones.txt")
+    rescue SystemCallError => e
+      skin_tone = "medium"
+    end
+    return skin_tone 
   end
   
   def generate_name(options)
@@ -235,21 +244,33 @@ module CharacterTools
   end 
 
   def get_random_line_from_file(file)
-    fname       = $DATA_PATH + "/" + file
-    new_file    = File.open(fname, "r")
-    new_array   = Array.new
-    new_file.each do |line|
-      line.chomp!
-      if line !~ /#/ and line.length > 4
-        new_array << line
+    begin 
+      fname       = $DATA_PATH + "/" + file
+      new_file    = File.open(fname, "r")
+      new_array   = Array.new
+      new_file.each do |line|
+        line.chomp!
+        if line !~ /#/ and line.length > 4
+          new_array << line
+        end
       end
+      result = new_array[rand(new_array.length - 1)]
+    rescue SystemCallError
+      raise 
+    ensure
+      new_file.close() unless new_file.nil?
     end
-    new_file.close()
-    return new_array[rand(new_array.length - 1)]
+    return result
   end
 
   def generate_plot
-    return get_random_line_from_file("plots.txt")
+    begin
+      plot = get_random_line_from_file("eplots.txt")
+    rescue SystemCallError => e
+      puts e.to_s
+      plot = "Some drab plot"
+    end
+    return plot
   end
 
   def generate_temperament
