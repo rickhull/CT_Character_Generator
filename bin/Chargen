@@ -49,9 +49,7 @@ option_parser.parse!
 
 character = Character.new
 character.generate
-character.to_s
 
-=begin
 unless basic_character
   career = CharacterTools.social_status(character) if career.empty?
   srand && terms = rand(5) + 1 if terms == 0
@@ -90,7 +88,7 @@ unless basic_character
       Other.new(char)
     else
       require "Citizen"
-    Citizen.new(char)
+      Citizen.new(char)
   end
 end
-=end
+Presenter.show(character)

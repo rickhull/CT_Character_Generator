@@ -145,9 +145,7 @@ module CharacterTools
     career        = char["career"]
     character     = char["character"]
     character.age += terms * 4
-    #character.careers[career] += terms
-    career_string = "#{career}-#{terms}"
-    character.careers << career_string
+    character.careers[career] += terms
   end
 
   # Pull Character data into a hash.
@@ -265,18 +263,23 @@ module CharacterTools
     end
     return result
   end
+
   def generate_plot
     begin
       plot = get_random_line_from_file("plots.txt")
-    rescue SystemCallError => e
-      puts e.to_s
+    rescue SystemCallError
       plot = "Some drab plot"
     end
     return plot
   end
 
   def generate_temperament
-    return get_random_line_from_file("temperaments.txt")
+    begin
+      temperament = get_random_line_from_file("temperaments.txt")
+    rescue SystemCallError
+      temperament = "Boring"
+    end
+    return temperament
   end
 
   def self.morale(options = "")

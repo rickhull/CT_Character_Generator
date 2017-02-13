@@ -15,8 +15,8 @@ class Character
     @species      = String.new
     @appearence   = String.new
     @age          = 18
-    @skills       = Array.new(0)
-    @careers      = Array.new(0)
+    @skills       = Hash.new(0)
+    @careers      = Hash.new(0)
     @stuff        = { "cash" => 0,
       "benefits"  => Hash.new(0)
       }
