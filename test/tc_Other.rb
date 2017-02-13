@@ -4,6 +4,7 @@
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "Other"
+require "Character"
 require "CharacterTools"
 require "test/unit"
 
@@ -11,6 +12,8 @@ class TestOther < Test::Unit::TestCase
 
   def setup
     @character = CharacterTools.init
+    #@character = Character.new
+    #@character.generate
     @character.careers["Other"] = 2
     @char = Hash.new(0)
     @char["character"]  = @character
