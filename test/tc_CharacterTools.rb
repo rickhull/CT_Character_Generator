@@ -34,16 +34,16 @@ class TestCharacterTools < Test::Unit::TestCase
       'terms' => terms} 
     CharacterTools.add_career(@char)
     assert(@character.age == 18 + (terms * 4))
-    assert(@character.careers[-1].match(/Scout/))
-    assert(@character.careers[-1].match(/-2/)) 
+    assert(@character.careers.has_key?(career))
+    assert(@character.careers[career] == terms)
   end
 
-  def test_temprament
+  def test_temperament
     temprament  = CharacterTools.generate_temperament
     assert(temprament.class == String)
     assert(temprament.length >=5)
   end
-
+  
   def test_plot
     plot  = CharacterTools.generate_plot
     assert(plot.class == String)
@@ -51,12 +51,12 @@ class TestCharacterTools < Test::Unit::TestCase
   end
 
   def test_add_second_career
-    terms = 2
-    career = "Scout"
+    terms1 = 2
+    career1 = "Scout"
     @char = { 
       'character' => @character, 
-      'career' => career, 
-      'terms' => terms} 
+      'career' => career1, 
+      'terms' => terms1} 
     CharacterTools.add_career(@char)
     terms2 = 1
     career2 = "Merchant"
@@ -65,9 +65,11 @@ class TestCharacterTools < Test::Unit::TestCase
       'career' => career2, 
       'terms' => terms2} 
     CharacterTools.add_career(@char2)
-    assert(@character.age == 18 + ((terms + terms2) * 4))
-    assert(@character.careers[-1].match(/Merchant/))
-    assert(@character.careers[-1].match(/-1/)) 
+    assert(@character.age == 18 + ((terms1 + terms2) * 4))
+    assert(@character.careers.has_key?(career1))
+    assert(@character.careers[career1] == terms1)
+    assert(@character.careers.has_key?(career2))
+    assert(@character.careers[career2] == terms2)
   end
 
   def test_add_college

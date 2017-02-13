@@ -9,7 +9,8 @@ require "pp"
 class TestMarine < Test::Unit::TestCase
 
   def setup
-    @character = CharacterTools.init
+    @character = Character.new
+    @character.generate
     @character.careers["Marine"] = 2
     @char = Hash.new(0)
     @char["character"]  = @character

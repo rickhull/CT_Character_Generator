@@ -7,7 +7,8 @@ require "test/unit"
 class TestNoble < Test::Unit::TestCase
 
   def setup
-    @character = CharacterTools.init
+    @character = Character.new
+    @character.generate
     @character.careers["Noble"] = 2
     @char = Hash.new(0)
     @char["character"]  = @character

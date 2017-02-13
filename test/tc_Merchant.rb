@@ -15,7 +15,8 @@ require "test/unit"
 class TestMerchant < Test::Unit::TestCase
 
   def setup
-    @character = CharacterTools.init
+    @character = Character.new
+    @character.generate
     @character.careers["Merchant"] = 2
     @char = Hash.new(0)
     @char["character"]  = @character

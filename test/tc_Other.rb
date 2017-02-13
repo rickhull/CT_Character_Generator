@@ -1,7 +1,8 @@
 # tc_Other.rb
 # Test Case for the Other career.
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
+$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
 require "Other"
 require "Character"
@@ -11,10 +12,12 @@ require "test/unit"
 class TestOther < Test::Unit::TestCase
 
   def setup
-    @character = CharacterTools.init
-    #@character = Character.new
-    #@character.generate
+    #@character = CharacterTools.init
+    @character = Character.new
+    @character.generate
+    @this_career = "Other-2"
     @character.careers["Other"] = 2
+    #@character.careers << @this_career
     @char = Hash.new(0)
     @char["character"]  = @character
     @char["career"]     = "Other"
