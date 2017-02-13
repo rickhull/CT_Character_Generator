@@ -1,5 +1,6 @@
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
+require "Character"
 require "CharacterTools"
 require "test/unit"
 require "pp"
@@ -7,21 +8,21 @@ require "pp"
 class TestCharacterTools < Test::Unit::TestCase
 
   def setup
-    @character = CharacterTools.init
+    #@character = CharacterTools.init
+    @character = Character.new
+    @character.generate
   end
 
+  
   def test_init
     genders = ["Male", "Female"]
     assert(@character.age == 18) 
     assert(@character.upp.length == 6)
     assert(@character.upp.match(/[0-9A-F]/))
     assert(@character.name.length > 1)
-    assert(genders.include?(@character.gender))
-    assert(@character.hair.length >= 4)
-    assert(@character.hair.match(/[a-zA-Z]/))
-    assert(@character.skin.length >= 4)
-    assert(@character.skin.length <= 15)
-    assert(@character.skin.match(/[a-z]/))
+    assert(genders.include?(@character.gender.capitalize))
+    assert(@character.appearence.length >= 10)
+    assert(@character.appearence.match(/[a-zA-Z]/))
   end
 
   def test_add_career
@@ -33,18 +34,18 @@ class TestCharacterTools < Test::Unit::TestCase
       'terms' => terms} 
     CharacterTools.add_career(@char)
     assert(@character.age == 18 + (terms * 4))
-    assert(@character.careers.has_key?(career))
-    assert(@character.careers[career] == terms) 
+    assert(@character.careers[-1].match(/Scout/))
+    assert(@character.careers[-1].match(/-2/)) 
   end
 
   def test_temprament
-    temprament  = CharacterTools.temprament
+    temprament  = CharacterTools.generate_temperament
     assert(temprament.class == String)
     assert(temprament.length >=5)
   end
 
   def test_plot
-    plot  = CharacterTools.plot
+    plot  = CharacterTools.generate_plot
     assert(plot.class == String)
     assert(plot.length >=5)
   end
@@ -65,10 +66,8 @@ class TestCharacterTools < Test::Unit::TestCase
       'terms' => terms2} 
     CharacterTools.add_career(@char2)
     assert(@character.age == 18 + ((terms + terms2) * 4))
-    assert(@character.careers.has_key?(career))
-    assert(@character.careers[career] == terms) 
-    assert(@character.careers.has_key?(career2))
-    assert(@character.careers[career2] == terms2) 
+    assert(@character.careers[-1].match(/Merchant/))
+    assert(@character.careers[-1].match(/-1/)) 
   end
 
   def test_add_college

@@ -3,6 +3,7 @@
 
 module CharacterTools
 
+
   $DATA_PATH  = File.expand_path("../../../data", __FILE__)
   require "Traveller"
   #require "Presenter"
@@ -144,7 +145,9 @@ module CharacterTools
     career        = char["career"]
     character     = char["character"]
     character.age += terms * 4
-    character.careers[career] += terms
+    #character.careers[career] += terms
+    career_string = "#{career}-#{terms}"
+    character.careers << career_string
   end
 
   # Pull Character data into a hash.
@@ -262,10 +265,9 @@ module CharacterTools
     end
     return result
   end
-
   def generate_plot
     begin
-      plot = get_random_line_from_file("eplots.txt")
+      plot = get_random_line_from_file("plots.txt")
     rescue SystemCallError => e
       puts e.to_s
       plot = "Some drab plot"
@@ -289,5 +291,9 @@ module CharacterTools
     end
     return morale
   end
+
+  module_function :get_random_line_from_file
+  module_function :generate_temperament
+  module_function :generate_plot
 
 end
