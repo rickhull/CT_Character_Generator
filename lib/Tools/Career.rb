@@ -1,14 +1,6 @@
-# Class for careers. Should be subclassed by the specific careers.
-
 include CharacterTools
 
 class Career
-  @skill_options = Hash.new(0)
-  @advanced_skill_options = Hash.new(0)
-
-  @muster_out = Hash.new
-  @muster_out["cash"] = Array.new
-  @muster_out["benefits"] = Array.new
   
   def initialize(char)
     run_career(char)
@@ -20,8 +12,6 @@ class Career
 
   # Set rank 
   def rank(char)
-    raise NotImplementedError,
-      "#{self} cannot respond to:"
   end
 
   def muster_out(char)
@@ -69,8 +59,6 @@ class Career
     end
   end
 
-  # The generic run_career method. 
-  #def self.run_career(char)
   def run_career(char)
     character               = char["character"]
     career                  = char["career"]
@@ -100,7 +88,5 @@ class Career
     end 
     muster_out(char)
 
-    # Some careers can raise Soc, so do this after skills.
-    CharacterTools.title(character)
   end
 end
