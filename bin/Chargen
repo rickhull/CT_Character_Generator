@@ -33,7 +33,6 @@ load_dirs.each do |dir|
   end
 end
 
-options = Hash.new(0)
 option_parser = OptionParser.new do |opts|
   opts.on("-c career", "Career, defaults based on Soc") do |c| 
     career = c if available_careers.include?(c)
