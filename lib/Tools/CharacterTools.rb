@@ -85,8 +85,6 @@ module CharacterTools
     return character
   end
 
-
-  # Return general social status based on Soc.
   def self.social_status(character)
     soc = character.upp[5,1].to_i(16)
     status = case soc     
@@ -97,7 +95,6 @@ module CharacterTools
     return status 
   end
   
-  # Increase a skill
   def self.increase_skill(options)
   # Assume an options hash is passed. 
     character = options["character"]
