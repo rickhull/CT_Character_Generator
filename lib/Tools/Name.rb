@@ -32,7 +32,7 @@ class Name
       first_name_query.close if first_name_query
       db.close if db
     end
-    return first_name.to_s
+    return first_name[0].to_s
   end
 
   def name_from_file(file)
@@ -66,14 +66,14 @@ class Name
       last_name_query.close if last_name_query
       db.close if db
     end
-    return last_name.to_s
+    return last_name[0].to_s
   end
 
   # Needs gender, produces first and last name as a single string.
   def new_name(gender, species)
-    f_name   = first_name(gender,species)
+    f_name    = first_name(gender,species)
     l_name    = last_name(species)
-    return        "#{f_name} #{l_name}"
+    return    "#{f_name} #{l_name}"
   end
 
   def to_s
