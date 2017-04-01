@@ -29,7 +29,7 @@
 
 require "CharacterTools"
 require "Career"
-require "Traveller"
+require "Dice"
 
 class Mycareer < Career 
   def initialize(char)

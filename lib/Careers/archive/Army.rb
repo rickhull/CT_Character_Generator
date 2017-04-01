@@ -1,6 +1,6 @@
 require "CharacterTools"
 require "Career"
-require "Traveller"
+require "Dice"
 
 class Army < Career 
   def initialize(char)
@@ -103,7 +103,7 @@ class Army < Career
     officers = %w[ 2LT 1LT CPT MAJ LTC COL BG MG LG GEN ]
     enlisted = %w[ PVT LCP CPL LSGT SGT GSGT LDSGT 1SGT SGTM ]
     commission   = 5
-    commission_roll  = Traveller.roll_dice(6,2,1) + char['terms'] - commission
+    commission_roll  = Dice.roll_dice(6,2,1) + char['terms'] - commission
     if commission_roll >= 0
       grade                   = [commission_roll/3 , officers.length - 1].min
       char['character'].rank = officers[grade]

@@ -1,6 +1,6 @@
 require "CharacterTools"
 require "Career"
-require "Traveller"
+require "Dice"
 
 class Marine < Career 
   def initialize(char)
@@ -60,7 +60,7 @@ class Marine < Career
     officers = %w[ LT CPT FC LTC COL BG ]
     enlisted = %w[ PVT LCP CPL LSGT SGT LDSG 1SGT GSGT SMSG ]
     commission   = 9
-    commission_roll  = Traveller.roll_dice(6,2,1) + char['terms'] - commission
+    commission_roll  = Dice.roll_dice(6,2,1) + char['terms'] - commission
     if commission_roll >= 0
       char['character'].rank = officers[commission_roll/2]
     else

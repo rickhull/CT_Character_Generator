@@ -11,7 +11,7 @@ require "test/unit"
 
 # The infrastructure
 require "tc_CharacterTools"
-require "tc_Traveller"
+require "tc_Dice"
 require "tc_Name"
 require "tc_Character"
 #require "tc_Chargen"

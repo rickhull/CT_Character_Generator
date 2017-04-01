@@ -1,7 +1,6 @@
 # Class for the regular citizens. Takes a character, and optional number of terms.
 
 require "CharacterTools"
-require "Traveller"
 require "Career"
 
 class Citizen < Career

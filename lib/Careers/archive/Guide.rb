@@ -1,7 +1,6 @@
 
 require "CharacterTools"
 require "Career"
-require "Traveller"
 
 class Guide < Career 
   def initialize(char)

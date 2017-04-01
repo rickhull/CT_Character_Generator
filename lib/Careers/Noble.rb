@@ -5,7 +5,7 @@
 
 require "CharacterTools"
 require "Career"
-require "Traveller"
+require "Dice"
 
 class Noble < Career 
   def initialize
@@ -61,7 +61,7 @@ class Noble < Career
     
     terms = character.careers["Noble"]
     promotion_roll_required = 12 - terms
-    promotion_level = (Traveller.roll_dice(6,2) - promotion_roll_required) / 3
+    promotion_level = (Dice.roll_dice(6,2) - promotion_roll_required) / 3
   
     if promotion_level > 0 
       options["level"]      = promotion_level

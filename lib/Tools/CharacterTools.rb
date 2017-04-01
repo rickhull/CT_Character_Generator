@@ -5,7 +5,7 @@ module CharacterTools
 
 
   $DATA_PATH  = File.expand_path("../../../data", __FILE__)
-  require "Traveller"
+  require "Dice"
   #require "Presenter"
   require "Name"
   #require "json"
@@ -15,7 +15,7 @@ module CharacterTools
   def generate_upp
     new_upp = String.new
     6.times do
-      stat = Traveller.roll_dice(6,2,1)
+      stat = Dice.roll_dice(6,2,1)
       stat = stat.to_s(16).upcase
       new_upp  = new_upp + stat
     end
@@ -23,7 +23,7 @@ module CharacterTools
   end
 
   def generate_gender
-    if Traveller.roll_dice(6,1,1) >= 4
+    if Dice.roll_dice(6,1,1) >= 4
       gender = "male"
     else
       gender = "female"
@@ -279,7 +279,7 @@ module CharacterTools
   end
 
   def self.morale(options = "")
-    morale   = Traveller.roll_dice(1,6,1)
+    morale   = Dice.roll_dice(1,6,1)
     if options.class == Hash and options["character"].careers.length > 0
       high_morales    = ["Marine", "Army"]
       medium_morales  = ["Navy", "Scout"]
