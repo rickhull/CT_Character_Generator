@@ -8,7 +8,6 @@ $LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
 require "optparse"
 require "Character"
-#require "CharacterTools"
 require "Presenter"
 
 def list_careers(career_dir)
@@ -50,23 +49,12 @@ character = Character.new
 character.generate
 
 unless basic_character
-  #careers << CharacterTools.social_status(character) if careers.empty?
-  careers << "Firster"
+  careers << CharacterTools.social_status(character) if careers.empty?
   srand && terms = rand(5) + 1 if terms == 0
 
   careers.each do |career|
-    # career's class is String
-    # For example, "Firster"
-    # There is a "Firster.rb" file defining the "Firster" class.
     require career
-    
-    # This bit works in the other branch.
-    #firster = Firster.new
-
-    # This is what I'd like to do, so any career class can be called.
     this_career = Module.const_get(career).new
-
-    # This works in the other branch.
     character.run_career(this_career, terms)
   end
 
