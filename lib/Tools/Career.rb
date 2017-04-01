@@ -53,6 +53,8 @@ class Career
   end
 
   def update_character(character, terms)
+    this_career = self.class
+    character.careers[this_career] = terms
     skill_points    = terms
     skill_options   = Array.new
 
