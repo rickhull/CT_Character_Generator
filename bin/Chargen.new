@@ -50,13 +50,24 @@ character = Character.new
 character.generate
 
 unless basic_character
-  careers << CharacterTools.social_status(character) if careers.empty?
+  #careers << CharacterTools.social_status(character) if careers.empty?
+  careers << "Firster"
   srand && terms = rand(5) + 1 if terms == 0
 
   careers.each do |career|
+    # career's class is String
+    # For example, "Firster"
+    # There is a "Firster.rb" file defining the "Firster" class.
     require career
-    firster = Firster.new
-    character.run_career(firster, terms)
+    
+    # This bit works in the other branch.
+    #firster = Firster.new
+
+    # This is what I'd like to do, so any career class can be called.
+    this_career = career.new
+
+    # This works in the other branch.
+    #character.run_career(firster, terms)
   end
 
 end
