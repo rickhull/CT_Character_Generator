@@ -31,7 +31,7 @@ class Firster < Career
       ]
 
     @muster_out_benefits = Hash.new
-    @muster_out_benefits["cash"] = [10000, 50000, 50000, 100000, 100000, 100000, 200000]
+    @muster_out_benefits["cash"] = [10000, 200000]
     @muster_out_benefits["benefits"] = [
       "Gun",
       "Blade",

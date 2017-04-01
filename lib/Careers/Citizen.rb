@@ -6,7 +6,7 @@ require "Career"
 
 class Citizen < Career
   
-  def initialize(char)
+  def initialize
   @skill_options = [ 
     "+1 Str",
     "+1 Dex",
@@ -37,9 +37,9 @@ class Citizen < Career
     "JoT"
     ]
 
-  @muster_out = Hash.new
-  @muster_out["cash"] = [ 1000, 3000, 5000, 7000, 9000 ]
-  @muster_out["benefits"] = [
+  @muster_out_benefits = Hash.new
+  @muster_out_benefits["cash"] = [ 1000, 9000 ]
+  @muster_out_benefits["benefits"] = [
     "Low Passage",
     "Blade",
     "+1 Int",
@@ -47,11 +47,5 @@ class Citizen < Career
     "Gun",
     "Middle Passage"
     ]
-  super(char)
-  end
-
-  # Set rank to nil so it and the space aren't printed.
-  def rank(char)
-    char["character"].rank = nil    
   end
 end
