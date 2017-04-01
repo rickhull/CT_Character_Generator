@@ -8,7 +8,7 @@ require "Career"
 require "Traveller"
 
 class Noble < Career 
-  def initialize(char)
+  def initialize
     @skill_options = [ 
       "+1 Int", 
       "+1 Edu", 
@@ -38,35 +38,36 @@ class Noble < Career
       "Computer"
       ]
 
-    @muster_out = Hash.new
-    @muster_out["cash"] = [10000, 50000, 50000, 100000, 100000, 100000, 200000]
-    @muster_out["benefits"] = [
+    @muster_out_benefits = Hash.new
+    @muster_out_benefits["cash"] = [10000, 200000]
+    @muster_out_benefits["benefits"] = [
       "HighPsg",
       "HighPsg",
       "Gun",
       "Blade",
+      "+1 Soc",
       "TAS",
       "Yacht"
     ] 
-    super(char) 
   end
 
-  def rank(char)
-    options = { 
-      "character" => char["character"],
-      "minimum"   => "A",
-      "index"     => 3,
-      "modifier"  => 2
-      }
+  def rank(character)
+    options               = Hash.new
+    options["character"]  = character
+    options["minimum"]    = "A"
+    options["index"]      = 3
+    options["modifier"]   = 2
     promotion_modifier = CharacterTools.stat_modifier(options)
-    terms = char["character"].careers["Noble"]
+    
+    terms = character.careers["Noble"]
     promotion_roll_required = 12 - terms
     promotion_level = (Traveller.roll_dice(6,2) - promotion_roll_required) / 3
+  
     if promotion_level > 0 
       options["level"]      = promotion_level
       options["stat"]       = "Soc"
       CharacterTools.modify_stat(options) 
-      char["skill_points"] += promotion_level
+      character["skill_points"] += promotion_level
     end
   end
 
