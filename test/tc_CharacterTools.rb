@@ -22,7 +22,11 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(@character.name.length > 1)
     assert(genders.include?(@character.gender.capitalize))
     assert(@character.appearence.length >= 10)
+    words_in_appearence = @character.appearence.split
+    assert(words_in_appearence.length > 6)
     assert(@character.appearence.match(/[a-zA-Z]/))
+    assert(@character.appearence.match(/hair/))
+    assert(@character.appearence.match(/skin/))
   end
 
   def test_add_career
@@ -198,5 +202,27 @@ class TestCharacterTools < Test::Unit::TestCase
 
   def test_morale_with_character
   end
-   
+
+  def test_not_noble?
+    upp = "77777A"
+    assert(CharacterTools.noble?(upp) == false)
+  end   
+
+  def test_noble?
+    upp = "77777B"
+    assert(CharacterTools.noble?(upp) == true)
+  end   
+
+  def test_get_random_line_from_file
+    filename = "skin_tones.txt"
+    result    = CharacterTools.get_random_line_from_file(filename)
+    assert(result.length != 0)
+  end
+
+  def test_fail_get_random_line_from_file
+    assert_raise(Errno::ENOENT){
+      filename    = "no_such_file.rerererere"
+      CharacterTools.get_random_line_from_file(filename)
+    }
+  end
 end
