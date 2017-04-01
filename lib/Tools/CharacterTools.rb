@@ -96,7 +96,6 @@ module CharacterTools
   end
   
   def self.increase_skill(options)
-  # Assume an options hash is passed. 
     character = options["character"]
     skill     = options["skill"] 
     level     = options.has_key?("level") ? options["level"] : 1
@@ -137,7 +136,7 @@ module CharacterTools
   end
 
   # Adds a career and modifies the age. 
-  def CharacterTools.add_career(char)
+  def self.add_career(char)
     terms         = char["terms"]
     career        = char["career"]
     character     = char["character"]
@@ -290,6 +289,11 @@ module CharacterTools
       end 
     end
     return morale
+  end
+
+  def self.noble?(upp)
+    soc = upp[5,1].to_i(16)
+    return soc > 10 ? true : false
   end
 
   module_function :get_random_line_from_file
