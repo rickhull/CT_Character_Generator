@@ -14,9 +14,12 @@ class Career
     skill_stuff = ["Gun", "Blade", "Weapon"]
     until terms < 1 do
       terms -= 2
-      cash_length     = @muster_out_benefits["cash"].length - 1
+      #cash_length     = @muster_out_benefits["cash"].length - 1
+      cash_min        = @muster_out_benefits["cash"][0]
+      cash_max        = @muster_out_benefits["cash"][-1]
       benefits_length = @muster_out_benefits["benefits"].length - 1
-      character.stuff["cash"] += @muster_out_benefits["cash"][rand(cash_length)]
+      #character.stuff["cash"] += @muster_out_benefits["cash"][rand(cash_length)]
+      character.stuff["cash"] += rand(cash_min..cash_max)
       benefit = @muster_out_benefits["benefits"][rand(benefits_length)]
       if benefit.match(/\+/)
         stat_options               = Hash.new(0)
