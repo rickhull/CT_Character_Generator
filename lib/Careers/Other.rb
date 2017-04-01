@@ -3,7 +3,7 @@ require "Career"
 require "Traveller"
 
 class Other < Career
-  def initialize(char)
+  def initialize
     @skill_options = [ 
       "+1 Str",
       "+1 Dex",
@@ -34,20 +34,15 @@ class Other < Career
       "JoT"
       ]
 
-    @muster_out = Hash.new
-    @muster_out["cash"] = [1000, 5000, 10000, 10000, 10000, 50000, 100000]
-    @muster_out["benefits"] = [
+    @muster_out_benefits = Hash.new
+    @muster_out_benefits["cash"] = [1000, 100000]
+    @muster_out_benefits["benefits"] = [
       "LowPsg",
       "+1 Int",
       "+1 Edu",
       "Gun",
       "HighPsg"
     ]
-    super(char)
   end
  
-  def rank(char)
-    char["character"].rank     = nil
-  end
-
 end
