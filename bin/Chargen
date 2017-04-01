@@ -21,7 +21,7 @@ def list_careers(career_dir)
   careers
 end
  
-career = ""
+careers = []
 terms  = 0
 basic_character = false
 
@@ -35,7 +35,7 @@ end
 
 option_parser = OptionParser.new do |opts|
   opts.on("-c career", "Career, defaults based on Soc") do |c| 
-    career = c if available_careers.include?(c)
+    careers << c if available_careers.include?(c)
   end
   opts.on("-t terms", "Terms, defaults to range of 1-5") do |t|
     terms = t.to_i
@@ -50,44 +50,25 @@ character = Character.new
 character.generate
 
 unless basic_character
-  career = CharacterTools.social_status(character) if career.empty?
+  #careers << CharacterTools.social_status(character) if careers.empty?
+  careers << "Firster"
   srand && terms = rand(5) + 1 if terms == 0
 
-  char = Hash.new(0)
-  char["character"] = character
-  char["career"]    = career
-  char["terms"]     = terms
+  careers.each do |career|
+    # career's class is String
+    # For example, "Firster"
+    # There is a "Firster.rb" file defining the "Firster" class.
+    require career
+    
+    # This bit works in the other branch.
+    #firster = Firster.new
 
-  CharacterTools.add_career(char)
+    # This is what I'd like to do, so any career class can be called.
+    this_career = Module.const_get(career).new
 
-  case career 
-    when "Army" then
-      require "Army"
-      Army.new(char)
-    when "Guide" then
-      require "Guide"
-      Guide.new(char)
-    when "LEO" then
-      require "LEO"
-      LEO.new(char)
-    when "Marine" then
-      require "Marine"
-      Marine.new(char)
-    when "Merchant" then
-      require "Merchant"
-      Merchant.new(char)
-    when "Navy" then
-      require "Navy"
-      Navy.new(char)
-    when "Noble" then
-      require "Noble"
-      Noble.new(char)
-    when "Other" then
-      require "Other"
-      Other.new(char)
-    else
-      require "Citizen"
-      Citizen.new(char)
+    # This works in the other branch.
+    character.run_career(this_career, terms)
   end
+
 end
 Presenter.show(character)
