@@ -52,4 +52,22 @@ class TestCharacter < Test::Unit::TestCase
     assert(@base_character.age == 18)
   end
 
+  def test_has_no_temperament
+    assert(@base_character.temperament == nil)
+  end
+
+  def test_has_temperament
+    assert(@character.temperament.length > 5)
+  end
+
+  def test_has_no_species
+    assert(@base_character.species.class == String)
+    assert(@base_character.species.length == 0)
+  end
+
+  def test_has_species
+    available_species = ["humaniti"]
+    assert(available_species.include?(@character.species.downcase))
+  end
+
 end
