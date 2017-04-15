@@ -33,7 +33,7 @@ load_dirs.each do |dir|
 end
 
 option_parser = OptionParser.new do |opts|
-  opts.on("-c career", "Career, defaults based on Soc") do |c| 
+  opts.on("-c career", "Career, defaults based on Soc. Can be used more than once for multiple careers.") do |c| 
     careers << c if available_careers.include?(c)
   end
   opts.on("-t terms", "Terms, defaults to range of 1-5") do |t|
@@ -49,7 +49,7 @@ character = Character.new
 character.generate
 
 unless basic_character
-  careers << CharacterTools.social_status(character) if careers.empty?
+  careers << CharacterTools.social_status(character)
   srand && terms = rand(5) + 1 if terms == 0
 
   careers.each do |career|
