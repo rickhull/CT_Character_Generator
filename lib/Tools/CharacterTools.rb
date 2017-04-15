@@ -117,8 +117,8 @@ module CharacterTools
     begin
       character = options["character"]
       stat      = options["stat"]
-      #return    unless STAT_NAMES.include?(stat) and character.upp.length > 5
       stat_level     = options.has_key?("stat_level") ? options["stat_level"] : 1
+      raise ArgumentError unless Integer(stat_level)
       stat_index = STAT_NAMES.index(stat)
       raise ArgumentError unless character.upp =~ /[0-9A-F]/
       new_stat = character.upp[stat_index,1].to_i(16) + stat_level
@@ -127,10 +127,8 @@ module CharacterTools
       new_stat = new_stat.to_s(16).upcase
       character.upp[stat_index] = new_stat
     rescue TypeError => wrong_type
-      #$stderr.puts "Input error type failure: #{wrong_type}."
       raise
     rescue ArgumentError => bad_arg
-      #$stderr.print "Bad argument: #{bad_arg}."
       raise
     end
   end
