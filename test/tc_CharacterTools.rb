@@ -191,10 +191,10 @@ class TestCharacterTools < Test::Unit::TestCase
       CharacterTools.modify_stat(options)
     } 
   end 
-=begin
+
   def test_modify_stat_failure_non_hex_upp
-    assert_raise(TypeError){
-    @character        = "" 
+    assert_raise(ArgumentError){
+    @character.upp        = "GGGGGG" 
     options               = Hash.new(0)
     options["character"]  = @character
     options["stat"]       = "Int"
@@ -202,7 +202,6 @@ class TestCharacterTools < Test::Unit::TestCase
     CharacterTools.modify_stat(options)  
     }
   end  
-=end
 
   def test_morale_method
     morale    = CharacterTools.morale
