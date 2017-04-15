@@ -55,6 +55,7 @@ class Career
   def update_character(character, terms)
     this_career = self.class
     character.careers[this_career] = terms
+    character.age   = character.age + (terms * 4) unless character.age > 18
     skill_points    = terms
     skill_options   = Array.new
 
