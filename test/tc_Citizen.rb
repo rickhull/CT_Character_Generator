@@ -1,5 +1,29 @@
 # Testing the Citizen class.
 
+# Note that this is currently failing in test_career, and more.
+# Sample output
+#
+# Loaded suite test/ts_CT_Character_Generator
+# Started
+# ................................. career is Citizen
+#  career.class is Class
+#  terms is 2
+# As key 0
+# Hash
+# F
+# ===============================================================================
+# Failure: <false> is not true.
+# test_career(TestCitizen)
+# /home/leam/lang/git/CT_Character_Generator/test/tc_Citizen.rb:27:in `test_career'
+#      24:       puts "As key #{@character.careers["Citizen"]}"
+#      25:     end
+#      26:     puts @character.careers.class
+#   => 27:     assert(@character.careers["Citizen"] == 2)
+#      28:   end
+#      29: 
+#      30:   def test_terms
+#  ===============================================================================
+
 $LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "test/unit"
@@ -11,20 +35,24 @@ class TestCitizen < Test::Unit::TestCase
   def setup
     @character = Character.new
     @character.generate
-    @character.careers['Citizen'] = 2
-    @char = Hash.new(0)
-    @char['character']  = @character
-    @char['career']     = "Citizen"
-    @char['terms']      = 2
-    Citizen.new(@char)
+    @career = "Citizen"
+    @this_career = Module.const_get(@career).new
+    @character.run_career(@this_career, 2)
   end
 
   def test_career
-    assert(@char['career'] == "Citizen") 
+    @character.careers.each_pair do |career, terms|
+      puts " career is #{career}"
+      puts " career.class is #{career.class}"
+      puts " terms is #{terms}"
+      puts "As key #{@character.careers["Citizen"]}"
+    end
+    puts @character.careers.class
+    assert(@character.careers["Citizen"] == 2)
   end
 
   def test_terms
-    assert(@char['terms'] == 2)
+    assert(@character.careers[@career] == 2)
   end
 
   def test_careers_has_key
