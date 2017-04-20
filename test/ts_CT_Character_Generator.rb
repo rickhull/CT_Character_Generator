@@ -21,7 +21,7 @@ require "tc_Character"
 # The various careers
 #require "tc_Noble"
 #require "tc_Other"
-require "tc_Citizen"
+#require "tc_Citizen"
 #require "tc_Firster"
 
 #require "tc_Army"
