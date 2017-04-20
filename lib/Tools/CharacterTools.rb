@@ -6,12 +6,8 @@ module CharacterTools
 
   $DATA_PATH  = File.expand_path("../../../data", __FILE__)
   require "Dice"
-  #require "Presenter"
   require "Name"
-  #require "json"
-  #require "pp"
 
-  # Provides UPP as a 6 Hexidecimal character string.
   def generate_upp
     new_upp = String.new
     6.times do
@@ -71,7 +67,6 @@ module CharacterTools
   end
  
   STAT_NAMES = %w{Str Dex End Int Edu Soc}
-  # Create a Character, with UPP, name, and gender.
   def self.init
     character          = Character.new
     character.upp      = self.upp
@@ -112,7 +107,6 @@ module CharacterTools
     end
   end
 
-  # Modify a stat.
   def self.modify_stat(options)
     begin
       character = options["character"]
@@ -133,7 +127,6 @@ module CharacterTools
     end
   end
 
-  # Adds a career and modifies the age. 
   def self.add_career(char)
     terms         = char["terms"]
     career        = char["career"]
@@ -142,7 +135,6 @@ module CharacterTools
     character.careers[career] += terms
   end
 
-  # Pull Character data into a hash.
   def self.hash_character(character)
     c_hash = Hash.new
     c_hash["name"]    = character.name
@@ -203,7 +195,6 @@ module CharacterTools
     end
   end
 
-  # Sets and Returns title if Character is a noble.
   def self.title(character)
     nobility = Hash.new
     nobility["B"] = { "f" => "Dame",      "m" => "Knight" }
@@ -212,7 +203,6 @@ module CharacterTools
     nobility["E"] = { "f" => "Countess",  "m" => "Count" }
     nobility["F"] = { "f" => "Duchess",   "m" => "Duke" }
 
-    #title = ""
     soc = character.upp[5,1].upcase 
     
     if nobility.has_key?(soc)
