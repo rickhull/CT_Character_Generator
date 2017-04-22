@@ -19,8 +19,8 @@ require "tc_Character"
 #require "tc_PresenterDefault"
 
 # The various careers
-#require "tc_Noble"
-#require "tc_Other"
+require "tc_Noble"
+require "tc_Other"
 require "tc_Citizen"
 #require "tc_Firster"
 
