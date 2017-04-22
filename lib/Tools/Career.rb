@@ -52,8 +52,8 @@ class Career
     end
   end
 
-  def update_character(character, terms)
-    this_career = self.class
+  def update_character(character, career, terms)
+    this_career = career.class.to_s
     character.careers[this_career] = terms
     character.age   = character.age + (terms * 4) unless character.age > 18
     skill_points    = terms

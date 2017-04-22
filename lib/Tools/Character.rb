@@ -44,6 +44,6 @@ class Character
   end
 
   def run_career(career, terms)
-    career.update_character(self, terms)
+    career.update_character(self, career, terms)
   end
 end
