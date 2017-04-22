@@ -52,7 +52,7 @@ option_parser.parse!
 character = Character.new
 character.generate
 
-if options["terms"].nil?
+if options["terms"] == 0
   srand && options["terms"] = rand(5) + 1
 else
   options["terms"] = Integer(options["terms"])
