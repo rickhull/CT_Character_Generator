@@ -1,9 +1,11 @@
+# Class for Navy characters.
+
 require "CharacterTools"
 require "Career"
 require "Dice"
 
 class Navy < Career 
-  def initialize(char)
+  def initialize
     @skill_options = [ 
       "Brawling",
       "+1 Str",
@@ -123,9 +125,9 @@ class Navy < Career
       "JoT"
       ]
 
-    @muster_out = Hash.new
-    @muster_out["cash"] = [1000, 5000, 5000, 10000, 20000, 50000, 50000]
-    @muster_out["benefits"] = [
+    @muster_out_benefits = Hash.new
+    @muster_out_benefits["cash"] = [1000, 50000]
+    @muster_out_benefits["benefits"] = [
       "LowPsg",
       "+1 Int",
       "+1 Edu",
@@ -134,18 +136,18 @@ class Navy < Career
       "HighPsg",
       "+2 Soc"
     ] 
-    super(char) 
   end
 
-  def rank(char)
-    officers = %w[ EN SLT LT LTCMDR CMDR CPT COMM FADM SADM GADM ]
+  def rank(character)
+    terms = character.careers["Navy"]
+     officers = %w[ EN SLT LT LTCMDR CMDR CPT COMM FADM SADM GADM ]
     enlisted = %w[ SR SA AS PO3 PO2 PO1 CPO SCPO MCPO ]
     commission   = 10
-    commission_roll  = Dice.roll_dice(6,2,1) + char["terms"] - commission
+    commission_roll  = Dice.roll_dice(6,2,1) + terms - commission
     if commission_roll >= 0
-      char["character"].rank = officers[commission_roll/2]
+      character.rank = officers[commission_roll/2]
     else
-      char["character"].rank = enlisted[char["terms"] + rand(2)]
+      character.rank = enlisted[terms + rand(2)]
     end
   end
 end
