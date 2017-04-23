@@ -1,0 +1,22 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+bin/Chargen:27:3: C: Style/IfUnlessModifier: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+  if dir.end_with?("Careers")
+  ^^
+bin/Chargen:46:62: W: Lint/UnusedBlockArgument: Unused block argument - s. You can omit the argument if you don't care about it.
+  opts.on("-s", "--sql", "Provide SQL statement output") do |s|
+                                                             ^
+bin/Chargen:55:4: C: Style/NumericPredicate: Use (options["terms"]).zero? instead of options["terms"] == 0.
+if options["terms"] == 0
+   ^^^^^^^^^^^^^^^^^^^^^
+bin/Chargen:66:45: C: Style/AndOr: Use || instead of or.
+  if options["careers"].key?(social_career) or options["careers"].count == 0
+                                            ^^
+bin/Chargen:66:48: C: Style/NumericPredicate: Use options["careers"].count.zero? instead of options["careers"].count == 0.
+  if options["careers"].key?(social_career) or options["careers"].count == 0
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 file inspected, 5 offenses detected

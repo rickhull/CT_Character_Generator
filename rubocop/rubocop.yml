@@ -1,0 +1,14 @@
+# Command line to run:
+# rubocop -c rubocop/rubocop.yml -D -o rubocop/Chargen.out bin/Chargen
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false
+
+Style/SpaceAroundOperators:
+  Enabled: false
