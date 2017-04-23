@@ -1,56 +1,67 @@
-9 Oct 15  I'm re-thinking the code and program flow, asking for critique.
-  Some of the names and classes exist, but will get heavily refactored.
+CT_Character_Tools
+==================
 
-15 Nov 15 More re-thinking. 
+Use Cases
+=========
 
+Removed several use cases. This program is just to create NPCs.
+Something else will use the basics and be able to edit characters.
+
+UC.1  Create a new character from scratch. 
+UC.5  Run dual careers (Navy and Noble). 
+UC.7  Output to XML, JSON, Wiki, CSV, HTML, Neo4J, SQL. 
+
+
+Classes and Modules
+===================
 Class Character
-  Holds attributes of a character, and minimal methods.
-  For example, the name method returns a concatantaion
-    of first_name and last_name
+  Holds data like UPP, Gender, Name, Skills, Equipment.
+  Mostly a data structure with the "generate" method.
+  The to_s needs to go into Presenter.
+  run_career needs to go away, or into CharacterTools.rb
+    run_career is the big issue right now.
 
-  ?? Something to take a hash and set Character attributes. 
-    ?? Is that Present, as output is what matters?
+Module CharacterTools
+  Methods to generate character data.
 
-Module Chargen
+Module Presenter
+  Methods to format output. 
 
-  Provides many of the tools for generating Character.attributes.
-  This module is usually a super class of a particular career. 
-  Note that Chargen generates attributes. 
+Class Career
+  Methods to modify a character based on career choises.
+Class <Career>
+  Attributes of the specified career.
 
-  Chargen.survival_roll(survival_required_number)  
-    # Returns bool
+Program Flow
+============
+
+This needs work. My gut feel is that I'm missing the OOP idea and have
+too many steps. Yet I don't know enough OOP to be sure.
+
+  Chargen
+    Get available careers
+    Get options
+    Class Character
+      Character.new
+      Character.generate
+    Set terms based on -t option or random.
+    == The basic character should not have a career.
+    == Terms should actually go after this.
+
+    Add a single term of the Social Career if not already a career.
+    For each career in the character.careers hash
+      Class Career
+      Class <Career>
+        Modify the character based on Methods and attributes of 
+        Class <Career>
+
+    Display the resulting character on the screen 
+    == PresenterSQL is a start on a new topic. Can be ignored for now.
   
-Module Marine, Pirate
-  A subclass of Chargen, it will provide tables for the 
-    Chargen methods to act on. 
-  There are several careers like "Marine", they all subclass Chargen.
   
-  Marine.survival_required_number = 7 
-  Pirate.survival_required_number = 9 
+
   
-Class Present
-  Takes an object of class Character and provides methods to 
-    display the object.
+Existing Code
+=============
 
- 
-For example: 
-
-  "Fred" = Character.new
-  require 'Marine'
-  if Chargen.survival_roll(survival_required_number)
-    puts "You lived another year."
-  end
-
-  require 'Pirate'
-  if Chargen.survival_roll(survival_required_number)
-    puts "You lived another year."
-  end
-
-## The Marine and Pirate Modules contain attributes and arrays that the
-    Chargen module uses. If the character changes careers, like going
-    from a Marine to a Pirate, the values in the attributes change.
-
-
-    
-
-
+https://github.com/LeamHall/CT_Character_Generator
