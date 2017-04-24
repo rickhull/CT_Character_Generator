@@ -1,0 +1,56 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+lib/Tools/Character.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class Character
+^^^^^
+lib/Tools/Character.rb:1:1: C: Style/FileName: The name of this source file (Character.rb) should use snake_case.
+class Character
+^
+lib/Tools/Character.rb:2:1: C: Style/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/Tools/Character.rb:7:47: C: Style/TrailingWhitespace: Trailing whitespace detected.
+  attr_accessor :gender, :name, :upp, :skills, 
+                                              ^
+lib/Tools/Character.rb:8:7: C: Style/AlignParameters: Align the parameters of a method call if they span more than one line.
+      :careers, :age, :rank, :title, :stuff,
+      ^^^^^^^^
+lib/Tools/Character.rb:9:7: C: Style/AlignParameters: Align the parameters of a method call if they span more than one line.
+      :appearence, :species, :plot, :temperament
+      ^^^^^^^^^^^
+lib/Tools/Character.rb:11:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def initialize(char = {}) ...
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/Tools/Character.rb:11:18: W: Lint/UnusedMethodArgument: Unused method argument - char. If it's necessary, use _ or _char as an argument name to indicate that it won't be used. You can also write as initialize(*) if you want the method to accept any arguments but don't care about them.
+  def initialize(char = {})
+                 ^^^^
+lib/Tools/Character.rb:21:7: C: Style/AlignHash: Align the elements of a hash literal if they span more than one line.
+      "benefits"  => Hash.new(0)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/Tools/Character.rb:22:7: C: Style/MultilineHashBraceLayout: Closing hash brace must be on the same line as the last hash element when opening brace is on the same line as the first hash element.
+      }
+      ^
+lib/Tools/Character.rb:39:52: C: Style/TrailingWhitespace: Trailing whitespace detected.
+    printf("%s %s %s [%s] Age %d \n %s \n %s %s\n", 
+                                                   ^
+lib/Tools/Character.rb:40:7: C: Style/AlignParameters: Align the parameters of a method call if they span more than one line.
+      @name, @species.capitalize, @gender.capitalize, @upp, @age,
+      ^^^^^
+lib/Tools/Character.rb:41:7: C: Style/AlignParameters: Align the parameters of a method call if they span more than one line.
+      @appearence,
+      ^^^^^^^^^^^
+lib/Tools/Character.rb:42:7: C: Style/AlignParameters: Align the parameters of a method call if they span more than one line.
+      @temperament, @plot
+      ^^^^^^^^^^^^
+lib/Tools/Character.rb:43:7: C: Style/ClosingParenthesisIndentation: Align ) with (.
+      ) 
+      ^
+lib/Tools/Character.rb:43:7: C: Style/MultilineMethodCallBraceLayout: Closing method call brace must be on the same line as the last argument when opening brace is on the same line as the first argument.
+      ) 
+      ^
+lib/Tools/Character.rb:43:8: C: Style/TrailingWhitespace: Trailing whitespace detected.
+      ) 
+       ^
+
+1 file inspected, 17 offenses detected
