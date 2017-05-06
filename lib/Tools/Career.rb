@@ -11,7 +11,7 @@ class Career
   def muster_out(options)
     character   = options["character"]
     terms       = options["terms"]
-    skill_stuff = ["Gun", "Blade", "Weapon"]
+    skill_stuff = ["Blade", "Gun", "TAS", "Weapon"]
     until terms < 1 do
       terms -= 2
       cash_min        = @muster_out_benefits["cash"][0]
@@ -28,16 +28,18 @@ class Career
       elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
         options               = Hash.new(0)
         case benefit
-          when "Gun" 
-            options["character"]  = character
-            options["skill"]      = "GunCbt"
-            options["level"]      = 1
-            CharacterTools.increase_skill(options)
           when "Blade"
             options["character"]  = character
             options["skill"]      = "Blade"
             options["level"]      = 1
             CharacterTools.increase_skill(options)
+          when "Gun" 
+            options["character"]  = character
+            options["skill"]      = "GunCbt"
+            options["level"]      = 1
+            CharacterTools.increase_skill(options)
+          when "TAS" 
+            character.stuff["cash"] += @muster_out_benefits["cash"][-1]
           when "Weapon"
             options["character"]  = character
             options["skill"]      = "Weapon"
