@@ -97,7 +97,7 @@ module CharacterTools
     return status 
   end
   
-  def self.increase_skill(options)
+  def increase_skill(options)
     character = options["character"]
     skill     = options["skill"] 
     level     = options.has_key?("level") ? options["level"] : 1
