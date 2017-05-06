@@ -1,4 +1,4 @@
-
+# Provides First and Last name based on gender and optionally species.
 class Name
 
   PROJECT_PATH = File.expand_path(File.dirname(__FILE__))
@@ -8,16 +8,29 @@ class Name
 
   def initialize(options)
     @gender       ||= options["gender"]
-    @species      ||= options["species"]
-    @name         = new_name(@gender, @species)
+    @species      = get_species(options)
+    @name         = new_name()
+  end
+
+  def get_species(options)
+    available_species = ["humaniti"]
+    if options.key?("species") and available_species.include?(options["species"])
+      species = options["species"]
+    else
+      species = available_species.sample
+    end
+    return species
   end
 
   # Pulls a first name from the database, based on gender. 
   # Gender required but defaults to male.
   # Requires sqlite3 functionality and the database file.
-  def first_name(gender="male", species="humaniti")
-    gender    = gender.downcase
-    species   = species.downcase
+  def first_name()
+    if @gender == "F"
+      gender = "female"
+    else
+      gender = "male"
+    end 
     begin 
       require "sqlite3"
       db = SQLite3::Database.open "#{DATA_PATH}/names.db"
@@ -25,7 +38,7 @@ class Name
       first_name_result = first_name_query.execute
       first_name = first_name_result.first
     rescue
-      namefile    = "data/#{species}_#{gender}_firstnames"
+      namefile    = "data/#{@species}_#{gender}_firstnames"
       name = name_from_file(namefile)
       return name
     ensure
@@ -50,8 +63,7 @@ class Name
 
   # Pulls a last name from the database. In the future based on culture. 
   # Requires sqlite3 functionality and the database file.
-  def last_name(species)
-    species   = species.downcase
+  def last_name()
     begin 
       require "sqlite3"
       db = SQLite3::Database.open "#{DATA_PATH}/names.db"
@@ -59,7 +71,7 @@ class Name
       last_name_result = last_name_query.execute
       last_name = last_name_result.first
     rescue
-      namefile    = "data/#{species}_lastnames"
+      namefile    = "data/#{@species}_lastnames"
       name = name_from_file(namefile)
       return name
     ensure
@@ -70,9 +82,9 @@ class Name
   end
 
   # Needs gender, produces first and last name as a single string.
-  def new_name(gender, species)
-    f_name    = first_name(gender,species)
-    l_name    = last_name(species)
+  def new_name()
+    f_name    = first_name()
+    l_name    = last_name()
     return    "#{f_name} #{l_name}"
   end
 
