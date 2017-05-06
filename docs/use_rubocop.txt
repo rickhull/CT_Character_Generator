@@ -1,0 +1,3 @@
+Example usage:
+
+rubocop -c rubocop/rubocop.yml -D -o rubocop/lib/Tools/Character.rb.out lib/Tools/Character.rb
