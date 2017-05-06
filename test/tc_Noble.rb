@@ -40,4 +40,10 @@ class TestNoble < Test::Unit::TestCase
     assert(@character.stuff['benefits'].count <= @half_terms)
   end
 
+  def test_title
+    @character.upp = "77777B"
+    @character.gender = "M"
+    @character.title = CharacterTools.get_title(@character)
+    assert(@character.title == "Knight")
+  end
 end
