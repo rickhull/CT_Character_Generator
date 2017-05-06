@@ -202,14 +202,11 @@ module CharacterTools
     end
   end
 
-  def self.title(character)
-    soc = character.upp[5,1].upcase 
-    gender = character.gender 
+  def title()
+    soc = @upp[5,1]
     if NOBILITY.has_key?(soc)
-      title = NOBILITY[soc][gender]
-      character.title = title
+      return NOBILITY[soc][@gender]
     end
-    return title
   end 
 
   def self.stat_modifier(options)
@@ -274,8 +271,8 @@ module CharacterTools
     return morale
   end
 
-  def self.noble?(upp)
-    soc = upp[5,1].to_i(16)
+  def noble?()
+    soc = @upp[5,1].to_i(16)
     return soc > 10 ? true : false
   end
 

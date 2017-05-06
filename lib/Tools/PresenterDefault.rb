@@ -6,7 +6,7 @@ module PresenterDefault
     lines[0] += "#{character.title} " if character.title
     lines[0] += "#{character.rank} "  if character.rank
     lines[0] += "#{character.name} "  if character.name
-    lines[0] += "#{character.gender.capitalize} "  if character.gender
+    lines[0] += "#{character.gender} "  if character.gender
     lines[0] += "Age: #{character.age} "   if character.age
     lines[0] += "#{character.upp} "   if character.upp
     character.careers.each_pair do |career, terms|

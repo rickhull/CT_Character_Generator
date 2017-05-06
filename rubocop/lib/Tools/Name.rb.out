@@ -1,0 +1,90 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+lib/Tools/Name.rb:1:1: C: Style/FileName: The name of this source file (Name.rb) should use snake_case.
+# Provides First and Last name based on gender and optionally species.
+^
+lib/Tools/Name.rb:3:1: C: Style/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+lib/Tools/Name.rb:6:1: C: Style/TrailingWhitespace: Trailing whitespace detected.
+lib/Tools/Name.rb:12:29: C: Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+    @name         = new_name()
+                            ^
+lib/Tools/Name.rb:17:32: C: Style/AndOr: Use && instead of and.
+    if options.key?("species") and available_species.include?(options["species"])
+                               ^^^
+lib/Tools/Name.rb:17:81: C: Metrics/LineLength: Line is too long. [81/80]
+    if options.key?("species") and available_species.include?(options["species"])
+                                                                                ^
+lib/Tools/Name.rb:22:5: C: Style/RedundantReturn: Redundant return detected.
+    return species
+    ^^^^^^
+lib/Tools/Name.rb:25:59: C: Style/TrailingWhitespace: Trailing whitespace detected.
+  # Pulls a first name from the database, based on gender. 
+                                                          ^
+lib/Tools/Name.rb:28:3: C: Metrics/MethodLength: Method has too many lines. [20/10]
+  def first_name() ...
+  ^^^^^^^^^^^^^^^^
+lib/Tools/Name.rb:28:17: C: Style/DefWithParentheses: Omit the parentheses in defs when the method doesn't accept any arguments.
+  def first_name()
+                ^
+lib/Tools/Name.rb:29:5: C: Style/ConditionalAssignment: Use the return of the conditional for variable assignment and comparison.
+    if @gender == "F" ...
+    ^^^^^^^^^^^^^^^^^
+lib/Tools/Name.rb:33:8: C: Style/TrailingWhitespace: Trailing whitespace detected.
+    end 
+       ^
+lib/Tools/Name.rb:34:10: C: Style/TrailingWhitespace: Trailing whitespace detected.
+    begin 
+         ^
+lib/Tools/Name.rb:37:81: C: Metrics/LineLength: Line is too long. [102/80]
+      first_name_query = db.prepare "SELECT * from humaniti_#{gender}_first ORDER BY RANDOM() LIMIT 1"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^
+lib/Tools/Name.rb:48:5: C: Style/RedundantReturn: Redundant return detected.
+    return first_name[0].to_s
+    ^^^^^^
+lib/Tools/Name.rb:53:41: C: Style/TrailingWhitespace: Trailing whitespace detected.
+      name_file   = File.open(file, "r") 
+                                        ^
+lib/Tools/Name.rb:58:7: W: Lint/UselessAssignment: Useless assignment to variable - name.
+      name        = name_array[rand(name_array.length - 1)]
+      ^^^^
+lib/Tools/Name.rb:60:7: W: Lint/UselessAssignment: Useless assignment to variable - name.
+      name = "Fred"
+      ^^^^
+lib/Tools/Name.rb:64:73: C: Style/TrailingWhitespace: Trailing whitespace detected.
+  # Pulls a last name from the database. In the future based on culture. 
+                                                                        ^
+lib/Tools/Name.rb:66:3: C: Metrics/MethodLength: Method has too many lines. [15/10]
+  def last_name() ...
+  ^^^^^^^^^^^^^^^
+lib/Tools/Name.rb:66:16: C: Style/DefWithParentheses: Omit the parentheses in defs when the method doesn't accept any arguments.
+  def last_name()
+               ^
+lib/Tools/Name.rb:67:10: C: Style/TrailingWhitespace: Trailing whitespace detected.
+    begin 
+         ^
+lib/Tools/Name.rb:70:81: C: Metrics/LineLength: Line is too long. [90/80]
+      last_name_query = db.prepare "SELECT * from humaniti_last ORDER BY RANDOM() LIMIT 1"
+                                                                                ^^^^^^^^^^
+lib/Tools/Name.rb:81:5: C: Style/RedundantReturn: Redundant return detected.
+    return last_name[0].to_s
+    ^^^^^^
+lib/Tools/Name.rb:85:15: C: Style/DefWithParentheses: Omit the parentheses in defs when the method doesn't accept any arguments.
+  def new_name()
+              ^
+lib/Tools/Name.rb:86:27: C: Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+    f_name    = first_name()
+                          ^
+lib/Tools/Name.rb:87:26: C: Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+    l_name    = last_name()
+                         ^
+lib/Tools/Name.rb:88:5: C: Style/RedundantReturn: Redundant return detected.
+    return    "#{f_name} #{l_name}"
+    ^^^^^^
+lib/Tools/Name.rb:92:5: C: Style/RedundantReturn: Redundant return detected.
+    return @name
+    ^^^^^^
+
+1 file inspected, 29 offenses detected

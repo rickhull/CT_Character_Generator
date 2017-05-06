@@ -5,7 +5,7 @@ class Character
   include CharacterTools
 
   attr_accessor :gender, :name, :upp, :skills, 
-      :careers, :age, :rank, :title, :stuff,
+      :careers, :age, :rank, :stuff,
       :appearence, :species, :plot, :temperament
 
   def initialize(char = {})
@@ -36,6 +36,7 @@ class Character
   end
 
   def to_s
+    printf("%s ", title) if noble?()
     printf("%s %s %s [%s] Age %d \n %s \n %s %s\n", 
       @name, @species.capitalize, @gender.capitalize, @upp, @age,
       @appearence,

@@ -8,12 +8,10 @@ require "pp"
 class TestCharacterTools < Test::Unit::TestCase
 
   def setup
-    #@character = CharacterTools.init
     @character = Character.new
     @character.generate
   end
 
-  
   def test_init
     genders = ["M", "F"]
     assert(@character.age == 18) 
@@ -101,6 +99,20 @@ class TestCharacterTools < Test::Unit::TestCase
     assert(CharacterTools.social_status(@character) == "Citizen")
     @character.upp = "77777F"
     assert(CharacterTools.social_status(@character) == "Noble")
+  end
+
+  def test_title_knight
+    @character.upp = "77777B"
+    @character.gender = "M"
+    #@character.title = CharacterTools.get_title(@character)
+    assert(@character.title == "Knight")
+  end
+
+  def test_title_dame
+    @character.upp = "77777B"
+    @character.gender = "F"
+    #@character.title = CharacterTools.get_title(@character)
+    assert(@character.title == "Dame")
   end
 
   def test_increase_skill
@@ -213,13 +225,13 @@ class TestCharacterTools < Test::Unit::TestCase
   end
 
   def test_not_noble?
-    upp = "77777A"
-    assert(CharacterTools.noble?(upp) == false)
+    @character.upp = "77777A"
+    assert(@character.noble? == false)
   end   
 
   def test_noble?
-    upp = "77777B"
-    assert(CharacterTools.noble?(upp) == true)
+    @character.upp = "77777B"
+    assert(@character.noble? == true)
   end   
 
   def test_get_random_line_from_file
