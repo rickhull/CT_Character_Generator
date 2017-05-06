@@ -43,7 +43,7 @@ module CharacterTools
       c = get_random_line_from_file("hair_colors.txt")
       l = get_random_line_from_file("hair_length.txt")
       new_hair = "#{b} #{t} #{c} #{l}"
-    rescue SystemCallError => e
+    rescue SystemCallError
       new_hair = "Straight medium brown short" 
     end
     return new_hair
@@ -52,7 +52,7 @@ module CharacterTools
   def generate_skin
     begin
       skin_tone =  get_random_line_from_file("skin_tones.txt")
-    rescue SystemCallError => e
+    rescue SystemCallError
       skin_tone = "medium"
     end
     return skin_tone 
@@ -120,9 +120,9 @@ module CharacterTools
       new_stat = [new_stat, 2].max
       new_stat = new_stat.to_s(16).upcase
       character.upp[stat_index] = new_stat
-    rescue TypeError => wrong_type
+    rescue TypeError
       raise
-    rescue ArgumentError => bad_arg
+    rescue ArgumentError
       raise
     end
   end
@@ -269,11 +269,11 @@ module CharacterTools
   def self.morale(options = "")
     morale   = Dice.roll_dice(1,6,1)
     if options.class == Hash and options["character"].careers.length > 0
-      high_morales    = ["Marine", "Army"]
+      high_morales    = ["Marine", "Army", "Firster"]
       medium_morales  = ["Navy", "Scout"]
       options["character"].careers.each do |career, terms|
         morale += (1 * terms)      if high_morales.include?(career)
-        morale += (0.5 * terms)    if high_morales.include?(career)
+        morale += (0.5 * terms)    if medium_morales.include?(career)
       end 
     end
     return morale
