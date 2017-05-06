@@ -7,6 +7,13 @@ module CharacterTools
   $DATA_PATH  = File.expand_path("../../../data", __FILE__)
   require "Dice"
   require "Name"
+  NOBILITY = {
+    "B" => { "F" => "Dame",     "M" => "Knight" },
+    "C" => { "F" => "Baroness", "M" => "Baron" },
+    "D" => { "F" => "Marquesa", "M" => "Marquis" },
+    "E" => { "F" => "Countess", "M" => "Count" },
+    "F" => { "F" => "Duchess",  "M" => "Duke" },
+  }
 
   def generate_upp
     new_upp = String.new
@@ -20,9 +27,9 @@ module CharacterTools
 
   def generate_gender
     if Dice.roll_dice(6,1,1) >= 4
-      gender = "male"
+      gender = "M"
     else
-      gender = "female"
+      gender = "F"
     end
     return gender
   end
@@ -196,23 +203,11 @@ module CharacterTools
   end
 
   def self.title(character)
-    nobility = Hash.new
-    nobility["B"] = { "f" => "Dame",      "m" => "Knight" }
-    nobility["C"] = { "f" => "Baroness",  "m" => "Baron" }
-    nobility["D"] = { "f" => "Marquesa",  "m" => "Marquis" }
-    nobility["E"] = { "f" => "Countess",  "m" => "Count" }
-    nobility["F"] = { "f" => "Duchess",   "m" => "Duke" }
-
     soc = character.upp[5,1].upcase 
-    
-    if nobility.has_key?(soc)
-      if character.gender.downcase == "female"
-        title = nobility[soc]["f"]
-        character.title = title
-      else
-        title = nobility[soc]["m"]
-        character.title = title
-      end 
+    gender = character.gender 
+    if NOBILITY.has_key?(soc)
+      title = NOBILITY[soc][gender]
+      character.title = title
     end
     return title
   end 
