@@ -45,29 +45,28 @@ class Noble < Career
       "HighPsg",
       "Gun",
       "Blade",
-      "+1 Soc",
       "TAS",
       "Yacht"
     ] 
   end
 
   def rank(character)
-    options               = Hash.new
-    options["character"]  = character
-    options["minimum"]    = "A"
-    options["index"]      = 3
-    options["modifier"]   = 2
-    promotion_modifier = CharacterTools.stat_modifier(options)
-    
     terms = character.careers["Noble"]
-    promotion_roll_required = 12 - terms
+    promotion_roll_required = 10 - terms
     promotion_level = (Dice.roll_dice(6,2) - promotion_roll_required) / 3
-  
     if promotion_level > 0 
-      options["level"]      = promotion_level
-      options["stat"]       = "Soc"
-      CharacterTools.modify_stat(options) 
-      character["skill_points"] += promotion_level
+      options               = Hash.new
+      options["character"]  = character
+      if character.noble?
+        options["stat_level"] = promotion_level
+        options["stat"]       = "Soc"
+        options["skill"]      = @advanced_skill_options.sample
+        CharacterTools.modify_stat(options) 
+      else
+        character.upp[5] = "B"
+        options["skill"]      = @skill_options.sample
+      end
+      CharacterTools.increase_skill(options) 
     end
   end
 
