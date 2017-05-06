@@ -15,12 +15,12 @@ class TestCharacterTools < Test::Unit::TestCase
 
   
   def test_init
-    genders = ["Male", "Female"]
+    genders = ["M", "F"]
     assert(@character.age == 18) 
     assert(@character.upp.length == 6)
     assert(@character.upp.match(/[0-9A-F]/))
     assert(@character.name.length > 1)
-    assert(genders.include?(@character.gender.capitalize))
+    assert(genders.include?(@character.gender))
     assert(@character.appearence.length >= 10)
     words_in_appearence = @character.appearence.split
     assert(words_in_appearence.length > 6)

@@ -24,7 +24,7 @@ class TestCharacter < Test::Unit::TestCase
   end
 
   def test_has_gender
-    genders = ["male", "female"]
+    genders = ["M", "F"]
     assert(genders.include?(@character.gender))
   end
 
