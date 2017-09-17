@@ -16,8 +16,9 @@ class Career
       terms -= 2
       cash_min        = @muster_out_benefits["cash"][0]
       cash_max        = @muster_out_benefits["cash"][-1]
+      cash_diff       = cash_max - cash_min
       benefits_length = @muster_out_benefits["benefits"].length - 1
-      character.stuff["cash"] += rand(cash_min..cash_max)
+      character.stuff["cash"] += rand(cash_diff) + cash_min
       benefit = @muster_out_benefits["benefits"][rand(benefits_length)]
       if benefit.match(/\+/)
         stat_options               = Hash.new(0)
