@@ -2,3 +2,5 @@ language: ruby
 
 rvm:
   - 2
+
+bundle: install gem "sqlite3", :platform => [:ruby]
