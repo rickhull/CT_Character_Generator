@@ -1,4 +1,4 @@
-Tasks: TOP => default
+Tasks TOP => default
 
 task :default => %w[:test]
 
