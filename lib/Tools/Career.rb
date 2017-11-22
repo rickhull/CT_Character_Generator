@@ -12,10 +12,11 @@ class Career
     character   = options["character"]
     terms       = options["terms"]
     skill_stuff = ["Blade", "Gun", "TAS", "Weapon"]
+    cash_min        = @muster_out_benefits["cash"][0]
+    cash_max        = @muster_out_benefits["cash"][-1]
+    cash_diff       = cash_max - cash_min
+
     ((terms / 2) + 1).times do
-      cash_min        = @muster_out_benefits["cash"][0]
-      cash_max        = @muster_out_benefits["cash"][-1]
-      cash_diff       = cash_max - cash_min
       character.stuff["cash"] += rand(cash_diff) + cash_min
       benefit = @muster_out_benefits["benefits"].sample
       if benefit.match(/\+/)
