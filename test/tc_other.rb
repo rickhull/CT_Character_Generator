@@ -1,17 +1,15 @@
-# Testing the Citizen class.
-
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+# Testing the Other class.
 
 require "test/unit"
-require "CharacterTools"
-require "Citizen"
+require "tools/character_tools"
+require "careers/other"
 
-class TestCitizen < Test::Unit::TestCase
+class TestOther < Test::Unit::TestCase
 
   def setup
     @character = Character.new
     @character.generate
-    @career = "Citizen"
+    @career = "Other"
     these_terms  = 2
     @character.careers[@career] = these_terms
     @half_terms = (@character.careers[@career] / 2) + 1
@@ -28,11 +26,9 @@ class TestCitizen < Test::Unit::TestCase
   end
 
   def test_muster_out_cash
-    puts "half_terms is #{@half_terms}."
-    puts "Character has #{@character.stuff['cash']} Credits." 
     assert(@character.stuff.has_key?('cash'))
     min_cash = 1000 * @half_terms
-    max_cash = 9000 * @half_terms
+    max_cash = 100000 * @half_terms
     assert(@character.stuff["cash"] >= min_cash) 
     assert(@character.stuff['cash'] <= max_cash) 
   end 
