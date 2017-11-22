@@ -3,10 +3,6 @@
 # written for each component program and named
 # "tc_<Program>.rb
 
-#$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
-#$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
-#$LOAD_PATH << File.expand_path("../../test", __FILE__)
-
 require "test/unit"
 
 # The infrastructure
@@ -19,7 +15,7 @@ require "test/unit"
 #require "tc_PresenterDefault"
 
 # The various careers
-#require "tc_Noble"
+require_relative "tc_noble"
 #require "tc_Other"
 #require "tc_Citizen"
 #require "tc_Firster"
@@ -29,4 +25,4 @@ require "test/unit"
 #require "tc_LEO"
 #require "tc_Marine"
 #require "tc_Merchant"
-require "tc_navy"
+require_relative "tc_navy"

@@ -1,10 +1,9 @@
 # Testing the Noble class.
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
-
 require "test/unit"
-require "CharacterTools"
-require "Noble"
+require "tools/character_tools"
+require "tools/character"
+require "careers/noble"
 
 class TestNoble < Test::Unit::TestCase
 
