@@ -13,8 +13,8 @@ class TestNoble < Test::Unit::TestCase
     @character.generate
     @career = "Noble"
     these_terms  = 2
-    @half_terms = (@character.careers[@career] / 2) + 1
     @character.careers[@career] = these_terms
+    @half_terms = (@character.careers[@career] / 2) + 1
     this_career = Module.const_get(@career).new
     @character.run_career(this_career, these_terms)
   end
@@ -37,7 +37,7 @@ class TestNoble < Test::Unit::TestCase
 
   def test_muster_out_benefits
     assert(@character.stuff.has_key?('benefits'))
-    assert(@character.stuff['benefits'].count <= @half_terms)
+    assert(@character.stuff['benefits'].count <= @half_terms + 1)
   end
 
   def test_title_knight

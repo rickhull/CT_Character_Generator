@@ -13,8 +13,8 @@ class TestOther < Test::Unit::TestCase
     @character.generate
     @career = "Other"
     these_terms  = 2
-    @half_terms = (@character.careers[@career] / 2) + 1
     @character.careers[@career] = these_terms
+    @half_terms = (@character.careers[@career] / 2) + 1
     this_career = Module.const_get(@career).new
     @character.run_career(this_career, these_terms)
   end

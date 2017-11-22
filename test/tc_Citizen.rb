@@ -13,8 +13,8 @@ class TestCitizen < Test::Unit::TestCase
     @character.generate
     @career = "Citizen"
     these_terms  = 2
-    @half_terms = (@character.careers[@career] / 2) + 1
     @character.careers[@career] = these_terms
+    @half_terms = (@character.careers[@career] / 2) + 1
     this_career = Module.const_get(@career).new
     @character.run_career(this_career, these_terms)
   end
@@ -28,6 +28,8 @@ class TestCitizen < Test::Unit::TestCase
   end
 
   def test_muster_out_cash
+    puts "half_terms is #{@half_terms}."
+    puts "Character has #{@character.stuff['cash']} Credits." 
     assert(@character.stuff.has_key?('cash'))
     min_cash = 1000 * @half_terms
     max_cash = 9000 * @half_terms
