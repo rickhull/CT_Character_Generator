@@ -12,40 +12,30 @@ class Career
     character   = options["character"]
     terms       = options["terms"]
     skill_stuff = ["Blade", "Gun", "TAS", "Weapon"]
-    until terms < 1 do
-      terms -= 2
+    ((terms / 2) + 1).times do
       cash_min        = @muster_out_benefits["cash"][0]
       cash_max        = @muster_out_benefits["cash"][-1]
       cash_diff       = cash_max - cash_min
       character.stuff["cash"] += rand(cash_diff) + cash_min
       benefit = @muster_out_benefits["benefits"].sample
       if benefit.match(/\+/)
-        stat_options               = Hash.new(0)
-        stat_options["character"]  = character
-        stat_options["level"]      = benefit.split[0].to_i
-        stat_options["stat"]       = benefit.split[1]
+        stat_options = {  "character" => character,
+                          "level" => benefit.split[0].to_i,
+                          "stat"  => benefit.split[1]}
         CharacterTools.modify_stat(stat_options)
       elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
-        options               = Hash.new(0)
+        options = { "character" => character, "level" => 1 }
         case benefit
           when "Blade"
-            options["character"]  = character
             options["skill"]      = "Blade"
-            options["level"]      = 1
-            CharacterTools.increase_skill(options)
           when "Gun" 
-            options["character"]  = character
             options["skill"]      = "GunCbt"
-            options["level"]      = 1
-            CharacterTools.increase_skill(options)
           when "TAS" 
             character.stuff["cash"] += @muster_out_benefits["cash"][-1]
           when "Weapon"
-            options["character"]  = character
             options["skill"]      = "Weapon"
-            options["level"]      = 1
-            CharacterTools.increase_skill(options)
         end 
+        CharacterTools.increase_skill(options) unless benefit == 'TAS'
       elsif character.stuff["benefits"].has_key?(benefit)
         character.stuff["benefits"][benefit]  += 1
       else
