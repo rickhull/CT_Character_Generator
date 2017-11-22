@@ -1,10 +1,11 @@
 # Testing the Navy class.
 
-$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+#$LOAD_PATH << File.expand_path("../../lib", __FILE__)
 
 require "test/unit"
-require "CharacterTools"
-require "Navy"
+require "tools/character_tools"
+require "careers/navy"
+require "character"
 
 class TestNavy < Test::Unit::TestCase
 
