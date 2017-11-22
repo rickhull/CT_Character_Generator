@@ -1,8 +1,8 @@
 class Character
 
-  $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
-  require "CharacterTools"
-  include CharacterTools
+  #$LOAD_PATH << File.expand_path(File.dirname(__FILE__))
+  require "tools/character_tools"
+  #include CharacterTools
 
   attr_accessor :gender, :name, :upp, :skills, 
       :careers, :age, :rank, :stuff,

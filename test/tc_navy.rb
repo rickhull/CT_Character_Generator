@@ -5,7 +5,7 @@
 require "test/unit"
 require "tools/character_tools"
 require "careers/navy"
-require "character"
+require "tools/character"
 
 class TestNavy < Test::Unit::TestCase
 

@@ -1,8 +1,8 @@
 # Class for Navy characters.
 
-require "CharacterTools"
-require "Career"
-require "Dice"
+require "tools/character_tools"
+require "tools/career"
+require "tools/dice"
 
 class Navy < Career 
   def initialize
