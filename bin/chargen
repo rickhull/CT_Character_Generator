@@ -71,7 +71,8 @@ unless basic_character
     these_terms = options["careers"][career]
     require File.join('careers', career)
     this_career = Module.const_get(career.capitalize).new
-    character.run_career(this_career, these_terms)
+    new_career  = this_career(character)
+    new_career.update_character(career, these_terms)
   end
 
 end

@@ -43,7 +43,7 @@ class Character
     to_s
   end
 
-  def run_career(career, terms)
-    career.update_character(self, career, terms)
-  end
+  #def run_career(career, terms)
+  #  career.update_character(career, terms)
+  #end
 end
