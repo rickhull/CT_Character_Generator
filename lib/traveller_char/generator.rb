@@ -1,3 +1,4 @@
+require 'traveller_char/data'
 require 'traveller_char/character'
 
 module TravellerChar
@@ -22,15 +23,11 @@ module TravellerChar
     end
 
     def self.gender
-      'M'
+      self.roll(dice: 1) > 3 ? 'M' : 'F'
     end
 
     def self.appearance
       'big black boots and long brown hair'
-    end
-
-    def self.age
-      21
     end
 
     def self.plot
@@ -45,7 +42,7 @@ module TravellerChar
       { name: self.name,
         gender: self.gender,
         appearance: self.appearance,
-        age: self.age,
+        age: 18,
         plot: self.plot,
         temperament: self.temperament }
     end
