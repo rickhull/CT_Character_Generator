@@ -121,7 +121,7 @@ module CharacterTools
       stat      = stat_mod.split[1]
       raise ArgumentError unless Integer(level)
       stat_index = STAT_NAMES.index(stat)
-      raise ArgumentError unless character.upp =~ /[0-9A-F]/
+      raise ArgumentError unless character.upp =~ /[0-9A-F]{6}/
       new_stat = character.upp[stat_index,1].to_i(16) + level
       new_stat = [new_stat, 15].min
       new_stat = [new_stat, 2].max
