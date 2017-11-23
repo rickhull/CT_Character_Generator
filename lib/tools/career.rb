@@ -53,7 +53,6 @@ module Career
     else
       skill_options = @skill_options
     end
-    puts(skill_options.class)
   end
 
   #public
