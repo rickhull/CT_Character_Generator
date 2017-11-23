@@ -45,7 +45,6 @@ module TravellerChar
 
   class Character
     def self.generate(basic: {})
-      basic = Generatator.basic.merge(basic)
       self.new(basic: Generator.basic.merge(basic), upp: Generator.upp)
     end
 
