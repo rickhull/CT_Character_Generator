@@ -3,12 +3,12 @@
 #
 # usage:  ruby bin/TeamGen
 
-$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
-$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
+#$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
+#$LOAD_PATH << File.expand_path("../../lib/Tools", __FILE__)
 
-require "Character"
-require "CharacterTools"
-require "Presenter"
+require "tools/character"
+require "tools/character_tools"
+require "tools/presenter"
 
 def list_careers(career_dir)
   careers = Array.new
@@ -23,7 +23,7 @@ end
 available_careers = []
 load_dirs = $LOAD_PATH.uniq
 load_dirs.each do |dir|
-  if dir.end_with?("Careers")
+  if dir.end_with?("careers")
     available_careers = list_careers(dir)
   end
 end
@@ -35,7 +35,7 @@ roles.each_key do |role|
   terms = rand(4) + 1
   puts "== #{role} =="
   career = "Navy"
-  require career
+  require File.join('careers', career.downcase)
   this_career = Module.const_get(career).new
   character = Character.new
   character.generate
