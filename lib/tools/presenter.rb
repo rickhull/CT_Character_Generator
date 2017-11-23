@@ -3,7 +3,7 @@ module Presenter
   def Presenter.show(character, method = "txt")
     case method
       when "csv"
-        require "PresenterCSV"
+        require "presenter_csv"
         PresenterCSV.show(character)
       when "wiki"
         print " == "
@@ -11,7 +11,7 @@ module Presenter
           |hdr| print "#{character[hdr]} " 
         }
       else
-        require "PresenterDefault"
+        require "presenter_default"
         PresenterDefault.show(character)
     end
     puts
