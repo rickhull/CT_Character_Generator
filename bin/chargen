@@ -7,8 +7,8 @@ require "optparse"
 require "tools/character_tools"
 require "tools/character"
 require "tools/presenter"
-
-career_dir = "careers"
+$LOAD_PATH << File.expand_path("../../lib/Careers", __FILE__)
+#career_dir = "careers"
 
 def list_careers(career_dir)
   careers = Array.new
@@ -23,13 +23,12 @@ end
 basic_character = false
 
 available_careers = []
-available_careers = ['firster', 'navy', 'other', 'noble', 'citizen']
-#load_dirs = $LOAD_PATH.uniq
-#load_dirs.each do |dir|
-#  if dir.end_with?("careers")
-#    available_careers = list_careers(dir)
-#  end
-#end
+load_dirs = $LOAD_PATH.uniq
+load_dirs.each do |dir|
+  if dir.end_with?("careers")
+    available_careers = list_careers(dir)
+  end
+end
 
 options = Hash.new
 options["careers"] = Hash.new
@@ -72,7 +71,7 @@ unless basic_character
   end
   options["careers"].each_key do |career|
     these_terms = options["careers"][career]
-    require 'careers/'career
+    require career
     this_career = Module.const_get(career).new
     character.run_career(this_career, these_terms)
   end
