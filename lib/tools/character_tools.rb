@@ -102,8 +102,7 @@ module CharacterTools
     skill     = options["skill"] 
     level     = options.has_key?("level") ? options["level"] : 1
     if skill.split.length > 1
-      options["stat_level"] = skill.split[0].to_i
-      options["stat"]       = skill.split[1]
+      options["stat_mod"] = skill
       self.modify_stat(options)
     else
       if character.skills.has_key?(skill)
@@ -116,13 +115,14 @@ module CharacterTools
 
   def self.modify_stat(options)
     begin
+      stat_mod  = options["stat_mod"]
       character = options["character"]
-      stat      = options["stat"]
-      stat_level     = options.has_key?("stat_level") ? options["stat_level"] : 1
-      raise ArgumentError unless Integer(stat_level)
+      level     = stat_mod.split[0].to_i 
+      stat      = stat_mod.split[1]
+      raise ArgumentError unless Integer(level)
       stat_index = STAT_NAMES.index(stat)
       raise ArgumentError unless character.upp =~ /[0-9A-F]/
-      new_stat = character.upp[stat_index,1].to_i(16) + stat_level
+      new_stat = character.upp[stat_index,1].to_i(16) + level
       new_stat = [new_stat, 15].min
       new_stat = [new_stat, 2].max
       new_stat = new_stat.to_s(16).upcase
