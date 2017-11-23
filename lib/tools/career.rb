@@ -1,10 +1,7 @@
 include CharacterTools
 
 class Career
-  def initialize(character)
-    @character = character
-  end
- 
+  
   def first_term
   end
 
@@ -57,7 +54,8 @@ class Career
     end
   end
 
-  def update_character(career, terms)
+  def update_character(character, career, terms)
+    @character = character
     this_career = career.class.to_s
     @character['careers'][this_career] = terms
     @character.age  += terms * 4 unless character.age > 18

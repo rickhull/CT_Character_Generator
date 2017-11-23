@@ -67,12 +67,16 @@ unless basic_character
   else
     options["careers"][social_career] = 1
   end
+
   options["careers"].each_key do |career|
+    puts(career)
+    puts(career.class)
+    puts(character.class)
     these_terms = options["careers"][career]
     require File.join('careers', career)
     this_career = Module.const_get(career.capitalize).new
-    new_career  = this_career(character)
-    new_career.update_character(career, these_terms)
+    puts(this_career.class)
+    this_career.update_character(character, career, these_terms)
   end
 
 end
