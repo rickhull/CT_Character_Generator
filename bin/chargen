@@ -6,6 +6,7 @@ require "optparse"
 require "tools/character_tools"
 require "tools/character"
 require "tools/presenter"
+require "tools/career"
 
 $LOAD_PATH << File.expand_path("../../lib/careers", __FILE__)
 
@@ -74,9 +75,10 @@ unless basic_character
     puts(character.class)
     these_terms = options["careers"][career]
     require File.join('careers', career)
-    this_career = Module.const_get(career.capitalize).new
-    puts(this_career.class)
-    this_career.update_character(character, career, these_terms)
+    #this_career = Module.const_get(career.capitalize).new
+    #puts(this_career.class)
+    
+    Noble.update_character(character, career, these_terms)
   end
 
 end

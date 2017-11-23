@@ -1,7 +1,9 @@
 include CharacterTools
 
-class Career
-  
+module Career
+  module_function
+
+   
   def first_term
   end
 

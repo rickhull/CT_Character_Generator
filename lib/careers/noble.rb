@@ -7,7 +7,8 @@ require "tools/character_tools"
 require "tools/career"
 require "tools/dice"
 
-class Noble < Career 
+class Noble  
+  include Career
   @skill_options = [ 
     "+1 Int", 
     "+1 Edu", 
