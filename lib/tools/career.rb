@@ -18,12 +18,12 @@ class Career
   def add_benefit(character)
     skill_stuff = ["Blade", "Gun", "TAS", "Weapon"]
     benefit = @muster_out_benefits["benefits"].sample
+    options = {'character' => character, 'level' => 1}
 
     if benefit.match(/\+/)
-      stat_options = { "stat_mod"  => benefit, "character" => character}
-      CharacterTools.modify_stat(stat_options)
+      options['stat_mod'] = benefit
+      CharacterTools.modify_stat(options)
     elsif skill_stuff.include?(benefit) && character.stuff["benefits"].has_key?(benefit)
-      options = { "character" => character, "level" => 1 }
       case benefit
         when "TAS" 
           character.stuff["cash"] += @muster_out_benefits["cash"][-1]
@@ -63,8 +63,8 @@ class Career
     skill_options   = build_skill_options(character)
 
     first_term(character)
-    
     rank(character)
+
     # Keep @skill_points late as rank can add to it.
     options               = Hash.new(0)
     options["character"]  = character
