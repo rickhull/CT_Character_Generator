@@ -90,9 +90,9 @@ module CharacterTools
   def self.social_status(character)
     soc = character.upp[5,1].to_i(16)
     status = case soc     
-      when 0..5   then  "Other"
-      when 11..15 then  "Noble"
-      else              "Citizen"
+      when 0..5   then  "other"
+      when 11..15 then  "noble"
+      else              "citizen"
     end
     return status 
   end

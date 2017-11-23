@@ -1,6 +1,7 @@
-class Character
+require "tools/character_tools"
+include CharacterTools
 
-  require "tools/character_tools"
+class Character
 
   attr_accessor :gender, :name, :upp, :skills, 
       :careers, :age, :rank, :stuff,
