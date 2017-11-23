@@ -1,8 +1,7 @@
 include CharacterTools
 
 module Career
-  module_function
-
+  #module_function
    
   def first_term
   end
@@ -54,12 +53,14 @@ module Career
     else
       skill_options = @skill_options
     end
+    puts(skill_options.class)
   end
 
+  #public
   def update_character(character, career, terms)
     @character = character
     this_career = career.class.to_s
-    @character['careers'][this_career] = terms
+    @character.careers[this_career] = terms
     @character.age  += terms * 4 unless character.age > 18
     skill_points    = terms
     skill_options   = build_skill_options

@@ -72,13 +72,13 @@ unless basic_character
   options["careers"].each_key do |career|
     puts(career)
     puts(career.class)
-    puts(character.class)
+    puts(character)
     these_terms = options["careers"][career]
     require File.join('careers', career)
-    #this_career = Module.const_get(career.capitalize).new
-    #puts(this_career.class)
-    
-    Noble.update_character(character, career, these_terms)
+    this_career = Module.const_get(career.capitalize).new
+    puts(this_career.class)
+    tc = Noble.new 
+    tc.update_character(character, career, these_terms)
   end
 
 end
