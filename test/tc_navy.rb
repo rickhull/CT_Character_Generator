@@ -32,7 +32,7 @@ class TestNavy < Test::Unit::TestCase
     assert(@character.stuff.has_key?('cash'))
     min_cash = 1000 * @half_terms
     max_cash = 50000 * @half_terms
-    assert(@character.stuff["cash"] >= min_cash) 
+    assert(@character.stuff['cash'] >= min_cash) 
     assert(@character.stuff['cash'] <= max_cash) 
   end 
 
