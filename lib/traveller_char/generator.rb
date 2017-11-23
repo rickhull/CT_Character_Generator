@@ -19,23 +19,33 @@ module TravellerChar
     end
 
     def self.name
-      'Jim'
+      TravellerChar::Data.sample('names.txt')
     end
 
     def self.gender
       self.roll(dice: 1) > 3 ? 'M' : 'F'
     end
 
-    def self.appearance
-      'big black boots and long brown hair'
+    def self.hair(tone: nil, body: nil, color: nil, length: nil)
+      tone ||= TravellerChar::Data.sample('hair_tone.txt')
+      body ||= TravellerChar::Data.sample('hair_body.txt')
+      color ||= TravellerChar::Data.sample('hair_colors.txt')
+      length ||= TravellerChar::Data.sample('hair_length.txt')
+      [tone, body, color, length].join(' ')
+    end
+
+    def self.appearance(hair: nil, skin: nil)
+      hair ||= self.hair
+      skin ||= TravellerChar::Data.sample('skin_tones.txt')
+      "#{hair} hair with #{skin} skin"
     end
 
     def self.plot
-      'stuff happened, and then some things'
+      TravellerChar::Data.sample('plots.txt')
     end
 
     def self.temperament
-      'sleepy'
+      TravellerChar::Data.sample('temperaments.txt')
     end
 
     def self.basic
