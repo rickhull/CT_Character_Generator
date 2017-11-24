@@ -1,4 +1,4 @@
-module TravellerChar
+module Traveller
   class Character
     def initialize(basic: {}, upp: {}, skills: {}, careers: {}, stuff: {})
       @name = basic.fetch(:name)
