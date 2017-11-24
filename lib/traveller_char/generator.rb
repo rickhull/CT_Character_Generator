@@ -10,12 +10,8 @@ module TravellerChar
 
   module Generator
     def self.roll(faces: 6, dice: 2, count: 1)
-      roll1 = -> (faces) { rand(faces) + 1 }
-      rolln = -> (dice, faces) { Array.new(dice) { roll1.(faces) } }
-      roll_sum = Array.new(count).reduce(0) { |sum, _|
-        sum + rolln.(dice, faces).sum
-      }
-      (roll_sum.to_f / count).round
+      rolln = -> (faces, dice) { Array.new(dice) { rand(faces) + 1 } }
+      (Array.new(count) { rolln.(faces, dice).sum }.sum.to_f / count).round
     end
 
     def self.name
