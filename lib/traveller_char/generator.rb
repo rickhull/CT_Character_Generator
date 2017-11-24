@@ -14,8 +14,15 @@ module TravellerChar
       (Array.new(count) { rolln.(faces, dice).sum }.sum.to_f / count).round
     end
 
-    def self.name
-      TravellerChar::Data.sample('names.txt')
+    def self.name(gender)
+      case gender.to_s.downcase
+      when 'm', 'male'
+        TravellerChar::Data.sample('male_names.txt')
+      when 'f', 'female'
+        TravellerChar::Data.sample('female_names.txt')
+      else
+        raise "unknown gender: #{gender}"
+      end
     end
 
     def self.gender
@@ -45,8 +52,9 @@ module TravellerChar
     end
 
     def self.basic
-      { name: self.name,
-        gender: self.gender,
+      gender = self.gender
+      { name: self.name(gender),
+        gender: gender,
         appearance: self.appearance,
         age: 18,
         plot: self.plot,
