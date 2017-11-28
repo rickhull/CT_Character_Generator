@@ -35,11 +35,12 @@ class Traveller::Character
     end
   end
 
-  def initialize(desc:, stats:, skills: Hash.new(0), careers: {}, stuff: {})
+  attr_reader :desc, :stats, :skills, :stuff
+
+  def initialize(desc:, stats:, skills: Hash.new(0), stuff: {})
     @desc = desc
     @stats = stats
     @skills = skills
-    @careers = careers
     @stuff = stuff
   end
 end
