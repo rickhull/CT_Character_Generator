@@ -1,4 +1,6 @@
 module Traveller
+  PLAYER_CHOICE = ENV['PLAYER_CHOICE']
+
   ROLL_RGX = %r{
     \A    # starts with
     (\d*) # 0 or more digits; dice count
@@ -17,6 +19,34 @@ module Traveller
     matches = str.match(ROLL_RGX) or raise("bad roll: #{str}")
     dice, faces = matches[1], matches[2]
     self.roll(dice: dice.empty? ? 1 : dice.to_i, faces: faces.to_i)
+  end
+
+  def self.choose(msg, *args)
+    return self.player_choose(msg, *args) if PLAYER_CHOICE
+    puts msg + '  (' + args.join(' ') + ')'
+    choice = args.sample
+    puts "> #{choice}"
+    choice
+  end
+
+  def self.player_choose(msg, *args)
+    chosen = false
+    while !chosen
+      puts msg + '  (' + args.join(' ') + ')'
+      choice = self.prompt.to_s.downcase.to_sym
+      if args.include?(choice)
+        chosen = choice
+      else
+        puts "Try again.\n"
+      end
+    end
+    chosen
+  end
+
+  def self.player_prompt(msg = nil)
+    print msg + ' ' if msg
+    print '> '
+    $stdin.gets(chomp: true)
   end
 
   # per http://www.traveller-srd.com/core-rules/skills/
@@ -174,4 +204,14 @@ module Traveller
     vacc_suit: nil,
     zero_g: nil,
   }
+end
+
+# compatibility stuff
+
+unless Comparable.method_defined?(:clamp)
+  module Comparable
+    def clamp(low, high)
+      [[self, low].max, high].min
+    end
+  end
 end
