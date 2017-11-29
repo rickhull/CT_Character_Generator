@@ -1,11 +1,17 @@
-require 'traveller/character'
 require 'traveller/data'
+require 'traveller/character'
+require 'traveller/homeworld'
 
 module Traveller
   module Generator
     def self.character(descr = {})
       Character.new(desc: self.desc.merge(descr),
                     stats: Character::Stats.roll)
+    end
+
+    def self.homeworld(name = nil)
+      name ||= Data.sample('homeworlds.txt')
+      Homeworld.new(name)
     end
 
     def self.name(gender)
