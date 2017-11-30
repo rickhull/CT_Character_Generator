@@ -2,30 +2,24 @@ require 'pry'
 require 'traveller/generator'
 require 'traveller/career_path'
 
-# 1. new char, 18 y/o with 2 skills from homeworld and 1+EDU
 char = Traveller::Generator.character
 path = Traveller::CareerPath.new(char)
-puts "#{char.desc.name} has come of age!"
+
+careers = %w{Scout}
 
 done = false
 while !done
-  career = Traveller.choose("Choose a career", :scout)
-  case career
-  when :scout
-    career = Traveller::Scout.new
+  careers = careers.select { |c| path.eligible? c }
+  if careers.empty?
+    puts "No eligible careers available!"
+    break
   end
-
-  # HACK
-  break unless path.eligible?(career)
-  # really, choose a different career
+  career = Traveller.choose("Choose a career", *careers)
+  career = Traveller.career_class(career).new
 
   # skip draft / drifter for now
   accepted = false
-  while !accepted
-    print "#{char.desc.name} is applying for Scout... "
-    accepted = path.apply(career)
-    puts accepted ? 'ACCEPTED' : 'REJECTED'
-  end
+  accepted = path.apply(career) while !accepted
 
   exit_career = false
   while !exit_career
@@ -43,14 +37,11 @@ while !done
       exit_career = true
     end
   end
-  if path.active_career
-    cash, other = path.muster_out
-    puts "Muster Out with #{cash} credits and #{other} benefits"
-  end
+  path.muster_out if path.active_career
   puts path.pretty_inspect
-
-  binding.pry
-
-  choice = Traveller.choose("Exit career mode?", :yes, :no)
-  done = true if choice == :yes
+  done = Traveller.choose("Exit career mode?", :yes, :no) == :yes
 end
+
+binding.pry
+
+puts "DONE"
