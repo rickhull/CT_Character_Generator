@@ -36,7 +36,7 @@ module Traveller
       end
     end
 
-    attr_reader :desc, :stats, :homeworld, :skills, :stuff, :log
+    attr_reader :desc, :stats, :homeworld, :skills, :stuff
 
     def initialize(desc:, stats:, homeworld:,
                    skills: {}, stuff: {}, log: [])
@@ -52,7 +52,10 @@ module Traveller
     # gain background skills based on homeworld
     def birth
       return nil unless @log.empty?
-      @log << "Born on #{@homeworld.name} (#{@homeworld.traits.join(' ')})"
+      self.log format("%s was born on %s (%s)",
+                      @desc.name,
+                      @homeworld.name,
+                      @homeworld.traits.join(' '))
       skill_count = 3 + (@stats.education / 2.5).round
       skill_choices = []
 
@@ -66,9 +69,27 @@ module Traveller
         }
       end
       skill_choices.each { |sym|
-        @log << "Acquired background skill: #{sym} 0"
+        self.log "Acquired background skill: #{sym} 0"
         @skills[sym] ||= 0
       }
+    end
+
+    def log(msg = nil)
+      return @log unless msg
+      puts msg
+      @log << msg
+    end
+
+    def name
+      @desc.name
+    end
+
+    def age(years = nil)
+      years ? @desc.age += years : @desc.age
+    end
+
+    def skill_check?(skill, val = 0)
+      @skills[skill] and @skills[skill] >= val
     end
   end
 end
