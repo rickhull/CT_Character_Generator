@@ -45,6 +45,7 @@ module Traveller
           @skills << skill
         end
       }
+      @skills.uniq!
     end
   end
 end
