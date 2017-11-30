@@ -4,9 +4,11 @@ require 'traveller/homeworld'
 
 module Traveller
   module Generator
-    def self.character(descr = {})
+    def self.character(descr = {}, homeworld: nil)
+      homeworld ||= self.homeworld
       Character.new(desc: self.desc.merge(descr),
-                    stats: Character::Stats.roll)
+                    stats: Character::Stats.roll,
+                    homeworld: homeworld)
     end
 
     def self.homeworld(name = nil)
