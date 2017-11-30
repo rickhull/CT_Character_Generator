@@ -59,16 +59,11 @@ module Traveller
     attr_accessor :term, :active, :rank
 
     def initialize(assignment = nil,
-                   stats: Character::Stats.empty, skills: Hash.new(0),
                    term: 0, active: false, rank: 0, benefits: {})
       if assignment and !self.class::SPECIALIST_SKILLS.key?(assignment)
         raise(UnknownAssignment, assignment.inspect)
       end
       @assignment = assignment
-
-      # track any stats and skills acquired in the career
-      @stats = stats
-      @skills = skills
 
       # career tracking
       @term = term
@@ -77,15 +72,19 @@ module Traveller
       @benefits = benefits  # acquired equipment, ships / shares
     end
 
-    def basic_training(first_career: false)
+    def basic_training(char, first_career: false)
       if first_career
-        self.class::SERVICE_SKILLS.each { |sym|
-          @skills[sym] = 0
-        }
+        skills = self.class::SERVICE_SKILLS
       else
-        sym = Traveller.choose("Service skill", *self.class::SERVICE_SKILLS)
-        @skills[sym] = 0
+        skills = [Traveller.choose("Service skill",
+                                   *self.class::SERVICE_SKILLS)]
       end
+      skills.each { |sym|
+        unless char.skills.key?(sym)
+          char.log "Acquired #{sym} 0 in Basic Training"
+          char.skills[sym] = 0
+        end
+      }
     end
 
     def assignment
@@ -105,18 +104,26 @@ module Traveller
       (Traveller.roll('2d6') + dm) >= self.class::ADVANCEMENT_CHECK
     end
 
-    def training_roll!(advanced: false)
+    # any skills obtained start at level 1
+    def training_roll!(char)
       roll = Traveller.roll('1d6')
-      @stats.boost self.class::STATS.fetch(roll - 1)
-      @skills[self.class::SERVICE_SKILLS.fetch(roll - 1)] += 1
-      @skills[self.class::ADVANCED_SKILLS.fetch(roll - 1)] += 1 if advanced
+      stats = self.class::STATS.fetch(roll - 1)
+      char.stats.boost stats
+      svc = self.class::SERVICE_SKILLS.fetch(roll - 1)
+      char.skills[svc] ||= 0
+      char.skills[svc] += 1
+      if self.class.advanced_skills?(char.stats)
+        adv = self.class::ADVANCED_SKILLS.fetch(roll - 1)
+        char.skills[adv] ||= 0
+        char.skills[adv] += 1
+      end
     end
 
-    def specialist_skill_roll!
+    def specialist_skill_roll!(char)
       roll = Traveller.roll('1d6')
       skill =
         self.class::SPECIALIST_SKILLS.fetch(self.assignment).fetch(roll - 1)
-      @skills[skill] += 1
+      skills[skill] += 1
     end
 
     def event_roll(dm = 0)
@@ -143,8 +150,6 @@ module Traveller
     def dump
       [self.class, @assignment,
        {
-         stats: @stats.to_h,
-         skills: @skills,
          term: @term,
          active: @active,
          rank: @rank }]
@@ -191,10 +196,11 @@ module Traveller
       @officer_rank = 1
     end
 
-    def officer_skill_roll!(dm = 0)
+    def officer_skill_roll!(char)
       roll = Traveller.roll('1d6')
       skill = self.class::OFFICER_SKILLS.fetch(roll - 1)
-      @skills[skill] += 1
+      char.skills[skill] ||= 0
+      char.skills[skill] += 1
     end
   end
 
