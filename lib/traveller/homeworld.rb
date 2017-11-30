@@ -22,38 +22,29 @@ module Traveller
                   :physical_science, :life_science, :social_science,
                   :space_science, :trade],
     }
-    CHAR_MIN = 3
-    CHAR_MAX = 5
+    TRAIT_MIN = 3
+    TRAIT_MAX = 6
 
-    attr_reader :name, :traits
+    attr_reader :name, :traits, :skills
 
     def initialize(name, traits = [])
       @name = name
-      if traits.size > self.class::CHAR_MAX
+      if traits.size > self.class::TRAIT_MAX
         warn "lots of world traits: #{traits}"
       elsif traits.empty?
-        sample_num = rand(CHAR_MAX - CHAR_MIN + 1) + CHAR_MIN
+        sample_num = rand(TRAIT_MAX - TRAIT_MIN + 1) + TRAIT_MIN
         traits = self.class::TRAITS.keys.sample(sample_num)
       end
       @traits = traits
-      @traits.each { |sym|
-        raise "bad trait: #{sym}" unless self.class::TRAITS.key?(sym)
-      }
-    end
-
-    # available skills -- only a fraction of which should apply to a
-    # character's background skills
-    def skills
-      hsh = {}
-      @traits.each { |sym|
-        skill = self.class::TRAITS.fetch(sym)
+      @skills = []
+      @traits.each { |trait|
+        skill = self.class::TRAITS.fetch(trait)
         if skill.is_a?(Array)
-          skill.each { |sk| hsh[sk] = 0 }
+          skill.each { |sk| @skills << sk }
         else
-          hsh[skill] = 0
+          @skills << skill
         end
       }
-      hsh
     end
   end
 end
