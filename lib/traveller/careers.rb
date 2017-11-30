@@ -1,62 +1,3 @@
-# a career consists of several terms
-# each term causes (potential) modifications of UPP, Skills, and Age
-# a career is ended by choice after any term, and there is a final
-# modification known as "muster out"
-
-
-
-
-# a skill can be a simple incrementer
-# or e.g. skill 8 is an immediate boost to level 8
-
-# to qualify for advanced skills, one must have an education qualification
-# usually Education 8+ or else a certain career rank
-
-# basic training: for the first career only, you get all skills listed at
-# level 0; subsequent careers: basic training only grants one skill at 0
-
-# completion / survival: fail this roll and suffer a mishap and leave
-# the service
-
-# if pass the survival roll, roll for interesting events
-
-# commission is for officer rank in a military career; start at rank 1
-# then use the officer rank table
-
-# one optional commission role per term
-
-# a commission obtained when one has already had several non-commissioned
-# ranks still puts the new officer at rank 1.  but prior ranks increase
-# benefits and pensions
-
-# some events give DM to advancement rolls or auto-advance; these apply
-# to commissions
-
-# all careers have ranks; military careers have officer and non-officer
-# ranks
-
-# to gain a rank, one must pass an advancement roll; upon success, an
-# extra roll is gained on skills and training tables, plus listed benefits
-# one advancement attempt per term
-
-# if the advancement roll is <= number of terms spent at this career,
-# you must leave this career; natural 12 means you must remain in career
-
-# ranks: start at rank 0; increment upon advancement roll
-
-# 1. to enlist in a career, 2d6 must be 9+
-# 2. check UPP to get a roll bonus; marines get +3 for high STR and INT
-# 3. so a high STR and INT char needs only 6+ to enlist
-# 4. enter first term - 4 years
-# 5. first, roll for term completion: 6+ but with high END, +2 bonus
-# 6. roll for commission - 9+ (high EDU bonus)
-# 7. roll for advancement - 9+ (go to rank 2)
-# 8. term completion + comission = earn 2 skills (rifle and cutlass)
-# 9. roll for skills: one roll each for term, commission, advancement
-# 10. no chance for advanced skills because low EDU
-
-require 'traveller/character'
-
 module Traveller
   class Career
     class UnknownAssignment < RuntimeError; end
@@ -220,6 +161,10 @@ module Traveller
         cash_benefit + self.retirement_benefit
       end
     end
+
+    def name
+      self.class.name.split('::').last
+    end
   end
 
   class Drifter < Career
@@ -241,7 +186,7 @@ module Traveller
      (Traveller.roll('2d6') + dm) >= self.class::COMMISSION_CHECK
     end
 
-    def commission
+    def commission!
       @officer = true
       @officer_rank = 1
     end
