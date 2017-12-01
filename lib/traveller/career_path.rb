@@ -66,7 +66,7 @@ module Traveller
         @char.log format("%s term %i was successful",
                          @active_career.name, @active_career.term)
         @char.age TERM_YEARS
-        self.training_roll
+        @active_career.training_roll!(@char)
 
         if @active_career.is_a?(MilitaryCareer)
           if !@active_career.officer
@@ -74,18 +74,26 @@ module Traveller
               if @active_career.commission_check?
                 @char.log "Became an officer!"
                 @active_career.commission!
+              else
+                @char.log "Commission application was rejected"
               end
             end
           end
-          @active_career.officer_skill_roll!(@char) if @active_career.officer
+          # @active_career.officer_skill_roll!(@char) if @active_career.officer
         end
 
         adv_roll = Traveller.roll('2d6')
         if adv_roll > @active_career.class::ADVANCEMENT_CHECK
           @active_career.rank += 1
           @char.log "Advanced career to rank #{@active_career.rank}"
-          # TODO: make sure to accumulate rank benefits
-          self.training_roll
+          title, skill, level = @active_career.rank_benefit
+          if title
+            @char.log "Awarded rank title: #{title}"
+            @char.log "Achieved rank skill: #{skill} #{level}"
+            @char.skills[skill] ||= 0
+            @char.skills[skill] = level if level > @char.skills[skill]
+          end
+          @active_career.training_roll!(@char)
         end
         if adv_roll <= @active_career.term
           @must_exit = true
@@ -96,27 +104,11 @@ module Traveller
         @char.log "#{@active_career.name} career ended with a mishap!"
         @char.age rand(TERM_YEARS) + 1
         # exit career
-        self.mishap_roll
+        @active_career.mishap_roll
         @active_career.active = false
         @careers << @active_career
         @active_career = nil
       end
-
-      self
-    end
-
-    def training_roll
-      @active_career.training_roll!(@char)
-    end
-
-    def term_event_roll
-      @active_career.event_roll
-      # TODO
-    end
-
-    def mishap_roll
-      @active_career.mishap_roll
-      # TODO
     end
 
     def muster_out
