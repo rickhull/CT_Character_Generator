@@ -83,7 +83,7 @@ module Traveller
       end
       skills.each { |sym|
         unless char.skills.key?(sym)
-          char.log "Acquired #{sym} 0 in Basic Training"
+          char.log "Acquired basic training skill: #{sym} 0"
           char.skills[sym] = 0
         end
       }
