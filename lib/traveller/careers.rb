@@ -18,6 +18,8 @@ module Traveller
       default: Array.new(6) { :default }
     }
 
+    RANKS = {}
+
     EVENTS = {
       2 => nil,
       3 => nil,
@@ -88,7 +90,8 @@ module Traveller
     end
 
     def assignment
-      @assignment ||= Traveller.choose(*self.class::SPECIALIST_SKILLS.keys)
+      @assignment ||= Traveller.choose("Choose a specialty:",
+                                       *self.class::SPECIALIST_SKILLS.keys)
     end
 
     def qualify_check?(career_count, _stats)
@@ -107,23 +110,39 @@ module Traveller
     # any skills obtained start at level 1
     def training_roll!(char)
       roll = Traveller.roll('1d6')
-      stats = self.class::STATS.fetch(roll - 1)
-      char.stats.boost stats
-      svc = self.class::SERVICE_SKILLS.fetch(roll - 1)
-      char.skills[svc] ||= 0
-      char.skills[svc] += 1
-      if self.class.advanced_skills?(char.stats)
+      choices = [:stats, :service, :specialist]
+      choices << :advanced if self.class.advanced_skills?(char.stats)
+      choices << :officer if self.is_a?(MilitaryCareer) and self.officer
+      choice = Traveller.choose("Choose training regimen:", *choices)
+      case choice
+      when :stats
+        stats = self.class::STATS.fetch(roll - 1)
+        which_stat = stats.keys.first
+        char.log "Trained #{which_stat} +1"
+        char.stats.boost stats
+        char.log "Trained #{which_stat} to #{char.stats.send(which_stat)}"
+      when :service
+        svc = self.class::SERVICE_SKILLS.fetch(roll - 1)
+        char.skills[svc] ||= 0
+        char.skills[svc] += 1
+        char.log "Trained service skill #{svc} to #{char.skills[svc]}"
+      when :specialist
+        spec =
+          self.class::SPECIALIST_SKILLS.fetch(self.assignment).fetch(roll - 1)
+        char.skills[spec] ||= 0
+        char.skills[spec] += 1
+        char.log "Trained specialist skill #{spec} to #{char.skills[spec]}"
+      when :advanced
         adv = self.class::ADVANCED_SKILLS.fetch(roll - 1)
         char.skills[adv] ||= 0
         char.skills[adv] += 1
+        char.log "Trained advanced skill #{adv} to #{char.skills[adv]}"
+      when :officer
+        off = self.class::OFFICER_SKILLS.fetch(roll - 1)
+        char.skills[off] ||= 0
+        char.skills[off] += 1
+        char.log "Trained officer skill #{off} to #{char.skills[off]}"
       end
-    end
-
-    def specialist_skill_roll!(char)
-      roll = Traveller.roll('1d6')
-      skill =
-        self.class::SPECIALIST_SKILLS.fetch(self.assignment).fetch(roll - 1)
-      skills[skill] += 1
     end
 
     def event_roll(dm = 0)
@@ -170,6 +189,11 @@ module Traveller
     def name
       self.class.name.split('::').last
     end
+
+    # possibly nil
+    def rank_benefit
+      self.class::RANKS[@rank]
+    end
   end
 
   class Drifter < Career
@@ -194,13 +218,6 @@ module Traveller
     def commission!
       @officer = true
       @officer_rank = 1
-    end
-
-    def officer_skill_roll!(char)
-      roll = Traveller.roll('1d6')
-      skill = self.class::OFFICER_SKILLS.fetch(roll - 1)
-      char.skills[skill] ||= 0
-      char.skills[skill] += 1
     end
   end
 
@@ -227,7 +244,11 @@ module Traveller
     SERVICE_SKILLS = [:pilot_small_craft, :survival, :mechanic,
                       :astrogation, :comms, :gun_combat_group]
     ADVANCED_SKILLS = [:medic, :navigation, :engineer,
-                       :computer, :space_science, :jack_of_all_trades]
+                       :computers, :space_science, :jack_of_all_trades]
+
+    # made up by Rick
+    OFFICER_SKILLS = [:deception, :diplomat, :investigate,
+                      :navigation, :recon, :stealth]
     SPECIALIST_SKILLS = {
       courier: [:comms, :sensors, :pilot_spacecraft,
                 :vacc_suit, :zero_g, :astrogation],
