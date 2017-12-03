@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'pry'
 require 'traveller/generator'
 require 'traveller/career_path'
@@ -7,41 +9,37 @@ path = Traveller::CareerPath.new(char)
 
 careers = %w{Scout}
 
-done = false
-while !done
+loop {
   careers = careers.select { |c| path.eligible? c }
   if careers.empty?
     puts "No eligible careers available!"
     break
   end
   career = Traveller.choose("Choose a career", *careers)
-  career = Traveller.career_class(career).new
+  career = Traveller.career_class(career).new(char)
 
   # skip draft / drifter for now
   accepted = false
   accepted = path.apply(career) while !accepted
 
-  exit_career = false
-  while !exit_career
+  #
+  loop {
     path.run_term
-    if path.active_career
-      if path.must_remain
-        exit_career = false
-      elsif path.must_exit
-        exit_career = true
-      else
-        choice = Traveller.choose("Continue career?", :yes, :no)
-        exit_career = (choice == :no)
-      end
-    else
-      exit_career = true
-    end
-  end
+    break unless path.active_career
+    break if career.must_exit?
+    next if career.must_remain?
+    break if Traveller.choose("Muster out?", :yes, :no) == :yes
+  }
   path.muster_out if path.active_career
-  puts path.pretty_inspect
-  done = Traveller.choose("Exit career mode?", :yes, :no) == :yes
-end
 
-binding.pry
+  puts char.desc.pretty_inspect
+  puts char.stats.pretty_inspect
+  puts char.skills.pretty_inspect
+  puts char.stuff.pretty_inspect
+
+  break if Traveller.choose("Exit career mode?", :yes, :no) == :yes
+}
+
+binding.pry if ENV['PRY']
 
 puts "DONE"
