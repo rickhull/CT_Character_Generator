@@ -30,7 +30,7 @@ module Traveller
 
     def apply(career)
       raise(Ineligible, career.name) unless self.eligible?(career)
-      if career.qualify_check?(@careers.size, @char.stats)
+      if career.qualify_check?(@careers.size)
         @char.log "Qualified for #{career.name}"
         self.enter(career)
       else

@@ -406,9 +406,14 @@ module Traveller
     # not defined at http://www.traveller-srd.com/core-rules/careers/ :(
     BENEFITS = {}
 
-    def qualify_check?(career_count, stats)
-      dm = stats.intelligence - career_count
-      (Traveller.roll('2d6') + dm) >= 5
+    def qualify_check?(career_count)
+      roll = Traveller.roll('2d6')
+      dm = @char.stats.intelligence - career_count
+      @char.log format("Qualify DM is %i based on Intelligence %i",
+                       dm, @char.stats.intelligence)
+      puts format("Qualify check: roll %i (DM %i) against %i",
+                  roll, dm, self.class::QUALIFY_CHECK)
+      (roll + dm) >= self.class::QUALIFY_CHECK
     end
   end
 end
