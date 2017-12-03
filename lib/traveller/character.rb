@@ -36,6 +36,20 @@ module Traveller
       end
     end
 
+    def self.stats_dm(stat)
+      case stat
+      when 0 then -3
+      when 1..2 then -2
+      when 3..5 then -1
+      when 6..8 then 0
+      when 9..11 then 1
+      when 12..14 then 2
+      when 15..20 then 3
+      else
+        raise "unexpected stat: #{stat} (#{stat.class})"
+      end
+    end
+
     attr_reader :desc, :stats, :homeworld, :skills, :stuff
 
     def initialize(desc:, stats:, homeworld:,
@@ -56,7 +70,9 @@ module Traveller
                       @desc.name,
                       @homeworld.name,
                       @homeworld.traits.join(' '))
-      skill_count = 3 + (@stats.education / 2.5).round
+      skill_count = 3 + self.class.stats_dm(@stats.education)
+      self.log format("Education %i qualifies for %i skills",
+                      @stats.education, skill_count)
       skill_choices = []
 
       # choose skill_count skills
