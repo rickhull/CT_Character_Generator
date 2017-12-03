@@ -77,6 +77,8 @@ module Traveller
 
       # choose skill_count skills
       if @homeworld.skills.size <= skill_count
+        self.log format("Homeworld %s only has %i skills available",
+                        @homeworld.name, @homeworld.skills.size)
         skill_choices = @homeworld.skills
       else
         skill_count.times { |i|
