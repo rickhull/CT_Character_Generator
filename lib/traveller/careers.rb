@@ -285,7 +285,10 @@ module Traveller
     end
 
     def commission_check?(dm = 0)
-     (Traveller.roll('2d6') + dm) >= self.class::COMMISSION_CHECK
+      roll = Traveller.roll('2d6')
+      puts format("Commission check: roll %i (DM %i) against %i",
+                  roll, dm, self.class::COMMISSION_CHECK)
+      (roll + dm) >= self.class::COMMISSION_CHECK
     end
 
     def commission!
