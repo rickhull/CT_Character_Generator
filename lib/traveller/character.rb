@@ -92,6 +92,21 @@ module Traveller
       }
     end
 
+    def add_stuff(benefits)
+      benefits.each { |sym, val|
+        self.log "Collecting #{sym} #{val}"
+        case @stuff[sym]
+        when Numeric, Array
+          self.log "Adding #{sym} #{val} to #{@stuff[sym]}"
+          @stuff[sym] += val
+        when NilClass
+          @stuff[sym] = val
+        else
+          raise("unexpected benefit: #{sym} #{val} (#{val.class})")
+        end
+      }
+    end
+
     def log(msg = nil)
       return @log unless msg
       puts msg
