@@ -345,7 +345,7 @@ module Traveller
 
     # made up by Rick
     OFFICER_SKILLS = [:deception, :diplomat, :investigate,
-                      :navigation, :recon, :stealth]
+                      :navigation, :tactics_military, :leadership]
     SPECIALIST_SKILLS = {
       courier: [:comms, :sensors, :pilot_spacecraft,
                 :vacc_suit, :zero_g, :astrogation],
